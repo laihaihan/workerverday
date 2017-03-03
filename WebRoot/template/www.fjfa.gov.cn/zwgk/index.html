@@ -1,0 +1,1058 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+#parse("www.fjfa.gov.cn/vmlib/zwgk.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>$!{pagetitle}--政务公开</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"> 
+function tabFun(tabName,own,avCss,unCss){
+	for(var i=1;i<20;i++){
+		if(document.getElementById(tabName+"_"+i)){
+		document.getElementById(tabName+"_"+i).className=unCss;	
+		var con=document.getElementById(tabName+"_"+i+"_c");
+		if(con)con.style.display="none";
+		}else break;
+	}
+	own.className=avCss;
+	var con=document.getElementById(own.id+"_c");
+	if(con)con.style.display="block";
+}
+</script>
+
+</head>
+
+<body>
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+ <!--DWLayoutTable-->
+   #parse("www.fjfa.gov.cn/topAndButton/top.html")
+  <tr>
+    <td valign="top"><table width="1000" border="0" cellpadding="0" cellspacing="0" align="center">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="1000" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="1000" valign="top" background="../images/inf_02.png" style="background-repeat:no-repeat"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="142" height="32" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td width="858" valign="bottom">&nbsp;&nbsp;
+					  #foreach($cate in $catelist_zwgk) 
+					   #set( $cateurl = "${cate.url}" )
+						  #if( ($cateurl) && ($!{cateurl} != "") && ($!{cateurl} != "null") )
+							#set($cateurl="${siteDomain}${cateurl}")
+						  #else
+							 #set($cateurl="${secondPageUrl}${cate.unid}")
+						  #end
+					  <a href="${cateurl}" style="cursor:hand;">${cate.name}</a>| 
+					  #end 
+					  </td>
+                    </tr>
+              
+              <tr>
+                <td height="20" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    </tr>
+              </table></td>
+              </tr>
+          <tr>
+            <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="211" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="211" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <!--DWLayoutTable-->
+                      <tr>
+                        <td width="211" valign="top" background="../images/inf_04.png"><table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                          <!--DWLayoutTable-->
+                          <tr>
+                            <td width="30" height="23">&nbsp;</td>
+                                        <td width="112" valign="bottom"><span class="xxgk_title_color bold"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/govinfosend/index.jsp?siteunid=${siteunid}">政府信息公开</a></span></td>
+                                        <td width="69">&nbsp;</td>
+                                      </tr>
+                          <tr>
+                            <td height="13">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                          
+                          
+                          </table></td>
+                                </tr>
+                      <tr>
+                        <td valign="top" class="xxgk_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <!--DWLayoutTable-->
+                          <tr>
+                            <td width="211" height="10"></td>
+                                      </tr>
+                          <tr>
+                            <td height="27" align="center"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/govinfosend/list.jsp?siteunid=${siteunid}&id=${zfxxgkzn}"><img src="../images/infor_17.png" width="162" height="22" /></a></td>
+                                      </tr>
+                          <tr>
+                            <td height="27" align="center"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/govinfosend/index_govinfo.jsp?siteunid=${siteunid}"><img src="../images/infor_10.jpg" width="162" height="22" /></a></td>
+                                      </tr>
+                          <tr>
+                            <td height="27" align="center"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/govinfosend/list.jsp?siteunid=${siteunid}&id=${zfxxgkgd}"><img src="../images/infor_19.png" width="162" height="22" /></a></td>
+                                      </tr>
+                          <tr>
+                            <td height="27" align="center"><a href="${tomcatroot}/${cmsWebapp}/govinfosend/index_applyforpublic.jsp?siteunid=${siteunid}"><img src="../images/infor_22.png" width="161" height="22" /></a></td>
+                                      </tr>
+                          <tr>
+                            <td height="27" align="center"><a href="${tomcatroot}/${cmsWebapp}/govinfosend/index_publicMail.jsp?siteunid=${siteunid}"><img src="../images/infor_24.png" width="161" height="21" /></a></td>
+                                      </tr>
+                          <tr>
+                            <td height="4"></td>
+                                      </tr>
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          </table></td>
+                                </tr>
+                      <tr>
+                        <td height="7" valign="top"><img src="../images/inf_13.png" width="211" height="7" /></td>
+                                </tr>
+                      
+                      
+                      
+                      </table></td>
+                          </tr>
+                  <tr>
+                    <td height="9"></td>
+                          </tr>
+                  <tr>
+                    <td valign="top"><table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+                      <tr>
+                        <td height="29" class="top_gggs2" align="right" valign="top"><a href="${secondPageUrl}${gsggunid}" class="color_5D5D5D">更多</a>&nbsp;&nbsp;</td>
+                                </tr>
+                      <tr>
+                        <td class="cont_gggs" style="line-height:24px;">
+                          <table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+                            <tr>
+                              <td height="8"></td>
+                                </tr>
+								#foreach($article in $articlelist_gsgg)
+								<tr valign="top">
+								<td>． <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+								</tr>
+								#end
+                            </table></td>
+                                </tr>
+                      <tr>
+                        <td class="bottom_gggs2">&nbsp;</td>
+                                </tr>
+                      </table></td>
+                          </tr>
+                  <tr>
+                    <td height="5"></td>
+                          </tr>
+                  <tr>
+                    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <!--DWLayoutTable-->
+                      <tr>
+                        <td width="211" valign="top" background="../images/inf_17.png"><table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                          <!--DWLayoutTable-->
+                          <tr>
+                            <td width="16" height="35">&nbsp;</td>
+                                        <td width="74"><span class="color_white bold">市政府领导</span></td>
+                                        <td width="70">&nbsp;</td>
+                                        <td width="36">
+										#foreach($article in $articlelist_sz)
+												 <a href="${siteDomain}/${article.path}">
+												更多</a>
+										#end
+										</td>
+                                        <td width="15">&nbsp;</td>
+                                      </tr>
+                          </table></td>
+                                </tr>
+                      <tr>
+                        <td valign="top" class="cont_gggs"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <!--DWLayoutTable-->
+                          <tr>
+                            <td width="211" valign="top" height="150"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <!--DWLayoutTable-->
+                              <tr>
+                                <td width="78" height="24" align="right"><span class="bold">市长：</span></td>
+                                              <td width="69">
+											  #foreach($article in $articlelist_sz)
+												 <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">
+												${article.title}</a>
+											  #end
+											  </td>
+                                              <td width="64" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                            </tr>
+											  #set( $col = 2)
+											  #set ($articlecount=0)
+											  #set( $flag = 0 ) ##每一列的标记
+											  #foreach($article in $articlelist_fsz)
+											  	  #set ($articlecount=$articlecount+1)
+											 	  #set( $flag= $flag +1 )
+				      							  #if($flag==1)
+													  #if($articlecount==1)  
+													    <tr> 
+														<td height="24" align="right"><span class="bold">副市长：</span></td>
+													  #else
+													    <tr>
+														<td height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+													  #end
+												  #end
+												   <td><a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">
+												${article.title}</a></td>
+												  #if($articlecount % $col==0)
+												  #set( $flag = 0 )
+												  </tr>
+												  #end
+											   #end 
+												  
+												  #if($articlecount%$col!=0)
+													#set( $other = $articlecount%$col)
+												   #foreach($td in [$other..$col])
+												   <td>&nbsp;</td>
+												   #end
+												  </tr>
+												  #end
+                              </table></td>
+                                      </tr>
+                          <tr>
+                            <td height="52" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <!--DWLayoutTable-->
+                              <tr>
+                                <td width="105" height="52" align="right"><img src="../images/inf_28.png" width="95" height="42" /></td>
+                                              <td width="106" align="center"><img src="../images/inf_30.png" width="95" height="42" /></td>
+                                            </tr>
+                              <!--DWLayoutTable-->
+                              
+                          
+                                        </table></td>
+                                      </tr>
+                          
+                      
+                      
+                      
+                                  </table></td>
+                                </tr>
+                      <tr>
+                        <td height="7" valign="top"><img src="../images/inf_13.png" width="211" height="7" /></td>
+                                </tr>
+                      
+                      
+                      </table></td>
+                          </tr>
+                  <tr>
+                    <td height="7"></td>
+                          </tr>
+                  <tr>
+                    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <!--DWLayoutTable-->
+                      <tr>
+                        <td width="211" height="40" valign="top" background="../images/inf_38.png"><table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                          <!--DWLayoutTable-->
+                          <tr>
+                            <td width="166" height="32"></td>
+                                  <td width="36" valign="bottom"><a href="${secondPageZfjgUrl}${fasrmzfzcbmunid}">更多</a></td>
+                                  <td width="9"></td>
+                                </tr>
+                          <tr>
+                            <td height="8"></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                          
+                          </table></td>
+                                </tr>
+                      <tr>
+                        <td valign="top" class="zf_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <!--DWLayoutTable-->
+                          <tr>
+                            <td width="21" height="10"></td>
+                                  <td width="166"></td>
+                                  <td width="28"></td>
+                                </tr>
+                          
+						  #foreach($article in $articlelist_fasrmzfzcbm)
+							<tr>
+							<td height="26" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							 <td class="zf_dot"><img src="../images/45.gif" width="7" height="7" />
+							 <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">
+							${article.title}</a>
+							<td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            </tr>
+						  #end
+                          </table></td>
+                            </tr>
+                      </table></td>
+                          </tr>
+              
+                      </table></td>
+                      <td width="789" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <!--DWLayoutTable-->
+                          <tr>
+                            <td width="10" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td width="779" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <!--DWLayoutTable-->
+                                <tr>
+                                  <td width="779" valign="top">
+								  
+								  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <!--DWLayoutTable-->
+                                    <tr>
+                                      <td width="779" height="26" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inf_06.jpg">
+                                        <!--DWLayoutTable-->
+                                        <tr>
+                                          <td width="87" height="26" align="center" id="tab_77_1" onmouseover="tabFun('tab_77',this);return false;"><a href="${secondPageUrl}${faywunid}" class="bold color_white">${cate_fayw.name}</a></td>
+                                              <td width="87" align="center" id="tab_77_2" onmouseover="tabFun('tab_77',this);return false;"><a href="${secondPageUrl}${bmdtunid}">${cate_bmdt.name}</a></td>
+                                              <td width="23" align="center">|</td>
+                                              <td width="87" align="center" id="tab_77_3" onmouseover="tabFun('tab_77',this);return false;"><a href="${secondPageUrl}${xsqdtunid}">${cate_xsqdt.name}</a></td>
+                                              <td width="476">&nbsp;</td>
+                                              <td width="19">&nbsp;</td>
+                                            </tr>
+                                        </table></td>
+                                      </tr>
+                                    <tr>
+                                      <td valign="top" class="xxgk_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                        <!--DWLayoutTable-->
+                                        <tr>
+                                          <td width="284" height="226" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+											  <td width="4" height="226">
+											  </td>
+                                              <td width="280" height="226">
+                                                      <script type="text/javascript" language="javascript">
+					  var slideimages = new Array();
+					  var slidelinks  = new Array();
+					  var slidetexts  = new Array();
+					  #set( $count = 0 )
+					  #foreach( $pnew in $articlelist_tpxm)
+					      slideimages[$count] = '${tomcatroot}/${pnew.photo}'
+						  slidelinks[$count]  = '${siteDomain}/${pnew.path}'
+						  slidetexts[$count]  = '${pnew.title}'
+					      #set( $count = $count + 1 )
+					  #end
+					              </script>
+                                                      <script type="text/javascript" language="javascript">
+					  var focus_width=280;
+					  var focus_height=190;
+					  var text_height=24;
+					  var swf_height = focus_height+text_height;
+					  
+					  var pics="";
+					  var links="";
+					  var texts="";
+					  
+					  for( var sl=0; sl<slideimages.length; sl++ ) {
+					     pics  = pics + slideimages[sl];
+					     links = links + slidelinks[sl];
+					     texts = texts + slidetexts[sl];
+					  
+					     if (sl +1 < slideimages.length) {
+					          pics  = pics + "|";
+					          links = links + "|";
+					          texts = texts + "|";
+					      }
+					  }
+					  document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+					  document.write('<param name="allowScriptAccess" value="sameDomain"> ')
+					  document.write('<param name="movie" value="../images/newShow.swf">')
+					  document.write('<param name="quality" value="high">')
+					  document.write('<param name="bgcolor" value="#F6F6F6">');
+					  document.write('<param name="menu" value="false">')
+					  document.write('<param name=wmode value="opaque">');
+					  document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+					  document.write('<embed ID="focus_flash" src="../images/newShow.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+					  document.write('</object>');
+					              </script>
+                                                  </div>
+											  </td>
+                                                  </tr>
+                                            </table></td>
+                                              <td width="495" valign="top">
+											  <!---111111111111111111111111111--->
+											  <table  id="tab_77_1_c" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <!--DWLayoutTable-->
+                                                <tr>
+                                                  <td width="416" height="10" valign="top"></td>
+                                                  <td width="79" valign="top"></td>
+                                                </tr>
+												#foreach($article in $articlelist_fayw)
+                                              <tr>
+                                                <td height="24" class="zf_dot">&nbsp;<img src="../images/pic_ico001.gif" width="5" height="9" /> <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+                                                <td class="zf_dot">${article.publishdate}</td>
+                                              </tr>
+                                              #end
+                                              </table>   
+											  <table id="tab_77_2_c" width="100%" border="0" cellpadding="0" cellspacing="0" style="display:none;">
+                                                <!--DWLayoutTable-->
+                                                <tr>
+                                                  <td width="416" height="10" valign="top"></td>
+                                                  <td width="79" valign="top"></td>
+                                                </tr>
+                                                 #foreach($article in $articlelist_bmdt)
+                                              <tr>
+                                                <td height="24" class="zf_dot">&nbsp;<img src="../images/pic_ico001.gif" width="5" height="9" /> <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+                                                <td class="zf_dot"> ${article.publishdate}</td>
+                                                </tr>
+                                              #end
+                                              </table>   
+											  
+											  <table id="tab_77_3_c" style="display:none;" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <!--DWLayoutTable-->
+                                                <tr>
+                                                  <td width="416" height="10" valign="top"></td>
+                                                  <td width="79" valign="top"></td>
+                                                </tr>
+                                                 #foreach($article in $articlelist_xsqdt)
+                                              <tr>
+                                                <td height="24" class="zf_dot">&nbsp;<img src="../images/pic_ico001.gif" width="5" height="9" /> <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+                                                <td class="zf_dot">${article.publishdate}</td>
+                                                 </tr>
+                                              #end
+                                              </table> 
+											  </td>
+                                            </tr>
+                                        </table></td>
+										<!--标签二内容-->
+										<!--标签3内容-->
+										<td valign="top" class="xxgk_border" style="display:none;"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                        <!--DWLayoutTable-->
+                                        <tr>
+                                          <td width="284" height="226" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+                                              <td width="284" height="226"></td>
+                                                  </tr>
+                                            </table></td>
+                                              <td width="495" valign="top">
+	                                          </td>
+                                            </tr>
+                                        </table></td>
+										
+                                      </tr>
+                                    <tr>
+                                      <td height="8" valign="top"><img src="../images/inf_15.png" width="779" height="7" /></td>
+                                      </tr>
+                                  </table>
+								  </td>
+                                </tr>
+                                <tr>
+                                  <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <!--DWLayoutTable-->
+                                    <tr>
+                                      <td width="576" height="10"></td>
+                                        <td width="203"></td>
+                                      </tr>
+                                    <tr>
+                                      <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                        <!--DWLayoutTable-->
+                                        <tr>
+                                          <td width="576" height="25" valign="top" background="../images/inform_30.jpg"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+                                              <td width="87" height="25" align="center" class="xxkg_tab1_sty_1" id="tab_88_1"  onmouseover="tabFun('tab_88',this,'xxkg_tab1_sty_1','xxkg_tab1_sty_2');return false;"><a href="${secondPageUrl}${zfgzbgunid}">${cate_zfgzbg.name}</a></td>
+                                                  <td width="87" align="center" class="xxkg_tab1_sty_2" id="tab_88_2"  onmouseover="tabFun('tab_88',this,'xxkg_tab1_sty_1','xxkg_tab1_sty_2');return false;"><a href="${secondPageUrl}${fzjhbgunid}">${cate_fzjhbg.name}</a></td>
+                                                  <td width="87" align="center" class="xxkg_tab1_sty_2" id="tab_88_3"  onmouseover="tabFun('tab_88',this,'xxkg_tab1_sty_1','xxkg_tab1_sty_2');return false;"><a href="${secondPageUrl}${szfwjunid}">${cate_szfwj.name}</a></td>
+                                                  <td width="87" align="center" class="xxkg_tab1_sty_2" id="tab_88_4"  onmouseover="tabFun('tab_88',this,'xxkg_tab1_sty_1','xxkg_tab1_sty_2');return false;"><a href="${secondPageUrl}${szfbwjunid}">${cate_szfbwj.name}</a></td>
+                                                  <td width="228">&nbsp;</td>
+                                                </tr>
+                                            </table></td>
+                                            </tr>
+                                        <tr>
+                                          <td valign="top" id="tab_88_1_c" class="xxgk_border" height="130"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+                                              <td height="10" colspan="2" valign="top"></td>
+                                                  <td width="92" valign="top"></td>
+                                                </tr>
+												#foreach($article in $articlelist_zfgzbg)
+												<tr valign="top">
+												<td width="18" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+												 <td width="466" valign="top">
+												 ． <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+												 <td valign="top">${article.publishdate} </td>
+												</tr>
+												#end
+                                            </table></td>
+											<!--page2 content-->
+											<td valign="top" id="tab_88_2_c" class="xxgk_border" style="display:none;"  height="130"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+                                              <td height="10" colspan="2" valign="top"></td>
+                                                  <td width="92" valign="top"></td>
+                                                </tr>
+                                            #foreach($article in $articlelist_fzjhbg)
+												<tr valign="top">
+												<td width="18" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+												 <td width="466" valign="top">
+												 ． <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+												 <td valign="top">${article.publishdate} </td>
+												</tr>
+												#end
+                                            </table></td>
+											
+											<!--page3 content-->
+											<td valign="top" id="tab_88_3_c" class="xxgk_border" style="display:none;"  height="130"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+                                              <td height="10" colspan="2" valign="top"></td>
+                                                  <td width="92" valign="top"></td>
+                                                </tr>
+                                            #foreach($article in $articlelist_szfwj)
+												<tr valign="top">
+												<td width="18" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+												 <td width="466" valign="top">
+												 ． <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+												 <td valign="top">${article.publishdate} </td>
+												</tr>
+												#end
+                                            </table></td>
+											
+											<!--page4 content-->
+											<td valign="top" id="tab_88_4_c" class="xxgk_border" style="display:none;"  height="130"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+                                              <td height="10" colspan="2" valign="top"></td>
+                                                  <td width="92" valign="top"></td>
+                                                </tr>
+                                            #foreach($article in $articlelist_szfbwj)
+												<tr valign="top">
+												<td width="18" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+												 <td width="466" valign="top">
+												 ． <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+												 <td valign="top">${article.publishdate} </td>
+												</tr>
+												#end
+                                            </table></td>
+                                            </tr>
+                                        <tr>
+                                          <td height="6" valign="top"><img src="../images/inform_33.png" width="576" height="6" /></td>
+                                            </tr>
+                                        
+                                        
+                                        </table></td>
+                                        <td rowspan="5" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+                                              <td width="9" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                              <td width="194" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <!--DWLayoutTable-->
+                                                <tr>
+                                                  <td colspan="3" valign="top" class="ac_rig_border2"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                    <!--DWLayoutTable-->
+                                                    <tr>
+                                                      <td height="25" colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <!--DWLayoutTable-->
+                                                        <tr>
+                                                          <td width="137" height="25" background="../images/active_07.jpg" class="ac_rig_title">&nbsp; ${cate_ghxx.name} </td>
+                                        <td width="70" align="right" background="../images/active_08.jpg"><a href="${secondPageUrl}${ghxxunid}">更多&gt;&gt;</a>&nbsp;</td>
+                                        </tr>
+                                                        </table></td>
+                                </tr>
+                                                    <tr><td height="25" colspan="2" valign="top">
+                                                      <table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inform_33.jpg">
+                                                        <!--DWLayoutTable-->
+                                                        <tr>
+														#set($count=1)
+														#foreach($cate in $cateList_ghxx) 
+															#if($count==1)
+															<td height="25" align="center" id="tab_d_${count}" class="gh_tab1_sty_1" onmouseover="tabFun('tab_d',this,'gh_tab1_sty_1','gh_tab1_sty_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#else
+															 <td>|</td>
+					                 <td align="center" id="tab_d_${count}"  onmouseover="tabFun('tab_d',this,'gh_tab1_sty_1','gh_tab1_sty_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#end
+															#set($count=$count+1)	  
+														#end
+                                  </tr>
+                                                            </table></td>
+					            </tr>
+                                                    <tr>
+													 #set ($catecount=0)
+													 #foreach($cate in $cateList_yjgl)
+													   #set ($catecount=$catecount+1)
+													    #if($catecount==1)
+														  <td width="191" valign="top" id="tab_d_{catecount}_c" height="170">
+														#else
+														  <td width="191" valign="top" id="tab_d_{catecount}_c" style="display:none;" height="170">
+														#end
+														<table width="100%" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+                                                          <td width="12" height="8"></td>
+														  <td width="180"></td>
+														</tr>
+													   #set( $articlelist ="")
+													   #set( $articlelist = $list.getList("cate",${cate.unid},6,30,"yyyy-MM-dd") )
+													    #if( $articlelist )
+				  										#foreach($article in $articlelist)
+														 <tr>
+														  <td height="24">&nbsp;<img src="../images/45.gif" width="7" height="7" /> <a href="#">${article.title}</a></td>
+														</tr>				 
+														#end
+														#end
+														</table>														 
+														</td>
+														 #end 
+                           							 </tr>
+                                                    </table></td>
+                                                  </tr>
+                                                <tr>
+                                                  <td height="260" colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                    <!--DWLayoutTable-->
+                                                    <tr>
+                                                      <td width="194" height="7" valign="top"></td>
+                                                        </tr>
+                                                    <tr>
+                                                      <td height="253" valign="top" class="ac_rig_border2">
+													  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <!--DWLayoutTable-->
+                                                        <tr>
+                                                          <td width="194" height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                            <!--DWLayoutTable-->
+                                                            <tr>
+                                                              <td width="137" height="25" background="../images/active_07.jpg" class="ac_rig_title">&nbsp; ${cate_rsrm.name} </td>
+                                        <td width="70" align="right" background="../images/active_08.jpg"><a href="${secondPageUrl}${rsrmunid}">更多&gt;&gt;</a>&nbsp;</td>
+                                        </tr>
+                                                            </table></td>
+                                                              </tr>
+                                                        <tr>
+                                                          <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                            <!--DWLayoutTable-->
+                                                            <tr>
+                                                              <td width="194" height="5" valign="top"></td>
+                                                                </tr>
+                                                            <tr>
+                                                              <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                <!--DWLayoutTable-->
+																#foreach($article in $articlelist_rsrm)
+																<tr>
+																<td width="172" height="24">&nbsp;<img src="../images/45.gif" width="7" height="7" />  
+																<a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">
+																${article.title}</a>
+																</tr>
+																#end
+                                                                <tr>
+                                                                  <td height="7"></td>
+                                                                    </tr>
+                                                                </table>                                                      </td>
+                                                                </tr>
+                                                            </table>                                                  </td>
+                                                            </tr>
+                                                        
+                                                        
+                                                        
+                                                        </table>                                              </td>
+                                                        </tr>
+                                                    </table></td>
+                                                  </tr>
+                                                <tr><td width="1" height="7"></td>
+									                <td width="192"></td>
+									                <td width="1"></td>
+									              </tr>
+                                                <tr>
+                                                  <td ></td>
+									                <td valign="top" class="ac_rig_border2"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+										                <!--DWLayoutTable-->
+										                <tr>
+										                  <td width="194" height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+										                    <!--DWLayoutTable-->
+										                    <tr>
+										                      <td width="137" height="25" background="../images/active_07.jpg" class="ac_rig_title">&nbsp; ${cate_ztzl.name} </td>
+                                            <td width="70" align="right" background="../images/active_08.jpg"><a href="${secondPageUrl}${ztzlunid}">更多&gt;&gt;</a>&nbsp;</td>
+                                            </tr>
+									                      </table></td>
+                                                        </tr>
+										                <tr>
+										                  <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+										                    <!--DWLayoutTable-->
+										                    <tr>
+										                      <td width="194" height="5"></td>
+                                                              </tr>
+										                    <tr>
+										                      <td height="168" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+										                        <!--DWLayoutTable-->
+																#foreach($article in $articlelist_ztzl)
+																<tr>
+																<td height="25">&nbsp;<img src="../images/45.gif" width="7" height="7" />  <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">
+																${article.title}</a></td>
+																</tr>
+																#end
+										                        </table></td>
+                                                              </tr>
+									                      </table></td>
+                                                        </tr>
+									                </table></td>
+                                                    <td></td>
+								                  </tr>
+                                              </table></td>
+                                            </tr> 
+                                        </table>                                  
+										</td>
+                                      </tr>
+                                    <tr>
+                                      <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                        <!--DWLayoutTable-->
+                                        <tr><td height="3"></td></tr>
+                                        <tr>
+                                          <td height="108" valign="top"><img src="../images/ad1.jpg" width="576" height="108" /></td>
+                                            </tr>
+                                        </table></td>
+                                      </tr>
+                                    <tr>
+                                      <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                        <!--DWLayoutTable-->
+                                        
+                                        <tr>
+                                          <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <!--DWLayoutTable-->
+                                            <tr>
+                                              <td width="284" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <!--DWLayoutTable-->
+                                                <tr>
+                                                  <td width="284" height="32" valign="top">
+												  <table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inf_19.png">
+                                                    <!--DWLayoutTable-->
+                                                    <tr>
+                                                      <td width="33" height="32" align="center"><img src="../images/fx_bjss_2_09.jpg" width="10" height="13" /></td>
+                                                            <td width="124"><span class="bold xxgk_title_color font_14px">${cate_zcfg.name}</span></td>
+                                                            <td width="76">&nbsp;</td>
+                                                            <td width="41"><a href="${secondPageUrl}${zcfgunid}">更多</a></td>
+                                                            <td width="10">&nbsp;</td>
+                                                          </tr>
+                                                    </table></td>
+                                                        </tr>
+                                                <tr>
+                                                  <td valign="top" class="xxgk_border">
+												  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                    <!--DWLayoutTable-->
+                                                    <tr>
+                                                      <td width="284" height="36" valign="top">
+													  <table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inf_25.png" style="background-repeat:repeat-x;">
+                                                        <!--DWLayoutTable-->
+                                                        <tr>
+                                                          <td width="92" height="4"></td>
+                                                                  <td width="92"></td>
+                                                                  <td width="92"></td>
+                                                                  <td width="8"></td>
+                                                              </tr>
+                                                        <tr>
+														#set($count=1)
+														#foreach($cate in $cateList_zcfg) 
+															#if($count==1)
+															<td height="32" align="center" class="flfg_tab_1" id="tab_99_${count}" onmouseover="tabFun('tab_99',this,'flfg_tab_1','flfg_tab_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#else
+															<td align="center" class="flfg_tab_2" id="tab_99_${count}" onmouseover="tabFun('tab_99',this,'flfg_tab_1','flfg_tab_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#end
+															#set($count=$count+1)	  
+														#end
+                                                                <td>&nbsp;</td>
+                                                              </tr>
+                                                        </table></td>
+                                                              </tr>
+                                                    <tr>
+													 #set ($catecount=0)
+													 #foreach($cate in $cateList_zcfg)
+													   #set ($catecount=$catecount+1)
+													    #if($catecount==1)
+														  <td valign="top" id="tab_99_${catecount}_c"  height="130">
+														#else
+														  <td valign="top" id="tab_99_${catecount}_c" style="display:none;"  height="130">
+														#end
+														<table width="100%" border="0" cellpadding="0" cellspacing="0">
+													   #set( $articlelist ="")
+													   #set( $articlelist = $list.getList("cate",${cate.unid},6,30,"yyyy-MM-dd") )
+													    #if( $articlelist )
+				  										#foreach($article in $articlelist)
+														 <tr>
+                                                          <td width="20" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                                                <td width="264">．  <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+                                                          </tr>
+														#end
+														#end
+														</table>														 
+														</td>
+													 #end                                                          
+													 </tr>
+                                                    </table></td>
+                                                      </tr>
+                                                <tr>
+                                                  <td height="7" valign="top"><img src="../images/inf_44.png" width="284" height="7" /></td>
+                                                      </tr>
+                                                
+                                                </table></td>
+                                                    <td width="292" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                      <!--DWLayoutTable-->
+                                                      <tr>
+                                                        <td width="8" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                                        <td width="284" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                          <!--DWLayoutTable-->
+                                                          <tr>
+                                                            <td width="284" height="32" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inf_19.png">
+                                                              <!--DWLayoutTable-->
+                                                              <tr>
+                                                                <td width="33" height="32" align="center"><img src="../images/fx_bjss_2_09.jpg" width="10" height="13" /></td>
+                                                            <td width="124"><span class="bold xxgk_title_color font_14px">${cate_tjxx.name}</span></td>
+                                                            <td width="76">&nbsp;</td>
+                                                            <td width="41"><a href="${secondPageUrl}${tjxxunid}">更多</a></td>
+                                                            <td width="10">&nbsp;</td>
+                                                          </tr>
+                                                              </table></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td valign="top" class="xxgk_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                              <!--DWLayoutTable-->
+                                                              <tr>
+                                                                <td width="284" height="36" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inf_25.png" style="background-repeat:repeat-x;">
+                                                                  <!--DWLayoutTable-->
+                                                                  <tr>
+                                                                    <td width="92" height="4"></td>
+                                                                  <td width="92"></td>
+                                                                  <td width="92"></td>
+                                                                  <td width="8"></td>
+                                                              </tr>
+                                                                  <tr>
+														#set($count=1)
+														#foreach($cate in $cateList_tjxx) 
+															#if($count==1)
+															<td height="32" align="center" class="flfg_tab_1" id="tab_a_${count}" onmouseover="tabFun('tab_a',this,'flfg_tab_1','flfg_tab_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#else
+															<td align="center" class="flfg_tab_2" id="tab_a_${count}" onmouseover="tabFun('tab_a',this,'flfg_tab_1','flfg_tab_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#end
+															#set($count=$count+1)	  
+														#end
+                                                                <td>&nbsp;</td>
+                                                              </tr>
+                                                                  </table></td>
+                                                                </tr>
+                                                              <tr>
+													 #set ($catecount=0)
+													 #foreach($cate in $cateList_tjxx)
+													   #set ($catecount=$catecount+1)
+													    #if($catecount==1)
+														  <td valign="top" id="tab_a_{catecount}_c"  height="130">
+														#else
+														  <td valign="top" id="tab_a_{catecount}_c" style="display:none;"  height="130">
+														#end
+														<table width="100%" border="0" cellpadding="0" cellspacing="0">
+													   #set( $articlelist ="")
+													   #set( $articlelist = $list.getList("cate",${cate.unid},6,30,"yyyy-MM-dd") )
+													    #if( $articlelist )
+				  										#foreach($article in $articlelist)
+														 <tr>
+                                                          <td width="20" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                                                <td width="264">． <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+                                                          </tr>
+														#end
+														#end
+														</table>														 
+														</td>
+													 #end 
+                                                          </tr>
+                                                              </table></td>
+                                                      </tr>
+                                                          <tr>
+                                                            <td height="7" valign="top"><img src="../images/inf_44.png" width="284" height="7" /></td>
+                                                      </tr>
+                                                          
+                                                          </table>                                              </td>
+                                                      </tr>
+                                                    </table>                                          </td>
+                                                  </tr>
+                                            <tr>
+                                              <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <!--DWLayoutTable-->
+                                                <tr>
+                                                  <td width="284" height="10" valign="top"></td>
+                                                      </tr>
+                                                <tr>
+                                                  <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                    <!--DWLayoutTable-->
+                                                    <tr>
+                                                      <td width="284" height="32" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inf_19.png">
+                                                        <!--DWLayoutTable-->
+                                                        <tr>
+                                                          <td width="33" height="32" align="center"><img src="../images/fx_bjss_2_09.jpg" width="10" height="13" /></td>
+                                                            <td width="124"><span class="bold xxgk_title_color font_14px">${cate_zjxx.name}</span></td>
+                                                            <td width="76">&nbsp;</td>
+                                                            <td width="41"><a href="${secondPageUrl}${zjxxunid}">更多</a></td>
+                                                            <td width="10">&nbsp;</td>
+                                                          </tr>
+                                                        </table></td>
+                                                          </tr>
+                                                    <tr>
+                                                      <td valign="top" class="xxgk_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <!--DWLayoutTable-->
+                                                        <tr>
+                                                          <td width="284" height="36" valign="top" background="../images/inf_25.png" style="background-repeat:repeat-x;"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                            <!--DWLayoutTable-->
+                                                            <tr>
+                                                              <td width="92" height="4"></td>
+                                                                  <td width="92"></td>
+                                                                  <td width="92"></td>
+                                                                  <td width="8"></td>
+                                                              </tr>
+                                                            <tr>
+															#set($count=1)
+														#foreach($cate in $cateList_zjxx) 
+															#if($count==1)
+															<td height="32" align="center" class="flfg_tab_1" id="tab_b_${count}" onmouseover="tabFun('tab_b',this,'flfg_tab_1','flfg_tab_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#else
+															<td align="center" class="flfg_tab_2" id="tab_b_${count}" onmouseover="tabFun('tab_b',this,'flfg_tab_1','flfg_tab_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#end
+															#set($count=$count+1)	  
+														#end
+                                                                <td>&nbsp;</td>
+                                                              </tr>
+                                                            
+                                                            
+                                                            </table></td>
+                                                                </tr>
+                                                        <tr>
+														 #set ($catecount=0)
+													 #foreach($cate in $cateList_zjxx)
+													   #set ($catecount=$catecount+1)
+													    #if($catecount==1)
+														  <td valign="top" id="tab_b_{catecount}_c"  height="130">
+														#else
+														  <td valign="top" id="tab_b_{catecount}_c" style="display:none;"  height="130">
+														#end
+														<table width="100%" border="0" cellpadding="0" cellspacing="0">
+													   #set( $articlelist ="")
+													   #set( $articlelist = $list.getList("cate",${cate.unid},6,30,"yyyy-MM-dd") )
+													    #if( $articlelist )
+				  										#foreach($article in $articlelist)
+														 <tr>
+                                                          <td width="20" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                                                <td width="264">． <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+                                                          </tr>
+														#end
+														#end
+														</table>														 
+														</td>
+													 #end 
+                                                          </tr>
+                                                        </table></td>
+                                                      </tr>
+                                                    <tr>
+                                                      <td height="7" valign="top"><img src="../images/inf_44.png" width="284" height="7" /></td>
+                                                      </tr>
+                                                    
+                                                    </table>                                              </td>
+                                                      </tr>
+                                                </table>
+												</td>
+                                                    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                      <!--DWLayoutTable-->
+                                                      <tr>
+                                                        <td width="292" height="10" valign="top"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td height="219" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                          <!--DWLayoutTable-->
+                                                          <tr>
+                                                            <td width="8" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                                            <td width="284" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                              <!--DWLayoutTable-->
+                                                              <tr>
+                                                                <td width="284" height="32" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inf_19.png">
+                                                                  <!--DWLayoutTable-->
+                                                                  <tr>
+                                                                    <td width="33" height="32" align="center"><img src="../images/fx_bjss_2_09.jpg" width="10" height="13" /></td>
+                                                            <td width="124"><span class="bold xxgk_title_color font_14px">${cate_yjgl.name}</span></td>
+                                                            <td width="76">&nbsp;</td>
+                                                            <td width="41"><a href="${secondPageUrl}${yjglunid}">更多</a></td>
+                                                            <td width="10">&nbsp;</td>
+                                                          </tr>
+                                                                  </table></td>
+                                                          </tr>
+                                                              <tr>
+                                                                <td valign="top" class="xxgk_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                  <!--DWLayoutTable-->
+                                                                  <tr>
+                                                                    <td width="284" height="36" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/inf_25.png" style="background-repeat:repeat-x;">
+                                                                      <!--DWLayoutTable-->
+                                                                      <tr>
+                                                                        <td width="92" height="4"></td>
+                                                                  <td width="92"></td>
+                                                                  <td width="92"></td>
+                                                                  <td width="8"></td>
+                                                              </tr>
+                                                                      <tr>
+														#set($count=1)
+														#foreach($cate in $cateList_yjgl) 
+															#if($count==1)
+															<td height="32" align="center" class="flfg_tab_1" id="tab_c_${count}" onmouseover="tabFun('tab_c',this,'flfg_tab_1','flfg_tab_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#else
+															<td align="center" class="flfg_tab_2" id="tab_c_${count}" onmouseover="tabFun('tab_c',this,'flfg_tab_1','flfg_tab_2');return false;"><a href="${secondPageUrl}${cate.unid}">${cate.name}</a></td>
+															#end
+															#set($count=$count+1)	  
+														#end 
+                                                              </tr>
+                                                                      </table></td>
+                                                                </tr>
+                                                                  <tr>
+                                                      #set ($catecount=0)
+													 #foreach($cate in $cateList_yjgl)
+													   #set ($catecount=$catecount+1)
+													    #if($catecount==1)
+														  <td valign="top" id="tab_c_{catecount}_c"  height="130">
+														#else
+														  <td valign="top" id="tab_c_{catecount}_c" style="display:none;"  height="130">
+														#end
+														<table width="100%" border="0" cellpadding="0" cellspacing="0">
+													   #set( $articlelist ="")
+													   #set( $articlelist = $list.getList("cate",${cate.unid},6,30,"yyyy-MM-dd") )
+													    #if( $articlelist )
+				  										#foreach($article in $articlelist)
+														 <tr>
+                                                          <td width="20" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                                                <td width="264">． <a href="${siteDomain}/${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+                                                          </tr>
+														#end
+														#end
+														</table>														 
+														</td>
+														 #end 
+                                                          </tr>
+                                                                  </table></td>
+                                                      </tr>
+                                                              <tr>
+                                                                <td height="7" valign="top"><img src="../images/inf_44.png" width="284" height="7" /></td>
+                                                      </tr>
+                                                              
+                                                              </table>                                                  </td>
+                                                          </tr>
+                                                          </table>                                              </td>
+                                                      </tr>
+                                                    </table>                                          </td>
+                                                  </tr>
+                                            
+                                            
+                                            </table>                                      </td>
+                                            </tr>
+                                        </table></td>
+                                      </tr>
+                                    
+                                    
+                                  </table>                              </td>
+                                </tr>
+                                
+                            </table>                          </td>
+                          </tr>
+                      </table>                      </td>
+                    </tr>
+              </table></td>
+              </tr>
+          </table></td>
+    </tr>
+	</table></td>
+  </tr>
+#parse("www.fjfa.gov.cn/topAndButton/buttom.html")
+</table>
+</body>
+</html>

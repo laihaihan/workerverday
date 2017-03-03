@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.linewell.ess.fds.form.CfgFormItem" table="supervise_item">
+		<id column="UNID" name="unid" type="string">
+			<generator class="assigned"/>
+		</id>
+		<property name="punid" column="punid" type="string"/>
+		<property name="itemTitle" column="itemTitle" type="string"/>
+		<property name="itemName" column="itemName" type="string"/>
+		<property name="itemType" column="itemType" type="string"/>
+		<property name="listDisplay" column="listDisplay" type="string"/>
+		<property name="columnWidth" column="columnWidth" type="string"/>
+		<property name="searchFlag" column="searchFlag" type="string"/>
+		<property name="orderFlag" column="orderFlag" type="string"/>
+		<property name="orderType" column="orderType" type="string"/>
+		<property name="sourceTable" column="sourceTable" type="string"/>
+		<property name="sourceItem" column="sourceItem" type="string"/>
+		<property name="sortId" column="sortId" type="int"/>
+		<property name="dataValue" column="datavalue" type="string"/>
+		<property name="jsValidate" column="jsValidate" type="string"/>
+		<property name="dataFrom" column="DATAFROM" type="string"/>
+		<property name="tagType" column="TAGTYPE" type="string"/>
+	</class>
+</hibernate-mapping>

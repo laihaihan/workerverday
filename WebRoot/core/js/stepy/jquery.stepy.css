@@ -1,0 +1,66 @@
+.button-back {
+	FLOAT: left
+}
+.button-next {
+	FLOAT: right
+}
+.finish {
+	FLOAT: right
+}
+.button-back {
+	BORDER-BOTTOM: #c9c4ba 1px solid; BORDER-LEFT: #c9c4ba 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT: 10px verdana; COLOR: #7f0055; BORDER-TOP: #c9c4ba 1px solid; CURSOR: pointer; BORDER-RIGHT: #c9c4ba 1px solid; TEXT-DECORATION: none; PADDING-TOP: 3px; -khtml-border-radius: 3px; -moz-border-radius: 3px; -opera-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px
+}
+.button-next {
+	BORDER-BOTTOM: #c9c4ba 1px solid; BORDER-LEFT: #c9c4ba 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT: 10px verdana; COLOR: #7f0055; BORDER-TOP: #c9c4ba 1px solid; CURSOR: pointer; BORDER-RIGHT: #c9c4ba 1px solid; TEXT-DECORATION: none; PADDING-TOP: 3px; -khtml-border-radius: 3px; -moz-border-radius: 3px; -opera-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px
+}
+.finish {
+	BORDER-BOTTOM: #c9c4ba 1px solid; BORDER-LEFT: #c9c4ba 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT: 10px verdana; COLOR: #7f0055; BORDER-TOP: #c9c4ba 1px solid; CURSOR: pointer; BORDER-RIGHT: #c9c4ba 1px solid; TEXT-DECORATION: none; PADDING-TOP: 3px; -khtml-border-radius: 3px; -moz-border-radius: 3px; -opera-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px
+}
+.button-back:hover {
+	BORDER-BOTTOM-COLOR: #dfdcd6; BORDER-TOP-COLOR: #dfdcd6; COLOR: #b07; BORDER-RIGHT-COLOR: #dfdcd6; BORDER-LEFT-COLOR: #dfdcd6
+}
+.button-next:hover {
+	BORDER-BOTTOM-COLOR: #dfdcd6; BORDER-TOP-COLOR: #dfdcd6; COLOR: #b07; BORDER-RIGHT-COLOR: #dfdcd6; BORDER-LEFT-COLOR: #dfdcd6
+}
+.finish:hover {
+	BORDER-BOTTOM-COLOR: #dfdcd6; BORDER-TOP-COLOR: #dfdcd6; COLOR: #b07; BORDER-RIGHT-COLOR: #dfdcd6; BORDER-LEFT-COLOR: #dfdcd6
+}
+.step {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; WIDTH: 820px; FONT: 10px verdana; CLEAR: left; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid; -khtml-border-radius: 3px; -moz-border-radius: 3px; -opera-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px
+}
+.step LABEL {
+	MARGIN: 10px 0px 3px 7px; DISPLAY: block; FONT: bold 13px verdana; COLOR: #444
+}
+.step LEGEND {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT: bold 14px verdana; COLOR: #4080bf; PADDING-TOP: 0px
+}
+.step INPUT {
+	BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; FONT: 13px verdana; MARGIN-LEFT: 7px; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid
+}
+.step TEXTAREA {
+	BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; FONT: 13px verdana; MARGIN-LEFT: 7px; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid
+}
+.step SELECT {
+	BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; FONT: 13px verdana; MARGIN-LEFT: 7px; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid
+}
+.error-image {
+	BACKGROUND: url(../img/error.png) no-repeat right top
+}
+.stepy-titles {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+.stepy-titles LI {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT: bold 18px verdana; FLOAT: left; COLOR: #ddd; CURSOR: pointer; PADDING-TOP: 10px
+}
+.stepy-titles LI SPAN {
+	DISPLAY: block; FONT: 11px verdana
+}
+.stepy-titles .current-step {
+	COLOR: #369; CURSOR: auto
+}
+.error {
+	BACKGROUND-COLOR: #faf4f4
+}
+LABEL.error {
+	MARGIN: 3px 3px 0px 10px; PADDING-LEFT: 21px; DISPLAY: block; FONT: 10px verdana; BACKGROUND: url(../img/alert.png) no-repeat; FLOAT: left; HEIGHT: 13px; COLOR: #de5130; PADDING-TOP: 2px
+}

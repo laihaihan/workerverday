@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- 注：本配置文件自2011年08月31日起不再需要手工配置。 -->
+	
+		<!-- 表单预览调用的地址 -->
+		<formPreviewUrl>/sys/jsp/document.jsp?unid=&type={type}&formId={formId}</formPreviewUrl>
+		<!-- 只读表单预览调用的地址 -->
+		<readonlyFormPreviewUrl>/sys/jsp/document.jsp?unid=&isRead=0&type={type}&formId={formId}</readonlyFormPreviewUrl>
+		<!-- 获取表单相关信息的地址 -->
+		<formInfoWsdl>/services/FD_FormInfo.asmx?wsdl</formInfoWsdl>
+	
+	<!-- 注：本配置文件自2011年08月31日起不再需要手工配置。 -->
+</config>

@@ -1,0 +1,52 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+/***************** 全局样式 *****************/
+global
+{
+	fontSize:12;
+	fontFamily:宋体;
+	color: #323232;
+}
+/*工具栏按钮*/
+.toolBarButton {
+	
+	upSkin:Embed('../images/ButtonBarUp.png');
+	downSkin:Embed('../images/ButtonBarDown.png');
+	overSkin:Embed('../images/ButtonBarOver.png');	
+	
+}
+
+/*更多*/
+.more {
+	
+	upSkin:Embed('../images/MoreUp.png');
+	downSkin:Embed('../images/MoreOver.png');
+	overSkin:Embed('../images/MoreOver.png');	
+}
+
+
+.myButtonBar {
+	
+	upSkin:Embed('../images/ButtonBarUp.png');
+	downSkin:Embed('../images/ButtonBarDown.png');
+	overSkin:Embed('../images/ButtonBarOver.png');	
+	
+}
+
+.lastButtonBar {
+	
+	upSkin:Embed('../images/ButtonBarUp.png');
+	downSkin:Embed('../images/ButtonBarDown.png');
+	overSkin:Embed('../images/ButtonBarOver.png');	
+	
+}
+
+.firstButtonBar {
+	
+	upSkin:Embed('../images/ButtonBarUp.png');
+	downSkin:Embed('../images/ButtonBarDown.png');
+	overSkin:Embed('../images/ButtonBarOver.png');	
+	
+}

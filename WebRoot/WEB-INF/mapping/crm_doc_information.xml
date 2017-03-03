@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+ <ucap-mapping>
+  <class  name="com.linewell.crm.account.CrmDocInformation" table="crm_doc_information" title="文档记录信息">
+<id>
+<property column="doc_unid" name="unid" title="主键" type="String"/>
+</id>
+<property column="belong_to_doc" name="belongToDoc" title="所属文档" type="String"/>
+<property column="doc_unid" name="unid" title="主键" type="String"/>
+<property column="doc_creator_id" name="creatorId" title="创建人ID" type="String"/>
+<property column="doc_creator" name="creator" title="创建人" type="String"/>
+<property column="doc_create_time" name="createTime" title="创建时间" type="String"/>
+<property column="doc_modifier_id" name="modifierId" title="上次修改人ID" type="String"/>
+<property column="doc_modifier" name="modifier" title="上次修改人" type="String"/>
+<property column="doc_modify_time" name="modifyTime" title="上次修改时间" type="String"/>
+<property column="doc_is_archive" name="isArchive" title="是否归档" type="String"/>
+<property column="doc_is_delete" name="isDelete" title=" 是否删除" type="String"/>
+<property column="doc_read_time" name="readTime" title="上次浏览时间" type="String"/>
+<property column="doc_read_count" name="readCount" title="浏览次数" type="int"/>
+  </class>
+ </ucap-mapping>

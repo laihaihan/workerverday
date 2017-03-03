@@ -1,0 +1,233 @@
+﻿@import url("common.css");
+
+/******************** 分隔条 ********************/
+.separated{
+	height: 4px;
+	background:#1fa3d2;
+}
+
+/******************** 容器 ********************/
+
+/* 一级容器（灰底，用于最外层） */
+.box_a{
+	background:#f3f3f3;
+	border-left:1px #d4dadc solid;	
+	border-right:1px #d4dadc solid;	
+	border-bottom:1px #d4dadc solid;
+	padding:10px;	
+}
+
+/* 一级容器（白底，用于第二层） */
+.box_b{
+	background:#fff;
+	border:1px #d4dadc solid;	
+	padding:10px;
+	padding-top:15px;
+}
+
+/*  标题容器 */
+.box_title{
+	background:#f3f3f3;
+	height:30px;
+	line-height:30px;
+	padding-left:15px;
+	padding-right:15px;
+	font-weight:bold;
+}
+
+/* 按钮栏容器 */
+.box_buttonbar{
+	height:30px;
+	line-height:30px;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+/* 表单标题容器 */
+.box_form_title{
+	height:18px;
+	line-height:18px;
+	padding-left:30px;
+	margin-top:10px;
+	margin-left:8px;
+	margin-right:8px;
+	background:#1fa3d2 url('images/form_title_bg.gif') no-repeat;
+	color:#fff;
+	font-weight:bold;
+	cursor:pointer;
+
+}
+
+/* 表单标题容器 */
+.box_form_content{
+	margin-left:8px;
+	margin-right:8px;
+	background:#f5f5f4;
+}
+
+/* 表单按钮栏容器 */
+.box_form_buttonbar{
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+
+/******************** 按钮 ********************/
+.button{
+	padding-left:8px;
+	padding-right:8px;
+	height:24px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+/******************** 视图标题区域 ********************/
+.title{
+	font-weight:bold;
+	height:24px;
+	line-height:24px;
+	margin-bottom:10px;
+}
+
+.title input{
+	margin-left:10px;
+}
+
+.titlt_icon{
+	margin-bottom:-5px;
+	width:16px;
+	height:16px;	
+}
+
+/********************** 表单表格 **********************/
+.table_form{
+	width:100%;
+}
+
+/* 标题单元格 */
+.table_form th{
+	width:20%;
+	padding:5px;
+	text-align:right;
+	border-top:1px #fff solid;
+	border-left:1px #fff solid;
+	border-bottom:1px #dcdcdc solid;
+	border-right:1px #dcdcdc solid;
+}
+
+
+/* 单元格 */
+.table_form td{
+	padding:5px;
+	text-align:left;
+	border-top:1px #fff solid;
+	border-left:1px #fff solid;
+	border-bottom:1px #dcdcdc solid;
+	border-right:1px #dcdcdc solid;
+}
+
+
+
+/********************** 日程表格 **********************/
+/* 页眉 */
+.table_schedule{
+	width:100%;
+}
+
+/* 标题单元格 */
+.table_schedule th{
+	padding:5px;
+	text-align:left;
+	border-bottom:1px #c7d0d3 solid;
+}
+
+
+/* 单元格 */
+.table_schedule td{
+	width:50px;
+	padding:5px;
+	text-align:center;
+	font-weight:bold;
+	border-bottom:1px #c7d0d3 solid;
+}
+
+
+/********************** 视图 **********************/
+/* 视图表 */
+.info_view_table{
+	width:100%;
+	background:#e1e1e1;
+}
+
+/* 视图表单元格 */
+.info_view_table td{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+/* 视图表单元格中的输入框 */
+.info_view_table td input{
+	width:100%;
+}
+
+/* 视图表行 */
+.info_view_table_tr{	
+	height:24px;
+	line-height:24px;
+	background:#ffffff;
+}
+
+/* 视图表标题行 */
+.info_view_table_tr.title{
+	background:url('images/table_title.gif') repeat-x;
+	font-weight:bold;
+	color:#1e5288;
+}
+
+/* 视图表双数行 */
+.info_view_table_tr.double{
+	background:#fafafa;
+}
+
+
+/******************** 其它样式 ********************/
+
+/* 默认排列 */
+.tonone{
+	float:none;
+}
+
+
+/* 置右 */
+.toright{
+	float: right;
+}
+
+/* 置左 */
+.toleft{
+	float:left;
+}
+
+/* 白色 */
+.white{
+	color:white;
+}
+
+/* 红色 */
+.red{
+	color:red;
+}
+
+/* 加间隔 */
+.gap{
+	margin-left:5px;
+	margin-right:5px;
+}
+/* 加粗 */
+.bold{
+	font-weight:bold;
+}
+
+
+
+

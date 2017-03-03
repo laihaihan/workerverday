@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+/*author:crazyJonny*/
+*,h1,h2,h3,h4,h5,h6,ul,li,a,input,form,a,p{margin:0px;padding:0px;}
+h2{font-size:14px;font-weight:bold;}
+body{font:12px/1.5 Arial,Verdana,Helvetica,sans-serif; color:#666666;}
+img{border:0px;}
+ul,li{list-style:none;}
+em{font-style:normal;}
+#second_panel a:link,#second_panel a:visited{text-decoration:none;color:#666666;}
+a:hover{color:#0a60ab;}
+/*menu*/
+#menu{height:40px;float:left;width:100%;background:#028ae7;}
+#start_menu{display:block; width:97px;height:40px;float:left;}
+#start_menu{background:url("../images/start_menu.png") center 0px no-repeat;}
+#start_menu .active{background:url("../images/start_menu.png") center -40px no-repeat;}
+
+/*elert content Start*/
+#start_menu_panel{width:404px;position:absolute;left:3px;bottom:42px;display:block;z-index:99999;background:#189cdd;border:1px #70beef solid;}
+/* ueser Login Area Start */
+#start_menu_panel .panel-user{ padding-left:22px;padding-right:22px; height:52px;}
+#start_menu_panel .panel-user .avatar{float:left; padding-top:4px;padding-left:4px;width:42px !important;height:42px !important; width:46px; height:46px;background:url('../images/avatar_bg.jpg') center center no-repeat; cursor:pointer;}
+#start_menu_panel .panel-user .avatar img{width:38px;height:38px;}
+#start_menu_panel .panel-user .avatar div.status_icon{width:16px;height:16px;position:absolute; top:45px; left:55px;overflow:hidden;}
+
+#start_menu_panel .panel-user .avatar div.status_icon_1{background:url('../images/online_status.png') 0px -7px no-repeat;}
+#start_menu_panel .panel-user .avatar div.status_icon_2{ background:url('../images/online_status.png') 0px -37px no-repeat;}
+#start_menu_panel .panel-user .avatar div.status_icon_3{background:url('../images/online_status.png') 0px -97px no-repeat;}
+#start_menu_panel .panel-user .avatar div.status_icon_4{ background:url('../images/online_status.png') 0px -67px no-repeat;}
+#start_menu_panel .panel-user .avatar #on_status{width:100px;display:none;border:1px #b3b3b3 solid;background:#fff url('../images/on_status_bg.png') left top repeat-y; position:absolute;  top:60px;left:25px; z-index:94000;}
+#start_menu_panel .panel-user .avatar #on_status a{display:block;color:#393939;background:url('../images/online_status.png') left top no-repeat; height:30px; line-height:30px; padding-left:25px; text-decoration:none;}
+#start_menu_panel .panel-user .avatar #on_status a:hover{ background-color:#e6ebf1;}
+#start_menu_panel .panel-user .avatar #on_status a.on_status_1{ background-position:4px 0px;}
+#start_menu_panel .panel-user .avatar #on_status a.on_status_2{ background-position:4px -30px;}
+#start_menu_panel .panel-user .avatar #on_status a.on_status_3{background-position:4px -90px;}
+#start_menu_panel .panel-user .avatar #on_status a.on_status_4{background-position:4px -60px;}
+#start_menu_panel .panel-user .name{float:left;padding-top:24px;padding-left:10px; color:#fff; font-size:14px; font-weight:bold;}
+#start_menu_panel .panel-user .tools{float:right;margin-top:20px;}
+#start_menu_panel .panel-user .tools .logout{display:inline-block; margin-right:14px; width:58px;  height:24px;  background:url('../images/logout.jpg') 0px 0px no-repeat; overflow:hidden;}
+#start_menu_panel .panel-user .tools .logout:hover{background-position:0px -24px;}
+#start_menu_panel .panel-user .tools .exit{  display:inline-block;width:55px;height:24px; background:url('../images/logout.jpg') -62px 0px no-repeat; overflow:hidden;}
+#start_menu_panel .panel-user .tools .exit:hover{ background-position:-62px -24px;}
+
+/*e-cat-depth-1*/
+.panel-menu{width:100%;height:auto;min-height:360px;_height:360px;padding-top:20px;}
+#first_panel{width:200px;float:left;}
+#first_panel ul li{width:100%;height:30px;display:block;}
+#first_panel ul li a{ padding-left:10px;padding-top:5px !important;height:25px !important; padding-top:5px; height:30px; line-height:20px; display:block; overflow:hidden; text-decoration:none;font-size:12px; color:#fff;}
+#first_panel ul li a:link,#first_panel ul li a:visited,#first_panel ul li a.active:link,#first_panel ul li a.active:visited{background:url('../images/menu_bg.png') right top no-repeat;}
+#first_panel ul li a:hover,#first_panel ul li a.active:link,#first_panel ul li a.active:visited{background-position:right -30px;color:#383838;}
+
+/*e-cat-depth-2*/
+#second_panel{width:175px; height:370px;float:left;padding-left:10px;overflow-y:auto;overflow-x:hidden;}
+.second-panel-menu{width:100%;background:#fff;height:auto;min-height:370px;_height:370px;}
+.jscroll-c{height:auto;min-height:370px;_height:370px;}
+.jscroll-c ul li a{height:30px;width:100%;display:block;line-height:30px;}
+a.smexpand,.jscroll-c ul li  ul li a{margin-right:0px; background:url('../images/menu_bg.png') right -60px no-repeat;}
+a.active,a.smexpand:hover{color:#fff; background-position:right -90px;}
+a.smexpand span,.jscroll-c ul li  ul li a span{ padding-left:20px;height:30px;line-height:30px;display:block; overflow:hidden;cursor:pointer;background:url('../images/menu_span_bg.png') 0px -30px no-repeat;}
+.jscroll-c ul li  ul li a{padding-left:30px;width:145px;}
+.jscroll-c ul li  ul li a:hover span{background:url('../images/sunmenu_bg.png') 0px -30px no-repeat;}
+
+
+
+
+

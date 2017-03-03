@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">   
+<html xmlns="http://www.w3.org/1999/xhtml">   
+<head>   
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+<title>HTML静态表格分页（通过JS实现）</title>   
+</head>   
+  <SCRIPT LANGUAGE="JavaScript">
+
+ 
+<!-- 
+function createPageHTML(_nPageCount, _nCurrIndex, _sPageName, _sPageExt){ 
+//tita 翻页函数
+
+if(_nPageCount == null || _nPageCount<=1){
+return; 
+} 
+
+//tita
+document.write("　　");
+
+if(_nPageCount==1)
+document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"."+_sPageExt+"\">下一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"."+_sPageExt+"\">尾页</a>")
+else {
+
+ if(_nPageCount==2) {
+    if (_nCurrIndex==0)
+  document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nCurrIndex+1) + "."+_sPageExt+"\">下一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nPageCount-1) + "."+_sPageExt+"\">尾页</a>")
+  else {
+    if (_nCurrIndex==1)
+    document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + _nCurrIndex + "."+_sPageExt+"\">下一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nPageCount-1) + "."+_sPageExt+"\">尾页</a>")
+	}
+   }
+   	
+ else {
+  if (_nCurrIndex==0)
+  document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nCurrIndex+1) + "."+_sPageExt+"\">下一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nPageCount-1) + "."+_sPageExt+"\">尾页</a>")
+  else {
+    if (_nCurrIndex==1)
+    document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nCurrIndex+1) + "."+_sPageExt+"\">下一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nPageCount-1) + "."+_sPageExt+"\">尾页</a>")
+	else {
+      if (_nCurrIndex<_nPageCount-1)
+      document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nCurrIndex-1) + "."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nCurrIndex+1) + "."+_sPageExt+"\">下一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nPageCount-1) + "."+_sPageExt+"\">尾页</a>")
+	  else {
+        if (_nCurrIndex==_nPageCount-1)
+        document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nCurrIndex-1) + "."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + _nCurrIndex + "."+_sPageExt+"\">下一页</a>&nbsp;&nbsp;<a href=\""+_sPageName+"_" + (_nPageCount-1) + "."+_sPageExt+"\">尾页</a>")
+        }
+      }
+    }
+  }
+}
+document.write("　　共" + _nPageCount + "页　　");
+document.write("当前第" + (_nCurrIndex+1) + "页　　");
+document.write("　　转到第<INPUT id='CP' src='' size='3' value='1' name='CP'/>页<input name='image' type='image' onClick='goto()' src='../../images/go.gif' border='0'/>") 
+//tita 
+} //WCM置标
+
+//tita
+function goto(){
+ toPage(CP.value);
+}
+
+function toPage(_pageNo){
+  if(!(IsAllNumeric(_pageNo))){
+			alert("请填写数字。");
+			return(false);
+  } 
+  else{
+    if(_pageNo>100||_pageNo==0){
+            alert("请填写在总页数范围内的数字。");
+			return(false);
+	}		
+	else{
+	       if (_pageNo==1){
+		   window.location="index.htm";
+		   }
+		   else{
+		   window.location="index_" + (_pageNo-1) + ".htm";
+		   }
+	}
+  }  
+}
+
+function IsAllNumeric(str) {
+  var l=str.length;
+  var i,s;
+  for(i=0;i<l;i++)
+  { s=str.charAt(i);
+    if(!(s>='0'&&s<='9')) return(false);
+  }
+  return(true);
+}
+//tita 
+//--> 
+</SCRIPT>
+ 
+<body>     
+<table width="500" border="0" cellpadding="5" cellspacing="1" bgcolor="#999999">   
+<tr>   
+    <th colspan="5">lishewen</th>   
+</tr>   
+<tbody id="tablelsw">  
+ #set($count=0)
+ #foreach($article in $pageMsg.list) 
+ #set($count=$count+1)
+ <tr>   
+    <td bgcolor="#FFFFFF">$!{count}</td>   
+    <td bgcolor="#FFFFFF">$!{article.title}</td>   
+    <td bgcolor="#FFFFFF">&nbsp;</td>   
+    <td bgcolor="#FFFFFF">&nbsp;</td>   
+    <td bgcolor="#FFFFFF">&nbsp;</td>   
+  </tr>   
+ #end
+  </tbody>   
+</table>   
+ <table width="100%" border="0" cellSpacing="0" cellPadding="0">
+ <TBODY>
+<TR>
+<TD class=fjyw_weibu align=middle>
+#set( $page=$pageMsg.totalpage-1)
+<SCRIPT>createPageHTML(${pageMsg.pagenum}, ${page}, "index", "html");</SCRIPT>
+　　<A href="${pageMsg.first}">首页</A>&nbsp;&nbsp;
+	<A href="${pageMsg.pre}">上一页</A>&nbsp;&nbsp;
+	<A href="${pageMsg.next}">下一页</A>&nbsp;&nbsp;
+	<A href="${pageMsg.last}">尾页</A>　　
+	共${pageMsg.pagenum}页　　
+	当前第${pageMsg.totalpage}页　　　　
+	转到第<INPUT id=CP value=1 src="" size=3 name=CP>页<INPUT onclick=goto() border=0 src="../../images/go.gif" type=image name=image>
+	</TD>
+	</TR>
+	</TBODY>
+</table>   
+</body>   
+</html> 

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  
+  <body>
+    	<table  width=100% border="1" bordercolor="#cccccc" cellspacing="0" cellpadding="0"  class="formtable">
+    		<tr>
+    			<th align="right" style="width:30%;">资源类型：</th>
+    			<td><input type=text name="type" style="width:90%" message="资源类型不能为空" id="type"/></td>
+    			
+    		</tr>
+    		<tr>
+    			<th align="right" >资源描述：</th>
+    			<td><input type=text name="caption" style="width:90%" message="资源描述不能为空"  id="caption"/></td>
+    		</tr>
+	    	 <tr>
+    			<th align="right" >缓存中的主表：</th>
+    			<td><input type=text name="mainTable" style="width:90%" message="缓存中的主表不能为空" id="mainTable"/></td>    			
+    		</tr>
+    		<tr>
+    			<th align="right" >相关的表名称：</th>
+    			<td><input type=text name="tables" style="width:90%" id="tables"/></td>
+    		</tr>
+	    	<tr>
+	   			<th align="right" >资源bean对象：</th>
+	   			<td><input type=text name="bean" style="width:90%" id="bean"/></td>
+	   			
+	   		</tr>
+	   		<tr>
+	   			<th align="right" >资源返回对象：</th>
+	   			<td><input type=text name="manager" style="width:90%" id="manager"/></td>
+	   		</tr>
+	   		<tr>
+	   			<th align="right" >是否为单资源：</th>
+	   			<td>
+	   				<input type="radio" name="single" id="single" value="true" />是
+	   				<input type="radio" name="single" id="single" value="false" />否
+				</td>
+	   			
+	   		</tr>
+	   		<tr>
+	   			<th align="right" >是否缓存：</th>
+	   			<td>
+	   			<input type="radio" name="memoryCache" id="memoryCache" value="true"/>是
+	   			<input type="radio" name="memoryCache" id="memoryCache" value="false"/>否
+	   			</td>
+	   		</tr>
+	   		<tr>
+	   			<th align="right" >资源管理接口类：</th>
+	   			<td>
+	   				<select id="iManagerType" style="width:90%">
+	   					<option value="0">IResourceManager</option>
+	   					<option value="1">IAuthorizedManager</option>
+	   				</select>
+	   			</td>
+	   		</tr>
+	   		
+    	</table>
+  </body>
+</html>

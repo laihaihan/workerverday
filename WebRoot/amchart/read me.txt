@@ -1,0 +1,15 @@
+settingsXml 文件夹内容为amchart配置文件夹（勿删）
+dataXml  文件夹为amchart实际数据，由后台类生成。
+
+命名规范：
+1、 column 类型的图标实际xml 命名规范为
+配置文件： zxjy_columnsettings.xml
+数据文件： zxjy_columndata.xml
+
+2、 line 类型的图标实际xml 命名规范为
+配置文件： zxjy_linesettings.xml
+数据文件： zxjy_linedata.xml
+
+3、 pie 类型的图标实际xml 命名规范为
+配置文件： zxjy_piesettings.xml
+数据文件： zxjy_piedata.xml

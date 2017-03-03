@@ -1,0 +1,1284 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+#parse("www.fjfa.gov.cn/vmlib/index.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>$pagetitle</title>
+<link href="css/new.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function getCount(unid,type){
+try{
+var url="${tomcatroot}/${cmsWebapp}/views/views.jsp?type="+type+"&unid="+unid;
+var xmlhttp;
+if(window.ActiveXObject)
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if(window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+		   xmlhttp.Open("get", url, false);
+    	   xmlhttp.Send(null); 
+		   var resultvalue=xmlhttp.responseText;
+		   //ret=resultvalue; 
+         document.all.browse.innerHTML=resultvalue;
+}catch(e){
+}
+} 
+function tabFun(tabName,own,avCss,unCss){
+	for(var i=1;i<20;i++){
+		if(document.getElementById(tabName+"_"+i)){
+		document.getElementById(tabName+"_"+i).className=unCss;	
+		var con=document.getElementById(tabName+"_"+i+"_c");
+		if(con)con.style.display="none";
+		}else break;
+	}
+	own.className=avCss;
+	var con=document.getElementById(own.id+"_c");
+	if(con)con.style.display="block";
+}
+</script>
+</head>
+<body onload="getCount('${siteunid}','site')">
+<!-- [广告管理] 开始 -->
+#*取得[广告管理]对象列表*#
+#set( $adList_fudong  = $list.getAdListByTimeLimit(${siteunid}, "0", "0") ) #*[浮动广告]列表*#
+#set( $adList_hengfu  = $list.getAdListByTimeLimit(${siteunid}, "1", "0") ) #*[横幅广告]列表*#
+#set( $adList_duilian = $list.getAdListByTimeLimit(${siteunid}, "2", "2") ) #*[对联广告]列表*#
+<!-- [广告管理] 结束 -->
+
+<!-- [浮动广告] 开始 -->
+#if(! $null.isNull($adList_fudong) && $adList_fudong.size()>0 )
+	#set( $count_fudong = 0 )
+	
+	#foreach( $info in $adList_fudong )
+		#set( $count_fudong = $count_fudong + 1 )
+		#set( $div_id = "div_1_${count_fudong}" )
+		#set( $count_delay = $count_fudong * 30 )
+		
+		#set( $filePrefix = $list.queryFilePrefix($info.image) )
+		
+		#set( $url = "${info.url}" )
+		#if( ($url) && ($!{url} != "") && ($!{url} != "null") )
+			#if( ($!{url.toLowerCase().indexOf("http://")} > -1) )
+			#else
+				#set( $url = "#" )
+			#end
+		#else
+			#set( $url = "#" )
+		#end
+
+<div id="$!{div_id}" style="position:absolute;left:$!{count_fudong}27px;top:$!{count_fudong}10px;z-index:$!{count_fudong}00;">
+#if( $!{filePrefix} == "swf" )
+<embed id="ad_flash" src="$!{siteDomain}$!{info.image}" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="120px" height="120px"></embed>
+#else
+<a href="$!{url}" target=_blank><img src="$!{siteDomain}$!{info.image}" align="absmiddle" border="0" /></a>
+#end
+</div>
+
+<script language="JavaScript"> 
+  var $!{div_id}xPos =20; 
+  var $!{div_id}yPos = document.body.clientHeight; 
+  var $!{div_id}step = 1; 
+  var $!{div_id}delay = $!{count_delay}; 
+  var $!{div_id}height = 0 ; 
+  var $!{div_id}Hoffset = 0; 
+  var $!{div_id}Woffset = 0; 
+  var $!{div_id}yon = 0; 
+  var $!{div_id}xon = 0; 
+  var $!{div_id}pause = true; 
+  var $!{div_id}interval; 
+  $!{div_id}.style.top = $!{div_id}yPos; 
+function $!{div_id}changePos(){ 
+	$!{div_id}width = document.body.clientWidth; 
+	$!{div_id}height = document.body.clientHeight; 
+	$!{div_id}Hoffset = $!{div_id}.offsetHeight; 
+	$!{div_id}Woffset = $!{div_id}.offsetWidth; 
+	$!{div_id}.style.left =$!{div_id}xPos + document.body.scrollLeft; 
+	$!{div_id}.style.top = $!{div_id}yPos + document.body.scrollTop; 
+	if ($!{div_id}yon) { 
+		$!{div_id}yPos = $!{div_id}yPos + $!{div_id}step; 
+	}else{ 
+		$!{div_id}yPos = $!{div_id}yPos - $!{div_id}step; 
+	}
+	if ($!{div_id}yPos < 0) { 
+		$!{div_id}yon = 1; 
+		$!{div_id}yPos = 0; 
+	}
+	if ($!{div_id}yPos >= ($!{div_id}height - $!{div_id}Hoffset)) { 
+		$!{div_id}yon = 0; 
+		$!{div_id}yPos = ($!{div_id}height - $!{div_id}Hoffset); 
+	}
+	if ($!{div_id}xon) { 
+		$!{div_id}xPos = $!{div_id}xPos + $!{div_id}step; 
+	}else{ 
+		$!{div_id}xPos = $!{div_id}xPos - $!{div_id}step; 
+	} 
+	if ($!{div_id}xPos < 0) { 
+		$!{div_id}xon = 1; 
+		$!{div_id}xPos = 0; 
+	} 
+	if ($!{div_id}xPos >= ($!{div_id}width - $!{div_id}Woffset)) { 
+		$!{div_id}xon = 0; 
+		$!{div_id}xPos = ($!{div_id}width - $!{div_id}Woffset); 
+	} 
+} 
+function $!{div_id}start() { 
+	$!{div_id}.visibility = "visible"; 
+	$!{div_id}interval = setInterval('$!{div_id}changePos()', $!{div_id}delay); 
+} 
+$!{div_id}start(); 
+</script>
+	#end
+#end
+<!-- [浮动广告] 结束 -->
+
+<!-- [对联广告] 开始 -->
+<SCRIPT language="JavaScript">
+// 符合web标准且可关闭的多幅对联广告
+<!--
+lastScrollY = 0;
+function heartBeat(){
+var diffY;
+if (document.documentElement && document.documentElement.scrollTop)
+diffY = document.documentElement.scrollTop;
+else if (document.body)
+diffY = document.body.scrollTop
+else {/*Netscape stuff*/}
+
+percent=.1*(diffY-lastScrollY);
+
+	if ( percent >0) {
+		percent = Math.ceil(percent);
+	} else {
+		percent = Math.floor(percent);
+	}
+
+#if(! $null.isNull($adList_duilian) && $adList_duilian.size()>0 )
+	#set( $count_duilian = 0 )
+	
+	#foreach( $info in $adList_duilian )
+		#set( $count_duilian = $count_duilian + 1 )
+
+		#if( $count_duilian == 1 )
+document.getElementById("leftDiv").style.top = parseInt(document.getElementById("leftDiv").style.top)+percent+"px";
+		#end
+		#if( $count_duilian == 2 )
+document.getElementById("rightDiv").style.top = parseInt(document.getElementById("rightDiv").style.top)+percent+"px";
+		#end
+		
+	#end
+#end
+
+lastScrollY = lastScrollY + percent;
+}
+// 下面这段删除后，对联将不跟随屏幕而移动。
+window.setInterval("heartBeat()", 1);
+//-->
+//关闭按钮
+function close_duilian1(){
+    duilian1.style.visibility='hidden';
+    leftDiv.style.visibility='hidden';
+}
+function close_duilian2(){
+    duilian2.style.visibility='hidden';
+}
+function close_duilian3(){
+    duilian3.style.visibility='hidden';
+	rightDiv.style.visibility='hidden';
+}
+function close_duilian4(){
+    duilian4.style.visibility='hidden';
+}
+//显示样式
+document.writeln("<style type=\"text\/css\">");
+document.writeln("#leftDiv,#rightDiv{width:100px;height:80px;background-color:#fff;position:absolute;}");
+document.writeln(".itemFloat{width:100px;height:auto;line-height:5px}");
+document.writeln("<\/style>");
+//以下为主要内容
+#if(! $null.isNull($adList_duilian) && $adList_duilian.size()>0 )
+	#set( $count_duilian = 0 )
+	
+	#foreach( $info in $adList_duilian )
+		#set( $count_duilian = $count_duilian + 1 )
+		#set( $filePrefix = $list.queryFilePrefix($info.image) )
+
+		#set( $url = "${info.url}" )
+		#if( ($url) && ($!{url} != "") && ($!{url} != "null") )
+			#if( ($!{url.toLowerCase().indexOf("http://")} > -1) )
+			#else
+				#set( $url = "#" )
+			#end
+		#else
+			#set( $url = "#" )
+		#end
+		
+		#if( $count_duilian == 1 )
+document.writeln("<div id=\"leftDiv\" style=\"top:40px;left:5px\">");
+//------左侧各块开始
+//---L1
+document.writeln("<div id=\"duilian1\" class=\"itemFloat\">");
+document.writeln("<a href=\"javascript:close_duilian1();\" title=\"关闭上面的广告\"><img src='images/ad_close.gif' align='absmiddle' border='0' /><\/a><br>");
+			#if( $!{filePrefix} == "swf" )
+document.writeln("<embed src='$!{tomcatroot}$!{info.image}' width=100></embed>");
+			#else
+document.writeln("<a href='$!{url}' target='_blank'><img src='$!{tomcatroot}$!{info.image}' width=100 align='absmiddle' border='0' /></a>");
+			#end
+document.writeln("<\/div>");
+//---L2
+//document.writeln("<div id=\"duilian2\" class=\"itemFloat\">");
+//document.writeln("<a href=\"javascript:close_duilian2();\" title=\"关闭上面的广告\"><img src='images/ad_close.gif' align='absmiddle' border='0' /><\/a><br>");
+//document.writeln("<a target=_blank href='http://www.fjqz.gov.cn'><img border=0 src='125gh.jpg' width=100 /></a>");
+//document.writeln("<\/div>");
+//------左侧各块结束
+document.writeln("<\/div>");
+		#end
+		#if( $count_duilian == 2 )
+document.writeln("<div id=\"rightDiv\" style=\"top:40px;right:5px\">");
+//------右侧各块结束
+//---R1
+document.writeln("<div id=\"duilian3\" class=\"itemFloat\">");
+document.writeln("<a href=\"javascript:close_duilian3();\" title=\"关闭上面的广告\"><img src='images/ad_close.gif' align='absmiddle' border='0' /><\/a><br>");
+			#if( $!{filePrefix} == "swf" )
+document.writeln("<embed src='$!{tomcatroot}$!{info.image}' width=100></embed>");
+			#else
+document.writeln("<a href='$!{url}' target='_blank'><img src='$!{tomcatroot}$!{info.image}' width=100 align='absmiddle' border='0' /></a>");
+			#end
+document.writeln("<\/div>");
+//---R2
+//document.writeln("<div id=\"duilian4\" class=\"itemFloat\">");
+//document.writeln("<a href=\"javascript:close_duilian4();\" title=\"关闭上面的广告\"><img src='images/ad_close.gif' align='absmiddle' border='0' /><\/a><br>");
+//document.writeln("<a target=_blank href=http://www.jscode.cn><img border=0 src='txz.jpg' width=100 /></a>");
+//document.writeln("<\/div>");
+//------右侧各块结束
+document.writeln("<\/div>");
+		#end
+		
+	#end
+#end
+</SCRIPT>
+<!-- [对联广告] 结束 -->
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+<!--DWLayoutTable-->
+	 #parse("www.fjfa.gov.cn/topAndButton/top.html")
+  <tr><td>
+  <table width="1000" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+  <td height="438" colspan="2">
+	<table width="1000" height="438" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+	<td width="204" height="438" valign="top" >
+	<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr ><td style="background:url(images/ind_13.jpg) no-repeat;" width="204" height="187">
+	<!-- 政府信息公开 -->
+	<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr><td height="44"></td></tr>
+	<tr><td class="td_xxgk"><a href="${tomcatroot}/${cmsWebapp}/govinfosend/list.jsp?siteunid=${siteunid}&id=${zfxxgkzn}">政府信息公开指南</a></td></tr>
+	<tr><td class="td_xxgk"><a href="${tomcatroot}/${cmsWebapp}/govinfosend/index_govinfo.jsp?siteunid=${siteunid}">政府信息公开目录</a></td></tr>
+	<tr><td class="td_xxgk"><a href="${tomcatroot}/${cmsWebapp}/govinfosend/list.jsp?siteunid=${siteunid}&id=${zfxxgkgd}">政府信息公开规定</a></td></tr>
+	<tr><td class="td_xxgk"><a href="${tomcatroot}/${cmsWebapp}/govinfosend/index_applyforpublic.jsp?siteunid=${siteunid}">政府依申请公开</a></td></tr>
+	<tr><td class="td_xxgk"><a href="${tomcatroot}/${cmsWebapp}/govinfosend/index_publicMail.jsp?siteunid=${siteunid}">政府信息公开意见箱</a></td></tr>	
+	<tr><td height="5"></td></tr>
+	</table>
+	</td></tr>
+	<tr><td height="3"></td></tr>
+	<tr><td><a href="${tomcatroot}/${cmsWebapp}/govinfosend/index.jsp?siteunid=${siteunid}"><img src="images/ind_24.jpg" /></a></td></tr>
+	<tr><td height="5"></td></tr>
+	<tr><td  style="background:url(images/ind_32.jpg) no-repeat;" width="204" height="190">
+	<!-- 专题专栏 -->
+	<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr><td height="36" align="right"><a href="${secondPageUrl}${ztzlunid}">更多</a>&nbsp;&nbsp;</td></tr>
+	#foreach($article in $articlelist_ztzl)
+	<tr valign="top"><td class="td_ztzl"><a href="${article.path}" title="${article.fullTitle}"  target="_blank">[专题]．${article.title}</a></td></tr>
+	#end
+	<tr><td height="5"></td></tr>
+	</table>
+	</td></tr>
+	</table>
+	</td>
+	<td width="8"></td>
+	<td width="584"  valign="top">
+	<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td height="260" >
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="210">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td height="194" valign="top" align="left" >
+<div>
+<script type="text/javascript" language="javascript">
+					  var slideimages = new Array();
+					  var slidelinks  = new Array();
+					  var slidetexts  = new Array();
+					  #set( $count = 0 )
+					  #foreach( $pnew in $articlelist_tpxm)
+					      slideimages[$count] = '${tomcatroot}/${pnew.photo}'
+						  slidelinks[$count]  = '${pnew.path}'
+						  slidetexts[$count]  = '${pnew.title}'
+					      #set( $count = $count + 1 )
+					  #end
+					  </script>
+					  
+					  <script type="text/javascript" language="javascript">
+					  var focus_width=210;
+					  var focus_height=174;
+					  var text_height=20;
+					  var swf_height = focus_height+text_height;
+					  
+					  var pics="";
+					  var links="";
+					  var texts="";
+					  
+					  for( var sl=0; sl<slideimages.length; sl++ ) {
+					     pics  = pics + slideimages[sl];
+					     links = links + slidelinks[sl];
+					     texts = texts + slidetexts[sl];
+					  
+					     if (sl +1 < slideimages.length) {
+					          pics  = pics + "|";
+					          links = links + "|";
+					          texts = texts + "|";
+					      }
+					  }
+					  document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+					  document.write('<param name="allowScriptAccess" value="sameDomain"> ')
+					  document.write('<param name="movie" value="images/newShow.swf">')
+					  document.write('<param name="quality" value="high">')
+					  document.write('<param name="bgcolor" value="#F6F6F6">');
+					  document.write('<param name="menu" value="false">')
+					  document.write('<param name=wmode value="opaque">');
+					  document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+					  document.write('<embed ID="focus_flash" src="images/newShow.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+					  document.write('</object>');
+					  </script>
+            </div>
+
+</td></tr>
+<tr><td height="66" class="background_1">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="10"></td>
+<td><img src="images/sc1007071_10.png" /></td>
+<td><a href="pic.html" class="font_14px">图片新闻</a></td>
+<td><img src="images/sc1007191_12.png" /></td>
+<td><a href="video.html"  class="font_14px">视频点播</a></td>
+</tr>
+</table>
+</td></tr>
+</table></td>
+<td width="8"></td>
+<!-- 福安要闻 -->
+<td width="362" valign="top">
+<table  width="362" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td height="24" class="top_fayw">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+<tr>
+<td width="20" height="24"></td>
+<td width="80" id="tab_33_1" onmouseover="tabFun('tab_33',this);return false;"><a href="${secondPageUrl}${faywunid}" class="font_14px color_white fayw_font">南安要闻</a></td>
+<td width="11">&nbsp;</td>
+<td width="62" align="center" id="tab_33_2" onmouseover="tabFun('tab_33',this);return false;" ><a href="${secondPageUrl}${bmdtunid}" class="color_red">部门动态</a></td>
+<td width="97" align="center" id="tab_33_3" onmouseover="tabFun('tab_33',this);return false;">&nbsp;<a href="${secondPageUrl}${xsqdtunid}">县市区动态</a></td>
+<td width="20">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr><td height="236" class="cont_fayw" id="tab_33_1_c">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+<tr><td width="10"  height="53"></td>
+  <td colspan="3" align="center"><img src="images/dg150_20100824_2.jpg" height="43"/></td>
+</tr>
+#foreach($article in $articlelist_fayw)
+<tr><td width="10" height="18"></td><td><img src="images/pic_ico001.gif" />&nbsp; </td><td> <a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td><td>${article.publishdate}</td></tr>
+#end
+
+<tr><td  height="8"></td>
+  </tr>
+</table>
+</td>
+<td height="236" class="cont_fayw" id="tab_33_2_c" style="display:none">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+<tr><td width="10"  height="53"></td>
+  <td colspan="3" align="center"><img src="images/dg150_20100824_2.jpg" height="43"/></td>
+</tr>
+#foreach($article in $articlelist_bmdt)
+<tr><td width="10" height="18"></td><td><img src="images/pic_ico001.gif" />&nbsp; </td><td> <a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td><td>${article.publishdate}</td></tr>
+#end
+<tr><td  height="8"></td>
+  </tr>
+</table>
+</td>
+<td height="236" class="cont_fayw" id="tab_33_3_c" style="display:none">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+<tr><td width="10"  height="53"></td>
+  <td colspan="3" align="center"><img src="images/dg150_20100824_2.jpg" height="43"/></td>
+</tr>
+#foreach($article in $articlelist_xsqdt)
+<tr><td width="10" height="18"></td><td><img src="images/pic_ico001.gif" />&nbsp; </td><td> <a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td><td>${article.publishdate}</td></tr>
+#end
+<tr><td  height="8"></td>
+  </tr>
+</table>
+</td>
+
+
+</tr>
+</table></td>
+</tr>
+</table>
+</td></tr>
+<tr><td height="3"></td></tr>
+<tr><td height="170" >
+<!-- 第一个TAB -->
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="27" class="title_tab1" valign="bottom">
+<table  width="100%" height="26" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td id="tab_l_1_1" width="78" height="26" class="focus_tab1" valign="bottom" onmouseover="tabFun('tab_l_1',this,'focus_tab1','blur_tab1');return false;">&nbsp;工作报告</td>
+<td width="3"></td>
+<td id="tab_l_1_2" width="78" height="26" class="blur_tab1" onmouseover="tabFun('tab_l_1',this,'focus_tab1','blur_tab1');return false;">&nbsp;人事任免</td>
+<td width="3"></td>
+<td id="tab_l_1_3" width="78" height="26" class="blur_tab1" onmouseover="tabFun('tab_l_1',this,'focus_tab1','blur_tab1');return false;">&nbsp;应急管理</td>
+<td width="3"></td>
+<td id="tab_l_1_4" width="78" height="26" class="blur_tab1" onmouseover="tabFun('tab_l_1',this,'focus_tab1','blur_tab1');return false;">&nbsp;最新文件</td>
+<td width="3"></td>
+<td id="tab_l_1_5" width="78" height="26" class="blur_tab1" onmouseover="tabFun('tab_l_1',this,'focus_tab1','blur_tab1');return false;">&nbsp;统计信息</td>
+<td align="right">&nbsp;
+</td>
+<td width="10"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td height="144">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="cont_tab1" id="tab_l_1_1_c">
+<tr><td  height="5"></td></tr>
+#foreach($article in $articlelist_zfgzbg)
+
+
+<tr><td width="10" height="18"></td><td>．<a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td><td width="100">${article.publishdate}</td></tr>
+#end
+<tr><td colspan="3" align="right" height="18"><a href="${secondPageUrl}${zfgzbgunid}">更多</a>&nbsp;&nbsp;</td></tr>
+<tr><td  height="2"></td></tr>
+</table>
+
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="cont_tab1" id="tab_l_1_2_c" style="display:none">
+<tr><td  height="5"></td></tr>
+#foreach($article in $articlelist_rsrm)
+<tr><td width="10" height="18"></td><td>．<a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td><td width="100">${article.publishdate}</td></tr>#end
+<tr><td colspan="3" align="right" height="18"> <a href="${secondPageUrl}${rsrmunid}">更多</a>&nbsp;&nbsp;</td></tr>
+<tr><td  height="2"></td></tr>
+</table>
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="cont_tab1" id="tab_l_1_3_c" style="display:none">
+<tr><td  height="5"></td></tr>
+#foreach($article in $articlelist_ztyjya)
+<tr><td width="10" height="18"></td><td>．<a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td><td width="100">${article.publishdate}</td></tr>#end
+<tr><td colspan="3" align="right" height="18"> <a href="${secondPageUrl}${rsrmunid}">更多</a>&nbsp;&nbsp;</td></tr>
+<tr><td  height="2"></td></tr>
+</table>
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="cont_tab1" id="tab_l_1_4_c" style="display:none">
+<tr><td  height="5"></td></tr>
+#foreach($article in $articlelist_zfwj)
+<tr><td width="10" height="18"></td><td>．<a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td><td width="100">${article.publishdate}</td></tr>#end
+<tr><td colspan="3" align="right" height="18"><a href="${secondPageUrl}${zfwjunid}">更多</a>&nbsp;&nbsp;</td></tr>
+<tr><td  height="2"></td></tr>
+</table>
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="cont_tab1" id="tab_l_1_5_c" style="display:none">
+<tr><td  height="5"></td></tr>
+#foreach($article in $articlelist_tjsj)
+<tr><td width="10" height="18"></td><td>．<a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td><td width="100">${article.publishdate}</td></tr>#end
+<tr><td colspan="3" align="right" height="18"><a href="${secondPageUrl}${tjsjunid}">更多</a>&nbsp;&nbsp;</td></tr>
+<tr><td  height="2"></td></tr>
+</table></td>
+
+</tr>
+</table>
+</td></tr>
+</table>	</td>
+	<td width="8"></td>
+	<td width="190" valign="top">
+	
+	<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="234"  valign="top">
+<!-- 公告公示 -->
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="29" class="top_gggs" align="right" valign="top"><a href="${secondPageUrl}${gggsunid}" class="color_5D5D5D">更多</a>&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td height="190" class="cont_gggs">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="8"></td>
+</tr>
+#foreach($article in $articlelist_gggs)
+<tr valign="top">
+<td>．<a href="${article.path}" title="${article.fullTitle}"  target="_blank">${article.title}</a></td>
+</tr>
+#end
+</table></td>
+</tr>
+<tr>
+<td class="bottom_gggs">&nbsp;</td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td  height="10" ></td>
+</tr>
+<tr>
+<td  height="192" valign="top">
+<!-- 热点关注 改为 排行版 -->
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0"  class="xzgk_border">
+<tr>
+<td  height="32" class="top_ldgz"  align="right">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr><td height="4"></td></tr>
+<tr>
+  <td width="80" height="30" class="num_tab1" id="tab_ee_1" onmouseover="tabFun('tab_ee',this,'num_tab1','num_tab2');return false;">
+   文章排行
+  </td>
+  <td width="80" height="30" align="center" valign="middle" class="num_tab2" id="tab_ee_2" onmouseover="tabFun('tab_ee',this,'num_tab1','num_tab2');return false;">
+  栏目排行 </td>
+  <td width="30" style="background:url(images/num_line.jpg) repeat-x bottom"></td>
+</tr>
+</table>
+
+</td>
+</tr>
+<tr  align="left">
+<td class="cont_ldgz" valign="top" id="tab_ee_1_c">
+<iframe scrolling="No" frameborder="0" width="175" height="158" valign="top" marginheight="0" marginwidth="0" src="${tomcatroot}/${cmsWebapp}/indexSort/articleSort.jsp" border="0"></iframe>
+</td>
+<td class="cont_ldgz" valign="top" id="tab_ee_2_c" style="display:none;" marginheight="0" marginwidth="0">
+<iframe scrolling="No" frameborder="0" width="175" height="158" valign="top" src="${tomcatroot}/${cmsWebapp}/indexSort/categorySort.jsp" border="0"></iframe></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>	</td>
+	</tr>
+	</table>
+  <!--===========================================-->
+  </td></tr>
+  <tr>
+    <td height="3"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td  height="88" colspan="2" align="center"><img src="images/day_15.jpg" /></td>
+  </tr>
+  <tr>
+    <td height="8"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="435" colspan="2"  class="td_zxbs">
+	<!-- 在线办事 -->
+	<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" align="center" >
+<tr>
+<td height="45" class="top_zxbs" valign="bottom">
+<table  width="100%" height="35" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td width="20"></td>
+<td><img src="images/ind_l_4.jpg" style="vertical-align:middle" /><span class="span_zxbs">在线办事</span></td>
+<td width="30"></td>
+<td align="right" width="250" class="td_bs">
+<img src="images/dot222.gif" style="vertical-align:middle" />&nbsp;
+办事指南查询:
+<select name="a" class="width_select_1"><option>选择部门</option></select></td>
+<td width="10"></td>
+<td>
+<input type="text" size="12" /></td>
+<td>
+&nbsp;	<input value="&nbsp;" type="submit" valign="middle" class="serach_btn"/></td>
+<td align="right" width="250" class="td_bs">
+<img src="images/dot222.gif" style="vertical-align:middle" />&nbsp;
+表格下载查询:
+<select name="a" class="width_select_1"><option>选择部门</option></select></td>
+<td width="10"></td>
+<td>
+<input type="text"    size="12" /></td><td>
+&nbsp;	<input value="&nbsp;" type="submit" valign="middle" class="serach_btn"/>
+</td>
+<td width="10"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td valign="top">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td colspan="7" height="10" ></td>
+</tr>
+<tr>
+<td width="5"></td>
+<td width="242"  height="370"  valign="top">
+<table  width="100%" height="370" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td valign="top" height="175">
+<!--百事实事网上办-->
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="26" class="top_bssswsb" valign="bottom" >
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td width="30"></td>
+<td class="color_white"  valign="bottom">${cate_ggfwpt.name}</td>
+
+<td width="80"></td>
+
+<td width="25"  valign="bottom"><a href="ggfwpt/index.html" class="color_5D5D5D">更多</a></td>
+
+<td width="10"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td class="cont_bssswsb">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="26"><img class="img_middle" src="images/index_40.jpg" />&nbsp;<a href="${ggfwpt_url}5E309AB2E6885A7A6DFC76A8EC0F2B93">教&nbsp;育</a></td><td><img class="img_middle" src="images/index_33.jpg" />&nbsp;<a href="${ggfwpt_url}8C0E68DAAD70DB703A40D7ADB19B6E1B">医&nbsp;疗</a></td>
+</tr>
+<tr>
+<td height="26"><img class="img_middle" src="images/index_47.jpg" />&nbsp;<a href="${ggfwpt_url}831C4657BF47A07EED04C14DE42F063C">就&nbsp;业</a></td><td><img class="img_middle" src="images/index_49.jpg" />&nbsp;<a href="${ggfwpt_url}42D18BB945C9B545579B30EB41185402">企业开办</a></td>
+</tr>
+<tr>
+<td height="26"><img class="img_middle" src="images/index_55.jpg" />&nbsp;<a href="${ggfwpt_url}2ECBD2D715EAAC345AE938FA2397939D">住&nbsp;房</a></td><td><img class="img_middle" src="images/index_56.jpg" />&nbsp;<a href="${ggfwpt_url}CB98281435BF1987DDEFCFBB4E1EC55F">证件办理</a></td>
+</tr>
+<tr>
+<td height="26"><img class="img_middle" src="images/index_60.jpg" />&nbsp;<a href="${ggfwpt_url}9EEF850F145FF895CF50DD05833B7BE1">交&nbsp;通</a></td><td><img class="img_middle" src="images/index_59.jpg" />&nbsp;<a href="${ggfwpt_url}444E43DA214C2D294DCEF4B5BF460CE4">资质认定</a></td>
+</tr>
+<tr>
+<td height="26"><img class="img_middle" src="images/index_63.jpg" />&nbsp;<a href="${ggfwpt_url}69D83BE4B057521237B98626B5E2440F">社会保障</a></td><td>&nbsp;</td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td height="8"></td>
+</tr>
+<tr>
+<td valign="top" width="242">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="30" class="top_bmfw" valign="bottom">
+<table  width="100%" height="26" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td width="40"></td>
+<td class="title_bmfw"  valign="middle"><a href="${bmfw_url}${bmfwunid}" target="_blank">${cate_bmfw.name}</a></td>
+
+<td width="80"></td>
+
+<td width="25" >&nbsp;</td>
+
+<td width="10"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td height="158" class="cont_bmfw">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+  <!--DWLayoutTable-->
+<tr>
+<td width="121" height="31" valign="bottom"><a href="${bmfwmore_url}0317C548B87BA69F3EB9732290C783EA" target="_blank"><img src="images/bm_b_1.jpg" width="111" height="26" /></a></td>
+<td width="121" valign="bottom"><a href="${bmfwmore_url}427F3AEC23C91E42FC902ABDE3F3001C" target="_blank"><img src="images/bm_b_2.jpg" width="111" height="26" /></a></td>
+</tr>
+<tr>
+  <td height="31" valign="bottom"><a href="${bmfwmore_url}EF9626B1677D457DCBF5F8713A8D5B76" target="_blank"><img src="images/bm_b_3.jpg" width="111" height="26" /></a></td>
+  <td valign="bottom"><a href="${bmfwmore_url}1A4B23DAE9D0686FB484E7CD4380C41A" target="_blank"><img src="images/bm_b_4.jpg" width="111" height="26" /></a></td>
+</tr>
+<tr>
+  <td height="31" valign="bottom"><a href="${bmfwmore_url}A2574380C765C9A50D2221EABFB9CAB5" target="_blank"><img src="images/bm_b_5.jpg" width="111" height="26" /></a></td>
+  <td valign="bottom"><a href="${bmfwmore_url}806F3A38D6750054B99C468587C387D5" target="_blank"><img src="images/bm_b_6.jpg" width="111" height="26" /></a></td>
+</tr>
+<tr>
+  <td height="31" valign="bottom"><a href="${bmfwmore_url}76B3AE965F4AAB8236BED7FA7222A7BF" target="_blank"><img src="images/bm_b_7.jpg" width="111" height="26" /></a></td>
+  <td valign="bottom"><a href="${bmfwmore_url}80461AEE1202B1BC79B21D10CF676FF9" target="_blank"><img src="images/bm_b_8.jpg" width="111" height="26" /></a></td>
+</tr>
+<tr>
+  <td height="31" valign="bottom"><a href="${bmfwmore_url}3C1AF288743781275F2DD71FE9475CB3" target="_blank"><img src="images/bm_b_9.jpg" width="111" height="26" /></a></td>
+  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+</tr>
+<tr>
+  <td height="3"></td>
+  <td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+<td width="10"></td>
+<td width="522" valign="top">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="28" class="td_kstd" valign="middle">
+<table  width="100%" height="24" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td class="top_kstd" width="64" height="24">快速通道</td>
+<td width="20"></td>
+<td>
+#foreach($cate in $cate_kstd) 
+ #set( $cateurl = "${cate.url}" )
+				  #if( ($cateurl) && ($!{cateurl} != "") && ($!{cateurl} != "null") )
+					#set($cateurl="${cateurl}")
+				  #else
+					 #set($cateurl="${secondPageUrl}${cate.unid}")
+				  #end
+		  <a href="${cateurl}">${cate.name}</a>|
+#end
+</td>
+<td></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td height="8"></td>
+</tr>
+<tr>
+<td height="154" class="td_bszn">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td width="90" align="center"><img src="images/index_43.jpg" /></td>
+<td valign="top">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="32" class="top_bszn">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+#set($count=1)
+#foreach($cate in $catelist_bszn) 
+	#if($count==1)
+	<td id="tab_l_2_1" align="center" width="87" height="32" class="bszn_av" onmouseover="tabFun('tab_l_2',this,'bszn_av','bszn_un');return false;" style="cursor:hand">${cate.name}</td>
+	#else
+	<td id="tab_l_2_${count}" align="center" width="87" class="bszn_un" onmouseover="tabFun('tab_l_2',this,'bszn_av','bszn_un');return false;" style="cursor:hand">${cate.name}</td>
+	#end
+	#set($count=$count+1)	  
+#end
+<td width="166"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+			  #set( $col = 5)
+			  #set ($catecount=0)
+ 			  #foreach($cate in $catelist_bszn)
+			  #set ($catecount=$catecount+1)
+			  #set( $childcount = 0 ) ##计算总数
+              #set( $flag = 0 ) ##每一列的标记 
+			  #if($catecount==1)
+			  <td id="tab_l_2_${catecount}_c">
+			  #else
+			   <td id="tab_l_2_${catecount}_c" style="display:none;">
+			  #end
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+			  #set( $childlist=$list.getCategoryList(${cate.unid}))
+			  #if( $childlist )
+				  #foreach($child in $childlist)
+				      #set ( $childcount = $childcount + 1 )
+					  #set( $flag= $flag +1 )
+				      #if($flag==1)
+					  <tr>
+					  #end
+					  <td align="center" height="26"><a href="${secondPageUrl}${child.unid}">${child.name}</a></td><td align="center">|</td>
+					  #if($childcount % $col==0)
+					  #set( $flag = 0 )
+					  </tr>
+					  #end 
+				  #end  
+			   #end 
+			    #if($childcount%$col!=0)
+		      	#set( $other = $childcount%$col)
+			   #foreach($td in [$other..$col])
+			   <td colspan="2">&nbsp;</td>
+			   #end
+		      </tr>
+              #end 
+</table></td>
+#end
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td height="8"></td>
+</tr>
+<tr>
+<td height="172">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="31" class="bg_pingtai">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td width="160" class="title_pingtai">
+网上审批服务平台</td>
+<td valign="middle">办事状态查询:<input type="text" size="12" value="--输入受理编号--">
+<input type="text" size="12" value="--输入查询密码--">
+<input type="submit" value="&nbsp;" class="serach_btn" /></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td align="left">
+<table width="520" border="1" cellspacing="0" cellpadding="0">
+                        <tr class="tr_table_title">
+                        <td  height="20" width="81" valign="bottom">受理部门</td><td width="200" >受理事项</td><td width="90">申报人或单位</td><td width="75">申报日期</td><td width="64">办件状态</td>
+                        </tr>
+						</table>
+<iframe scrolling="No" frameborder="0" width="518" height="100" valign="top" src="${tomcatroot}/${cmsWebapp}/bsjg.jsp" border="0"></iframe>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+<td width="10"></td>
+<td width="208" valign="top">
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="165">
+<!-- 办件流计-->
+<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td height="28"><img src="images/index_24.jpg"/></td>
+</tr>
+<tr>
+<td class="cont_bstj">
+<table  width="100%" height="137" border="0" cellspacing="0" cellpadding="0" >
+  <!--DWLayoutTable-->
+<tr>
+<td width="305" height="5"></td>
+</tr>
+<tr>
+<td height="34" class="red_bstj" align="center">截止2010年09月05日</td>
+</tr>
+<tr>
+<td height="24" valign="top"><img src="images/redPoin.jpg"/> 累计收件:69623件</td>
+</tr>
+
+
+
+<tr>
+  <td height="24" valign="top"><img src="images/redPoin.jpg"/> 累计办结:68098件</td>
+</tr>
+
+
+<tr>
+  <td height="24" valign="top"><img src="images/redPoin.jpg"/> 昨日收件:4件</td>
+</tr>
+
+
+
+
+<tr>
+  <td height="24" valign="top"><img src="images/redPoin.jpg"/> 昨日办结:0件</td>
+</tr>
+<tr>
+  <td height="1"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td height="7"><img src="images/index_66.jpg"/></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+	<td height="10"></td>
+</tr>
+</table>
+
+<!-- [场景式服务导航] 开始 -->
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+	<td height="36" >
+		<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+		<tr>
+			<td><img src="images/ind_l_6.jpg" /></td>
+			<td align="center"><a href="$!{tomcatroot}/$!{cmsWebapp}/cjdh/index.jsp?siteunid=$!{siteunid}" class="color_5D5D5D">更多</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+<td  height="155">
+<table  width="100%" height="155" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+<td><a href="#"><img src="images/index_75.jpg" /></a></td><td><a href="#"><img src="images/index_77.jpg" /></a></td>
+</tr>
+<tr>
+<td><a href="#"><img src="images/index_93.jpg" /></a></td><td><a href="#"><img src="images/index_94.jpg" /></a></td>
+</tr>
+<tr>
+<td><a href="#"><img src="images/index_106.jpg" /></a></td><td><a href="#"><img src="images/index_107.jpg" /></a></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+<td width="5"  ></td>
+</tr>
+<tr>
+<td colspan="7" height="10" ></td>
+</tr>
+</table></td>
+</tr>
+</table>	</td>
+  </tr>
+  <tr>
+    <td height="8"></td>
+    <td></td>
+  </tr>
+  <!----------------------------------------->
+  
+  <tr>
+    <td height="425" >
+	
+<table width="1000" height="438" border="0" cellpadding="0" cellspacing="0" class="jlhd_border">
+        <!--DWLayoutTable-->
+        <tr>
+          <td height="47" colspan="10" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/index_119.jpg">
+            <!--DWLayoutTable-->
+            <tr>
+              <td width="150" height="47" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+          <td width="444" valign="middle">
+			  #foreach($cate in $catelist_zmhd)
+			    #if( ($cateurl) && ($!{cateurl} != "") && ($!{cateurl} != "null") )
+					#set($cateurl="${cateurl}")
+				  #else
+					 #set($cateurl="${secondPageUrl}${cate.unid}")
+				  #end
+			  <a href="${cateurl}">${cate.name}</a>|
+			  #end
+		   </td>
+          <td width="149" valign="middle">&nbsp;</td>
+          <td width="257" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+        </tr>
+          </table></td>
+    </tr>
+        <tr>
+          <td width="6" rowspan="12" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+      <td width="172" height="8"></td>
+      <td width="1"></td>
+      <td width="11"></td>
+      <td width="252"></td>
+      <td width="6"></td>
+      <td width="252"></td>
+      <td width="6"></td>
+      <td width="265"></td>
+      <td width="27"></td>
+    </tr>
+        <tr>
+          <td height="183" valign="top">
+            <table width="172" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              
+              
+              <tr>
+                <td width="172" height="27" valign="top">
+                  <table width="172" border="0" cellpadding="0" cellspacing="0" background="images/index_122.jpg" style="background-repeat:no-repeat">
+                    <tr>
+                      <td width="31" height="27" valign="top"></td>
+                  <td width="85" valign="middle"><span class="ld_font">领导信箱</span></td>
+                  <td width="56" valign="middle"><span class="ld_font_rig"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=${ldxxunid}&type=leaderMail">我要写信</a></span></td>
+                </tr>      
+                </table></td>
+              </tr>
+              <tr>
+                <td width="172" height="155" class="ld_border"><iframe scrolling="No" frameborder="0" width="170" height="154" valign="top" src="${tomcatroot}/${cmsWebapp}/leaderMail/leaderMailIndex.jsp" border="0"></iframe></td>
+              </tr>
+                </table></td>
+      <td></td>
+          <td></td>
+          <td rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="jlhd_4_border">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="1" height="27"></td>
+            <td width="257" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/index_125.jpg">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="36" height="27" align="center"><img src="images/btn_01.gif" width="15" height="15" /></td>
+                  <td width="172"><span class="jlhd_font_bold">建言献策</span></td>
+                  <td width="52"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=${jyxcunid}&type=advice&jspType=List">更多</a></td>
+                </tr>
+              </table>        </td>
+          </tr>
+        <tr>
+          <td height="150"></td>
+            <td valign="top">
+			<iframe scrolling="No" frameborder="0" width="255" height="149" valign="top" src="${tomcatroot}/${cmsWebapp}/advice/adviceIndex.jsp" border="0"></iframe>
+			</td>
+          </tr>
+        <tr>
+          <td height="5"></td>
+            <td></td>
+          </tr>
+        
+        
+        </table></td>
+      <td rowspan="2" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+      <td rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="jlhd_4_border">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="1" height="27"></td>
+            <td width="257" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/index_125.jpg">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="36" height="27" align="center"><img src="images/mbi_011.gif" width="16" height="16" /></td>
+                  <td width="172"><span class="jlhd_font_bold">法律咨询</span></td>
+                  <td width="52"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=${flzsunid}&type=suggest&jspType=List">更多</a></td>
+                </tr>
+              </table>        </td>
+          </tr>
+        <tr>
+          <td height="150"></td>
+            <td valign="top">
+			<iframe scrolling="No" frameborder="0" width="255" height="149" valign="top" src="${tomcatroot}/${cmsWebapp}/suggest/suggestIndex.jsp" border="0"></iframe></td>
+          </tr>
+        <tr>
+          <td height="5"></td>
+            <td></td>
+          </tr>
+        
+        
+        </table></td>
+      <td></td>
+      <td rowspan="4" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="jlhd_4_border">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="263" height="59" valign="top"><img src="images/index_127.jpg" width="263" height="59" /></td>
+              </tr>
+        <tr>
+          <td height="146" valign="top">
+		  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  #*取得最新的【在线访谈】对象（状态：预告1、进行时2、回顾3、全部9）*#
+			  #set( $interview = $list.getInterviewBySiteUnidAndStatus(${siteunid}, "2"))
+                  #if( $interview )
+            <!--DWLayoutTable-->
+            <tr>
+              <td width="15" height="30" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td colspan="2" valign="middle">本期信息</td>
+					  <td align="center"><a href="${tomcatroot}/${cmsWebapp}/interview/list.jsp?siteunid=${siteunid}" class="line_hei_24">更多</a></td>
+                    </tr>
+            <tr>
+              <td rowspan="3" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+#set( $obj_attr_01 = $list.getAttrImageByPUnid(${interview.unid}) )
+#if( $obj_attr_01 )
+<td width="92" rowspan="3" valign="top"><img src="${tomcatroot}/${cmsWebapp}/interview/showAttach.jsp?id=$!{obj_attr_01.unid}" width="92" height="94" align="absmiddle" border="0" /></td>
+#else
+<td width="92" rowspan="3" valign="top"><img src="images/index_133.jpg" width="92" height="94" /></td>
+#end
+                      <td width="10" height="46" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td width="146" valign="middle"><a href="${tomcatroot}/${cmsWebapp}/interview/detail.jsp?siteunid=${siteunid}&id=${interview.unid}" class="line_hei_24">$!{interview.title}</a></td>
+                    </tr>
+            <tr>
+              <td rowspan="2" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td height="30"><a href="${tomcatroot}/${cmsWebapp}/interview/write.jsp?siteunid=${siteunid}&id=${interview.unid}" class="line_hei_24"><img src="images/index_136.jpg" width="93" height="19" border="0"/></a></td>
+                    </tr>
+            <tr>
+              <td height="28" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    </tr>
+            
+            
+            
+            <tr>
+              <td height="12" colspan="4" align="center" valign="middle"><img src="images/index_142.jpg" width="214" height="4" /></td>
+                    </tr>
+            
+            </table></td>
+              </tr>
+        <tr>
+          <td height="155" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <!--DWLayoutTable-->
+            <tr>
+              <td width="19" height="25" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td colspan="2" valign="middle"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    </tr>
+            <tr>
+              <td height="26" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td colspan="2">访谈嘉宾：<a href="../ucap/www2/www.wuyishan.gov.cn/zh-cn/zxft/detail.html?id=$!{interview.unid}" target="_blank">$!{interview.guests}</a></td>
+                    </tr>
+            <tr>
+              <td height="28" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td colspan="2">访谈时间：<a href="../ucap/www2/www.wuyishan.gov.cn/zh-cn/zxft/detail.html?id=$!{interview.unid}" target="_blank">$!{interview.intertime_e}</a></td>
+                    </tr>
+            <tr>
+              <td height="28" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td colspan="2">主 持 人：<a href="../ucap/www2/www.wuyishan.gov.cn/zh-cn/zxft/detail.html?id=$!{interview.unid}" target="_blank">$!{interview.compere}</a></td>
+                    </tr>
+            
+            <tr>
+              <td height="45" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td width="223" valign="middle" >您可以就每期的专题进行网上提问，访谈领导将及时回答您的问题</td>
+                        
+                <td>&nbsp;</td>
+                    </tr>
+			#end
+            </table></td>
+              </tr>
+        <tr>
+          <td height="5"></td>
+              </tr>
+        
+        
+        
+        
+        
+        
+        </table></td>
+      <td></td>
+    </tr>
+        <tr>
+          <td height="5"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td height="0"></td>
+     
+          <td></td>
+          <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+        
+        
+        <tr>
+          <td colspan="2" rowspan="7" valign="top"><table width="167" border="0" cellpadding="0" cellspacing="0">
+            
+            <tr>
+              <td width="172" height="27" colspan="3" valign="top"><table width="172" border="0" cellpadding="0" cellspacing="0" background="images/index_139.jpg" style="background-repeat:no-repeat">
+                
+                <tr>
+                  <td width="31" height="27" valign="top"></td>
+                  <td width="103" valign="middle"><span class="ld_font">机关效能投诉</span></td>
+                  <td width="38" valign="middle"><span class="ld_font_rig"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=${sntsunid}&type=complaint">写信</a></span></td>
+                </tr>
+                
+                </table></td>
+          </tr>
+            <tr>
+              <td width="167" valign="top" class="ld_border"><table width="164" border="0" cellpadding="0" cellspacing="0">
+                
+                <tr>
+                  <td width="167" height="5"></td>
+                </tr>
+                <tr>
+                  <td width="167" height="24">&nbsp;．省信访局 　87802214</td>
+                </tr>
+                <tr>
+                  <td width="167" height="24">&nbsp;．省发改委　 87063442</td>
+                </tr>
+                <tr>
+                  <td width="167" height="24">&nbsp;．省法院　 　87885254</td>
+                </tr>
+                <tr>
+                  <td width="167" height="24">&nbsp;．省检察院 　87762320</td>
+                </tr>
+                <tr>
+                  <td width="167" height="24">&nbsp;．省委组织部 87855603</td>
+                </tr>
+                <tr>
+                  <td width="167" height="25">&nbsp;．省台办 　　87805458</td>
+                </tr>
+                
+                
+                
+                
+                
+                </table></td>
+        </tr>
+            
+            
+            
+            
+            
+            
+            
+          </table></td>
+      <td height="181"></td>
+      <td rowspan="5" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="jlhd_4_border">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="1" height="27"></td>
+            <td width="254" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/index_125.jpg">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="36" height="27" align="center"><img src="images/Mail Open.png" width="16" height="16" /></td>
+                  <td width="172"><span class="jlhd_font_bold">民意征集</span></td>
+                  <td width="52"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=${myzzunid}&type=solicit&jspType=List">更多</a></td>
+                </tr>
+              </table>        </td>
+          </tr>
+        <tr>
+          <td height="150"></td>
+            <td valign="top">
+			<iframe scrolling="No" frameborder="0" width="255" height="149" valign="top" src="${tomcatroot}/${cmsWebapp}/solicit/solicitIndex.jsp" border="0"></iframe>
+			</td>
+          </tr>
+        </table></td>
+      <td></td>
+      <td rowspan="6" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="jlhd_4_border">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="1" height="27"></td>
+            <td width="254" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/index_125.jpg">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="36" height="27" align="center"><img src="images/2009_tubiao_jy.jpg" width="16" height="16" /></td>
+                  <td width="172"><span class="jlhd_font_bold">网上调查</span></td>
+                  <td width="52"><a href="${tomcatroot}/${cmsWebapp}/survey/list.jsp?siteunid=${siteunid}">更多</a></td>
+                </tr>
+              </table>        </td>
+          </tr>
+        <tr>
+          <td height="150"></td>
+            <td valign="top">
+			<iframe scrolling="No" frameborder="0" width="255" height="149" valign="top" src="${tomcatroot}/${cmsWebapp}/survey/surveyIndex.jsp" border="0"></iframe>
+			</td>
+          </tr>
+        </table></td>
+      <td></td>
+      <td></td>
+    </tr>
+        <tr>
+          <td height="12"></td>
+          <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+      </table>
+	</td>
+  </tr>
+  <tr>
+    <td height="8"></td>
+  </tr>
+#parse("www.fjfa.gov.cn/include/link.html")
+  </table>
+  </td>
+  </tr>
+#parse("www.fjfa.gov.cn/topAndButton/buttom.html")
+</table>
+
+</body>
+</html>

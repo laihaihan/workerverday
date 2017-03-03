@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+ <ucap-mapping>
+  <class  name="com.linewell.crm.account.CrmAccountVisit" table="crm_account_visit" title="客户拜访记录">
+<id>
+<property column="visit_unid" name="unid" title="主键" type="String"/>
+</id>
+<property column="visit_unid" name="unid" title="主键" type="String"/>
+<property column="visit_account" name="account" title="拜访客户" type="String"/>
+<property column="visit_title" name="title" title="拜访主题" type="String"/>
+<property column="visit_date" name="date" title="拜访时间" type="String"/>
+<property column="visit_staff" name="staff" title="拜访人员" type="String"/>
+<property column="visit_origin" name="origin" title="拜访原因" type="String"/>
+<property column="visit_result" name="result" title="拜访结果" type="String"/>
+<property column="visit_plan" name="plan" title="下次拜访计划" type="String"/>
+  </class>
+ </ucap-mapping>

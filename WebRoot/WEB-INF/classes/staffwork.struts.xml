@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "../struts-2.0.dtd">
+
+<struts>
+ <package name="staffwork" extends="struts-default">
+  <!--add action on here-->
+  <action name="staff" class="com.linewell.staffSys.staffAction" />
+  <action name="email" class="com.linewell.emailSys.emailAction" />
+ </package>
+</struts>
+

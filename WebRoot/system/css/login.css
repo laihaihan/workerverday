@@ -1,0 +1,72 @@
+/*系统标签样式 begin*/
+body {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+	background-color:#eef0ef;
+}
+
+
+/*页面留白 begin*/
+.blank {
+	height: 8px;
+	line-height: 8px;
+	clear: both;
+	visibility: hidden;
+}
+
+/* 登录区域 */
+.login {
+	background: url('../images/login_bg.gif') no-repeat left center;
+	height: 460px;
+	width: 798px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -399px;
+	margin-top: -230px;
+}
+
+
+/* 登录区域信息区 */
+.login_info {
+	margin: 179px 0 0 415px;
+}
+
+
+/* 信息区输入框背景 */
+.login_info_input {
+}
+
+
+/* 信息区输入框 */
+.login_info_input  input{
+	border: none;
+	height: 24px;
+	width: 195px;
+	line-height: 20px;
+	color: #505050;
+	font-size: 14px;
+	background-color: transparent;
+}
+
+/* 信息区错误信息 */
+.login_info_error {
+	color: #e82f34;
+	font-size: 12px;
+}
+
+/* 登录按钮 */
+.login_button {
+	float: right;
+	margin-right:180px;
+
+}
+.login_button input {
+	background-image: url('../images/login_button.gif');
+	width: 72px;
+	height: 21px;
+	border-style: none;
+	background-color: transparent;
+}

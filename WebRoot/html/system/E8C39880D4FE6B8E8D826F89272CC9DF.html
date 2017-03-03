@@ -1,0 +1,79 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<TABLE class=tableSet3 align=center border=0>
+
+<COL width="20%">
+<COL width="30%">
+<COL width="20%">
+<COL width="30%">
+<TBODY>
+<TR>
+<TH><SPAN class=red>*</SPAN>系统名称：</TH>
+<TD colSpan=3><INPUT class=inputbox id=app_name name=app_name/> <A title=配置数据库 onclick=proxoolManager.modifyDB(); href="javascript:void(0)">配置数据库</A></TD></TR>
+<TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>系统英文名称： 
+<TD colSpan=3><INPUT class=inputbox id=app_name_en name=app_name_en/></TD></TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>显示名称： 
+<TD colSpan=3><INPUT class=inputbox id=app_display_name name=app_display_name/></TD></TR>
+<TR>
+<TH>前置图标： 
+<TD colSpan=3><INPUT class=inputbox id=app_picture name=app_picture/></TD></TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>应用系统管理员：</TH>
+<TD><INPUT class=inputbox id=app_admins name=app_admins/></TD>
+<TH>单位级数：</TH>
+<TD><INPUT class=inputbox id=app_dept_level name=app_dept_level/></TD></TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>是否禁用：</TH>
+<TD><INPUT id=app_forbid name=app_forbid/></TD>
+<TH><SPAN class=red>*</SPAN>是否显示版权信息：</TH>
+<TD><INPUT id=app_copyright name=app_copyright/></TD></TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>是否启用登陆日志：</TH>
+<TD><INPUT id=app_login_log name=app_login_log/></TD>
+<TH><SPAN class=red>*</SPAN>是否启用操作日志：</TH>
+<TD><INPUT id=app_operate_log name=app_operate_log/></TD></TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>是否需要回收站：</TH>
+<TD><INPUT id=app_recycle name=app_recycle/></TD>
+<TH>回收站文件地址：</TH>
+<TD><INPUT class=inputbox id=app_recycle_path name=app_recycle_path/></TD></TR>
+<TR>
+<TH>使用范围：</TH>
+<TD colSpan=3><INPUT class=inputred id=app_use_scopes name=app_use_scopes/></TD></TR>
+<TR>
+<TH>不能使用范围：</TH>
+<TD colSpan=3><INPUT class=inputred id=app_unuse_scopes name=app_unuse_scopes/></TD></TR>
+<TR>
+<TH>允许再次配置的部门：</TH>
+<TD colSpan=3><INPUT class=inputbox id=app_edit_depts name=app_edit_depts/><IMG title=帮助 onclick="searchHelp('appConfig_againConf')" src="../../uistyle/images/help.gif"></IMG></TD></TR>
+<TR>
+<TH>可自定义的用户组：</TH>
+<TD colSpan=3><INPUT class=inputbox id=app_edit_users name=app_edit_users/></TD></TR>
+<TR>
+<TH>不可自定义的用户组：</TH>
+<TD colSpan=3><INPUT class=inputbox id=app_unedit_users name=app_unedit_users/></TD></TR>
+<TR>
+<TH>表单HTML相对保存路径：</TH>
+<TD colspan="3"><INPUT class=inputbox id=app_form_html_path name=app_form_html_path /></TD></TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>附件保存在数据库：</TH>
+<TD><INPUT class=inputbox id=app_attr_is_save_db name=app_attr_is_save_db /></TD>
+<TH><SPAN class=red>*</SPAN>普通附件地址：</TH>
+<TD><INPUT class=inputbox id=app_attr_path style="WIDTH: 60%" name=app_attr_path/><IMG title=帮助 onclick="searchHelp('appConfig_att')" src="../../uistyle/images/help.gif"></IMG></TD>
+</TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>模板保存在数据库：</TH>
+<TD><INPUT class=inputbox id=app_attr_cfg_is_save_db name=app_attr_cfg_is_save_db /></TD>
+<TH><SPAN class=red>*</SPAN>模板附件地址：</TH>
+<TD><INPUT class=inputbox id=app_attr_config_path style="WIDTH: 60%" name=app_attr_config_path/><IMG title=帮助 onclick="searchHelp('appConfig_confAtt')" src="../../uistyle/images/help.gif"></IMG></TD></TR>
+<TR>
+<TH><SPAN class=red>*</SPAN>单个文件最大值：</TH>
+<TD><INPUT class=inputbox id=app_attr_file_size_max_index name=app_attr_file_size_max_index/>（M）</TD>
+<TH><SPAN class=red>*</SPAN>批量上传最大值：</TH>
+<TD><INPUT class=inputbox id=app_attr_size_max name=app_attr_size_max/>（M）</TD></TR>
+<TR>
+<TH>复制的接口实现：</TH>
+<TD colSpan=3><INPUT class=inputbox id=app_copy_interface name=app_copy_interface/></TD></TR></TBODY></TABLE>

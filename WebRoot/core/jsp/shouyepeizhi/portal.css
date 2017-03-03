@@ -1,0 +1,234 @@
+html {
+	margin: 0px; padding: 0px;
+}
+body {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+* {
+	margin: 0px; padding: 0px;
+}
+body {
+	font: 14px/1.5em Arial, Simsun, Tahoma, Verdana, Microsoft YaHei, Mingliu, Helvetica; color: rgb(47, 47, 48); font-size-adjust: none; font-stretch: normal; background-color: rgb(255, 255, 255);
+}
+img {
+	border: currentColor;
+}
+a {
+	cursor: pointer;
+}
+a:link {
+	color: rgb(47, 47, 48); text-decoration: none;
+}
+a:visited {
+	color: rgb(47, 47, 48); text-decoration: none;
+}
+a:hover {
+	color: rgb(47, 47, 48); text-decoration: underline;
+}
+a:active {
+	color: rgb(47, 47, 48); text-decoration: underline;
+}
+.banner_bg {
+	background: url("../images/banner_bg.jpg") repeat-x top;
+}
+.banner_text {
+	background-position: 0px 50%; width: 515px; height: 12px; padding-top: 25px; float: left; background-image: url("../Images/banner_text.png"); background-repeat: no-repeat; _background-image: none;
+}
+.banner_r {
+	background: url("../images/banner_r.jpg") no-repeat right top;
+}
+.info_bg {
+	background: url("../images/info_bg.jpg") repeat-x top;
+}
+.gap01 {
+	background: url("../images/gap_bg.gif") repeat-y left;
+}
+.bottom_bg {
+	background: url("../images/bottom_bg.jpg") repeat-x top; height: 29px; text-align: center; color: rgb(182, 197, 232); line-height: 29px; font-size: 12px;
+}
+.toolarea01_bg {
+	background: url("../images/toolarea01_bg.jpg") repeat-x top; border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgb(192, 205, 231) rgb(192, 205, 231); padding: 5px 8px 0px; height: 28px; clear: both;
+}
+.toolarea02_bg {
+	background: url("../images/toolarea01_bg.jpg") repeat-x top; padding: 5px 8px 0px; border: 1px solid rgb(192, 205, 231); height: auto; clear: both; margin-top: 7px;
+}
+.toolarea02_bg1 {
+	background: url("../images/toolarea01_bg.jpg") repeat-x top; border: 1px solid rgb(192, 205, 231); height: auto; clear: both;
+}
+.tb01 td {
+	border: 1px solid rgb(229, 234, 244); height: 29px;
+}
+.tb01 th {
+	background: url("../images/th_bg01.jpg") repeat-x top; height: 29px; line-height: 29px; font-weight: normal; border-right-color: rgb(229, 234, 244); border-bottom-color: rgb(219, 226, 239); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+}
+.tb01 p {
+	padding: 2px 5px;
+}
+.tb01 .num01 {
+	margin: 0px auto; padding: 0px 0px 0px 8px; width: 20px; text-align: left;
+}
+.tb01 {
+	background: rgb(255, 255, 255); border: 1px solid rgb(189, 203, 230); border-collapse: collapse;
+}
+.tb01 .tb_l {
+	border-left-color: rgb(189, 203, 230);
+}
+.tb01 .tb_b {
+	border-bottom-color: rgb(189, 203, 230);
+}
+.tb01 .tb_r {
+	border-right-color: rgb(189, 203, 230);
+}
+li {
+	list-style-type: none;
+}
+.btn01_bg {
+	background: url("../images/btn01_bg.gif") repeat-x 0px 50%; cursor: pointer;
+}
+.pagearea {
+	background: rgb(230, 234, 240); border-width: 0px 1px 1px; border-style: solid; border-color: rgb(192, 206, 231); height: 28px;
+}
+.inp01 {
+	border: 1px solid rgb(197, 202, 205); height: 19px; line-height: 19px; font-size: 14px; display: inline;
+}
+.left {
+	float: left;
+}
+.pagebox01 {
+	margin: 0px auto; width: 470px; height: 28px; line-height: 28px; clear: both;
+}
+.pg02 {
+	height: 25px; float: left; display: block;
+}
+.inpbox {
+	line-height: 30px; float: left; display: block;
+}
+.tc_top_bg {
+	background: url("../images/tc_top_bg.gif") repeat-x top; color: rgb(235, 241, 252); padding-left: 7px; font-weight: bold;
+}
+.tc_btm_bg {
+	background: url("../images/tc_btm_bg.gif") repeat-x top; height: 2px; line-height: 2px;
+}
+.tc_border {
+	border-width: 0px 1px; border-style: solid; border-color: rgb(159, 159, 159);
+}
+.tc_tool_bg {
+	background: url("../images/tc_tool_bg.gif") repeat-x top; padding-left: 37px;
+}
+.win_box {
+	padding: 10px 36px 35px;
+}
+.tab_outer {
+	background: url("../images/dot01.jpg") repeat-x bottom; padding-left: 13px;
+}
+.box01 {
+	border-width: 0px 1px 1px; border-style: solid; border-color: rgb(226, 231, 235); padding: 36px;
+}
+.box02 {
+	padding: 34px; border: 1px solid rgb(243, 239, 239);
+}
+.tab_left_a {
+	background: url("../images/tab_left_a.gif") no-repeat left bottom; text-align: center; text-indent: 3px; font-weight: bold;
+}
+.tab_left_b {
+	background: url("../images/tab_left_b.gif") no-repeat left bottom; text-align: center; text-indent: 3px;
+}
+.tab_right_a {
+	background: url("../images/tab_right_a.gif") no-repeat; font-size: 0px;
+}
+.tab_right_b {
+	background: url("../images/tab_right_b.gif") no-repeat; font-size: 0px;
+}
+.tab_outer div {
+	float: left;
+}
+.red01 {
+	color: rgb(194, 7, 14); font-family: Verdana, arial, sans-serif; font-size: 14px;
+}
+.inp02 {
+	height: 22px; line-height: 19px; font-size: 14px;
+}
+.tit01 {
+	font-weight: bold;
+}
+.blank01 {
+	background: rgb(241, 241, 241); height: 1px; line-height: 1px; overflow: hidden; clear: both; margin-top: 12px; display: block;
+}
+.f1 {
+	color: rgb(59, 89, 153); line-height: 28px; text-indent: 12px; font-size: 14px; font-weight: 400; border-bottom-color: rgb(226, 226, 226); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.b1 {
+	
+}
+.b1 dl {
+	padding-top: 7px;
+}
+.b1 dt {
+	height: 27px; line-height: 27px; text-indent: 8px; font-size: 14px; font-weight: bold; border-top-color: rgb(220, 224, 225); border-top-width: 1px; border-top-style: solid; background-color: rgb(235, 235, 235);
+}
+.b1 dd a {
+	color: rgb(44, 74, 119); line-height: 24px; padding-left: 6px; font-size: 14px;
+}
+.b1 dd a span {
+	color: rgb(160, 160, 160); text-indent: 6px;
+}
+.b2 {
+	background: url("../images/20120802005.png") no-repeat left top; border: 1px solid rgb(210, 225, 241);
+}
+.b2 .header h2 {
+	color: rgb(59, 89, 153); line-height: 24px; padding-left: 8px; font-size: 14px; font-weight: bold;
+}
+.b2 .header span {
+	color: rgb(204, 204, 204); line-height: 24px; padding-right: 8px; float: right;
+}
+.b2 .header span a {
+	color: rgb(153, 153, 153);
+}
+.b2 .cnt {
+	padding: 0px 8px; line-height: 24px;
+}
+.y1 {
+	color: rgb(255, 100, 3);
+}
+#tabs .tab-list span {
+	color: rgb(196, 196, 196); float: right;
+}
+.btn-reg {
+	background: url("../../images/bg_v5.png");
+}
+.btn-login {
+	background: url("../../images/bg_v5.png");
+}
+.btn {
+	padding: 0px; outline: 0px; border: 0px currentColor; height: 26px; text-align: center; line-height: 26px; font-size: 14px; font-weight: 700; vertical-align: baseline; float: left; display: inline-block; cursor: pointer;
+}
+.btn-login {
+	width: 74px; color: rgb(255, 255, 255);
+}
+.btn-reg {
+	background-position: -78px 0px; width: 74px; color: rgb(85, 85, 85); margin-left: 5px;
+}
+.grid-1 {
+	overflow: hidden; margin-top: 8px; _height: 248px;
+}
+.grid-1 ul li a {
+	font-size: 14px;
+}
+.tab-list ul li a {
+	font-size: 14px;
+}
+.tab-list ul li {
+	line-height: 22px;
+}
+.tab-list ul {
+	margin-top: 3px;
+}
+#weitijiao .cnt li {
+	background: url("arrow_c.gif") no-repeat left 7px; padding-left: 20px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>cache.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+	<script type="text/javascript">
+		function change(){
+			var selval = Ext.getDom("cacheType").value;
+			if(selval == "0"){
+				Ext.getDom("OSCache").style.display="none";
+				Ext.getDom("MemCached").style.display="none";
+			}else if(selval =="oscache"){
+				Ext.getDom("OSCache").style.display="";
+				Ext.getDom("MemCached").style.display="none";
+			}else if(selval == "memcache" ){
+				Ext.getDom("OSCache").style.display="none";
+				Ext.getDom("MemCached").style.display="";
+			}
+		}
+
+	</script>
+
+  </head>
+  
+  <body>
+    <table width=100% border="1"  bordercolor="#cccccc" cellspacing="0"  class="formtable" cellpadding="0">
+        <tr>
+          <th width=25%>缓存类型：</th>
+          <td >
+          	<select name="cacheType" onchange="change()" id="cacheType">
+              	<option value="oscache" >OSCache</option>
+              	<option value="memcache">MemCached</option>
+           	</select>
+              <span class="hint">缓存服务器的类型选择</span>
+            </td>
+        </tr>
+   </table>
+   <table width=100% id="OSCache" border="1" bordercolor="#cccccc" cellspacing="0"  class="formtable" cellpadding="0">
+        <tr>
+          <th width=25%>是否使用内存缓存：</th>
+          <td ><input type="radio" name="isMemory" value="1" id="isMemory" />是<input type="radio" value="0" name="isMemory" id="isMemory" />否
+          <label for="checkbox">是<span class="hint">标记是否应用内存或者硬盘存储</span></label></td>
+        </tr>
+        <tr >
+          <th>硬盘保存位置：</th>
+          <td ><input id="path"  value="" name="path"  message="硬盘保存位置不能为空"  type="text" size="20" />
+          <span class="hint">设置缓存在硬盘中的保存位置</span></td>
+        </tr>
+   </table>
+   <table width=100%  id="MemCached" style="display:none;"  border="1" bordercolor="#cccccc" cellspacing="0"  class="formtable" cellpadding="0">
+        <tr >
+          <th width=25%>服务器地址和端口号：</th>
+          <td ><input id="servers"   name="servers" checkType="1" message="服务器地址和端口号填写错误" value="" type="text" size="20" />
+              <span class="hint">各个IP地址间用,隔开，如：192.168.70.66:11211</span></td>
+        </tr>
+        <tr >
+          <th>各个服务器的权重：</th>
+          <td ><input id="weights"   name="weights" checkType="4" message="各个服务器的权重必须为整数" type="text" value="" size="20" />
+            <span class="hint">与上面服务器的配置相对应，值越大越优先，用,分隔</span></td>
+        </tr>     
+       <tr >
+          <th>初始化的连接数：</th>
+          <td ><input id="initConn"    name="initConn"   checkType="3" message="初始化的连接数必须为整数"  type="text" value="" size="20" />
+            <span class="hint">服务器初始化的默认连接数</span></td>
+        </tr>  
+       <tr >
+          <th>最小连接数：</th>
+          <td ><input id="minConn"   name="minConn" type="text" checkType="3" message="最小连接数必须为整数" value="" size="20" />
+            <span class="hint">服务器允许的最小连接数</span></td>
+       </tr>  
+       <tr >
+          <th>最大连接数：</th>
+          <td ><input id="maxConn"  name="maxConn" type="text" checkType="3" message="最大连接数必须为整数" value="" size="20" />
+           <span class="hint">服务器允许的最大连接数</span></td>
+       </tr> 
+       <tr >
+          <th>最大处理时间：</th>
+          <td ><input id="maxIdle"  name="maxIdle" type="text" checkType="3" message="最大处理时间必须为整数"  value="" size="20" />
+          <span class="hint">设置服务器请求的最大处理时间（1000*60*60*6）单位：毫秒（ms）</span></td>
+       </tr>  
+       <tr >
+          <th>主线程的睡眠时间：</th>
+          <td ><input id="maintSleep" checkType="3" message="主线程的睡眠时间必须为整数"  name="maintSleep" type="text" value="" size="20" />
+            <span class="hint">设置服务器请求处理的时间间隔，单位：毫秒（ms）</span></td>
+       </tr>     
+      <tr >
+          <th>是否关闭nagle算法：</th>
+          <td >
+          	<input type="radio" name="nagle" value="1" id="nagle"/>是<input type="radio" name="nagle" value="0" id="nagle"/>否
+	  		<span class="hint">*默认为关闭nagle算法</span></td>
+   	   </tr>  
+  	   <tr >
+         <th>设置读取超时时间：</th>
+        <td ><input id="socketTO"  name="socketTO"  checkType="3" message="设置读取超时时间必须为整数" type="text" value="" size="20" />
+        <span class="hint">*设置服务器请求的处理的超时时间，默认为3秒单位：毫秒（ms）</span></td>
+       </tr>  
+      
+   </table>
+    <table width=100%  border="1" bordercolor="#cccccc" cellspacing="0"  class="formtable" cellpadding="0">
+    <tr><td align="right" colspan="2"><input type="button" onclick="docForm.saveForm();" value="保存"/></td></tr>         
+   </table>
+
+  </body>
+</html>

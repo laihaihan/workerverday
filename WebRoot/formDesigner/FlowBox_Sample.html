@@ -1,0 +1,99 @@
+<%@page contentType="text/html;charset=UTF-8"%>
+<%@page import="com.linewell.ucap.platform.cache.form.Form"%> 
+<%@page import="com.linewell.ucap.resource.*"%> 
+<%
+  //表单参数
+	String unid=request.getParameter("unid");
+	String type=request.getParameter("type");
+	String formId=request.getParameter("formId");
+	String openST=request.getParameter("openST");
+	String viewMId=request.getParameter("viewMId");
+	String belongToAppId=request.getParameter("belongToAppId");
+	String belongToModuleId=request.getParameter("belongToModuleId");
+	if(null==belongToAppId || belongToAppId.equals("null") || belongToAppId.equals(""))
+	{
+		try
+		{
+			ResourceContext rc = ResourceContext.newInstance();
+			ResourceCache cache = rc.getResourceCache(ResourceType.RESOURCE_TYPE_FORM);
+			Form form = (Form) cache.getResource(unid);
+			belongToAppId = form.getBelongToApp();
+		}
+		catch(Exception e)
+		{
+			System.out.println("从缓存表单中获取所属应用系统出错");
+		}
+	}
+
+  //显示表单参数
+  String tmpSourceType = request.getParameter("sourceType");
+	String sourceType= (null==tmpSourceType || ""==tmpSourceType ? "form" : tmpSourceType);
+	String showFormId=request.getParameter("showFormId");
+%>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">	
+    <head>
+        <title></title>         
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style type="text/css" media="screen"> 
+			html, body	{ height:100%; }
+			body { margin:0; padding:0; overflow:auto; text-align:center; 
+			       background-color: #ffffff; }   
+			#flashContent { display:none; }
+        </style>
+		
+        <link rel="stylesheet" type="text/css" href="history/history.css" />
+        <script src="AC_OETags.js" language="javascript"></script>
+        <script type="text/javascript" src="history/history.js"></script>
+        <script type="text/javascript" src="swfobject.js"></script>
+		<script src="AC_OETags.js" language="javascript"></script>
+        <script type="text/javascript" language="javascript" src="bridge/FABridge.js"></script>
+        
+        <script type="text/javascript">
+            var swfVersionStr = "10.0.0";
+            var xiSwfUrlStr = "playerProductInstall.swf";
+            var flashvars = {};
+            //ucap参数传递
+			var ucapParames="{'unid':'<%=unid%>','type':'<%=type%>','formId':'<%=formId%>','openST':'<%=openST%>','viewMId':'<%=viewMId%>','sourceType':'<%=sourceType%>','showFormId':'<%=showFormId%>','belongToAppId':'<%=belongToAppId%>','belongToModuleId':'<%=belongToModuleId%>'}";
+            flashvars.ucapParames=ucapParames;
+            
+            var params = {};
+            params.quality = "high";
+            params.bgcolor = "#ffffff";
+            params.allowscriptaccess = "sameDomain";
+            params.allowfullscreen = "true";
+            var attributes = {};
+            attributes.id = "FlowBox_Sample";
+            attributes.name = "FlowBox_Sample";
+            attributes.align = "middle";
+            swfobject.embedSWF(
+                "FlowBox_Sample.swf", "flashContent", 
+                "100%", "100%", 
+                swfVersionStr, xiSwfUrlStr, 
+                flashvars, params, attributes);
+			swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+        </script>
+
+    </head>
+    <body>
+    	<div id="flashContent">
+			<script type="text/javascript"> 
+				var pageHost = ((document.location.protocol == "https:") ? "https://" :	"http://"); 
+			</script> 
+        </div>
+       	<noscript>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="FlowBox_Sample">
+                <param name="movie" value="FlowBox_Sample.swf" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#ffffff" />
+                <param name="allowScriptAccess" value="sameDomain" />
+                <param name="allowFullScreen" value="true" />
+                <object type="application/x-shockwave-flash" data="FlowBox_Sample.swf" width="100%" height="100%">
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="true" />
+                </object>
+            </object>
+	    </noscript>		
+   </body>
+</html>

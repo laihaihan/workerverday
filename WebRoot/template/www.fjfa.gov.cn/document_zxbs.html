@@ -1,0 +1,258 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>中国福安-$!{msg.title}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="../../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<script language="javascript" type="text/javascript"> 
+function getCount(unid,type){
+	try{
+		var url="../../${tomcatroot}/${cmsWebapp}/views/views.jsp?type="+type+"&unid="+unid;
+		var xmlhttp;
+		if(window.ActiveXObject)
+		{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		else if(window.XMLHttpRequest)
+		{
+			xmlhttp=new XMLHttpRequest();
+		}
+	
+		xmlhttp.Open("get", url, false);
+		xmlhttp.Send(null); 
+		var resultvalue=xmlhttp.responseText;
+		//ret=resultvalue; 
+		document.all.browse.innerHTML=resultvalue;
+	} catch(e) {
+	}
+}
+</script>
+<SCRIPT language="javascript" type="text/javascript">
+function doZoom(size) {
+	document.getElementById('Zoom').style.fontSize = size + 'px';
+} 
+</SCRIPT>
+
+<body class="other_body_bg" onload="getCount('$!{msg.unid}','document')">
+
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+#parse("www.fjfa.gov.cn/topAndButton/document_top.html")
+<tr>
+	<td height="418">&nbsp;</td>
+	<td valign="top">
+
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tr>
+			<td height="40" colspan="3" class="art_border" style="padding-left:15px;">
+				#set( $nav =$list.getNavBar(${msg.cateunid},"&nbsp;-&gt;&nbsp;"))
+				<img src="../../images/ind_l_4.jpg" width="17" height="17" align="absmiddle" border="0" />
+				当前位置：$!{nav}
+			</td>
+		</tr>
+		<tr>
+			<td height="15" colspan="3" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="3" height="5"></td>
+			<td width="27"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td height="356"></td>
+			<td colspan="2" valign="top" align="center" class="art_cont_box_border" style="padding-top:10px;">
+<!-- [在线办事-办事指南]内容 开始 -->
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr height="10">
+	<td width="20">&nbsp;</td>
+	<td align="center" class="art_title_box"><span class="art_title">
+		<meta name="titlestart" />$!{msg.title}<meta name="titleend" />
+	</span></td>
+	<td width="20">&nbsp;</td>
+</tr>
+</table>
+
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr height="10"><td>&nbsp;</td></tr>
+</table>
+
+<script language="javascript">
+function onMouserClickSerch(Id){
+	for(var i=1;i<=5;i++){
+		if (i==Id){
+		  if(document.getElementById("SerchTd_"+i))	{
+			document.getElementById("SerchTd_"+i).style.background="url(../../images/Items_list_2.gif)";
+			document.getElementById("SerchTr_"+i).style.display="";
+			document.getElementById("SerchTd_"+i).className="SerchTdMouseOver";
+		  }
+		}else{
+		  if(document.getElementById("SerchTd_"+i))	{
+			document.getElementById("SerchTd_"+i).style.background="url(../../images/Items_list_2_1.gif)";
+			document.getElementById("SerchTr_"+i).style.display="none";
+			document.getElementById("SerchTd_"+i).className="SerchTdMouseOut";
+		  }
+		}
+	}
+}
+</script>
+<table width="780px" align="center" border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td height="28" background="../../images/Items_list_3.gif">
+	
+		<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr height="27px" valign="middle">
+			<td id="SerchTd_1" width="76" align="center" 
+				background="../../images/Items_list_2.gif" class="white_12b" style="CURSOR: hand;" 
+				onmouseover="onMouserClickSerch(1)">办事指南</td>
+			<td id="SerchTd_2" width="76" align="center" 
+				background="../../images/Items_list_2_1.gif" style="CURSOR: hand;" 
+				onmouseover="onMouserClickSerch(2)">表格下载</td>
+			<td id="SerchTd_3" width="76" align="center" 
+				background="../../images/Items_list_2_1.gif" style="CURSOR: hand;" 
+				onmouseover="onMouserClickSerch(3)">在线咨询</td>
+			<td id="SerchTd_4" width="76" align="center" 
+				background="../../images/Items_list_2_1.gif" style="CURSOR: hand;" 
+				onmouseover="onMouserClickSerch(4)">在线申报</td>
+			<td id="SerchTd_5" width="76" align="center" 
+				background="../../images/Items_list_2_1.gif" style="CURSOR: hand;" 
+				onmouseover="onMouserClickSerch(5)">办理机构</td>
+			<td align="left">&nbsp;</td>
+		</tr>
+		</table>
+		
+	</td>
+</tr>
+<tr>
+	<td align="center" valign="top" background="../../images/Items_list_3_2.gif">
+	
+		<table width="100%" align="center" border="0" cellspacing="5" cellpadding="0">
+		<tr>
+			<td align="center" valign="top">
+			
+				<table width="100%" align="center" border="0" cellpadding="5" cellspacing="0">
+				<tr id="SerchTr_1">
+					<td valign="top" style="color:#000000;line-height:20px;text-align:left;padding-left:5px;padding-right:5px;">
+					<!--[办事指南]内容 开始-->
+						<meta name="contentstart" />$!{msg.content}<meta name="contentend" />
+					<!--[办事指南]内容 结束-->
+					</td>
+				</tr>
+				<tr id="SerchTr_2"  style="display:none;">
+					<td valign="top" style="color:#000000;line-height:20px;text-align:left;padding-left:5px;padding-right:5px;">
+				#set( $list_attr_01 = $list.getAttrListByPUnid(${msg.unid}, 0) )
+				#if( $list_attr_01 )
+						<table  width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+					#set( $count_01 = 0 )
+					#foreach( $info in $list_attr_01)
+						#set( $count_01 = $count_01 + 1 )
+						#if ( $count_01 == 1 )
+						<tr height="24px" bgcolor="#FFFFFF">
+							<td align="center"><strong>文档名称</strong>&nbsp;</td>
+							<td align="center"><strong>文档实体</strong>&nbsp;</td>
+							<td align="center"><strong>申请表样本</strong>&nbsp;</td>
+						</tr>
+						#end
+						<tr height="24px" bgcolor="#FFFFFF">
+							<td>&nbsp;$!{info.caption}</td>
+							<td><a href="../../document_view.html?id=$!{info.unid}&file=$!{info.file_name}" target="_blank">$!{info.file_name}</a>&nbsp;</td>
+							<td><a href="../../document_down.html?id=$!{info.unid}" target="_blank">$!{info.file_name}</a>&nbsp;</td>
+						</tr>
+					#end
+						</table>
+				#end
+					</td>
+				</tr>
+				<tr id="SerchTr_3"  style="display:none;">
+					<td valign="top" style="color:#000000;line-height:20px;text-align:left;padding-left:10px;">
+						<img src="../../images/list_arrow_3x3_01.gif" border="0" align="absmiddle" />
+						<a href="#" target="_blank">在线咨询</a>
+					</td>
+				</tr>
+				<tr id="SerchTr_4"  style="display:none;">
+					<td valign="top" style="color:#000000;line-height:20px;text-align:left;padding-left:10px;">
+						<img src="../../images/list_arrow_3x3_01.gif" border="0" align="absmiddle" />
+						<a href="#" target="_blank">在线申报</a>
+					</td>
+				</tr>
+				<tr id="SerchTr_5"  style="display:none;">
+					<td valign="top" style="color:#000000;line-height:20px;text-align:left;padding-left:10px;">
+						<img src="../../images/list_arrow_3x3_01.gif" border="0" align="absmiddle" />
+						$!{msg.dept}
+					</td>
+				</tr>
+				</table>
+				
+			</td>
+		</tr>
+		</table>
+		
+	</td>
+</tr>
+<tr>
+	<td align="center" valign="top"><img src="../../images/Items_list_3_3.gif" align="absmiddle" border="0" /></td>
+</tr>
+</table>
+<!-- [在线办事-办事指南]内容 结束 -->
+					<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td height="10">&nbsp;</td>
+						<td valign="top" class="art_cont_border" align="left" style="padding:10px;"></td>                          
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td height="38">&nbsp;</td>
+						<td valign="top">
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+								  <td width="80" height="38" align="right"><a href="#"><img src="../../images/button_jc.gif" width="59" height="20" border="0" /></a></td>
+									<td width="97" align="right"><a href="#"><img src="../../images/button_wz.gif" width="82" height="20" border="0" /></a></td>
+									<td width="76" align="right">推荐给朋友</td>
+									<td width="169" align="center"><input name="" value="您朋友的E-mail" size="20" onClick=""/>           </td>
+									<td width="76"><input type="image" src="../../images/button_qd.gif" name=""/></td>
+									<td width="448" align="right">
+										【　<a href="javascript:doZoom(16);">大</a>　<a href="javascript:doZoom(14);">中</a>　<a href="javascript:doZoom(12);">小</a>　】
+										【<a  href="">收藏</a>】
+										【<a href="javascript:printPage();">打印</a>】
+										【<a href="javascript:window.close();">关闭</a>】
+									</td>
+								</tr>
+							</table>            
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td height="16"></td>
+						<td></td>
+						<td></td>
+					</tr>						
+					<!--============评论开始============-->
+					<tr>
+						<td height="38">&nbsp;</td>
+						<td valign="top" align="center">
+							<iframe scrolling="no" frameborder="0" valign="top" border="0" width="1000" height="370" src="../../${tomcatroot}/${cmsWebapp}/articleComment/articleComment.jsp?unid=${msg.unid}"></iframe>
+						</td>
+						<td>&nbsp;</td>
+				</tr>
+				<!--============评论结束============-->
+				</table>
+			
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr><td heigh=""></td></tr>
+<tr>
+	<td height="180" colspan="2"  align="center">
+		#parse("www.fjfa.gov.cn/topAndButton/document_buttom.html")
+	</td>
+</tr>
+</table>
+
+</body>
+
+</html>

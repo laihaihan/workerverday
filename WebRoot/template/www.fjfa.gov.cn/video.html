@@ -1,0 +1,207 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>$pagetitle</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<SCRIPT language="javascript">
+var NowTreeTrId="";
+var NowTreeImageId="";
+function SubTreeMiddle(tr_id,image_id){
+	var tr_id=tr_id;
+	var image_id=image_id;
+	if(tr_id!=NowTreeTrId){
+		getObject(tr_id).style.display="";
+		getObject(image_id).src="../images/treeicon_close.gif"
+		if (NowTreeTrId!=""){
+			getObject(NowTreeTrId).style.display="none";
+			getObject(NowTreeImageId).src="../images/treeicon_open.gif"
+		}
+		NowTreeTrId=tr_id;
+		NowTreeImageId=image_id;
+	}else{
+		if(getObject(tr_id).style.display=="none"){
+			getObject(tr_id).style.display="";
+			getObject(image_id).src="../images/treeicon_close.gif"
+		}else{
+			getObject(tr_id).style.display="none";
+			getObject(image_id).src="../images/treeicon_open.gif"
+		}
+	}
+}
+function change(spurl,title) {
+document.getElementById("nstv").URL=spurl;
+document.getElementById("jm").value=title;
+}
+</SCRIPT>
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+  <!--DWLayoutTable-->
+  #parse("www.fjfa.gov.cn/topAndButton/top.html")
+  <tr><td><table width="1000" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <!--DWLayoutTable-->
+  <tr><td width="1000" height="544" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+    <!--DWLayoutTable-->
+    <tr>
+      <td width="1000" height="40" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="46" height="40" align="center" class="art_border"><img src="images/ind_l_4.jpg" width="17" height="17" /></td>
+		  #set( $zxspunid="D083670F817F4BCE4BFA3FC186887BD0")
+		  #set( $nav =$list.getNavBar($zxspunid,"&nbsp;-&gt;&nbsp;"))
+              <td width="954" class="art_border"> 当前位置：$nav</td>
+            </tr>
+      </table>      </td>
+            </tr>
+    <tr>
+      <td height="504" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="14" height="17">&nbsp;</td>
+          <td width="974">&nbsp;</td>
+          <td width="12">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="542">&nbsp;</td>
+          <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <!--DWLayoutTable-->
+            <tr>
+              <td width="974" height="39" align="center" background="images/sp_bg_02.jpg" style="background-repeat:no-repeat;"></td>
+                        </tr>
+            <tr>
+              <td height="467" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/sp_bg_03.jpg" style="background-repeat:repeat-y;">
+                <!--DWLayoutTable-->
+                <tr>
+                  <td width="15" height="16">&nbsp;</td>
+                      <td width="450">&nbsp;</td>
+                      <td width="483">&nbsp;</td>
+                      <td width="26">&nbsp;</td>
+                    </tr>
+                <tr>
+                  <td height="429">&nbsp;</td>
+                      <td valign="top" class="sp_left_border"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <!--DWLayoutTable-->
+                        <tr>
+                          <td height="25" bgcolor="e8f3ff"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <!--DWLayoutTable-->
+                            <tr>
+							#set( $cate_zxsp = $list.getCategoryByUnid(${zxspunid}))
+		 				    #set( $articlelist_zxsp = $list.getList("video",${zxspunid},15,28,"yyyy-MM-dd") )
+                              <td width="388" height="14" valign="top" class="bold font_14px">&nbsp;&nbsp;<img src="images/czfwdt_pic3_43.gif" width="9" height="10" /> ${cate_zxsp.name}</td>
+                                <td width="60" class="fjyw_gengduo"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/views/list.jsp?cateunid=${zxspunid}" class="fjyw_gengduo">更多&gt;&gt;</a></td>
+                              </tr>
+                            </table></td>
+                          </tr>
+                       #foreach($article in $articlelist_zxsp)
+					    <tr>
+                          <td height="26" valign="bottom"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td width="5">&nbsp;</td>
+                                  <td width="12" align="left"><img src="images/45.gif" width="7" height="7"/></td>
+                                  <td valign="bottom" class="fjyw_daohan"><A style="CURSOR: hand" 
+onclick="change('${siteoutputpath}/${article.attrurl}','${article.title}');">${article.title}</A></td>
+								  <td width="80">(${article.publishdate})</td>
+                                </tr>
+                            </table></td>
+                          </tr>
+						  #end
+                        <tr>
+                          <td height="17" valign="top">&nbsp;</td>
+                          </tr>
+                        
+                        
+                              </table></td>
+                      <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <!--DWLayoutTable-->
+                        <tr>
+                          <td width="32" rowspan="2" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td width="451" height="428" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <!--DWLayoutTable-->
+                              <tr>
+                                <td height="373" colspan="2" valign="top"><object id="nstv" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701standby=Loading" classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" width="433" height="360" components...type="application/x-oleobject" player="player" media?="media?" windows="windows" microsoft?="microsoft?">
+                                  <param name="URL" value="" />
+                                  <param name="rate" value="1" />
+                                  <param name="balance" value="0" />
+                                  <param name="currentPosition" value="10.1248957" />
+                                  <param name="defaultFrame" value="" />
+                                  <param name="playCount" value="1" />
+                                  <param name="autoStart" value="-1" />
+                                  <param name="currentMarker" value="0" />
+                                  <param name="invokeURLs" value="-1" />
+                                  <param name="baseURL" value="" />
+                                  <param name="volume" value="50" />
+                                  <param name="mute" value="0" />
+                                  <param name="uiMode" value="full" />
+                                  <param name="stretchToFit" value="0" />
+                                  <param name="windowlessVideo" value="0" />
+                                  <param name="enabled" value="-1" />
+                                  <param name="enableContextMenu" value="-1" />
+                                  <param name="fullScreen" value="0" />
+                                  <param name="SAMIStyle" value="" />
+                                  <param name="SAMILang" value="" />
+                                  <param name="SAMIFilename" value="" />
+                                  <param name="captioningID" value="" />
+                                  <param name="enableErrorDialogs" value="0" />
+                                  <param name="_cx" value="11456" />
+                                  <param name="_cy" value="9525" />
+                                </object>
+                                </td>
+                      </tr>
+                              <tr>
+                                <td width="435" height="55" align="left" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="fef0ea">
+                                  <!--DWLayoutTable-->
+                                  <tr>
+                                    <td width="46" height="55" align="center" valign="middle"><img src="images/spxw_ic.gif" width="13" height="15" /></td>
+                                        <td width="96" valign="middle" class="fjyw_daohan"><font style="font-size:13px">您现在收看的是</font></td>
+                            <td width="293" align="left"><input id="jm" name="jm"  value="请在左边栏目中选择节目"/></td>
+			              </tr>
+                                  <!--DWLayoutTable-->
+                                  
+                                </table></td>
+                        <td width="16">&nbsp;</td>
+                              </tr>
+                              
+                              
+                                      </table></td>
+                          </tr>
+                        <tr>
+                          <td height="1"></td>
+                          </tr>
+                        
+                        </table></td>
+                      <td>&nbsp;</td>
+                    </tr>
+                <tr>
+                  <td height="22">&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                
+                
+                
+                </table></td>
+              </tr>
+            <tr>
+              <td height="19" valign="top"><img src="images/sp_bg_05.jpg" width="972" height="19" /></td>
+              </tr>
+            <tr>
+              <td height="17">&nbsp;</td>
+              </tr>
+          </table></td>
+        </tr>  
+      </table>
+      </td>
+    </tr>
+  </table></td>
+  </tr>
+  </table>
+  #parse("www.fjfa.gov.cn/topAndButton/buttom.html")
+  </td>
+  </tr>
+  </table>
+</body>
+</html>

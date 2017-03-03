@@ -1,0 +1,387 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<SPAN style="DISPLAY: none">
+    <INPUT class=inputbox id=view_unid name=view_unid>
+    <INPUT class=inputbox id=view_display_name_spell name=view_display_name_spell>
+    <INPUT class=inputbox id=view_belong_to_users name=view_belong_to_users>
+    <INPUT class=inputbox id=view_belong_to_depts name=view_belong_to_depts>
+    <INPUT class=inputbox id=view_belong_to_app name=view_belong_to_app>
+    <INPUT class=inputbox id=view_condition_type name=view_condition_type>
+    <INPUT class=inputbox id=view_punid name=view_punid>
+    <INPUT class=inputbox id=view_module_unid name=view_module_unid>
+    <INPUT class=inputbox id=view_belong_to_app name=view_belong_to_app>
+</SPAN>
+
+<TABLE class="table21" style="width:100%;*width:98%;_width:100%;border-collapse:collapse;border:1px solid #B2CDD5;text-align:left;margin-left:1px;">
+    <TBODY>
+	<TR>
+		<td>
+
+<div onclick="toggleClick('ucap_form_basic');" style="margin:10px 0 10px 0;background: url(../../uistyle/images/doc/line.gif)  80px 50% no-repeat;cursor:hand;color:#3f529c;font-size:14px;font-weight:bold;">
+	<img id="ucap_form_basic_img" src="../../uistyle/images/doc/display.gif"></img>
+		基本属性
+</div>
+<TABLE id="ucap_form_basic" class="table2">
+	<COL width="20%">
+	<COL width="30%">
+	<COL width="20%">
+	<COL width="30%">
+    <TBODY>
+        <TR>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                视图配置名称:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_name name=view_name>
+            </TD>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                视图显示名称:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_display_name name=view_display_name>
+            </TD>
+        </TR>
+        <TR>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                视图来源类型:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_source_type name=view_source_type>
+            </TD>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                视图来源值:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_source_unid name=view_source_unid conValue="belongToModuleId">
+            </TD>
+        </TR>
+        <TR>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                表单类型:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_form_type name=view_form_type>
+            </TD>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                表单来源:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_form_unid name=view_form_unid conValue="belongToModuleId">
+            </TD>
+        </TR>
+          <TR>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                每页显示的条数:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_page_size name=view_page_size>
+            </TD>
+        </TR>
+	</TBODY>
+</TABLE>
+<div onclick="toggleClick('ucap_form_show');" style="margin:10px 0 10px 0;background: url(../../uistyle/images/doc/line.gif)  80px 50% no-repeat;cursor:hand;color:#3f529c;font-size:14px;font-weight:bold;">
+	<img id="ucap_form_show_img" src="../../uistyle/images/doc/hide.gif"></img>
+		显示属性
+</div>
+<TABLE id="ucap_form_show" style="display:none;" class="table2" >
+	<COL width="20%">
+	<COL width="30%">
+	<COL width="20%">
+	<COL width="30%">
+    <TBODY>	
+		<TR>
+            <TH>
+                视图展示类型:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_type name=view_type />
+            </TD>
+            <TH>
+                选项列位置:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_check_position name=view_check_position />
+            </TD>
+        </TR>
+		<TR id="view_type_tr">
+            <TH>
+                表单列表渲染函数名称:
+            </TH>
+            <TD colspan="3">
+                <INPUT style="width:200px;" class=inputbox id=view_embellish_js_name name=view_embellish_js_name />
+				<span style="color:red">通过此事件可以自定义渲染逻辑，填JS函数名称</span>
+            </TD>
+        </TR>
+		 <TR>
+            <TH>
+                新文档打开方式：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_newdoc_type name=view_newdoc_type />
+            </TD>
+            <TH>
+                旧文档打开方式
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_opendoc_type name=view_opendoc_type />
+            </TD>
+        </TR>
+		<TR>
+			<TH>
+                视图宽度:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_width name=view_width />
+            </TD>
+            <TH>
+                视图分类样式:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_categories name=view_categories />
+            </TD>
+        </TR>
+        <TR>
+            <TH>
+                视图预览方式:
+            </TH>
+            <TD colspan="3">
+                <INPUT class=inputbox id=view_preview_type name=view_preview_type />
+            </TD>
+        </TR>
+		<TR id="view_preview_type_tr" style="display:none;">
+            <TH>
+                预览大小(宽或高):
+            </TH>
+            <TD colspan="3">
+                <INPUT style="width:200px;" class=inputbox id=view_preview_size name=view_preview_size />
+				<span>像素(px)</span>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+<div onclick="toggleClick('ucap_form_advanced');" style="margin:10px 0 10px 0;background: url(../../uistyle/images/doc/line.gif)  80px 50% no-repeat;cursor:hand;color:#3f529c;font-size:14px;font-weight:bold;">
+	<img id="ucap_form_advanced_img" src="../../uistyle/images/doc/hide.gif"></img>
+		高级属性
+</div>
+<TABLE id="ucap_form_advanced" style="display:none;" class="table2" >
+	<COL width="20%">
+	<COL width="30%">
+	<COL width="20%">
+	<COL width="30%">
+    <TBODY>	
+        <TR>
+			<TH>
+                是否有流程字段:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_flow_item name=view_flow_item>
+            </TD>
+			<TH>
+                公共类型:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_public_type name=view_public_type>
+            </TD>
+        </TR>
+         <TR>
+			<TH>
+                是否直接打开记录页面:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_open name=view_open>
+            </TD>
+            <TH>
+                是否以单列作为链接:
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=view_simple_link name=view_simple_link>
+            </TD>
+        </TR>
+		
+		<TR>
+			<TH>
+                打开时js事件:
+            </TH>
+            <TD colspan="3">
+                <INPUT style="width:200px;" class=inputbox id=view_open_js name=view_open_js>
+                <IMG title=帮助 onclick="searchHelp('viewInfo_openJS')" src="../../uistyle/images/help.gif" />
+                </IMG>
+				<span style="color:red">视图行单击事件，填JS函数名称</span>
+            </TD>
+        </TR>
+        <TR>
+            <TH>
+                视图加载完JS:
+            </TH>
+            <TD colspan="3">
+                <INPUT style="width:200px;" class=inputbox id=view_loadjs name=view_loadjs>
+                <IMG title=帮助 onclick="searchHelp('viewInfo_loadedJS')" src="../../uistyle/images/help.gif">
+                </IMG>
+				<span style="color:red">视图加载完后执行的事件</span>
+            </TD>
+        </TR>
+		 <TR>
+            <TH>
+                是否编辑视图:
+            </TH>
+            <TD colspan="3">
+                <INPUT class=inputbox id=view_edit name=view_edit>
+            </TD>
+        </TR>
+		<TR id="view_edit_tr">
+			<TH>
+                是否只保存选中:
+            </TH>
+            <TD colspan="3">
+                <INPUT class=inputbox id=view_onlysave_selected name=view_onlysave_selected>
+            </TD>
+        </TR>
+		<TR id="view_edit_tr2">
+            <TH>
+                编辑视图增加行JS:
+            </TH>
+            <TD colspan="3">
+                <INPUT style="width:200px;" class=inputbox id=view_add_rowjs name=view_add_rowjs>
+                <IMG title=帮助 onclick="searchHelp('viewInfo_addColJS')" src="../../uistyle/images/help.gif">
+                </IMG>
+				<span style="color:red">编辑视图在增加行事件时会调用此事件，填JS函数名称</span>
+            </TD>
+        </TR>
+		<TR id="view_edit_tr3">
+            <TH>
+                验证函数名称:
+            </TH>
+            <TD colspan="3">
+                <INPUT style="width:200px;" class=inputbox id=view_save_validate_js_name name=view_save_validate_js_name />
+				<span style="color:red">&#160;&#160;&#160;&#160;&#160;编辑视图在保存时会调用此事件，填JS函数名称</span>
+            </TD>
+        </TR>
+        <TR>
+            <TH>
+                提示信息类型:
+            </TH>
+            <TD colspan="3">
+                <INPUT class=inputbox id=view_message_type name=view_message_type>
+            </TD>
+        </TR>
+		<TR id="view_message_type_tr">
+            <TH>
+                提示信息内容:
+            </TH>
+            <TD colspan="3">
+                <INPUT class=inputbox id=view_message name=view_message>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+
+		</td>
+	</TR>
+	<TR>
+            <TD align=middle >
+                <INPUT class=btnChannel onclick=_UcapForm.docSave(); type=button value=保存
+                name=btnSave/>
+            </TD>
+        </TR>
+	</TBODY>
+</TABLE>
+
+
+
+<script>
+
+var bindRadioClick = function(name,fn){
+	//获取要绑定的对象集合
+	var objs = Ext.query("input[name='"+name+"']");
+	Ext.each(objs,function(o){
+		//绑定单击事件
+		Ext.get(o).on("click",fn,o);
+		//执行已经选中的单击事件
+		if(o.checked){
+			o.click();
+		}
+	});
+};
+
+/**
+ * 文档加载完毕后的事件
+ * @param {Object} "input[name=view_preview_type]"
+ */
+Ext.onReady(function(){
+	//绑定预览类型单击事件
+	bindRadioClick("view_preview_type",function(){
+		if("00"==this.value){
+			$("view_preview_type_tr").style.display = "none";
+		}else{
+			$("view_preview_type_tr").style.display = "";
+		}
+	});
+	//绑定提示信息类型单击事件
+	bindRadioClick("view_message_type",function(){
+		if("01"==this.value){
+			$("view_message_type_tr").style.display = "none";
+		}else{
+			$("view_message_type_tr").style.display = "";
+		}
+	});
+	//绑定视图展示类型类型单击事件
+	bindRadioClick("view_type",function(){
+		if("04"!=this.value){
+			$("view_type_tr").style.display = "none";
+		}else{
+			$("view_type_tr").style.display = "";
+		}
+	});
+	//是否编辑视图
+	bindRadioClick("view_edit",function(){
+		if("0"==this.value){
+			$("view_edit_tr").style.display = "none";
+			$("view_edit_tr2").style.display = "none";
+			$("view_edit_tr3").style.display = "none";
+		}else{
+			$("view_edit_tr").style.display = "";
+			$("view_edit_tr2").style.display = "";
+			$("view_edit_tr3").style.display = "";
+		}
+	});
+});
+
+/**
+ * 折叠展开事件
+ * @param {Object} id
+ */
+function toggleClick(id){
+	var obj = Ext.get(id);
+	if(obj){
+		if(obj.isDisplayed()){
+			var imgObj = Ext.getDom(id+"_img");
+			imgObj.setAttribute("src","../../uistyle/images/doc/hide.gif");
+		}else{
+			var imgObj = Ext.getDom(id+"_img");
+			imgObj.setAttribute("src","../../uistyle/images/doc/display.gif");
+		}
+		obj.setVisibilityMode(2);
+		obj.toggle(true);
+	}
+}
+</script>

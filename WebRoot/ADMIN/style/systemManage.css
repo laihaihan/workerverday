@@ -1,0 +1,222 @@
+﻿/******************** 系统标签样式 ********************/
+*{
+	margin: 0;
+	padding: 0;	
+}
+
+html{
+	height:100%;
+	width:100%;
+}
+
+body {
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	font-size: 12px;
+	color:#333;
+	margin: 0;
+	padding: 0;
+	font-family: Arial,宋体;
+	background:#f0f9ff;
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+
+/*模块样式 */
+iframe{
+	width:100%;
+	height:100%;
+	border-style:none;
+}
+
+
+/********************** 页眉区域 **********************/
+/* 页眉 */
+.topBox {
+	width:100%;
+	height:64px;
+	background:#ddd url('images/systemManage/topBG.gif') repeat-x ;
+}
+
+/* LOGO */
+.logo {
+	width: 677px;
+	height: 64px;
+	background: url('images/systemManage/topLogo.gif') no-repeat ;
+}
+
+
+/********************** 当前位置区域 **********************/
+.siteBox{
+	width:100%;
+	height:28px;
+	background:#ddd url('images/systemManage/siteBG.gif') repeat-x ;
+}
+
+/* 图标 */
+.siteIcon{
+	float:left;
+	width: 24px;
+	height: 28px;
+	background: url('images/systemManage/siteIcon.gif') no-repeat ;
+}
+
+.siteBox ul{
+	float:left;
+}
+
+.siteBox li{
+	color:#0b4175;
+	float:left;
+	list-style:none;
+	line-height:28px;
+	margin-right:8px;
+}
+.siteBox li a{
+	color:#0b4175;
+}
+
+
+/********************** 页脚区域 **********************/
+/* 页脚 */
+.bottomBox {
+	color:#1c62a5;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:28px;
+	line-height:28px;
+	width:100%;
+	background:#ddd url('images/systemManage/footerBG.gif') repeat-x ;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+
+/******************** 主区域 ********************/
+/* 主区域 */
+.midBox{
+	position:absolute;
+	top:92px;
+	bottom:28px;
+	left:0px;
+	right:0px;
+	width:100%;
+	overflow:hidden;
+}
+/*fix ie6 and ie7 bug*/
+*html .midBox,*+html .midBox{   
+   height: expression(documentElement.clientHeight-64-28-28);
+}
+
+/* 左区域 */
+.leftBox{
+	width: 230px;
+	float: left;
+	background:black none no-repeat;
+	height:100%;
+	position:relative;	
+}
+/* 工具栏 */
+.treeToolBar{
+	width:100%;
+	height:83px;
+	background:gray url('images/systemManage/leftToolBarBG.gif') repeat-x;
+	overflow:hidden;
+}
+
+/* 按钮列表 */
+.treeToolBar dl{
+	clear:both;
+	height:28px;
+	line-height:28px;
+	position:relative;
+	top:12px;
+	left:10px;
+	width:500px;
+	margin-bottom:5px;
+	
+}
+/* 按钮列表 标题*/
+.treeToolBar dt{
+	float:left;
+	height:28px;
+	line-height:28px;
+
+	
+}
+/* 按钮列表 按钮*/
+.treeToolBar dd{
+	float:left;
+	height:28px;
+	line-height:28px;
+	width:58px;
+	cursor:pointer;	
+}
+.treeToolBar dd:hover{
+	background:transparent url('images/systemManage/fileButtonOver.png') no-repeat;
+}
+
+/* 按钮列表 按钮 图片*/
+.treeToolBar dd img{
+	margin-left:8px;
+	position:relative;
+	top:4px;
+}
+
+
+
+/* 左侧树 */
+.leftBoxTree{
+	overflow:auto;
+	background:#f0f7ff;
+	position:absolute;
+	top:83px;
+	left:0px;
+	right:0px;
+	width:100%;
+	bottom:0px;
+}
+
+/*fix ie6 and ie7 bug*/
+*html .leftBoxTree,*+html .leftBoxTree{   
+   height: expression(documentElement.clientHeight-64-28-28-83);
+}
+
+
+/* 分隔条 */
+.separatorBox{
+	width:9px;
+	background:gray url('images/systemManage/separatorBG.gif') repeat-y;
+	height:100%;
+	float:left;
+	position:relative;
+}
+/* 分隔条按钮 */
+.separatorBtn{
+	background:gray url('images/systemManage/separatorBtn.gif') no-repeat;
+	width:9px;
+	height:41px;
+	position:absolute;
+	top:50%;
+	margin-top:-20px;
+	cursor:pointer;
+}
+
+.separatorBtn.open{
+	background:url('images/systemManage/separatorBtnOpen.gif') no-repeat;
+}
+
+
+
+/* 右区域 */
+.rightBox{
+	margin-left: 239px;
+	background:gray;
+	height:100%;
+}
+

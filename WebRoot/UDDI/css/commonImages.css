@@ -1,0 +1,7 @@
+.cl_nav_bullet,.cl_nav_dots,.cl_nav_arrow{position:absolute;}
+.cl_nav_bullet{top:-3px;left:-1494px}
+.cl_nav_dots{top:-3px;left:-1503px}
+.cl_nav_arrow{top:-3px;left:-1483px}
+
+.cl_CollapsibleArea_expanding{background:url('../images/common.png') no-repeat scroll -2705px -3px;width:9px;height:12px;overflow:hidden}
+.cl_CollapsibleArea_collapsing{background:url('../images/common.png') no-repeat scroll -2720px -3px;width:9px;height:12px;overflow:hidden}

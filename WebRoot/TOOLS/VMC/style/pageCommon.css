@@ -1,0 +1,134 @@
+*{ margin:0; padding:0; word-break: break-all;}
+*html{ overflow:auto;}
+*+html{ overflow:auto;}
+
+/*系统标签样式 begin*/
+body {	
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+	color: #1b4959;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/*ie6 bug*/
+*html .clearfix {
+	height: 1%;
+}
+/*ie bug*/
+*+html .clearfix {
+	height: 1%;
+}
+/*系统标签样式 begin*/
+
+/*公共样式 begin*/
+
+/* 星标 */
+.star{
+	color: #FF5050;
+	margin-right:5px;
+}
+
+
+/* 页面留白 */
+.blank {
+	height: 8px;
+	line-height: 8px;
+	clear: both;
+	visibility: hidden;
+}
+
+/* 分隔线 */
+.separator{
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+	color: #939393;
+}
+/*公共样式 end*/
+
+
+
+
+
+/*提示信息 begin*/
+
+
+
+
+/* 输入提示 */
+.tips_input{	
+	border: 1px #6cc6ff solid;	
+	line-height: 22px;
+	padding-left: 28px;
+	padding-right: 10px;
+	background: #e5f5ff url('images/tips_input.png') no-repeat 5px ;	
+	color: #135aae;
+	width:300px;
+}
+
+
+/* 正确提示 */
+.tips_correct{
+	border:1px #fff solid;	
+	height:22px;
+	width:300px;
+	background: url('images/tips_correct.png') no-repeat left center;	
+}
+
+
+/* 错误提示 */
+.tips_error{
+	border: 1px #ffbaba solid;	
+	line-height: 22px;
+	padding-left: 28px;	
+	background: #ffe6e6 url('images/tips_error.png')  no-repeat 5px;
+	padding-right: 10px;
+	color: #f15757;
+	width:300px;
+}
+/* 输入提示 */
+.tips_input{	
+	border: 1px #6cc6ff solid;		
+	line-height: 22px;
+	padding-left: 28px;
+	padding-right: 10px;
+	background: #e5f5ff url('images/tips_input.png') no-repeat 5px ;	
+	color: #135aae;
+	width:300px;
+}
+
+
+/* 正确提示 */
+.tips_correct{
+	background: url('images/tips_correct.png') no-repeat 5px
+	padding-left: 28px;
+	padding-right: 10px;
+	line-height:22px;
+	width:300px;
+}
+
+
+/* 错误提示 */
+.tips_error{
+	border: 1px #ffbaba solid;	
+	line-height: 22px;
+	padding-left: 28px;	
+	background: #ffe6e6 url('images/tips_error.png')  no-repeat 5px;
+	padding-right: 10px;
+	color: #f15757;
+	width:300px;
+}
+/*提示信息 end*/
+
+
+
+/*修正EXT在文档加入标准后出现checkbox上移的bug for ext*/
+.ext-ie input.x-tree-node-cb{margin-bottom:-5px;}

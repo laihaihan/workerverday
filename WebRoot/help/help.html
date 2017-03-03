@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>帮助文档</title>
+<style type="text/css">
+<!--
+* {
+	margin:0 auto;
+	font-size:12px;
+	color:#333;
+}
+.titleStyle {
+	width:auto;
+	padding:8px 0px 8px 10px;
+	font-size:12px;
+	font-weight:bold;
+	text-align:left;
+	background-color:#F4F4F4;
+}
+#content {
+	padding:8px;
+	color:#333;
+	text-indent:2em;
+	line-height:24px;
+	word-break:break-all;
+	
+}
+a, a:link, a:visited {
+	color:#261CDC;
+	text-decoration:underline;
+}
+a:hover {
+	color:#333;
+	text-decoration:underline;
+}
+img {
+	border:0px;
+}
+#helpList {
+	width:20%;
+	height:550px;
+	overflow:auto;
+	padding:4px;
+	background-color:#F9F9F9;
+	float:left;
+	border-right:#DBDBDB 1px dashed;
+}
+#helpList ul {
+    list-style:none;
+	padding:12px 0px 20px 0px;
+}
+#helpList ul li {
+    line-height:25px;
+}
+#helpListTitle {
+	width:auto;
+	font-weight:bold;
+	height:17px;
+	background:#F9F9F9 url(left_bg.gif) repeat-y left center;
+	padding:5px 0px 0px 8px;
+}
+#rightBox {
+	height:550px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+-->
+#fl {
+	float:right;
+}
+#helpTitle {
+	height:23px;
+	background:#A4C8EE url(../uistyle/images/top_bg.gif) repeat-y left center;
+	border-bottom:#FFF 2px solid;
+	clear:both;
+	color:#FFF;
+	font-size:14px;
+	font-weight:bold;
+	padding:7px 0px 0px 14px;
+}
+</style>
+<script language="JavaScript">
+// JavaScript Document
+function pagebartop(div,img)
+{
+	if (div.style.display=="") 
+	{	img.src="../uistyle/images/treeicon_open.gif";
+		img.alt="伸展";
+		div.style.display="none";
+	}
+	else
+	{	img.src="../uistyle/images/treeicon_close.gif";
+		img.alt="收缩";
+		div.style.display="";
+	}
+}
+</script>
+</head>
+
+<body scroll="no">
+ <div id="helpTitle">LW--UCAP帮助手册</div>
+ <div id="helpList">
+	<div id="helpListTitle"><img src="../uistyle/images/left_icon.gif" align="absmiddle" />&nbsp;系统配置参数说明</div>
+	<ul>
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top1"  onClick="pagebartop(frmremark1,top1)"/>登陆配置</li>
+		<div id="frmremark1" style="DISPLAY:none">		
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif"  />&nbsp;<a href="#login_useIpScope" >可使用IP范围</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" />&nbsp;<a href="#login_unuseIpScope">不可使用IP范围</a></p>
+		</div>
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top2"  onClick="pagebartop(frmremark2,top2)"/>应用系统配置</li>
+		<div id="frmremark2" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#appConfig_againConf">允许再次配置的部门</a></p>
+		</div>
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top3"  onClick="pagebartop(frmremark3,top3)" />数据表配置</li>
+		<div id="frmremark3" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top3_1" onClick="pagebartop(frmremark3_1,top3_1)"/>表单基本信息
+		<div id="frmremark3_1" style="DISPLAY:none">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#form_title">记录标题</a></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#form_showHtmlUrl">显示HTML页面</a></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#form_editJs">可编辑JS</a></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#form_dataVindicator">数据维护者</a></p>
+		</div>
+		</p>
+		
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top3_2" onClick="pagebartop(frmremark3_2,top3_2)"/>字段基本信息
+		<div id="frmremark3_2" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#formFields_sourceValue">来源值</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#formFields_rowConfValue">列配置对应</a></p>
+		</div>
+		</p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top3_3" onClick="pagebartop(frmremark3_3,top3_3)"/>字段显示属性
+		<div id="frmremark3_3" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#fieldAtt_valScope">验证范围</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#fieldAtt_hideConf">字段隐藏配置信息</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#fieldAtt_editConf">字段编辑配置信息</a></p>
+		</div>
+		</p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top3_4" onClick="pagebartop(frmremark3_4,top3_4)"/>按钮配置
+		<div id="frmremark3_4" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#button_isShow">显示与否JS</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#button_belongToMenu">所属菜单</a></p>
+		</div>
+		</p>
+		</div>
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top4"  onClick="pagebartop(frmremark4,top4)" />数据库视图配置</li>
+		<div id="frmremark4" style="DISPLAY:none">
+			<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#dataView_condition">数据库视图条件</a></p>
+		</div>
+		
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top5"  onClick="pagebartop(frmremark5,top5)" />视图配置</li>
+		<div id="frmremark5" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top5_1" onClick="pagebartop(frmremark5_1,top5_1)"/>视图基本信息
+		<div id="frmremark5_1" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#viewInfo_openJS">打开时js事件</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#viewInfo_addColJS">增加行JS</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#viewInfo_loadedJS">视图加载完JS</a></p>
+		</div>
+		</p>
+		
+		
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top5_2" onClick="pagebartop(frmremark5_2,top5_2)"/>视图字段信息
+		<div id="frmremark5_2" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#view_rowOnclickJS">列单击JS函数</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#view_rowTurnJS">列转换JS函数</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#view_changeValueJS">值发生改变时JS函数</a></p>
+		</div>
+		</p>
+		
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top5_3" onClick="pagebartop(frmremark5_3,top5_3)"/>视图分类
+		<div id="frmremark5_3" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#viewType_begin_end">开始、结束位置</a></p>
+		</div>
+		</p>
+		</div>
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top6"  onClick="pagebartop(frmremark6,top6)" />固定查询配置</li>
+		<div id="frmremark6" style="DISPLAY:none">
+			<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#fixupSelect_condition">固定查询条件</a></p>
+		</div>
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top7"  onClick="pagebartop(frmremark7,top7)" />按钮配置</li>
+		<div id="frmremark7" style="DISPLAY:none">
+			<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#button_content">按钮内容</a></p>
+		</div>
+		
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top8"  onClick="pagebartop(frmremark8,top8)" />扩展功能</li>
+		<div id="frmremark8" style="DISPLAY:none">
+			<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#expandFunction">扩展对象工厂</a></p>
+		</div>
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top9"  onClick="pagebartop(frmremark9,top9)" />界面配置</li>
+		<div id="frmremark9" style="DISPLAY:none">
+			<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#interphaseStyle">界面风格配置</a></p>
+			<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#interphaseScheme">界面方案配置</a></p>
+		</div>
+			<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top10"  onClick="pagebartop(frmremark10,top10)" />系统参数配置</li>
+		<div id="frmremark10" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top10_1" onClick="pagebartop(frmremark10_1,top10_1)"/>系统参数
+		<div id="frmremark10_1" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#parameter_relatingType">关联类型</a><p>
+		</div>
+		</p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top10_2" onClick="pagebartop(frmremark10_2,top10_2)"/>编号配置
+		<div id="frmremark10_2" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../uistyle/images/leaf.gif" align="absmiddle" />&nbsp;<a href="#serialNumber_style">编号样式</a></p>
+		</div>
+		</p>
+		</div>
+	</ul>
+	<div id="helpListTitle"><img src="../uistyle/images/left_icon.gif" align="absmiddle" />&nbsp;新建应用系统</div>
+	<ul>
+		<li><img src="../uistyle/images/rp_bullet.gif" align="absmiddle" /><a href="#stepOne">新建步骤</a></li>
+	</ul>
+	<div id="helpListTitle"><img src="../uistyle/images/left_icon.gif" align="absmiddle" />&nbsp;二次开发</div>
+	<ul>
+		<li><img src="../uistyle/images/rp_bullet.gif" align="absmiddle" /><a href="#developmentFront">方式一</a></li>
+		<li><img src="../uistyle/images/rp_bullet.gif" align="absmiddle" /><a href="#developmentBack">方式二</a></li>
+	</ul>
+	<div id="helpListTitle"><img src="imag\help.gif" align="absmiddle" />&nbsp;疑难问题解答</div>
+	<ul>
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top19"  onClick="pagebartop(home,top19)"/>首页</li>
+		<div id="home" style="DISPLAY:none">
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#navigation1" >导航栏功能按钮介绍</a></p>		
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#navigation2" >导航栏欢迎信息配置</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#copyright" >版权信息修改</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#home2" >首页欢迎信息修改</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#channel" >频道数据来源对应关系</a></p>
+		</div>	
+		<li><img src="../uistyle/images/treeicon_open.gif" align="absmiddle" id="top20"  onClick="pagebartop(SystemConfiguration,top20)"/>系统配置</li>
+		<div id="SystemConfiguration" style="DISPLAY:none">	
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#DBdiscrete" >数据库分离配置</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#Composesubtable" >表单关联配置</a></p>	
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#flowcompose" >流程相关组合表单配置</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#flowview" >流程相关视图配置</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#viewitem" >视图列配置需要注意什么</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#viewoperation" >视图操作列设置</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#formgeneralselection" >通用选择框来源值对照表</a></p>
+	    <p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#flowbutton" >新建指定流程按钮如何配置</a></p>
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#viewbutton" >打开指定视图按钮如何配置</a></p>
+	
+		<p>&nbsp;&nbsp;&nbsp;<img src="imag\leaf2.gif"  />&nbsp;<a href="#useragent" >用户代理人有什么作用</a></p>
+		
+		
+		</div>	
+	</ul>
+</div>	
+
+
+<div id="rightBox">
+
+     <div id="login_useIpScope" class="titleStyle">登陆配置---可使用IP范围
+     </div>
+     <div id="content">
+         <p>用于规定可以使用该系统的IP地址，如内容：192.168.5.1-192.168.5.250,则表示该范围内的IP可以使用该系统。</p>
+         <p>为空时默认为都可以使用该系统。</p>  
+     </div>
+     <div id="login_unuseIpScope" class="titleStyle">登陆配置---不可使用IP范围
+     </div>
+     <div id="content">
+         <p>用于限制不可使用该系统的IP地址，如：192.168.5.4,则表示该范围内的IP不可以使用该系统。</p>
+         <p>如果该IP既在可使用IP范围又在不可使用IP范围，则该IP无法使用该系统。</p>  
+     </div>
+     <div id="appConfig_againConf" class="titleStyle">应用系统配置---允许再次配置的部门
+     </div>
+     <div id="content">
+         <p>该域值中的部门管理员可再将此资源自定义的权限分配给其他的用户、部门、职位、角色。</p>
+         <p>&nbsp;</p>  
+     </div>
+     <div id="form_title" class="titleStyle">数据表---表单基本信息---记录标题
+     </div>
+     <div id="content">
+          <p>用于显示记录表单的标题，可自定义，如：导航栏配置——{F$navigation_name}，navigation_name为该表中的字段。</p>
+         <p>&nbsp;</p>  
+     </div>
+     <div id="form_showHtmlUrl" class="titleStyle">数据表---表单基本信息---显示HTML页面
+     </div>
+     <div id="content">
+         <p>用于自行配置当前页面显示的HTML，如果该项为空则使用系统默认HTML显示记录内容。</p>
+         <p>如内容：D:\Eclipse_WorkSpace\ucapPlatform\WebRoot\html\system\03D661949DBF98FC18EF4DF59F2044C3.html,则表示将使用该HTML页面显示记录内容。</p>  
+     </div>
+     <div id="form_editJs" class="titleStyle">数据表---表单基本信息---可编辑JS
+     </div>
+     <div id="content">
+	     <p>用于判断页面是否可编辑，不符合条件时只读，如：1!=2，则表示该页面为只读页面。</p>
+ 	     <p>为空时默认表示页面为可编辑页面。</p>  
+	     <p>_UcapForm.cfg.isRead：0为只读，1为编辑，-1为无权限</p> 
+	     <p>取父窗口父节点页面的文档状态（一般用于三级界面视图打开的文档）window.opener.parent._UcapForm.cfg.isRead</p> 
+	     <p>取父窗口的文档状态（一般用于二级界面视图打开的文档）window.opener._UcapForm.cfg.isRead</p> 
+	     <p>取当前页面的文档状态_UcapForm.cfg.isRead</p> 
+	     <p>以上_UcapForm.cfg.isRead可以替换成页面存在的js函数，如常用到的$V("字段名")可以从json中取到应的最初的字段数据</p>
+	     <p>常用到的方法还有：$F("字段名")、$("字段名")等等</p> 
+	       <p>常用到的全局变量还有：ucapHeader.userJson.unid/depts/roles/effectiveFullDept等等</p> 
+	     <p>例如：$V("字段名")=="值"，返回true则为编辑，false则返回只读页面</p>
+	     <p>if($V("字段名")=="值")_UcapForm.cfg.isRead="-1"//如果返回ture则返回无权限页面</p>
+     </div>
+     <div id="form_dataVindicator" class="titleStyle">数据表---表单基本信息---数据维护者
+     </div>
+     <div id="content">
+         <p>此用户可对此表单的所有相关文档进行修改，由系统记录相应的操作日志，包括对流程异常的处理。</p>
+          <p>为空时默认所有人都不可以进行修改。</p>  
+      </div>
+     <div id="formFields_sourceValue" class="titleStyle">数据表---字段基本信息---来源值
+     </div>
+     <div id="content">
+          <p>用于自行定义属性为字典、视图列、日期、日期时间、大文本、通用选择框字段的来源数据。</p>
+          <p>属性为字典、通用选择框时可通过选项来选择来源。</p>  
+         <p>属性为日期：yyyy-MM-dd、yyyy/MM/dd等格式。</p>  
+          <p>属性为日期时间：yyyy-MM-dd HH:mm:ss、yyyy/MM/dd HH:mm等格式。</p>  
+     </div>
+     <div id="formFields_rowConfValue" class="titleStyle">数据表---字段基本信息---列配置对应
+     </div>
+     <div id="content">
+            <p>当字段属性为视图列时出现该配置项。</p>
+          <p>用来取得视图列的值，可配置视图中要取的列的字段名。</p>
+           <p>如:unid,title,name,age则表示取得字段名为这四个列的值。</p>  
+     </div>
+     <div id="fieldAtt_valScope" class="titleStyle">数据表---字段显示属性---验证范围
+     </div>
+     <div id="content">
+          <p>用于字段内容长度的验证，为空时默认为无验证。</p>
+           <p>如：“100,600”表示长度范围在100-600间，“,100”表示小于100，“100,”表示大于100。注意：配置时不带引号。</p>  
+     </div>
+     <div id="fieldAtt_hideConf" class="titleStyle">数据表---字段显示属性---字段隐藏配置信息</div>
+     <div id="content">
+          <p>隐藏与否特定条件:用于判断该字段是否隐藏，不符合条件的如果没有替换值，则该字段将隐藏。为空时默认为不隐藏。</p>
+          <p>如：1！=2，并且替换值为空则表示该字段隐藏。</p>
+           <br />
+          <p>隐藏替换值:与“隐藏与否特定条件”形成组合条件。用于替换该字段原有内容，不符合条件的字段内容将被替换。</p>
+              <p>如：1！=2，并且替换值不为空则表示该字段替换成“隐藏替换值中”的内容。</p>  
+     </div>
+     <div id="fieldAtt_editConf" class="titleStyle">数据表---字段显示属性---字段编辑配置信息
+     </div>
+     <div id="content">
+         <p>编辑与否特定条件:用于判断该字段是否可编辑，不符合条件的为只读。默认为可编辑。</p>
+           <p>如：1！=2，则表示为只读。</p>  
+     </div>
+     <div id="button_isShow" class="titleStyle">数据表---按钮配置---显示与否JS
+     </div>
+      <div id="content">
+         <p>用于判断该按钮是否显示，不符合条件则该按钮不予显示,默认为显示。</p>
+         <p>如:1！=2则表示该按钮为隐藏不予显示。</p>  
+     </div>
+     <div id="button_belongToMenu" class="titleStyle">数据表---按钮配置---所属菜单
+     </div>
+     <div id="content">
+            <p>指定按钮的父级的名称，应用时用菜单进行展示。</p>
+         <p>&nbsp;</p>  
+     </div>
+     <div id="dataView_condition" class="titleStyle">数据库视图配置---数据库视图条件
+     </div>
+     <div id="content">
+           <p>用于配置视图的WHERE显示条件，为空时默认无条件</p>
+           <p>如：where A.a1=B.b2则表示只显示符合这个条件的记录，不符合的记录将不予显示。</p>  
+     </div>
+     <div id="viewInfo_openJS" class="titleStyle">视图配置---视图基本信息---打开时js事件</div>
+     <div id="content">
+            <p>单击该视图记录时触发的JS事件，为空时默认为打开该记录。</p>
+            <p>如:createRecord()则表示单击该视图时将执行这个JS函数。</p>  
+     </div>
+     <div id="viewInfo_addColJS" class="titleStyle">视图配置---视图基本信息---增加行JS
+     </div>
+     <div id="content">
+            <p>在可编辑视图中，当用户在最后一行最后一列的单元格回车时执行该JS事件。</p>
+           <p>为空时默认为保存</p>  
+     </div>
+     <div id="viewInfo_loadedJS" class="titleStyle">视图配置---视图基本信息---视图加载完JS</div>
+     <div id="content">
+            <p>该视图加载完之后触发的JS事件。</p>
+            <p>如：showWelcomeMessage()则表示视图加载完后将执行该JS函数。</p>  
+      </div>
+       <div id="view_rowOnclickJS" class="titleStyle">视图配置---视图字段信息---列单击JS函数
+       </div>
+       <div id="content">
+              <p>单击视图中该列时触发的JS事件。</p>
+          <p>如：showWelcomeMessage()则表示单击视图中该列时将执行该JS函数。</p>  
+       </div>
+
+       <div id="view_rowTurnJS" class="titleStyle">视图配置---视图字段信息---列转换JS函数
+       </div>
+       <div id="content">
+            <p>视图中该列内容转换时触发的JS事件。</p>
+            <p>如：showWelcomeMessage则表示该列内容转换时将执行该JS函数。如下：
+			//列转换js函数的方法<br/>
+			function conversion(value,metadata,record,rowIndex,colIndex,store){<br/>
+			    //当前列值value<br/>
+			    //取视图中的一个列值record.get("字段英文名")<br/>
+			    //变红return '<span class="red">'+value+'</span>'<br/>
+			    return value;
+			}<br/>
+			</p>  
+       </div>
+
+        <div id="view_changeValueJS" class="titleStyle">视图配置---视图字段信息---值发生改变时JS函数
+        </div>
+         <div id="content">
+               <p>在可编辑视图中直接对列内容进行编辑时触发的JS事件。</p>
+               <p>如：showWelcomeMessage()则表示直接编辑该列时将执行该JS函数。</p>  
+        </div>
+
+        <div id="viewType_begin_end" class="titleStyle">视图配置---视图分类---开始、结束位置
+        </div>
+        <div id="content">
+               <p>对于分类类型为本身值的情况，可对分类值进行截取分类。</p>
+             <p>如：2009-08-08，开始位置为0，结束位置为4时，则说明分类值截取结果为2009。</p>  
+       </div>
+
+       <div id="fixupSelect_condition" class="titleStyle">固定查询配置---固定查询条件
+       </div>
+       <div id="content">
+          <p></p>
+          <p>&nbsp;</p>  
+     </div>
+      <div id="button_content" class="titleStyle">按钮配置---按钮内容
+      </div>
+      <div id="content">
+              <p>用于存放该按钮执行的JS事件。</p>
+              <p>如：view.reset();则说明该按钮执行的是这个JS函数。</p>  
+     </div>
+     <div id="expandFunction" class="titleStyle">扩展功能---扩展对象工厂
+     </div>
+     <div id="content">
+          <p>用于存放用户自己编写的功能类。</p>
+          <p>&nbsp;</p>  
+     </div>
+     <div id="interphaseStyle" class="titleStyle">界面风格配置
+     </div>
+     <div id="content">
+            <p>风格资源路径:用来存放界面样式资源的相对路径，如：uistyle/style_3</p>
+            <p>风格缩略图:用来存放界面的整体缩略图的相对路径，如：uistyle/style_3/ucapimages/style_3.gif</p>
+            <p>&nbsp;</p>  
+     </div>
+     <div id="interphaseScheme" class="titleStyle">界面方案配置
+     </div>
+     <div id="content">
+            <p>LOGO图片:当前LOGO显示样式为图片时将加载此项中的路径内容。</p>
+            <p>LOGOFLASH:当前LOGO显示样式为FLASH时将加载此项中的路径内容。</p>
+            <p>&nbsp;</p>  
+     </div>
+     <div id="parameter_relatingType" class="titleStyle">系统参数配置---关联类型</div>
+     <div id="content">
+         <p>在文档或试图中如果缺省值来自此系统参数并系统参数配置了关联类型时，会根据此关联类型对应的资源标示转换为相应的名称。</p>
+            <p>关联类型资源名称为globalsession.xml。</p>  
+      </div>
+      <div id="serialNumber_style" class="titleStyle">编号配置---编号样式
+      </div>
+      <div id="content">
+           <p>用于定义编号的样式，一般为前缀+{年度}+{月份}+{序号}+后缀，用户也可将几项自行组合，注：样式不能为空。</p>
+            <p>如：前缀+{年度}+{序号}+后缀，注意{序号}必须存在。</p>  
+      </div>
+     <div id="stepOne" class="titleStyle">新建应用系统---步骤
+     </div>
+      <div id="content">
+           <p>(1):利用超级管理员admin账号登陆平台设计管理系统，并在“应用系统配置”视图中新建一个新的应用系统记录指定其系统管理员。如下图：</p>
+           <p>&nbsp;</p>
+           <p><img src="imag\newSystem1.gif" /></p> 
+           <p>&nbsp;</p>
+           <p><img src="imag\newSystem2.gif" /></p> 
+           <p>(2):用新建应用系统的管理员账号登陆，并选择进入该新建应用系统。如下图：</p> 
+           <p>&nbsp;</p>
+           <p><img src="imag\newSystem3.gif" /></p> 
+           <p>(3):在导航栏中选择自定义，定制该应用系统的菜单。如下图：</p>
+           <p>&nbsp;</p> 
+           <p><img src="imag\newSystem4.gif" /></p>
+           <p>&nbsp;</p> 
+           <p><img src="imag\newSystem5.gif" /></p>
+           <p>(4):在应用系统下新建菜单模块，以下是新建系统管理模块菜单示例。如下图：</p> 
+           <p>&nbsp;</p>
+           <p><img src="imag\newSystem6.gif" /></p>
+           <p>&nbsp;</p>
+           <p><img src="imag\newSystem7.gif" /></p>
+           <p>(5):至此一个新的基础应用系统已新建完成，系统管理员可在此基础上根据业务需求进行更多操作。</p>
+      </div>
+      <div id="developmentFront" class="titleStyle">二次开发---方式一（继承ABaseInteraction类）
+      </div>
+      <div id="content">
+           <p>该方法继承了ABaseInteraction类，用户只要在扩展功能里配置上功能类，并编写该类，就可实现该扩张功能，并可在后台指定回调函数，简单易用。实例如下：</p>
+           <p>&nbsp;</p>
+ 
+           <p>（1）在扩展功能视图里新建扩展功能（生成数据库视图），如下图：</p>
+           <p>&nbsp;</p>
+           <p><img src="imag\development1.gif" /></p>
+           <p>&nbsp;</p>
+           <p>（2）扩展对象里配置上要编写的功能类。如下图：</p>
+           <p>&nbsp;</p>
+           <p><img src="imag\development2.gif"  /></p>
+           <p>扩展功能类型包含隐藏公式、系统参数、按钮、流程条件，如果类型为按钮，则要在按钮视图中配置功能按钮，如下图：</p>
+           <p>&nbsp;</p>
+           <p><img src="imag\development3.gif"  /></p>
+           <p>如果扩展功能类型为流程条件时则只能在流程中使用，如下图：</p>
+           <p>&nbsp;</p>
+           <p><img src="imag\development6.gif" /></p>
+           <p>如果新建扩展功能有带参数（可有多个参数）则要在参数视图里配置上参数，功能类的获取参数就是通过此参数名来获取参数值的，如下图：</p>
+           <p>&nbsp;</p>
+           <p><img src="imag\development4.gif"  /></p>
+           <p>实现类都必须继承ABaseInteraction类、实现execute方法。示例如下图：</p>
+           <p>&nbsp;</p>
+           <p><img src="imag\development5.gif" /></p>
+     </div>
+     <div id="developmentBack" class="titleStyle">二次开发---方式二（实现IAction接口）
+     </div>
+     <div id="content">
+           <p>前台</p>
+           <p>(1)前台采用EXJ2.0框架</p>
+           <p>(2)前后台交互的JS代码示例如下：<br />
+           function doExecute(){	<br />
+             		&nbsp; &nbsp; var json = ucapCommonFun.getFormJSon("expDialogHtml");	<br />
+           		&nbsp; &nbsp; var requestConfig = {<br />
+           			&nbsp; &nbsp; &nbsp; url:ucapSession.baseAction,<br />
+           			&nbsp; &nbsp; &nbsp; params:{"type":"configLog","action":"excute"},<br />
+           			&nbsp; &nbsp; &nbsp; jsonData:json,<br />
+           			&nbsp; &nbsp; &nbsp; callback:function(options,success,response){<br />
+           				&nbsp; &nbsp; &nbsp; &nbsp; if (success){<br />
+           					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var exjson = Ext.util.JSON.decode(response.responseText);<br />	
+           					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(exjson.result || exjson.result=="true"){<br />
+           						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ext.Msg.alert("提示",exjson.msg);<br />
+           						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(ucapSession.commonWin){<br />
+           							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ucapSession.commonWin.close();<br />
+						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  }else{<br />
+           						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp&nbsp; ; Ext.Msg.alert("提示",exjson.msg);<br />
+           					&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  }<br />
+           				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br />
+           					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ext.Msg.alert("提示","执行不成功！");<br />
+           					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(ucapSession.commonWin){<br />
+           							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ucapSession.commonWin.close();<br />
+           						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+           				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+           			&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+           		&nbsp; &nbsp; &nbsp; }<br />
+           		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ext.Ajax.request(requestConfig);<br />
+           	&nbsp; &nbsp; }<br />
+            </p>
+            <p> 说明：<br />
+            		（1）JSON---前台要传递给后台的内容值，值为ID为expDialogHtml里所有对象的值。<br />
+                   （2）"type":"configLog"---type为标识（固定为type），configLog为后台类的引用名。<br />
+           			与WebRoot\WEB-INF\verbs.properties相关联，说明前台提交到configLog在verbs.properties中所对应的后台类。<br />
+           		（3）"action":"excute"---action为参数名，excute为参数值，都可自行定义。<br />
+           		（4）exjson---后台返回的JSON结果值。<br />	
+           		（5）在“按钮配置视图”里配置上拥有这个方法的按钮并将按钮应用到系统中，单击该按钮时就触发该方法。
+             </p>
+  
+           <p>JS包简单说明：<br />
+            WebRoot\js\portal\form.js封装了关于表单的JS方法。<br />
+            WebRoot\js\util\common.js封装了关于系统常用工具的JS方法，比如系统SESSION值等。<br />
+             WebRoot\js\view\view.js封装了关于视图的JS方法<br />
+            </P>
+           <p>后台</p>
+
+            <p>(1)新建的类必须实现IAction接口。</p>
+            <p>(2)JSONObject requestStr = JsonUtil.readJsonFromRequest(request)---获取前台传过来的JSON值。</p>
+            <p>(3)JsonUtil.printJSONObject(response, JSONObject
+							.fromObject("{result:true,msg:'导出成功'}"));---后台返回JSON值到前台。</p>
+							
+     </div>
+     <div id="navigation1" class="titleStyle">首页---导航栏功能按钮介绍
+      </div>
+      <div id="content">
+           <p><img src="imag\answer.gif"/>导航栏功能按钮：</p>
+            <p><img src="imag\home.jpg"/></p>
+            <p>&nbsp;</p>
+     </div>
+      <div id="navigation2" class="titleStyle">首页---导航栏欢迎信息配置
+      </div>
+      <div id="content">
+           <p><img src="imag\answer.gif"/>导航栏内容配置如下：</p>
+            <p>&nbsp;</p>
+            <p><img src="imag\navigation.gif"/></p>
+            <p>&nbsp;</p>
+           <p>红色方框里面的内容就是欢迎信息配置内容，其中user_display_name为系统参数标识，打开“系统管理——系统参数配置——系统参数</p>
+           <p>配置”，选择需要展示的参数的对应参数标识即可。</p>  
+     </div>
+           <div id="copyright" class="titleStyle">首页---版权信息如何修改
+      </div>
+      <div id="content">
+           <p><img src="imag\answer.gif"/>修改版权信息有两种方式：</p>
+            <p> 手动修改：</p>
+            <p>**修改.. \sys\jsp目录下的footer.jsp文件</p>
+            <p>if (copyright == null || "".equals(copyright)) copyright = "版权所有 ? 2010 南威软件工程发展有限公司";</p>
+            <p>**修改应用系统目录下的login.jsp文件，修改该文件中的版权信息将在登陆页面中起作用</p>
+            <p>&nbsp;</p>
+            <p>自定义修改</p>
+           <p>点击导航栏中的自定义按钮---界面方案-----版权信息，即可修改版权信息</p>
+           <p>注意：通过自定义修改过版权信息后，手动修改footer.jsp的版权信息不起作用；但登陆页面中的版权信息还是要通过修改login.jsp文件才能起作用。</p>  
+     </div>
+      <div id="home2" class="titleStyle">首页---欢迎信息如何修改
+      </div>
+      <div id="content">
+           <p><img src="imag\answer.gif"/>修改掉首页“欢迎使用UCAP系统”：</p>
+            <p> 手动修改：</p>
+            <p>**需要修改.. \js\ucap\portal目录下的menu.js文件</p>
+            <p>&nbsp;</p>
+           
+     </div>
+     <div id="channel" class="titleStyle">首页---频道数据来源的对应关系
+      </div>
+      <div id="content">
+           <p><img src="imag\answer.gif"/>系统提供10种频道样式，及相应的数据来源类型供用户选择使用，不同的频道样式有不同的数据来源类型及来源值，频道样式、数据来源类型及来源值输入方式关系如下表所示：</p>
+            <p> <img src="imag\channel.gif"/></p>
+          
+            <p>&nbsp;</p>
+           
+     </div>
+     
+     <div id="DBdiscrete" class="titleStyle">系统配置---数据库分离配置
+     </div>
+     <div id="content">
+             <p><img src="imag\answer.gif"/>数据库分离配置步骤</p>
+              <p>第一：建立表空间A（略）</p>
+               <p>第二：在A中导入以下八张表：</p> 
+                 <p><img src="imag\DBdeploy2.jpg" /></p>   
+             <p>第三：进入需要进行数据库分离的应用系统配置页面</p> 
+              <p>点击“配置数据库”，在弹出的数据库配置对话框中设置信息：</p> 
+              <p><img src="imag\DBdeploy1.jpg"  style="width:745px;"/></p>  
+           <p>至此数据库分离成功，业务数据将会保存到数据库A中。</p>
+           <p>&nbsp;</p>
+             
+     </div>
+          <div id="Composesubtable" class="titleStyle">系统配置---表单关联配置
+     </div>
+     <div id="content">
+             <p><img src="imag\answer.gif"/>表单关联配置在表单一对多的情况下使用，假设表A为主表，表B为子表，在系统中要建立表A与表B的关联关系，需要注意一下几点：</p>
+             <p>第一：表B中配置关联主表A的外键</p> 
+              <p><img src="imag\view8.jpg"  style="width:745px;"/></p>  
+              <p>&nbsp;</p>
+           <p>该字段在进行表单关联配置时使用。</p>
+            <p>&nbsp;</p>
+           <p>第二：在主表A中要进行关联配置</p>  
+             
+             <p><img src="imag\view9.jpg" /></p>  
+           <p>如上图所示，在进行关联配置时表单选择表B，字段选择第一步配置的关联字段。</p>
+            <p>&nbsp;</p>
+             <p>第三：表B视图条件中要配置“外键等于unid”条件。</p>  
+             <p>&nbsp;</p>
+             <p><img src="imag\view7.jpg"  style="width:745px;"/></p>  
+           <p>&nbsp;</p>
+           <p>第四：配置组合页签。</p>  
+             <p>&nbsp;</p>
+           <!--  <p><img src="imag\view7.jpg"  style="width:745px;"/></p>  -->
+           <p>&nbsp;</p>
+            
+             
+     </div>
+     
+     <div id="flowcompose" class="titleStyle"> 系统配置---流程相关组合表单如何配置 
+     </div>
+     <div id="content">
+           <p><img src="imag\answer.gif" />重点在页签的配置，其主表及按钮的配置跟配置一般的组合表单类似</p>          
+           <p>页签配置：</p>  
+           <p><img src="imag\compose_form_tab.jpg"/></p>
+           <p>&nbsp;</p>
+        <p>应用实例：</p>
+           <p>以配置船舶应急管理流程相关组合表单为例，先配置组合表单的主表信息</p>
+           <p><img src="imag\compose1.jpg" style="width:720px;"/></p>
+           <p>&nbsp;</p>
+           <p>应急管理流程相关组合表单页签信息</p>
+           <p><img src="imag\compose2.jpg" /></p>
+           <p>&nbsp;</p>
+           <p>流程日志页签配置页面</p>
+           <p><img src="imag\compose3.jpg" style="width:720px;"/></p>
+        
+           <p>&nbsp;</p>
+
+     </div>
+    
+     <div id="flowview" class="titleStyle"> 系统配置---流程相关视图如何配置
+     </div>
+     <div id="content">
+           <p><img src="imag\answer.gif"/>视图具体内容如下表</p>
+           <p><img src="imag\flow_view.jpg"/></p>  
+           <p>&nbsp;</p>
+           <p>图例：</p>
+           <p><img src="imag\view1.jpg" style="width:720px;"/></p>  
+           <p>&nbsp;</p>
+           <p>作为流程视图还需要设置视图条件及视图按钮</p>
+           <p><img src="imag\flow_view2.jpg"/></p>
+           <p>&nbsp;</p>
+           <p>图例：</p>
+           <p><img src="imag\view2.jpg" style="width:745px;"/></p>  
+           <p>&nbsp;</p>
+      </div>
+    
+       <div id="viewitem" class="titleStyle">系统配置---视图列配置需要注意什么
+       </div>
+       <div id="content">
+           <p><img src="imag\answer.gif"/>视图列的配置必须选择主键编号，并且要作为视图列的第一项，建议不要进行显示</p> 
+           <p>&nbsp;</p> 
+           <p>图例：</p>
+           <p><img src="imag\view3.jpg" style="width:745px;"/></p>  
+           <p>&nbsp;</p>
+      </div>
+      
+     <div id="viewoperation" class="titleStyle">系统配置---视图操作列如何设置
+     </div>
+     <div id="content">
+           <p><img src="imag\answer.gif"/>在视图列配置时将操作列作为视图列的最后一项展示，然后在配置子按钮时，将要展</p>
+           <p>示在操作列的按钮显示位置选择“操作列/都是”</p>  
+           <p>&nbsp;</p>
+           <p>第一步：先配置出操作列</p>
+           <p><img src="imag\view4.jpg" style="width:745px;"/></p>  
+           <p>&nbsp;</p>
+           <p>第二步：在操作列中添加按钮</p>
+           <p><img src="imag\view5.jpg" style="width:745px;"/></p>  
+           <p>&nbsp;</p>
+     </div>
+    
+     <div id="formgeneralselection" class="titleStyle">系统配置---通用选择框来源值代表意义对照表
+     </div>
+     <div id="content">
+           <p><img src="imag\answer.gif"/>下面提供来源值及其代表意义对照表</p>
+           <p><img src="imag\select.jpg"/></p> 
+           <p>&nbsp;</p> 
+           <p>图例：</p>
+           <p><img src="imag\view6.jpg" style="width:745px;"/></p>  
+           <p>&nbsp;</p>
+      </div>
+       
+  <div id="flowbutton" class="titleStyle">系统配置---新建指定流程按钮如何配置
+      </div>
+      <div id="content">
+           <p><img src="imag\answer.gif"/>新建流程按钮如下</p>
+           <p><img src="imag\flow_button.jpg" /></p> 
+           <p>按钮内容：</p>  
+           <p>ucapCommonFun.newFlowDocByFlowIds("ADFE54E0A7B746E9000D570000000004");</p>
+           <p>其中“ADFE54E0A7B746E9000D570000000004”为具体流程的id。</p>
+      </div>
+ 
+      <div id="viewbutton" class="titleStyle">系统配置---打开指定视图按钮如何配置
+      </div>
+      <div id="content">
+             <p><img src="imag\answer.gif" />打开指定视图按钮配置如下</p>
+             <p><img src="imag\view_button.jpg" /></p> 
+             <p>按钮内容：</p>  
+             <p>ucapCommonFun.indexOpen.directOpenView('EAF6469B84B5A3411D2B7CDFA9D56208','nd=2009')</p>  
+             <p>其中“EAF6469B84B5A3411D2B7CDFA9D56208”为指定视图的unid，“nd”为该视图条件中列出的可作为条件的字段之一。</p>
+      </div>
+
+      <div id="useragent" class="titleStyle">系统配置---用户代理人的配置有什么作用
+      </div>
+      <div id="content">
+             <p><img src="imag\answer.gif"/>用户代理人可代理用户处理事务，常用的作用是在用户出差期间帮用户处理流程事务。</p>
+             <p>&nbsp;</p>
+     </div>
+
+     
+     
+
+
+
+</div>
+</body>
+</html>

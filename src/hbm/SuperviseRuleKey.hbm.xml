@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.rulefactor.BusinessRuleKey" table="SUPERVISE_RULEKEY">
+<id column="KEY_UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="KEY_PUNID" name="punid" type="string"/>
+<property column="KEY_PNAME" name="pname" type="string"/>
+<property column="KEY_POWERID" name="powerId" type="string"/>
+<property column="KEY_SUNID" name="sunid" type="string"/>
+<property column="KEY_SNAME" name="sname" type="string"/>
+<property column="KEY_TYPE" name="type" type="string"/>
+<property column="KEY_WORD" name="keyWord" type="string"/>
+<property column="KEY_REMARK" name="remark" type="string"/>
+<property column="KEY_FLAG" name="flag" type="string"/>
+
+</class>
+</hibernate-mapping>

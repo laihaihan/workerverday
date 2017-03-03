@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.portal.interactreply.PortalInteractReply" table="PTL_INTERACTREPLY">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="PUNID" name="punid" type="string"/>
+<property column="TYPE" name="type" type="string"/>
+<property column="STATUS" name="status" type="string"/>
+<property column="REPLYPEOPLE" name="replypeople" type="string"/>
+<property column="REPLYTPEOPLEUNID" name="replytpeopleunid" type="string"/>
+<property column="REPLYDEPT" name="replydept" type="string"/>
+<property column="REPLYDEPTUNID" name="replydeptunid" type="string"/>
+<property column="REPLYCONTENT" name="replycontentclob" type="clob" lazy="true"/>
+<property column="REPLYTTIME" name="replyttime" type="string"/>
+<property column="ATTRNAME" name="attrname" type="string"/>
+<property column="ATTRCONTENT" name="attrcontent" type="blob" lazy="true"/>
+<property column="ATTRTYPE" name="attrtype" type="string"/>
+</class>
+</hibernate-mapping>

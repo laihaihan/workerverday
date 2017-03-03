@@ -1,0 +1,1 @@
+1、在执行compress.bat之前一般要记得先清空ucap-debug.js,否则会使得压缩的js具有重复的代码。

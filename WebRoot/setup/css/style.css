@@ -1,0 +1,49 @@
+body{margin:0; padding:0;font-size:12px;margin:5px;}
+
+.width25percent{width:25%;}
+
+/*定义textbox类型*/
+input.text{height:18px;border:1px solid #ccc;color:#666;}
+
+/*定义页面的描述 begin*/
+div.desc_info{position:relative; text-indent:20px;border:1px solid #999; background:#F9F9F9;padding:5px;line-height:18px;font-size:13px;padding-right:15px;margin-top:5px; margin-bottom:5px;}
+	div.desc_info div.close{position:absolute;right:5px;top:5px;width:8px;height:8px;background:url(../images/close.png) no-repeat;cursor:pointer;}
+/*定义页面的描述 end*/	
+
+/*定义表单类型 begin*/
+table.form_table{background-color:#ced6da;}
+	table.form_table td.step_desc{font-size:12px;line-height:20px;}
+	table.form_table td.form_desc{font-size:12px;}
+		table.form_table td.form_desc span.desc_title{font-weight:bold;}
+	table.form_table td.text_box{text-align:right;font-weight:bold;background-color:#ebf0f5;}
+	table.form_table td.input_box{}
+		table.form_table td.input_box input{border:1px solid #ccc;height:20px;}
+	table.form_table th{background-color:#F7F7F7;width:200px;text-align:right;}
+	table.form_table td{background-color:#fff;padding:5px;padding-top:5px;padding-bottom:5px;}
+		table.form_table td span.hint{color:#ccc;font-size:12px;}
+		table.form_table td span.required{color:#f00;}	
+		table.form_table td.buttons_box{text-align:right; padding-right:10px;}
+			table.form_table td.buttons_box input{padding:5px; font-size:12px;}
+			table.form_table td.buttons_box div.show_more_box{float:left;}		
+				table.form_table td.buttons_box span.show_more_btn{display:block;cursor:pointer;}
+			table.form_table td.buttons_box div.buttons_box{float:right;}
+/*定义表单类型 end*/			
+
+/*定义字段组合框 begin*/
+fieldset.fields_group{padding:3px;margin-top:5px;}
+	fieldset.fields_group legend{font-weight:bold;}
+/*定义字段组合框 end*/	
+
+/*定义列表 begin*/	
+table.list_table{background-color:#000;}
+	table.list_table th{background-color:#777;color:#fff;line-height:25px;}
+	table.list_table tr{background-color:#fff;}
+	table.list_table td{padding:5px;}
+		table.list_table tr.event{background-color:#F7F7F7;}
+		table.list_table tr.detail{background-color:#fff;}
+			table.list_table tr.detail td{padding:5px;}
+/*定义列表 end*/	
+
+
+
+

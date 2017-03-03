@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>ipSet.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+     <table width=100% border="1" bordercolor="#cccccc" cellspacing="0" cellpadding="0" class="formtable">
+    	
+    	<tr>
+    		<th align="right">能使用的IP范围：</th>
+    		<Td><input type="text" id="login_use_ips" name="login_use_ips" size="80"></Td>
+    	</tr>
+    	<tr>
+    		<th align="right">不能使用的IP范围：</th>
+    		<Td><input type="text" id="login_unuse_ips" name="login_unuse_ips" size="80"></Td>
+    	</tr>
+    	<tr>
+    		<th align="right" >是否限制次数：</th>
+    		<td>
+    			<input type="radio" id="login_restrict" value="1" name="login_restrict">是 
+    			<input type="radio" id="login_restrict" value="0" name="login_restrict">否 
+    		</td>
+    	</tr>
+    	
+    	<tr>
+    		<th align="right">限制天数：</th>
+    		<td>
+    			<input type="text" id="login_restrict_day" name="login_restrict_day">
+    		</td>
+    	</tr>
+    	<tr>
+    		<th align="right">限制次数：</th>
+    		<td>
+    			<input type="text" id="login_restrict_time" name="login_restrict_time">
+    		</td>
+    	</tr>
+    	<tr>
+    		<th align="right">是否有登陆按钮：</th>
+    		<td>
+    			<input type="radio" id="login_is_login" value="1" name="login_is_login">是 
+    			<input type="radio" id="login_is_login" value="0" name="login_is_login">否 
+    		</td>
+    	</tr>
+    	 <tr><td align="right" colspan="2"><input type="button" onclick="docForm.saveForm();" value="保存"/></td></tr>
+    </table>
+  </body>
+</html>
+

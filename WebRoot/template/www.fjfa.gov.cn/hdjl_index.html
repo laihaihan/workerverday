@@ -1,0 +1,363 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+#parse("www.fjfa.gov.cn/vmlib/hdjl.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>福安</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+     #parse("www.fjfa.gov.cn/topAndButton/top.html")
+</table>
+</td>
+</tr>
+<tr>
+    <td><table width="1000" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <td height="664" valign="top">
+					<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                        <tr>
+                            <td height="52" colspan="5" valign="top">
+								<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/active_02.jpg" style="background-repeat:no-repeat">
+                                    <tr>
+                                        <td width="156" height="32" valign="top">&nbsp;</td>
+                                        <td width="844" valign="bottom">
+										#foreach($cate in $catelist_hdjl)
+											#if( ($cateurl) && ($!{cateurl} != "") && ($!{cateurl} != "null") )
+												#set($cateurl="${cateurl}")
+											  #else
+												 #set($cateurl="${secondPageUrl}${cate.unid}")
+											  #end
+										  <a href="${cateurl}">${cate.name}</a>|
+										  #end
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="20" valign="top">&nbsp;</td>
+                                        <td valign="top">&nbsp;</td>
+                                    </tr>
+                                </table>
+							</td>
+                        </tr>
+                        <tr>
+                            <td width="266" rowspan="2" valign="top">
+<!-- [在线访谈]模块 开始 -->
+#*根据当前时间获取最新一期【访谈直播】*#
+#set( $interview_01 = $list.getInterviewTopProgressByDate(${siteunid}, 14) )
+#if( $interview_01 )
+	#set( $attr_01 = $list.getAttrImageByPUnid(${interview_01.unid}) )
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td width="266" height="38" align="right" valign="middle" background="images/active_03.jpg">
+		<!--<img src="images/more_btn_03.jpg" width="58" height="19" />-->&nbsp;&nbsp;
+	</td>
+</tr>
+<tr>
+	<td height="212" valign="top" background="images/active_12.jpg">
+
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="266" height="180" valign="top">
+			
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:url(images/active27_14.jpg) no-repeat center;">
+				<tr>
+					<td height="144" colspan="2" align="center" valign="bottom">
+					#if( $attr_01 )
+						<img src="${tomcatroot}/${cmsWebapp}/interview/showAttach.jsp?id=$!{attr_01.unid}" width="175" height="128" align="absmiddle" border="0" />
+					#else
+						<img src="images/active_17.jpg" width="175" height="128" align="absmiddle" border="0" />
+					#end
+					</td>
+				</tr>
+				<tr>
+					<td width="34" height="36" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+					<td width="232" align="left">
+						<img src="images/pic_dot_jt.gif" width="10" height="10" align="absmiddle" border="0" />
+						<a href="${tomcatroot}/${cmsWebapp}/interview/detail.jsp?siteunid=$!{siteunid}&id=$!{interview_01.unid}" title="$!{interview_01.fullTitle}">$!{interview_01.title}</a>
+					</td>
+				</tr>
+				</table>
+				
+			</td>
+		</tr>
+		<tr>
+			<td height="32" align="center"><img src="images/active_33.jpg" width="247" height="1" /></td>
+		</tr>
+		</table>
+		
+	</td>
+</tr>
+</table>
+#end
+
+#*根据当前时间获取最近一期【访谈预告】*#
+#set( $interview_02 = $list.getInterviewTopForeshowByDate(${siteunid}, 44) )
+#if( $interview_02 )
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="167" valign="top">
+	
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/active_12.jpg">
+		<tr>
+			<td height="29" colspan="3" valign="top">
+	
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/active_36.jpg">
+				<tr>
+					<td width="30" height="29" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+					<td width="67" valign="middle">下期预告</td>
+					<td width="169" align="right">
+						<a href="${tomcatroot}/${cmsWebapp}/interview/detail.jsp?siteunid=$!{siteunid}&id=$!{interview_02.unid}">详细内容&gt;&gt;</a>&nbsp;&nbsp;
+					</td>
+				</tr>
+				</table>
+				
+			</td>
+		</tr>
+		<tr>
+			<td width="11" height="8"></td>
+			<td width="244"></td>
+			<td width="11"></td>
+		</tr>
+		<tr>
+			<td height="130"></td>
+			<td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;$!{interview_02.intro}</td>
+			<td></td>
+		</tr>
+		</table>
+		
+	</td>
+</tr>
+</table>
+#end
+
+#*获取【在线访谈】列表（状态：预告1、进行时2、回顾3、全部9）*#
+#set( $listInterview_03 = $list.getInterviewListBySiteUnid(${siteunid}, 5, 18) )
+#if( $listInterview_03 )
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="168" valign="top">
+	
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/active_12.jpg">
+		<tr>
+			<td width="266" height="29" valign="top">
+			
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/active_36.jpg">
+				<tr>
+					<td width="30" height="29" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+					<td width="67">往期回顾</td>
+					<td width="169" align="right"><a href="${tomcatroot}/${cmsWebapp}/interview/list.jsp?siteunid=$!{siteunid}" class="red">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+				</tr>
+				</table>
+				
+			</td>
+		</tr>
+		<tr>
+			<td height="132" valign="top">
+			
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="19" height="12" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+					<td width="247" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+				</tr>
+			#set( $count_03 = 0 )
+			#foreach( $info_03 in $listInterview_03 )
+				#set( $count_03 = $count_03 + 1 )
+				<tr>
+					<td height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+					<td align="left">
+						<img src="images/45.gif" width="7" height="7" align="absmiddle" border="0" />
+						<a href="${tomcatroot}/${cmsWebapp}/interview/detail.jsp?siteunid=$!{siteunid}&id=$!{info_03.unid}" title="$!{info_03.fullTitle}">$!{info_03.title}</a>
+					</td>
+				</tr>
+			#end
+				</table>
+				
+			</td>
+		</tr>
+		<tr>
+			<td height="7"></td>
+		</tr>
+		</table>
+		
+	</td>
+</tr>
+</table>
+#end
+<!-- [在线访谈]模块 结束 -->
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="26" valign="top"><img src="images/active_45.jpg" width="266" height="23" /></td>
+</tr>
+</table>
+
+                            </td>
+                            <td width="10" height="608"></td>
+                            <td width="510" rowspan="3" valign="top">
+								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="510" height="257" valign="top">
+											<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td height="32" colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/active_05.jpg">
+                                                            <!--DWLayoutTable-->
+                                                            <tr>
+                                                                <td width="35" height="32" align="center"><img src="images/email-30.png" width="24" height="24" /></td>
+                                                                <td width="84" valign="middle" class="ac_mid_title">市长信箱</td>
+                                                                <td width="280" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                                                <td width="111" align="right">
+																	<a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=C418200D55F0A6517002EBD42E9E7CCA&type=leaderMail">查看更多&gt;&gt;&nbsp;</a>																</td>
+                                                            </tr>
+                                                        </table></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="224"></td>
+                                                  <td width="508" valign="top" class="ac_mid_border"><iframe scrolling="no" frameborder="0" width="508" height="215" valign="top" src="${tomcatroot}/${cmsWebapp}/leaderMail/leaderMailIndex_hdjl.jsp" border="0"></iframe></td>
+                                                </tr>
+                                            </table></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="65" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/active_37.jpg">
+                                                <!--DWLayoutTable-->
+                                                <tr>
+                                                    <td width="34" height="65" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                                    <td width="85" class="xx_font">我要写信</td>
+													<script type="text/javascript">
+													function gotoDetail(){
+														var handlenum=document.getElementById("handlenum").value;
+														var handlepwd=document.getElementById("handlepwd").value;
+														window.open("${tomcatroot}/${cmsWebapp}/advice/adviceDetail.jsp?handlenum="+handlenum+"&handlepwd="+handlepwd);
+													}
+													</script>
+                                                    <td width="391">
+													登记号：<input type="text" id="handlenum" name="handlenum" size="14"/>&nbsp;
+													密码：<input type="password" id="handlepwd" name="handlepwd" size="14"/>
+													<input type="button" value="查询" onclick="gotoDetail();"/>
+													</td>
+                                                </tr>
+                                            </table></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="290" valign="top">
+											<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="510" height="32" valign="top">
+														<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/active_05.jpg">
+                                                            <tr>
+                                                                <td width="35" height="32" align="center"><img src="images/gtk-edit-3.png" width="22" height="22" /></td>
+                                                                <td width="84" valign="middle" class="ac_mid_title">建言献策</td>
+                                                                <td width="280" valign="top">&nbsp;</td>
+                                                                <td width="111" align="right"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=82F3A1E1AF549AE70C13A2C268E7C951&type=advice">查看更多&gt;&gt; &nbsp;</a></td>
+                                                            </tr>
+                                                        </table></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="256" valign="top" class="ac_mid_border">
+														<iframe scrolling="No" frameborder="0" width="508" height="250" valign="top" src="${tomcatroot}/${cmsWebapp}/advice/adviceIndex_hdjl.jsp" border="0"></iframe>
+													</td>
+                                                </tr>
+                                            </table></td>
+                                    </tr>
+                                </table></td>
+                            <td width="10" rowspan="3" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td width="204" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <!--DWLayoutTable-->
+                                    <tr>
+                                        <td width="204" height="199" valign="top" class="ac_rig_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <!--DWLayoutTable-->
+                                                <tr>
+                                                    <td width="202" height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                            <!--DWLayoutTable-->
+                                                            <tr>
+                                                                <td width="137" height="25" background="images/active_07.jpg" class="ac_rig_title">&nbsp;&nbsp;&nbsp;民意征集</td>
+                                                                <td width="67" align="right" background="images/active_08.jpg"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=84A576C6145AB0980CE46FC455D89A54&type=solicit&jspType=List">更多&gt;&gt;</a>&nbsp;</td>
+                                                            </tr>
+                                                        </table></td>
+                                                    <td width="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="172" colspan="2" valign="top">
+														<iframe scrolling="no" frameborder="0" width="204" height="172" valign="top" src="${tomcatroot}/${cmsWebapp}/solicit/solicitIndex_hdjl.jsp" border="0"></iframe>
+													</td>
+                                                </tr>
+                                            </table></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="66" align="center"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=AA7C6EC65C4D4AA99450732E02C79390&type=complaint&jspType=List"><img src="images/active_29.jpg" width="180" height="48" border="0" /></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="60" align="center" valign="top"><a href="#"><img src="images/active_39.jpg" width="180" height="48" border="0" /></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="60" align="center" valign="top"><a href="${tomcatroot}/${cmsWebapp}/hdjl.jsp?cateunid=647192FC3ED2FD0D1787EDFA23DFB1F5&type=suggest&jspType=List" target="_blank"><img src="images/active_43.jpg" width="180" height="48" border="0" /></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="223" valign="top">
+<!-- [网上调查]模块 开始 -->
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="25" colspan="2" valign="top">
+													
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="137" height="25" background="images/active_07.jpg" class="ac_rig_title">&nbsp;&nbsp;&nbsp;网上调查</td>
+			<td width="67" align="right" background="images/active_08.jpg"><a href="${tomcatroot}/${cmsWebapp}/survey/list.jsp?siteunid=$!{siteunid}">更多&gt;&gt;</a>&nbsp;</td>
+		</tr>
+		</table>
+		
+	</td>
+</tr>
+<tr>
+	<td width="1" height="1"></td>
+	<td width="203"></td>
+</tr>
+<tr>
+	<td height="197"></td>
+	<td valign="top" class="ac_rig_border">
+		<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="19" height="12" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+			<td width="247" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		</tr>
+#*获取【网上调查】列表*#
+#set( $listOnlineSurvey_01 = $list.getOnlineSurveyListBySiteUnid(${siteunid}, 5, 18) )
+#if( $listOnlineSurvey_01 )
+	#set( $count_01 = 0 )
+	#foreach( $info_01 in $listOnlineSurvey_01 )
+		#set( $count_01 = $count_01 + 1 )
+		<tr>
+			<td height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+			<td align="left">
+				<img src="images/45.gif" width="7" height="7" align="absmiddle" border="0" />
+				<a href="${tomcatroot}/${cmsWebapp}/survey/detail.jsp?siteunid=$!{siteunid}&id=$!{info_01.unid}" title="$!{info_01.fullTitle}">$!{info_01.title}</a>
+			</td>
+		</tr>
+	#end
+#end
+		</table>
+	</td>
+</tr>
+</table>
+<!-- [网上调查]模块 结束 -->
+										</td>
+                                    </tr>
+                                </table></td>
+                        </tr>
+                        <tr>
+                            <td height="3"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td height="1"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table></td>
+            </tr>
+        </table></td>
+</tr>
+#parse("www.fjfa.gov.cn/topAndButton/buttom.html")
+</table>
+</body>
+</html>

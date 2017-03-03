@@ -1,0 +1,250 @@
+/**** Global Style 全局样式 ****/
+body {
+	margin: 0px auto;
+	padding: 0px;
+	color: #1B4959;
+	font: 12px/ 200% Tahoma;
+	overflow: auto;
+	scrollbar-face-color: #F6F6F6;
+	scrollbar-highlight-color: #FFF;
+	scrollbar-shadow-color: #cccccc;
+	scrollbar-3dlight-color: #CCC;
+	scrollbar-arrow-color: #330000;
+	scrollbar-track-color: #F6F6F6;
+	scrollbar-darkshadow-color: #FFF;
+	scrollbar-face-color: #F6F6F6;
+	scrollbar-highlight-color: #FFF;
+	scrollbar-shadow-color: #CCC;
+	scrollbar-3dlight-color: #CCC;
+	scrollbar-arrow-color: #330000;
+	scrollbar-track-color: #F6F6F6;
+	scrollbar-darkshadow-color: #FFF;
+}
+
+td,th {
+	font: 12px
+}
+
+html {
+	scrollbar-face-color: #f6f6f6;
+	font: 12px;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-shadow-color: #cccccc;
+	scrollbar-3dlight-color: #cccccc;
+	scrollbar-arrow-color: #330000;
+	scrollbar-track-color: #f6f6f6;
+	scrollbar-darkshadow-color: #ffffff;
+	scrollbar-face-color: #f6f6f6;
+	font-size: 9pt;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-shadow-color: #cccccc;
+	scrollbar-3dlight-color: #cccccc;
+	scrollbar-arrow-color: #330000;
+	scrollbar-track-color: #f6f6f6;
+	scrollbar-darkshadow-color: #ffffff;
+}
+
+textarea {
+	word-break: break-all
+}
+
+img {
+	border: 0px;
+}
+
+ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a,a:link,a:visited {
+	color: #1B4959;
+	text-decoration: none
+}
+
+a:hover {
+	color: #F00;
+	text-decoration: underline;
+}
+
+.title,a.title:link,a.title:visited {
+	color: #848484;
+	font-weight: bold;
+	text-decoration: none
+}
+
+a.title:hover {
+	color: #F00;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* 头部CSS */
+.headerBox {
+	width: 100%;
+	height: 154px; /*For Firefox*/ *
+	height: 154px; /*For IE7 & IE6*/
+	_height: 155px; /*For IE6*/
+}
+
+.topBar {
+	background: url("../images/admin/top_bg.gif") repeat-x scroll center top
+		transparent;
+	height: 100px;
+	width: 100%;
+}
+.logo {
+    float: left;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 320px;
+    z-index: 1000;
+}
+
+.topBarBox {
+	width: 67.5%;
+	height: 100px;
+	background: url(../images/admin/top_right.gif) no-repeat right top;
+	float: right;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.topBarTool {
+	width: auto;
+	height: 26px;
+	float: right;
+	clear: both;
+}
+
+.topBarToolLeft {
+	width: 20px;
+	height: 26px;
+	background: url(../images/admin/topbar_tool_r1.gif) no-repeat left top;
+	float: left;
+}
+
+.topBarToolBox {
+	padding: 3px 0px 0px 0px;
+	width: auto;
+	height: 26px;
+	background: url(../images/admin/topbar_tool_bg.gif) repeat-x center top;
+	float: left;
+}
+
+.topBarToolBox li {
+	display: inline;
+	float: left;
+}
+
+.topBarToolRight {
+	width: 35px;
+	height: 26px;
+	background: url(../images/admin/topbar_tool_r2.gif) no-repeat left top;
+	float: left;
+}
+
+/**** 菜单样式 ****/
+#menu {
+	height: 56px;
+	width: 100%;
+	position: absolute;
+	z-index: 2000;
+	top: 71px;
+	left: 0px;
+}
+
+.mainMenu {
+	height: 28px;
+	padding-left: 1.5%;
+}
+
+.menuText1 {
+	background: url("../images/admin/mainmenu_1.gif") repeat-x scroll center bottom
+		transparent;
+	border-color: #0081B2 #0081B2 -moz-use-text-color;
+	border-style: solid solid none;
+	border-width: 1px 1px medium;
+	color: #00435F;
+	cursor: pointer;
+	float: left;
+	height: 24px; *
+	height: 23px;
+	_height: 23px;
+	margin: 4px 1px 0 3px;
+	padding: 0 16px;
+	height: 23px;
+	_height: 23px;
+}
+
+.menuText2 {
+	background: url("../images/admin/mainmenu_2.gif") repeat-x scroll center bottom
+		transparent;
+	border-color: #0081B2 #0081B2 -moz-use-text-color;
+	border-style: solid solid none;
+	border-width: 1px 1px medium;
+	color: #00435F;
+	cursor: pointer;
+	float: left;
+	font-weight: bold;
+	height: 26px; *
+	height: 25px;
+	_height: 29px;
+	margin: 0 1px 0 3px;
+	padding: 2px 16px 0;
+	position: relative;
+	top: 1px;
+	height: 25px;
+	_height: 29px;
+}
+
+.subMenu1 {
+	display: none;
+}
+
+.subMenu {
+	background: url("../images/admin/submenu_bg.gif") repeat-x scroll 0 0 transparent
+		;
+	clear: both;
+	color: #00435F;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 2.5%;
+	text-align: left;
+}
+
+.topLine {
+	position: absolute;
+	top: 128px;
+	width: 100%;
+	height: 7px;
+	background: url(../images/admin/top_arrowhead_bg.gif) repeat-x center top;
+	cursor: pointer;
+	clear: both;
+	text-align: center;
+}
+
+/* /头部CSS */
+#footer {
+	background: url("../images/admin/footer_bg.gif") repeat-x scroll center top
+		transparent;
+	clear: both;
+	color: #333333;
+	margin-top: 1px;
+	padding-top: 0;
+	text-align: center;
+	width: 100%;
+}
+/** 设置标签div */
+.setTabs {
+	position: relative;
+	width: 180px;
+	border: 1px solid #A0A0A0;
+	background-color: #F0F0F0;
+	display: none;
+	z-index:99;
+}

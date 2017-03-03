@@ -1,0 +1,235 @@
+﻿@import url("common.css");
+
+/********************** 页面样式  **********************/
+body{
+	background:#1799cd url('images/main_bg.gif') repeat-x;
+}
+
+/********************** 页眉区域 **********************/
+/* 页眉 */
+.header {
+	position:absolute;
+	top:0px;
+	left:4px;
+	right:4px;
+	height:64px;
+	background:#1fa3d2;
+}
+
+/* LOGO */
+.logo {
+	margin: 15px 0 0 20px;
+	width: 240px;
+	height: 35px;
+	background: url('images/logo.gif') no-repeat ;
+	float:left;
+}
+
+/* 顶部导航 */
+.top {
+	float: right;
+	margin-top:5px;
+	margin-right:10px;
+	color:#fff;
+}
+
+
+/* 顶部导航 */
+.top_nav {
+	float: right;
+}
+
+.top_nav a {
+	margin-left:5px;
+	color: #fff;
+	text-decoration: none;
+
+}
+
+/* 置右 */
+.toright{
+	float: right;
+}
+
+/* 顶部页面留白 */
+.top_blank {
+	height: 4px;
+	line-height: 4px;
+	clear: both;
+	visibility: hidden;
+}
+
+/*************************** 导航 ***************************/
+
+/* 导航 */
+.nav {
+	position:absolute;
+	top:64px;
+	left:4px;
+	right:4px;
+	height:61px;
+	background: url('images/nav_bg.gif') repeat-x;
+}
+
+/* 页签 */
+.nav_tab{
+	height:36px;
+}
+
+/* 页签项 */
+.nav_tab_item{
+	font-weight:bold;
+	color:#333;
+	float:left;
+	height:25px;
+	margin-top:10px;
+	line-height:25px;
+	padding-left:8px;
+	padding-right:8px;
+	margin-left:5px;
+	cursor:pointer;
+}
+.nav_tab_item a{
+	color:#333;
+	text-decoration: none;
+}
+
+/* 页签经过效果 */
+.nav_tab_item:hover{
+	background: #a6dcf1;
+}
+
+/* 页签项当前效果 */
+.nav_tab_item.current{
+	color:#fff;
+	background: #1799cd;
+	border-left:1px #d2e4e9 solid;
+	border-right:1px #d2e4e9 solid;
+	border-top:1px #d2e4e9 solid;
+}
+.nav_tab_item.current a{
+	color:#fff;	
+	text-decoration: none;
+}
+
+/* 页签区下拉菜单 */
+.nav_tab_select{
+	margin-top:12px;
+	margin-left:10px;
+}
+
+.nav_submenu{	
+	margin-top:7px;
+	margin-left:60px;
+}
+.nav_submenu a{	
+	margin-right:6px;
+	text-decoration:none;
+	color:#333;
+}
+
+/******************** 左边区域 ********************/
+
+/* 主区域左 */
+.area_main_left{
+	position:absolute;
+	top:125px;
+	bottom:0px;
+	left:4px;
+	width:209px;
+	background:#fff;
+	overflow:auto;
+}
+
+/* 搜索 */
+.left_search{
+	background: #fff url('images/search_bg.gif') repeat-x;
+	margin-left:5px;
+	margin-right:3px;
+	padding:10px;
+}
+
+.left_search_button{
+	width:50px;
+	height:24px;
+}
+.left_search_checkbox{
+	vertical-align:text-bottom; 
+	margin-right:5px;
+	margin-left:10px;
+}
+
+/* 子菜单 */
+.left_menu{
+	background: #e2f5fb url('images/menu_bg.gif') no-repeat;
+	margin-left:5px;
+	margin-right:3px;
+	margin-top:10px;
+	padding:6px 10px 10px 10px;
+}
+
+
+/******************** 分隔条区域 ********************/
+.area_main_separate{
+	position:absolute;
+	top:125px;
+	bottom:0px;
+	left:213px;
+	width:11px;
+	background:#fff;
+}
+
+.area_main_separate input{
+	background:transparent url('images/separate_button.gif') no-repeat;
+	border-style: none;
+	width:11px;
+	height:56px;
+	cursor:pointer;
+}
+
+
+/******************** 右边区域 ********************/
+.area_main_right{
+	position: absolute;
+	top: 125px;
+	bottom: 0px;
+	right: 4px;
+	left: 224px;
+	background: #fff;
+	overflow:hidden;
+}
+
+/* 模块 */
+.module{
+	width: 100%;
+	height: 100%;
+	overflow:auto;
+	margin:0;
+	padding:0;
+	border:0px;
+	border-style:none
+}
+
+
+
+/******************** 其它样式 ********************/
+
+/* 默认排列 */
+.tonone{
+	float:none;
+}
+
+
+/* 置右 */
+.toright{
+	float: right;
+}
+
+/* 白色 */
+.white{
+	color:white;
+}
+
+
+
+

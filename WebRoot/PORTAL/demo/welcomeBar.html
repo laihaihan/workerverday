@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>WelcomeBar</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			function bodyLoad(){
+				refreshTime(); 
+				setInterval(refreshTime, 1000);
+			}
+			
+			/**
+			 *刷新当前时间
+			 */
+			function refreshTime(){
+				var myDate = new Date();
+				var hours = myDate.getHours();
+				if (hours == 0) {
+					snXXX.innerHTML = "午夜";
+				} else if (hours < 12) {
+					snXXX.innerHTML = "上午";
+				} else if (hours == 12) {
+					snXXX.innerHTML = "正午";
+				} else {
+					snXXX.innerHTML = "下午";
+				}
+				snTime.innerHTML = myDate.toLocaleTimeString(); 
+			}
+		</script>
+	</head>
+	<body scroll=no onload="bodyLoad();" style="margin:0">
+		<div style="width:100%;height:100%;background:url(images/welcome_middle.png);">
+			<table width="100%" height="100%">
+				<tr>
+					<td><img src="images/welcome_left.png"></td>
+					<td>XXX同志：<span id="snXXX"></span>好！<span id="snTime"></span></td>
+					<td><input></td>
+					<td><img src="images/welcome_right.png"></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,473 @@
+package $package$;
+
+import java.util.List;
+import net.sf.json.JSONObject;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import com.linewell.ucap.db.JDBCTool;
+import com.linewell.ucap.jdbc.core.JdbcTemplate;
+import com.linewell.ucapx.redevelop.codetool.util.BeanConverter;
+import com.linewell.ucapx.redevelop.codetool.util.ConverterException;
+import com.linewell.ucap.session.Session;
+import com.linewell.ucap.util.JsonUtil;
+import com.linewell.ucap.util.UNIDGenerate;
+import com.linewell.ucapx.form.ForeignApi;
+import com.linewell.ucapx.redevelop.web.manager.FormBeanFlag;
+import com.linewell.ucapx.redevelop.web.manager.FormJsonBean;
+import com.linewell.ucapx.redevelop.web.manager.SubFormJsonBean;
+
+/**
+ * XXXXX业务逻辑处理
+ * 
+ * @author ucap@linewell.com
+ *
+ */
+public class $BeanName$Manager {
+	
+	/**
+	 * 日志记录文件
+	 */
+	private static final Log log = LogFactory.getLog($BeanName$Manager.class);
+	
+	/**
+	 * 根据标识从数据表中查询对象
+	 * 
+	 * @param unid 标识
+	 * 
+	 * @param session 会话对象  Session
+	 * 
+	 * @return 查询结果对象
+	 */
+	public  $BeanName$ get(String unid,Session session){
+		$BeanName$ obj = null;
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(session);
+		
+		try {
+			jt.open();
+			
+			$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+			obj = $beanName$DAO.get(unid, jt);
+			
+		} catch (Exception e) {
+			log.error(e);
+		}finally{
+			jt.close();
+		}
+		
+		return obj;
+	}
+	
+	/**
+	 * 根据外键查询获取对象列表
+	 * 
+	 * @param foreignKey 外键 String
+	 * 
+	 * @param session 会话对象 Session
+	 * 
+	 * @return 对象列表 List<Object>
+	 */
+	public  List<$BeanName$> getList(String fkName,String mainUnid,Session session){
+		
+		if (StringUtils.isEmpty(fkName) || StringUtils.isEmpty(mainUnid)) return null;
+		
+		List<$BeanName$> objectList = null;
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(session);
+		
+		try {
+			jt.open();
+			$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+			objectList = $beanName$DAO.getList(fkName,mainUnid, jt);
+		} catch (Exception e) {
+			log.error(e);
+		}finally{
+			jt.close(); 
+		}
+		
+		return objectList;
+	}
+	/**
+	 * 将数组转换成List Bean对象
+	 * @param rs
+	 * @return List<$BeanName$> 
+	 */
+	@SuppressWarnings("unchecked")
+	public List<$BeanName$> getList(String[][] rs){
+	
+		List<$BeanName$> $beanName$List = null;
+		//调用通用的方法进行转换
+		try {
+			BeanConverter bc = new BeanConverter();
+			$beanName$List =(List<$BeanName$>)bc.translateArrayToBeanList(rs,  $BeanName$._UcapFormName);
+			 
+		} catch (ConverterException e) {
+			e.printStackTrace();
+		}
+		return $beanName$List;
+	}
+	/**
+	 * 实现对象的新增保存
+	 * 
+	 * @param bean 要保存的对象
+	 * 
+	 * @param session 会话对象
+	 * 
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public  boolean save($BeanName$ bean,Session session){
+		boolean result = true;
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(session);
+		
+		try {
+			jt.open();
+			$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+			result = $beanName$DAO.save(bean, jt);
+		} catch (Exception e) {
+			result = false;
+			log.error(e);
+		}finally{
+			jt.close();
+		}
+		
+		return result;
+	}
+	/**
+	 * 事务处理的新增保存
+	 * @param bean  要保存的对象
+	 * @param jt    数据访问对象
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public boolean saveTransaction($BeanName$ bean,JdbcTemplate jt){
+		$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+		return $beanName$DAO.save(bean, jt);	
+	}
+	/**
+	 * 实现对象的批量新增保存
+	 * 
+	 * @param beanList 对象列表
+	 * 
+	 * @param session 会话对象 Session
+	 * 
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public  boolean saveList(List<$BeanName$> beanList,Session session){
+		boolean result = true;
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(session);
+		try {
+			jt.open();
+			$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+			result = $beanName$DAO.saveList(beanList, jt);
+		} catch (Exception e) {
+			result = false;
+			
+			log.error(e);
+		}finally{
+			jt.close();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 事务处理的批量新增保存
+	 * @param beanList  要保存的对象列表
+	 * @param jt    数据访问对象
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public boolean saveListTransaction(List<$BeanName$> beanList,JdbcTemplate jt){
+		$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+		return $beanName$DAO.saveList(beanList, jt);	
+	}
+	/**
+	 * 实现对象的更新保存
+	 * 
+	 * @param bean 要保存的对象
+	 * 
+	 * @param session 会话对象 Session
+	 * 
+	 * @return 根据操作结果返回成功与否
+	 */
+	public  boolean update($BeanName$ bean,Session session){
+		boolean result = true;
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(session);
+		try {
+			jt.open();
+			$BeanName$DAO  $beanName$DAO = new $BeanName$DAO();
+			result = $beanName$DAO.update(bean, jt);
+		} catch (Exception e) {
+			result = false;
+			
+			log.error(e);
+		}finally{
+			jt.close();
+		}
+		
+		return result;
+	}
+	/**
+	 * 事务处理的更新保存
+	 * @param bean  要保存的对象
+	 * @param jt    数据访问对象
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public boolean updateTransaction($BeanName$ bean,JdbcTemplate jt){
+		$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+		return $beanName$DAO.update(bean, jt);	
+	}
+	/**
+	 * 实现对象的批量更新保存
+	 * 
+	 * @param beanList 对象列表
+	 * 
+	 * @param session 会话对象 Session
+	 * 
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public  boolean updateList(List<$BeanName$> beanList,Session session){
+		boolean result = true;
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(session);
+		
+		try {
+			jt.open();
+			$BeanName$DAO  $beanName$DAO = new $BeanName$DAO();			
+			result = $beanName$DAO.updateList(beanList, jt);
+		} catch (Exception e) {
+			result = false;
+			log.error(e);
+		}finally{
+			jt.close();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 事务处理的批量更新
+	 * @param beanList  要保存的对象列表
+	 * @param jt    数据访问对象
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public boolean updateListTransaction(List<$BeanName$> beanList,JdbcTemplate jt){
+		$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+		return $beanName$DAO.updateList(beanList, jt);	
+	}
+	/**
+	 * 根据标识删除数据
+	 * 
+	 * @param unid 标识
+	 * 
+	 * @param session 会话对象 Session
+	 * 
+	 * @return 操作结果
+	 */
+	public  boolean delete(String unid,Session session){
+		boolean result = true;
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(session);
+		
+		try {
+			jt.open();
+			$BeanName$DAO  $beanName$DAO = new $BeanName$DAO();
+			result = $beanName$DAO.delete(unid, jt);
+		} catch (Exception e) {
+			result = false;
+			
+			log.error(e);
+		}finally{
+			jt.close();
+		}
+		
+		return result;
+	}
+	/**
+	 * 事务处理的删除
+	 * @param unid  要删除的主键
+	 * @param jt    数据访问对象
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public boolean deleteTransaction(String unid,JdbcTemplate jt){
+		$BeanName$DAO $beanName$DAO = new  $BeanName$DAO();
+		return $beanName$DAO.delete(unid, jt);	
+	}
+	
+	/**
+	 * 根据多个标识删除数据
+	 * 
+	 * @param unids 标识数组
+	 * 
+	 * @param session 会话对象 Session
+	 * 
+	 * @return 操作结果
+	 */
+	public  boolean deleteList(String[] unids,Session session){
+		boolean result = true;
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(session);
+		
+		try {
+			jt.open();
+			$BeanName$DAO  $beanName$DAO = new $BeanName$DAO();
+			result = $beanName$DAO.deleteList(unids, jt);
+		} catch (Exception e) {
+			result = false;
+			
+			log.error(e);
+		}finally{
+			jt.close();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 事务处理的批量删除
+	 * @param unids 要删除的主键数组
+	 * @param jt    数据访问对象
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public boolean deleteListTransaction(String[] unids,JdbcTemplate jt){
+		$BeanName$DAO $beanName$DAO = new $BeanName$DAO();
+		return $beanName$DAO.deleteList(unids, jt);	
+	}
+	
+	/**
+	 * 执行数据的操作，包括添加、修改、删除以及子表操作
+	 * @param mainJsonBean  前台提交过来的对象
+	 * @param ucapSession   Session对象
+	 * @param jt            JdbcTemplate对象
+	 * @return
+	 */
+	public void formJsonSaveAll(FormJsonBean formJsonBean,Session ucapSession,JdbcTemplate jt){
+		//获取主表的对象
+		SubFormJsonBean mainFormBean = formJsonBean.getMainForm();
+		
+		//主表操作
+		formJsonSave(mainFormBean, ucapSession, jt, "", "");		
+		List<SubFormJsonBean> subFormList = formJsonBean.getSubForms();
+		ForeignApi fApi = new ForeignApi();
+				
+		for(SubFormJsonBean subForm : subFormList){
+			[beginIf]
+			if($SubBeanName$._UcapFormUnid.equals(subForm.getFormUnid())){
+				String fkName = fApi.getFkName(mainFormBean.getFormUnid(), subForm.getFormUnid());
+				String fkValue = mainFormBean.getDocUnid();
+				$SubBeanName$Manager manager = new $SubBeanName$Manager();
+				manager.formJsonSave(subForm, ucapSession, jt, fkName, fkValue);
+				manager = null;
+				continue;
+			}
+			[endIf]
+		}
+	}
+	
+	/**
+	 * 保存单表的JSON数据
+	 * @param formBean     SubFormJsonBean 前台传输过来的对象
+	 * @param ucapSession  Session对象
+	 * @param jt           数据访问对象
+	 * @param fkName       外键名称 可为空
+	 * @param fkValue      外键的值 可为空
+	 */
+	public void formJsonSave(SubFormJsonBean formBean,Session ucapSession,JdbcTemplate jt,
+			String fkName,String fkValue){
+		//获取操作的类型
+		FormBeanFlag beanFlag = formBean.getUcapBeanFlg();
+		JSONObject json = formBean.getItemsJson();
+		String docUnid = formBean.getDocUnid();
+		
+		
+		if (beanFlag.equals(FormBeanFlag.Update)){
+			//说明是更新操作
+			//获取旧对象
+			$BeanName$ item = this.get(docUnid, ucapSession);
+			
+			BeanConverter bc = new BeanConverter();
+			bc.jsonAddToBean(json, item);
+			this.updateTransaction(item, jt);
+			
+		} else if (beanFlag.equals(FormBeanFlag.Insert)){
+			//说明是新文档 
+			if (StringUtils.isEmpty(docUnid)){
+				UNIDGenerate ug = new UNIDGenerate();				
+				docUnid = ug.getUnid();			
+				
+				//把新生成的文档ID，设置到对象中
+				formBean.setDocUnid(docUnid);
+			}
+			String[][] rs = JsonUtil.jsonToArray(json);
+			List<$BeanName$> itemList = this.getList(rs);
+			$BeanName$ item = itemList.get(0);	
+			//设置主键
+			item.set$MainKey$(docUnid);
+			
+			//判断外键及外键对应的值不为空，则要设置外键
+			if(StringUtils.isNotEmpty(fkName) && StringUtils.isNotEmpty(fkValue)){
+				BeanConverter bc = new BeanConverter();
+				bc.setPropertyByField(item, fkName, fkValue);
+			}
+			
+			this.saveTransaction(item, jt);
+		} else if (beanFlag.equals(FormBeanFlag.Delete)){
+			//说明是删除操作
+			this.deleteTransaction(docUnid, jt);
+		}	
+	}
+	
+	/**
+	 * 执行数据的操作，包括添加、修改、删除以及子表操作
+	 * @param $BeanName$    要处理对象
+	 * @param ucapSession   Session对象
+	 * @param jt            JdbcTemplate对象
+	 * @param fkName       外键名称 可为空
+	 * @param fkValue      外键的值 可为空
+	 * @return
+	 */
+	public boolean formBeanSave($BeanName$ $beanName$,Session ucapSession,JdbcTemplate jt,
+			String fkName,String fkValue){
+		String docUnid = $beanName$.get$MainKey$();
+		//主表的处理
+		FormBeanFlag beanFlag = $beanName$.getUcapBeanFlg();
+		if (beanFlag.equals(FormBeanFlag.Update)){
+			//说明是更新操作
+			this.updateTransaction($beanName$, jt);
+		} else if (beanFlag.equals(FormBeanFlag.Insert)){
+			//说明是新文档 
+			if (StringUtils.isEmpty(docUnid)){
+				UNIDGenerate ug = new UNIDGenerate();
+				docUnid = ug.getUnid();
+				//把新生成的文档ID，设置到对象中
+				$beanName$.set$MainKey$(docUnid);
+			}
+			//判断外键及外键对应的值不为空，则要设置外键
+			if(StringUtils.isNotEmpty(fkName) && StringUtils.isNotEmpty(fkValue)){
+				BeanConverter bc = new BeanConverter();
+				bc.setPropertyByField($beanName$, fkName, fkValue);
+			}
+			this.saveTransaction($beanName$, jt);
+		} else if (beanFlag.equals(FormBeanFlag.Delete)){
+			//说明是删除操作
+			this.deleteTransaction(docUnid, jt);
+		}	
+		
+		//以下为从表的处理，可能有多个
+		ForeignApi fApi = new ForeignApi();
+		[beginList]
+		List<$SubBeanName$> $subBeanName$List = $beanName$.get$SubBeanName$List();
+		if(null != $subBeanName$List){
+			for($SubBeanName$ $subBeanName$ : $subBeanName$List){
+				String subfkName = fApi.getFkName($BeanName$._UcapFormUnid, $SubBeanName$._UcapFormUnid);
+				$SubBeanName$Manager manager = new $SubBeanName$Manager();
+				manager.formBeanSave($subBeanName$, ucapSession, jt, subfkName, docUnid);
+				manager = null;
+			}
+		}
+		[endList]
+		return true;
+	}
+}

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>jQuery Stepy - A Wizard Plugin</TITLE>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<META content=no-cache http-equiv=Pragma>	
+<LINK rel=stylesheet type=text/css href="stylesheet.css"><LINK rel=stylesheet type=text/css href="jquery.stepy.css">
+<SCRIPT type=text/javascript src="jquery.min.js"></SCRIPT>
+<!-- Optionaly -->
+<SCRIPT type=text/javascript src="jquery.stepy.min.js"></SCRIPT>
+
+<BODY>
+
+<FORM id=callback>
+<FIELDSET title="Step 1"><LEGEND>填写表单1</LEGEND>
+	<table width="98%" align="center" class="form_table_ext">
+			<col width="15%" align="right">
+			<col width="35%" align="left">
+				
+			<tr>
+				<th><LABEL><font color="red">*</font>审批事项名称：</LABEL></th>
+				<td>
+					<input type="text" name="servicename" id="servicename" style="width:90%" value="${smpApplyInfo.servicename}"/>
+				</td>
+			</tr>
+			<tr>
+			
+			<th><LABEL><font color="red">*</font>申请部门名称：</LABEL></th>
+				<td>
+					<input type="text" name="applydeptname" id="applydeptname" readonly style="width:90%" value="${smpApplyInfo.applydeptname}"/>
+				</td>
+			</tr>
+			
+			<tr>
+				<th><LABEL><font color="red">*</font>申请人姓名：</LABEL></th>
+				<td>
+					<input type="text" name="applyusername" id="applyusername" readonly style="width:90%" value="${smpApplyInfo.applyusername}"/>
+				</td>
+				
+			</tr>
+			
+			<tr>
+				<th><LABEL><font color="red">*</font>拆分个数：</LABEL></th>
+				<td>
+					<input type="text" name="splitcount" id="splitcount" readonly style="width:90%" value="${smpApplyInfo.applyusername}"/>
+				</td>
+				
+			</tr>
+				
+			<tr>
+				<th><LABEL><font color="red">*</font>理由：</LABEL></th>
+				<td>
+					<textarea name="content" id="content" style="width:90%" cols="80" rows="5">${smpApplyInfo.content}</textarea>
+				</td>
+			</tr>
+			
+		</table>
+</FIELDSET> 
+
+<FIELDSET title="Step 2"><LEGEND>填写表单2</LEGEND>
+<LABEL>User:</LABEL> <INPUT size=40 type=text> 
+<LABEL>Password:</LABEL> <INPUT size=40 type=password> 
+</FIELDSET> 
+<FIELDSET title="Step 3"><LEGEND>填写表单3</LEGEND>
+<LABEL>Nick Name:</LABEL> <INPUT size=40 type=text> 
+<LABEL>Age:</LABEL> <INPUT size=40 type=text> </FIELDSET> 
+<INPUT class=finish value=完成! type=submit>
+ </FORM>
+<SCRIPT type=text/javascript>
+			$(function() {
+				$('#callback').stepy({
+					back: function(index) {
+						//alert('Going to step ' + index + '...');
+					}, next: function(index) {
+						//alert('Going to step ' + index + '...');
+					}, select: function(index) {
+						//alert('Current step ' + index + '.');
+					}, finish: function(index) {
+						//alert('Finishing on step ' + index + '...');
+					}, titleClick: true
+				});
+
+				$('#target').stepy({
+					description:	false,
+					legend:			false,
+					titleClick:		true,
+					titleTarget:	'#title-target'
+				});
+
+			});
+		</SCRIPT>
+</BODY></HTML>

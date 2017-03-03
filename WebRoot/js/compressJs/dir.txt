@@ -1,0 +1,16 @@
+..\ucap\util\common.js
+..\ucap\portal\menuConfig.js
+..\ucap\portal\form.js
+..\ucap\view\view.js
+..\ucap\view\viewTree.js
+..\ucap\view\viewConfig.js
+..\ucap\view\viewConditionCfg.js
+..\ucap\dept\dept.js
+..\ucap\dict\dictTree.js
+..\ucap\util\validator.js
+..\ucap\util\treeUi.js
+..\ucap\select\listSelect.js
+..\ucap\shortCut\shortConfig.js
+..\ucap\calendar\WdatePicker.js
+..\ucap\flow\ucapFlow.js
+..\ucap\flow\userjs\userSend.js

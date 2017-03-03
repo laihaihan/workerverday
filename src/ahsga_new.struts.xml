@@ -1,0 +1,36 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="ahsga" namespace="/ahsga" extends="struts-default">
+		<action name="ptluser" class="com.linewell.ahsga.module.user.PtlUserAction"></action>		
+		<action name="immigrationqueryhm" class="com.linewell.ahsga.module.immigration.ImmigrationNetHandleAction"></action>
+		<action name="lpreemstbl" class="com.linewell.ahsga.module.immigration.LpreemstblAction"></action>
+		<!-- 
+		<action name="endendorsement" class="com.linewell.ahsga.module.immigration.EndEndorsementAction"></action>
+		 -->
+		<action name="serviceReport" class="com.linewell.ahsga.module.service.ServiceReportAction"></action>
+		<action name="immigrationQueryAction" class="com.linewell.ahsga.module.immigration.ImmigrationQueryAction"></action>
+		<action name="endorsementInfoAction" class="com.linewell.ahsga.module.immigration.EndorsementInfoAction"></action>
+		<action name="illegalQueryAction" class="com.linewell.ahsga.module.carIllegal.CarLllegalQueryAction"></action>
+		<action name="immigrationBasicInfoAction" class="com.linewell.ahsga.module.immigration.editable.ImmigrationBasicInfoAction"></action>
+		<action name="editableLpreemstblAction" class="com.linewell.ahsga.module.immigration.editable.EditableLpreemstblAction"></action>
+		
+	</package>
+	<package name="floating" extends="struts-default">
+		<action name="tbldeptTree" class="com.linewell.ahsga.module.deptTree.DeptTreeAction"></action>
+		<action name="tblFlowPopuTempAction" class="com.linewell.ahsga.module.floating.flowPopuTemp.TblFlowPopuTempAction"></action>	
+	    <action name="tblAgentAction" class="com.linewell.ahsga.module.floating.system.TblAgentAction"></action>	
+	    <action name="tblEnterpriseAction" class="com.linewell.ahsga.module.floating.jiuyerenyuan.TblEnterpriseAction"></action>	
+	   	<action name="tblRoleAction" class="com.linewell.ahsga.module.floating.system.TblRoleAction"></action>
+	   	<action name="tblConfigAction"  class="com.linewell.ahsga.module.floating.system.TblConfigAction"></action>
+	    <!-- 出租信息管理 -->
+	    <action name="tblFeedbackRecordAction" class="com.linewell.ahsga.module.floating.jiuyerenyuan.TblFeedbackRecordAction"></action>
+	    <action name="tblStaffAction" class="com.linewell.ahsga.module.floating.jiuyerenyuan.TblStaffAction"></action>	
+	 	<action name="rentInfoAction" class="com.linewell.ahsga.module.floating.chuzu.TblHouseDealAction"></action>	
+		<action name="infoReleaseAction" class="com.linewell.ahsga.module.floating.xinxigonggao.TblInfoReleaseAction"></action>
+		<action name="shequPeopleAction" class="com.linewell.ahsga.module.floating.system.TblUserAction"></action>	
+		<action name="tblUserAction" class="com.linewell.ahsga.module.floating.system.TblUserAction"></action>
+		<action name="tblCommunityRentAction" class="com.linewell.ahsga.module.floating.shequrenyuan.TblCommunityRentAction"></action>
+	</package>
+</struts>

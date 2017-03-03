@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+	
+		<!-- 通用序列号生成接口 -->
+	<service>
+		<name>GenKey</name>
+	    <serviceClass>com.linewell.core.genkey.GenKeyInterface</serviceClass>
+	    <implementationClass>com.linewell.core.genkey.imp.GenKeyInterfaceImp</implementationClass>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+	
+</beans>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="gb2312"?>
+<flow id="06BDC65DD140447F007A0E0840000000" name="南威系统应用平台bug管理" sort="南威系统应用平台" belongDept="7F6F0171574BC692946F75736210EFD3" isSubFlow="2" useScope="" watchScope="" itemTitleName="472112B33DAF5D78E59B59E226BB4FE8" formid="383EB3254781510D53E59081DE95888A">
+<nodes>
+<node
+ id="9582A44BAB924949000000000072004A"
+ name="开始"
+ formid=""
+ auditType=""
+ multipleParallel=""
+ transferAction="" nodeType="0" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<transitions>
+<transition id="6668707F609E4A7B000A3C1A0C000000" transitionType="0" remark="">
+</transition>
+</transitions>
+<coordinate x="83" y="144"/>
+</node>
+<node
+ id="7B18781D1A4942D6006104454200FF15"
+ name="结束"
+ formid=""
+ auditType=""
+ multipleParallel=""
+ transferAction="" nodeType="2" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<coordinate x="616" y="138"/>
+<actions>
+<action id="send" name="发送"></action>
+<action id="diffluence_send" name="分流发送"></action>
+<action id="node_call_back" name="本节点收回"></action>
+<action id="front_node_call_back" name="上一节点收回"></action>
+<action id="sub_flow_call_back" name="子流程收回"></action>
+<action id="send_sub_flow" name="发送子流程"></action>
+<action id="opinion" name="阅批意见"></action>
+<action id="read_over" name="阅批办理结束"></action>
+<action id="multitask_over" name="多人办理结束"></action>
+<action id="change_flow" name="更改流程"></action>
+</actions>
+</node>
+<node
+ id="6668707F609E4A7B000A3C1A0C000000"
+ name="bug登记"
+ formid=""
+ auditType="0"
+ multipleParallel="1"
+ transferAction="0" nodeType="1" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<transitions>
+<transition id="1DBE3D711C6545800042001D69000071" transitionType="0" remark="">
+</transition>
+</transitions>
+<coordinate x="201" y="144"/>
+<participants>
+<participant participantType="0" name="" defaultParticipant="">458917F931B64E2A4A5D5090AEA1A801</participant></participants>
+<actions>
+<action id="send" name="发送"><participants>
+<participant participantType="4" name="" defaultParticipant="">7DF2E7B946804126000000290B1A3500</participant></participants>
+</action>
+<action id="BFD6D5AF99A369CC559826522D35289E" name="提交意见"><participants>
+<participant participantType="4" name="" defaultParticipant="">7DF2E7B946804126000000290B1A3500</participant></participants>
+</action>
+<action id="09d" name="保存"><participants>
+<participant participantType="4" name="" defaultParticipant="">7DF2E7B946804126000000290B1A3500</participant></participants>
+</action>
+</actions>
+</node>
+<node
+ id="1DBE3D711C6545800042001D69000071"
+ name="bug处理"
+ formid=""
+ auditType="0"
+ multipleParallel="1"
+ transferAction="0" nodeType="1" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<transitions>
+<transition id="DC5F8147F81E4584000B0021731DFF3A" transitionType="0" remark="">
+</transition>
+</transitions>
+<coordinate x="333" y="138"/>
+<participants>
+<participant participantType="1" name="" defaultParticipant="">7F6F0171574BC692946F75736210EFD3</participant></participants>
+<actions>
+<action id="send" name="发送"><participants>
+<participant participantType="4" name="" defaultParticipant="">7DF2E7B946804126000000290B1A3500</participant></participants>
+</action>
+<action id="09d" name="保存"><participants>
+<participant participantType="4" name="" defaultParticipant="">7DF2E7B946804126000000290B1A3500</participant></participants>
+</action>
+<action id="BFD6D5AF99A369CC559826522D35289E" name="解决意见"><participants>
+<participant participantType="4" name="" defaultParticipant="">7DF2E7B946804126000000290B1A3500</participant></participants>
+</action>
+</actions>
+</node>
+<node
+ id="DC5F8147F81E4584000B0021731DFF3A"
+ name="回归测试"
+ formid=""
+ auditType="0"
+ multipleParallel="1"
+ transferAction="0" nodeType="1" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<transitions>
+<transition id="7B18781D1A4942D6006104454200FF15" transitionType="0" remark="">
+</transition>
+<transition id="1DBE3D711C6545800042001D69000071" transitionType="0" remark="">
+</transition>
+</transitions>
+<coordinate x="474" y="217"/>
+<participants>
+<participant participantType="2" name="" defaultParticipant="">160D8732A0F484B817358B1A00675245</participant></participants>
+<actions>
+<action id="send" name="发送"></action>
+<action id="BFD6D5AF99A369CC559826522D35289E" name="发送时意见"><participants>
+<participant participantType="4" name="" defaultParticipant="">7DF2E7B946804126000000290B1A3500</participant></participants>
+</action>
+</actions>
+</node>
+</nodes>
+</flow>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "../struts-2.0.dtd">
+
+<struts>
+ <package name="core" extends="struts-default">
+  <!--对ucap平台的二次引用-->
+  <action name="menu" class="com.linewell.core.ucap.menu.MenuAction" />
+  <!--菜单-->
+  <action name="module" class="com.linewell.core.ucap.module.ModuleAction" />
+  <!--模块-->
+  <action name="user" class="com.linewell.core.ucap.user.UserAction" />
+  <!--用户-->
+  <action name="dept" class="com.linewell.core.ucap.dept.UcapDeptAction" />
+  <!--部门-->
+  <action name="role" class="com.linewell.core.ucap.role.RoleAction" />
+  <!--角色-->
+  <action name="resource" class="com.linewell.core.ucap.resource.ResourceAction" />
+  <!--平台资源-->
+  <action name="weekset" class="com.linewell.core.weekset.WeekSetAction" />
+  <!--节假日设置-->
+  <action name="dict" class="com.linewell.core.dict.ApasDictAction" />
+  <!--字典-->
+  <action name="AppFile" class="com.linewell.core.file.AppFileAction" />
+  <!--文件-->
+  <action name="tree" class="com.linewell.core.tree.TreeAction" />
+  <!--树形-->
+  <action name="view" class="com.linewell.core.view.ViewAction">
+   <!--视图-->
+   <result name="grid">/core/view/view_grid.jsp</result>
+   <result name="treegrid">/core/view/view_treegrid.jsp</result>
+   <result name="portlet">/core/view/portlet_view.jsp</result>
+  </action>
+  <action name="GenCode" class="com.linewell.core.gencode.GenCodeAction">
+   <!--代码生成器-->
+   <result name="choosetable">/core/buildermodule/choose_table.jsp</result>
+  </action>
+  <action name="NetBrakeSync" class="com.linewell.core.sync.NetBrakeSyncConfigurateAction">
+   <!--网闸同步配置-->
+   <result name="choosetable">/core/sync/choose_table.jsp</result>
+  </action>
+  <action name="FormContent" class="com.linewell.core.form.content.FormContentAction" />
+  <!-- 业务表单 -->
+  <action name="FormDesign" class="com.linewell.core.form.design.FormDesignAction" />
+  <!-- 业务规则配置 -->
+  <action name="UserCenter" class="com.linewell.core.user.center.UserCenterAction" />
+  <!-- 用户中心 -->
+  <action name="portlet" class="com.linewell.core.portlet.PortletAction" />
+  <!-- 首页配置 -->
+  <action name="print" class="com.linewell.core.print.printlodop.PrintAction" />
+  <!-- 套打配置 -->
+  <action name="PrintCenter" class="com.linewell.core.print.PrintCenterAction" />
+  <action name="attrCfg" class="com.linewell.core.attr.cfg.UcapAttrConfigAction" />
+  <!-- 套打中心配置 -->
+  <action name="PrintIreport" class="com.linewell.core.print.printireport.PrintIreportAction" />
+  <!-- 套打中心配置 -->
+  <action name="UserPrint" class="com.linewell.core.print.printlodop.UserPrintAction" />
+  <!-- 用户套打配置方案 -->
+  <action name="TaskScheduling" class="com.linewell.core.task.taskscheduling.TaskSchedulingAction" />
+  <!-- 任务调度中心-->
+  <action name="Sms" class="com.linewell.core.sms.SmsAction" />
+  <!-- 短信功能 -->
+  <action name="SmsTemplate" class="com.linewell.core.sms.template.SmsTemplateAction" />
+  <!-- 短信模板 -->
+  <action name="SystemConfig" class="com.linewell.core.system.SystemConfigAction" />
+  <!-- 系统基础配置 -->
+  <!--window7样式操作后台相关类-->
+  <action name="userdesktop" class="com.linewell.core.style.windows.userdesktippic.UserDesktipPicAction" />
+  <!--用户桌面-->
+  <action name="usershortcut" class="com.linewell.core.style.windows.usershortcut.UserShortcutAction" />
+  <!--桌面快捷方式-->
+  <action name="userDefaulStyle" class="com.linewell.core.userstyle.defaul.UserDefaulStyleAction" />
+  <!--桌面快捷方式-->
+  <action name="CommonBusiness" class="com.linewell.core.business.CommonBusinessAction" />
+  <!--通用业务处理类-->
+  <action name="nav" class="com.linewell.core.ucap.action.NavigationAction" />
+  <!-- 导航栏 -->
+  <action name="flowconfig" class="com.linewell.core.flow.config.FlowConfigAction" />
+  <!--流程配置-->
+  <action name="flowtest" class="com.linewell.core.flow.flowtest.FlowTestAction" />
+  <!--流程提交-->
+  <action name="flowSubmit" class="com.linewell.core.flow.business.CoreSubmitAction" />
+  <!--流程办结-->
+  <action name="flowTermit" class="com.linewell.core.flow.business.CoreTerminateAction" />
+  <!--流程退回-->
+  <action name="flowSendback" class="com.linewell.core.flow.business.CoreFlowSendbackAction" />
+  <!--流程退回上个环节-->
+  <action name="flowSendbacklast" class="com.linewell.core.flow.business.CoreFlowSendbackLastAction" />
+  <!--流程测试-->
+  <!-- 快速建模 -->
+  <action name="buildermodule" class="com.linewell.core.buildermodule.info.BuilderModuleInfoAction" />
+  <!--模型基本信息、详细信息保存-->
+  <action name="buildermoduledetail" class="com.linewell.core.buildermodule.detail.BuilderModuleDetailAction" />
+  <!--通用附件配置-->
+  <action name="appattr" class="com.linewell.core.appattr.AppAttrAction" />
+  <!--文档控件附件上传-->
+  <action name="uploadOffice" class="com.linewell.core.file.office.OfficeAction">
+   <result name="officeedit">/core/officeedit/result.jsp</result>
+  </action>
+  <action name="appmaterial" class="com.linewell.core.appmaterial.AppMaterialAction" />
+  <!--模型基本信息、详细信息保存-->
+  <action name="shouyepeizhi" class="com.linewell.core.shouyepeizhi.ShouyepeizhiAction">
+   <result name="chooserole">/core/jsp/shouyepeizhi/choose_role.jsp</result>
+  </action>
+  <action name="appattr" class="com.linewell.core.appattr.AppAttrAction" />
+  <!--按钮应用配置-->
+  <action name="buttonApplication" class="com.linewell.core.buttonapplication.ButtonApplicationAction" />
+  <!-- SQL语句历史记录 -->
+  <action name="sqlLog" class="com.linewell.core.view.sqllog.SqlLogAction" />
+  <action name="doctype" class="com.linewell.core.doctype.DoctypeAction" />
+  <!-- 视图按钮 -->
+  <action name="subButton" class="com.linewell.core.subbutton.SubButtonAction" />
+  <!-- 按钮图标 -->
+  <action name="iconApplication" class="com.linewell.core.iconapplication.IconApplicationAction" />
+  <!-- 按钮信息 -->
+  <action name="buttonInfo" class="com.linewell.core.button.ButtonAction" />
+  <!-- 模块绑定链接与流程 -->
+  <action name="moduleFlowConfig" class="com.linewell.core.ucap.module.ModuleFlowConfigAction" />
+  <!-- 审计管理 -->
+  <action name="audit" class="com.linewell.core.audit.AuditAction" />
+  <action name="exceptionlog" class="com.linewell.core.log.exception.ExceptionLogAction" />
+  <action name="logjdbc" class="com.linewell.core.log.jdbc.LogJDBCAction" />
+  <action name="loghttp" class="com.linewell.core.log.http.LogHttpAction" />
+  <action name="logmethod" class="com.linewell.core.log.method.LogMethodAction" />
+ </package>
+</struts>
+

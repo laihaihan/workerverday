@@ -1,0 +1,85 @@
+/****在core数据库中增加导航栏按钮所使用表 2013-08-02 begin***/
+1、表结构
+-- Create table
+create table CORE_BUTTON_APPLICATION
+(
+  BUTTON_UNID         VARCHAR2(32) not null,
+  APP_UNID            VARCHAR2(32),
+  BUTTON_NAME         VARCHAR2(100),
+  BUTTON_IMG_PATH     VARCHAR2(500),
+  BUTTON_DISPLAY_IMG  VARCHAR2(1),
+  BUTTON_IMG_STYLE    VARCHAR2(1),
+  BUTTON_TYPE         VARCHAR2(1),
+  BUTTON_CLASSIFY     VARCHAR2(1),
+  BUTTON_CLASS        VARCHAR2(50),
+  BUTTON_SORT         NUMBER,
+  BUTTON_FUNCTION     VARCHAR2(50),
+  BUTTON_DISPLAY_NAME VARCHAR2(100),
+  BUTTON_ROLE_UNID    VARCHAR2(32),
+  BUTTON_KIND         VARCHAR2(1)
+)
+tablespace CORE
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CORE_BUTTON_APPLICATION
+  is '按钮配置';
+-- Add comments to the columns 
+comment on column CORE_BUTTON_APPLICATION.BUTTON_UNID
+  is '主键';
+comment on column CORE_BUTTON_APPLICATION.APP_UNID
+  is '应用系统主键';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_NAME
+  is '按钮名称';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_IMG_PATH
+  is '按钮图标路径';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_DISPLAY_IMG
+  is '是否显示按钮图标（0：不显示；1：显示）';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_IMG_STYLE
+  is '图标样式（0：小图标；1：大图标）';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_TYPE
+  is '类型分为：流程、快捷方式，视图，首页，表单。字典定义为：流程：1；快捷方式：2；视图:3;首页：4；表单：5';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_CLASSIFY
+  is '是否使用CSS样式文件的样式';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_CLASS
+  is 'CSS样式名称';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_SORT
+  is '按钮序号';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_FUNCTION
+  is '脚本方法名称';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_DISPLAY_NAME
+  is '按钮显示名称';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_ROLE_UNID
+  is '按钮所属角色';
+comment on column CORE_BUTTON_APPLICATION.BUTTON_KIND
+  is '按钮种类（0：默认；1：自定义）';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table CORE_BUTTON_APPLICATION
+  add constraint PK_CORE_BUTTON_APPLICATION primary key (BUTTON_UNID)
+  using index 
+  
+
+2、党务支撑平台初始数据
+insert into core_button_application (BUTTON_UNID, APP_UNID, BUTTON_NAME, BUTTON_IMG_PATH, BUTTON_DISPLAY_IMG, BUTTON_IMG_STYLE, BUTTON_TYPE, BUTTON_CLASSIFY, BUTTON_CLASS, BUTTON_SORT, BUTTON_FUNCTION, BUTTON_DISPLAY_NAME, BUTTON_ROLE_UNID, BUTTON_KIND)
+values ('9AA579F99BB14C4BB1DD76FE36E05CC2', '3E2592D5DD95DA5C339C0935F7E9DAA8', '首页', '/core/upload/navigation/icon_94.gif', '1', '0', '4', '', '', 1, 'javascript:void(0)', '首页', '3E2592D5DD95DA5C339C0935F7E9DAA8', '0');
+
+insert into core_button_application (BUTTON_UNID, APP_UNID, BUTTON_NAME, BUTTON_IMG_PATH, BUTTON_DISPLAY_IMG, BUTTON_IMG_STYLE, BUTTON_TYPE, BUTTON_CLASSIFY, BUTTON_CLASS, BUTTON_SORT, BUTTON_FUNCTION, BUTTON_DISPLAY_NAME, BUTTON_ROLE_UNID, BUTTON_KIND)
+values ('10C9319A4C9CE9DB41F58AE87C81B820', '3E2592D5DD95DA5C339C0935F7E9DAA8', '个人中心', '/core/upload/navigation/user.png', '1', '0', '4', '', '', 2, 'editPersonalCenter', '个人中心', '3E2592D5DD95DA5C339C0935F7E9DAA8', '1');
+
+insert into core_button_application (BUTTON_UNID, APP_UNID, BUTTON_NAME, BUTTON_IMG_PATH, BUTTON_DISPLAY_IMG, BUTTON_IMG_STYLE, BUTTON_TYPE, BUTTON_CLASSIFY, BUTTON_CLASS, BUTTON_SORT, BUTTON_FUNCTION, BUTTON_DISPLAY_NAME, BUTTON_ROLE_UNID, BUTTON_KIND)
+values ('D1AB778DBB172C17A0B5E5F05290272C', '3E2592D5DD95DA5C339C0935F7E9DAA8', '系统切换', '/core/upload/navigation/icon_101.gif', '1', '0', '4', '', '', 3, 'chooseSys', '系统切换', '3E2592D5DD95DA5C339C0935F7E9DAA8', '1');
+
+insert into core_button_application (BUTTON_UNID, APP_UNID, BUTTON_NAME, BUTTON_IMG_PATH, BUTTON_DISPLAY_IMG, BUTTON_IMG_STYLE, BUTTON_TYPE, BUTTON_CLASSIFY, BUTTON_CLASS, BUTTON_SORT, BUTTON_FUNCTION, BUTTON_DISPLAY_NAME, BUTTON_ROLE_UNID, BUTTON_KIND)
+values ('CB68557F7BF6C3744F735BC2E715AA7C', '3E2592D5DD95DA5C339C0935F7E9DAA8', '分级管理中心', '/core/upload/navigation/icon_49.gif', '1', '0', '4', '', '', 5, 'javascript:void(0)', '分级管理中心', '3E2592D5DD95DA5C339C0935F7E9DAA8', '1');
+
+insert into core_button_application (BUTTON_UNID, APP_UNID, BUTTON_NAME, BUTTON_IMG_PATH, BUTTON_DISPLAY_IMG, BUTTON_IMG_STYLE, BUTTON_TYPE, BUTTON_CLASSIFY, BUTTON_CLASS, BUTTON_SORT, BUTTON_FUNCTION, BUTTON_DISPLAY_NAME, BUTTON_ROLE_UNID, BUTTON_KIND)
+values ('D48055C1B8F9B0929393842D03200331', '3E2592D5DD95DA5C339C0935F7E9DAA8', '门户配置', '/core/upload/navigation/icon_7.gif', '1', '0', '4', '', '', 6, 'javascript:void(0)', '门户配置', '3E2592D5DD95DA5C339C0935F7E9DAA8', '1');
+
+/****在core数据库中增加导航栏按钮所使用表 2013-08-02 end***/

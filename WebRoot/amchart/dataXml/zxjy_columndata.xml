@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chart>
+  <series>
+    <value xid="1">行政审批</value>
+  </series>
+  <graphs>
+    <graph gid="1">
+      <value xid="1" color="#7F8DA9">2</value>
+    </graph>
+  </graphs>
+</chart>
+

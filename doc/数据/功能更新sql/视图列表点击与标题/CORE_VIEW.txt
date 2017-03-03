@@ -1,0 +1,6 @@
+alter table core_view add(VIEW_CLICK_TYPE varchar2(1));
+comment on column core_view.VIEW_CLICK_TYPE is '打开视图编辑页面的形式（0：单击；1：双击）';
+
+alter table core_view add(VIEW_EDIT_TITLE varchar2(255));
+comment on column core_view.VIEW_EDIT_TITLE is '打开视图编辑页面显示在左上角的标题名称';
+  

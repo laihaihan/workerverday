@@ -1,0 +1,2 @@
+#*取得[连接分类]，用于sitemap.html文件*#
+#set( $link_cate = $list.getLinkCategoryList(${siteunid},"1,6"))

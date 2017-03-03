@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="gb2312"?>
+<sessions>
+
+	<!-- name:全局变量名称 -->
+	<!-- tableName:表名称 -->
+	<!-- pkName:表主键名称 -->
+	<!-- displayName:显示名称（用于视图查询）-->
+	<!-- introductions:说明 -->
+	<!-- treatClassName:处理类名称 -->
+	<!-- containAllFields:是否包含所有字段信息；TRUE/FALSE -->
+	<!-- selectBoxDictValue:通用选择框字典值 -->
+	<!-- sqlWhere:通用选择框查询条件-->
+	<!-- belongToAppItemName:所属应用系统的字段名称-->
+	<!-- dataSelect:构成数据后台逻辑对象-->
+	<!-- sort:表所属元素名称-->
+	<!-- sortValue:表所属元素值-->
+
+	<session name="globalUser" tableName="ucap_user" pkName="user_unid" displayName="user_display_name" introductions="用户" treatClassName="com.linewell.ucap.session.GlobalUser" containAllFields="TRUE" selectBoxDictValue="200" sqlWhere="" belongToAppItemName="" dataSelect="" sort="用户管理" sortValue="01"/>
+	<session name="globalDept" tableName="ucap_dept" pkName="dept_unid" displayName="dept_name" introductions="部门" treatClassName="com.linewell.ucap.session.GlobalDept" containAllFields="TRUE" selectBoxDictValue="201"  sqlWhere="" belongToAppItemName="" dataSelect="" sort="用户管理" sortValue="02"/>
+	<session name="globalPost" tableName="ucap_post" pkName="post_unid" displayName="post_name" introductions="职位" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="202"  sqlWhere="" belongToAppItemName="" dataSelect="" sort="用户管理" sortValue="02"/>
+	<session name="globalRole" tableName="ucap_role" pkName="role_unid" displayName="role_name" introductions="角色" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="203"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="用户管理" sortValue="02" selectBoxShowType="01" actionType="treeSelect" actionName="getRoleTree"/>
+	
+	<session name="globalDictionary" tableName="ucap_dictionary" pkName="dictionary_unid" displayName="dictionary_name" introductions="字典" treatClassName="com.linewell.ucap.session.GlobalDictionary" containAllFields="TRUE" selectBoxDictValue="204"   sqlWhere="" belongToAppItemName="DICTIONARY_BELONG_TO_APP" dataSelect="" sort="系统参数配置" sortValue="05" rootName="字典列表" selectBoxShowType="00" actionType="dict" actionName="getDictTree"/>
+
+	<session name="globalApp" tableName="ucap_app" pkName="app_unid" displayName="app_name" introductions="应用系统" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="205"   sqlWhere="app_unid=app_punid" belongToAppItemName="" dataSelect="" sort="平台配置" sortValue="01"/>
+
+	<session name="globalTip" tableName="ucap_tip" pkName="tip_unid" displayName="tip_num" introductions="消息配置" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="206"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="平台配置" sortValue="01"/>
+	<session name="globalStyle" tableName="ucap_style" pkName="style_unid" displayName="style_name" introductions="界面风格" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="207"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/>
+	
+	<session name="globalPrar" tableName="ucap_prar" pkName="para_unid" displayName="para_name" introductions="系统参数" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="208"   sqlWhere="" belongToAppItemName="PARA_BELONG_TO_APP" dataSelect="com.linewell.ucap.select.SpecialListDataSelect" sort="系统参数配置" sortValue="05"/>
+	
+	<session name="globalShortCuts" tableName="ucap_shortcuts" pkName="collection_unid" displayName="collection_name" introductions="快捷方式集" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="209"   sqlWhere="COLLECTION_UNID=COLLECTION_PUNID" belongToAppItemName="COLLECTION_BELONG_TO_APP" dataSelect="" sort="界面配置" sortValue="04"/>
+	
+	<session name="globalNavigation" tableName="ucap_navigation" pkName="navigation_unid" displayName="navigation_name" introductions="导航栏" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="210"   sqlWhere="NAVIGATION_UNID=NAVIGATION_PUNID" belongToAppItemName="NAVIGATION_BELONG_TO_APP" dataSelect="" sort="界面配置" sortValue="04"/>
+	
+	<session name="globalChannel" tableName="ucap_channel" pkName="channel_unid" displayName="channel_name" introductions="频道" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="211"   sqlWhere="" belongToAppItemName="CHANNEL_BELONG_TO_APP" dataSelect="" sort="界面配置" sortValue="04"/>
+	
+	<session name="globalScheme" tableName="ucap_scheme" pkName="scheme_unid" displayName="scheme_name" introductions="界面方案" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="212"   sqlWhere="SCHEME_UNID=SCHEME_PUNID" belongToAppItemName="SCHEME_BELONG_TO_APP" dataSelect="" sort="界面配置" sortValue="04"/>
+	
+	<session name="globalMenuRoot" tableName="ucap_menu_root" pkName="mroot_unid" displayName="mroot_name" introductions="菜单根节点" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="213"   sqlWhere="MROOT_UNID=MROOT_PUNID" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/>
+	
+	<session name="globalChannelDisplay" tableName="ucap_channel_dispaly" pkName="display_unid" displayName="display_channel_name" introductions="频道显示" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="214"   sqlWhere="DISPLAY_UNID=DISPLAY_PUNID" belongToAppItemName="DISPLAY_BELONG_TO_APP" dataSelect="" sort="界面配置" sortValue="04"/>
+	
+	
+	<session name="globalModule" tableName="ucap_module" pkName="module_unid" displayName="module_name" introductions="模块" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="215"   sqlWhere="MODULE_UNID=MODULE_PUNID" belongToAppItemName="MODULE_BELONG_TO_APP" dataSelect="" sort="界面配置" sortValue="04"/>
+	
+	
+	<session name="globalViewQuery" tableName="ucap_view_query" pkName="query_unid" displayName="query_name" introductions="视图查询" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="216" sqlWhere="QUERY_UNID=QUERY_PUNID" belongToAppItemName="QUERY_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	
+	<session name="globalViewFixedquery" tableName="ucap_view_fixedquery" pkName="fixedquery_unid" displayName="fixedquery_name" introductions="固定查询" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="217" sqlWhere="FIXEDQUERY_UNID=FIXEDQUERY_PUNID" belongToAppItemName="FIXEDQUERY_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	
+	<session name="globalView" tableName="ucap_view" pkName="view_unid" displayName="view_name" introductions="视图" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="218"   sqlWhere="view_unid=view_punid or view_public_type='05'" belongToAppItemName="VIEW_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	
+	<session name="globalViewItem" tableName="ucap_view_item" pkName="item_unid" displayName="item_display_name" introductions="视图字段配置" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="219"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	<session name="globalButton" tableName="ucap_button" pkName="button_unid" displayName="button_name" introductions="按钮" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="220"   sqlWhere="" belongToAppItemName="BUTTON_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	<session name="globalFormShow" tableName="ucap_form_show" pkName="sform_unid" displayName="sform_name" introductions="显示表单" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="221"   sqlWhere="SFORM_MODULE_UNID='?' or (sform_public_type is not null or sform_public_type='02' or sform_public_type='03')" belongToAppItemName="SFORM_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	<session name="globalForm" tableName="ucap_form" pkName="form_unid" displayName="form_name_cn" introductions="表单" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="222"   sqlWhere="FORM_MODULE_UNID='?' or (form_public_type is not null or form_public_type='02' or form_public_type='03')" belongToAppItemName="FORM_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	<session name="globalFormItem" tableName="ucap_form_item" pkName="fitem_unid" displayName="fitem_name_cn" introductions="表单字段" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="223"   sqlWhere="FITEM_FORM_UNID='?'" belongToAppItemName="" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	<session name="globalDbView" tableName="ucap_db_view" pkName="dbview_unid" displayName="dbview_name_cn" introductions="数据库视图" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="224"   sqlWhere="DBVIEW_MODULE_UNID='?' or (DBVIEW_public_type is not null or DBVIEW_public_type='02' or DBVIEW_public_type='03')" belongToAppItemName="DBVIEW_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	
+	<session name="globalDbViewItem" tableName="ucap_db_view_item" pkName="dbvitem_unid" displayName="dbvitem_name_cn" introductions="数据库视图字段" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="225"   sqlWhere="" belongToAppItemName="DBVIEW_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	<session name="globalComposeForm" tableName="ucap_compose_form" pkName="cform_unid" displayName="cform_name" introductions="组合表单" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="true" selectBoxDictValue="226"   sqlWhere="CFORM_MODULE_UNID='?' or (cform_public_type is not null or cform_public_type='02' or cform_public_type='03')" belongToAppItemName="CFORM_BELONG_TO_APP" dataSelect="" sort="设计管理" sortValue="03"/>
+	<session name="globalInteraction" tableName="ucap_interaction" pkName="interaction_unid" displayName="interaction_name" introductions="扩展功能" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="227"   sqlWhere="" belongToAppItemName="INTERACTION_BELONG_TO_APP" dataSelect="com.linewell.ucap.select.SpecialListDataSelect" sort="设计管理" sortValue="03"/>
+	<session name="globalColumns" tableName="ucap_columns" pkName="columns_unid" displayName="columns_name" introductions="栏目名称" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="228"   sqlWhere="" belongToAppItemName="columns_belong_to_app" dataSelect="" sort="界面配置" sortValue="04" rootName="栏目列表" selectBoxShowType="00" actionType="columns" actionName="getColumnsTree"/>
+	<session name="globalBusinessModule" tableName="ucap_manager" pkName="manager_unid" displayName="manager_name" introductions="业务模块名称" treatClassName="com.linewell.ucap.session.GlobalBusinessModule" containAllFields="FALSE" selectBoxDictValue="229"   sqlWhere="" belongToAppItemName="" dataSelect="com.linewell.ucap.select.BusinessModuleSelect" sort="界面配置" sortValue="04"/>
+	
+	<session name="globalDataSourceCfg" tableName="ucap_data_source_cfg" pkName="dscfg_unid" displayName="dscfg_cfg_name" introductions="数据源配置" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="TRUE" selectBoxDictValue="230"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="设计管理" sortValue="03"/>
+
+	<!-- 用于缓存更新 -->
+	<session name="globalOpinionCache" tableName="ucap_opinion" pkName="opinion_unid" displayName="opinion_user_unid" introductions="用户意见缓存" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="231"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="用户意见缓存" sortValue="01"/>
+	<session name="globalShortCutCache" tableName="ucap_shortcut" pkName="shortcut_unid" displayName="shortcut_collection_unid" introductions="快捷方式集" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="232"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/>
+	<session name="globalMenuLeafCache" tableName="ucap_menu_leaf" pkName="leaf_unid" displayName="leaf_punid" introductions="菜单叶节点" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="233"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/>
+	<session name="globalProxyCache" tableName="ucap_out_proxy" pkName="proxy_unid" displayName="proxy_user_unid" introductions="用户代理人缓存" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="234"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="用户代理人缓存" sortValue="01"/>
+	<session name="globalModuleItem" tableName="ucap_module_leaf" pkName="leaf_unid" displayName="leaf_punid" introductions="模块叶子" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="235"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/>
+    <!--数据权限配置的缓存获取判断，避免多次查询数据库-->
+	<session name="globalViewDataRole" tableName="ucap_view_data_role" pkName="vdr_viewid" displayName="vdr_roleid" introductions="视图数据权限" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="236"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="权限配置" sortValue="06"/>
+	<session name="globalComposeFormTab" tableName="ucap_compose_form_tab" pkName="tab_unid" displayName="tab_name" introductions="组合表单页签" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="true" selectBoxDictValue="237"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="设计管理" sortValue="03"/>
+	<session name="globalFormItemShow" tableName="ucap_form_item_show" pkName="show_unid" displayName="show_name" introductions="表单字段显示属性" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="true" selectBoxDictValue="238"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="设计管理" sortValue="03"/>
+
+	<!--session name="globalUserCache" tableName="ucap_user" pkName="user_unid" displayName="user_login_name" introductions="用户登录名缓存" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="281"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="用户登录名缓存" sortValue="01"/>
+	<session name="globalAppCache" tableName="ucap_app" pkName="app_unid" displayName="app_punid" introductions="应用系统" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="282"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="平台配置" sortValue="01"/>
+	<session name="globalShortCutsCache" tableName="ucap_shortcuts" pkName="collection_unid" displayName="collection_punid" introductions="快捷方式集" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="283"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/>
+	<session name="globalNavigationCache" tableName="ucap_navigation" pkName="navigation_unid" displayName="navigation_punid" introductions="导航栏" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="284"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/>
+	<session name="globalChannelCache" tableName="ucap_channel" pkName="channel_unid" displayName="channel_unid" introductions="频道" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="285"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/>
+	<session name="globalSchemeCache" tableName="ucap_scheme" pkName="scheme_unid" displayName="scheme_punid" introductions="界面方案" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="286"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/-->
+	<!--session name="globalMenuRootCache" tableName="ucap_menu_root" pkName="mroot_unid" displayName="mroot_punid" introductions="菜单根节点" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="287"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/-->
+	<!--session name="globalChannelDisplayCache" tableName="ucap_channel_dispaly" pkName="display_unid" displayName="display_punid" introductions="频道显示" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="288"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/-->
+	<!--session name="globalStyleCache" tableName="ucap_style" pkName="style_unid" displayName="style_punid" introductions="界面风格" treatClassName="com.linewell.ucap.session.GlobalResource" containAllFields="FALSE" selectBoxDictValue="289"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04"/-->
+	
+	
+</sessions>

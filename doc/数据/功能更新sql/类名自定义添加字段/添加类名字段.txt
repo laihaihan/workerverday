@@ -1,0 +1,11 @@
+-- Add/modify columns 
+alter table CORE_BUILDERMODULE_INFO add CLASSNAME VARCHAR2(20);
+-- Add comments to the columns 
+comment on column CORE_BUILDERMODULE_INFO.CLASSNAME
+  is 'VARCHAR2(20)';
+
+-- Add/modify columns 
+alter table CORE_BUILDERMODULE_INFO add packname varchar2(100);
+-- Add comments to the columns 
+comment on column CORE_BUILDERMODULE_INFO.packname
+  is '°üÃû';

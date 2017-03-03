@@ -1,0 +1,10 @@
+/* CSS Document */
+
+body,table,tr,td,iframe{border:none;padding:0px;margin:0px;font-size:12px;color:#333;}
+img{border:0 none;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#f00;text-decoration:underline;}
+.login_bg{background:url(../images/admin/form_bg.jpg) no-repeat;}
+.body_bg{background:url(../images/admin/bg_1.jpg) repeat-x;background-color:#2fa5e3;}
+.log_btn{background:url(../images/admin/log_btn.jpg) no-repeat;border:0 none;width:69px;height:24px;}
+.res_btn{background:url(../images/admin/res_btn.gif) no-repeat;border:0 none;width:67px;height:24px;}

@@ -1,0 +1,122 @@
+-------------------------------在ucap表空间下执行
+insert into UCAP_MODULE_LEAF (LEAF_UNID, LEAF_NAME, LEAF_NAME_SPELL, LEAF_TYPE, LEAF_CONTENTS, LEAF_BIG_PICTURE, LEAF_SMALL_PICTURE, LEAF_OPEN_TYPE, LEAF_USE_SCOPES, LEAF_UNUSE_SCOPES, LEAF_INTERACTION, LEAF_PUNID, LEAF_BELONG_TO_DEPTS, LEAF_BELONG_TO_USERS, LEAF_PICTURE_POSITION, LEAF_CHILDRENS, LEAF_VERSION, LEAF_RELSOURCE_UNID, LEAF_CREATOR, LEAF_MODIFIER, LEAF_MODIFIED, LEAF_MODULE_UNID, LEAF_DEFAULT_OPEN, LEAF_EXECUTE_CONTENT, LEAF_EXECUTE_TYPE)
+values ('C3970998DCA0B35C740D9CE661EDC662', '首页配置', null, '02', 'view.action?fn=grid&viewId=1DD81D965191FDEEFFAA44BB320B00C7', null, null, '03', null, null, null, 'C3970998DCA0B35C740D9CE661EDC662', null, null, null, null, '10', null, null, null, null, null, '0', null, '01');
+
+insert into UCAP_MENU_LEAF (LEAF_UNID, LEAF_NAME, LEAF_NAME_SPELL, LEAF_USE_SCOPES, LEAF_INTERACTION, LEAF_TIP, LEAF_TYPE, LEAF_CONTENT, LEAF_PUNID, LEAF_BELONG_TO_DEPTS, LEAF_BELONG_TO_USERS, LEAF_UNUSE_SCOPES, LEAF_CHILDRENS, LEAF_PICTURE, LEAF_OPEN_TYPE, LEAF_VERSION, LEAF_RELSOURCE_UNID, LEAF_CREATOR, LEAF_MODIFIER, LEAF_MODIFIED, LEAF_BIG_PICTURE, LEAF_EXECUTE_CONTENT, LEAF_EXECUTE_TYPE)
+values ('539C0AE7CCFC171C80589F850A847B97', '首页', null, null, null, null, '03', '../core/jsp/portlets/portlets.jsp', '539C0AE7CCFC171C80589F850A847B97', null, null, null, null, null, null, '9', null, null, null, null, null, null, null);
+
+update UCAP_MENU_ROOT t set t.mroot_childrens = t.mroot_childrens ||',539C0AE7CCFC171C80589F850A847B97' where t.mroot_unid='9C2AFB0D1F909CF0042DDC73EE9A49D5'
+
+-------------------在core表空间下执行--------------------------------
+-- Create table
+create table CORE_PORTLETS
+(
+  unid                VARCHAR2(32) not null,
+  title               VARCHAR2(50),
+  source_type         VARCHAR2(10),
+  source              VARCHAR2(4000),
+  belong_to_roles     VARCHAR2(4000),
+  belong_to_apps      VARCHAR2(4000),
+  belong_to_rolesname VARCHAR2(4000),
+  position            VARCHAR2(20),
+  view_column         VARCHAR2(4000),
+  height              VARCHAR2(100),
+  status              VARCHAR2(10),
+  recordnum           VARCHAR2(100)
+)
+tablespace CORE
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column CORE_PORTLETS.unid
+  is '主键';
+comment on column CORE_PORTLETS.title
+  is '标题';
+comment on column CORE_PORTLETS.source_type
+  is '数据来源类型';
+comment on column CORE_PORTLETS.source
+  is '数据来源值';
+comment on column CORE_PORTLETS.belong_to_roles
+  is '关联角色';
+comment on column CORE_PORTLETS.belong_to_apps
+  is '所属应用系统';
+comment on column CORE_PORTLETS.belong_to_rolesname
+  is '角色名称';
+comment on column CORE_PORTLETS.position
+  is '位置';
+comment on column CORE_PORTLETS.view_column
+  is '显示列';
+comment on column CORE_PORTLETS.height
+  is '高度';
+comment on column CORE_PORTLETS.status
+  is '状态';
+comment on column CORE_PORTLETS.recordnum
+  is '记录数';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table CORE_PORTLETS
+  add constraint PK_CORE_PORTLETS primary key (UNID)
+  using index 
+  tablespace CORE
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+-- Create table
+create table CORE_USER_PORTLETS
+(
+  unid           VARCHAR2(32) not null,
+  userid         VARCHAR2(32),
+  portlets_sort  VARCHAR2(4000),
+  column_width   VARCHAR2(4000),
+  belong_to_apps VARCHAR2(4000)
+)
+tablespace CORE
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column CORE_USER_PORTLETS.unid
+  is '主键';
+comment on column CORE_USER_PORTLETS.userid
+  is '用户标识';
+comment on column CORE_USER_PORTLETS.portlets_sort
+  is '排序';
+comment on column CORE_USER_PORTLETS.column_width
+  is '列宽';
+comment on column CORE_USER_PORTLETS.belong_to_apps
+  is '应用系统';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table CORE_USER_PORTLETS
+  add constraint PK_CORE_USER_PORTLETS primary key (UNID)
+  using index 
+  tablespace CORE
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+---------------------------------------------------

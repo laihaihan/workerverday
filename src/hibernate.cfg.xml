@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.provider_class">
+		org.hibernate.connection.ProxoolConnectionProvider
+	</property><!-- ProxoolConnectionProvider DatasourceConnectionProvider -->
+	<property name="hibernate.proxool.pool_alias">
+		D5A732887EB491ABC10B23D4B43DA38C
+	</property>
+	<property name="hibernate.proxool.xml">
+		WEB-INF/proxool.xml
+	</property>
+	<!-- hibernate.cfg.xml 与 web.xml同时加载 proxool.xml就会报错，这里应设为true -->
+	<property name="hibernate.proxool.existing_pool">true</property>
+	<property name="show_sql">false</property>
+	<property name="cache.use_query_cache">false</property>
+	<property name="dialect">
+		org.hibernate.dialect.Oracle9Dialect
+	</property>
+	<!-- Mapping files -->
+	<mapping resource="hbm/App_View_Column.hbm.xml"></mapping>
+	<mapping resource="hbm/App_View_Query.hbm.xml"></mapping>
+	<mapping resource="hbm/App_View.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseMonitorReply.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseMonitorRecord.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseCaseMarkItem.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseCaseMarkScore.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseDutyPeople.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseAttachment.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseFlowLog.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseOpinion.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseStepInfo.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseRuleKey.hbm.xml"></mapping>
+	<mapping resource="hbm/PortalIssue.hbm.xml"></mapping>
+	<mapping resource="hbm/PortalComplain.hbm.xml"></mapping>
+	<mapping resource="hbm/PortalInteractReply.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseWord.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseForm.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseFormItem.hbm.xml"></mapping>
+	<mapping resource="hbm/SuperviseShareItem.hbm.xml"></mapping>
+	<mapping resource="hbm/BaseInfo.hbm.xml"></mapping>
+	<mapping resource="hbm/FlowInfo.hbm.xml"></mapping>
+	<mapping resource="hbm/HandleInfo.hbm.xml"></mapping>
+	<mapping resource="hbm/SpecialInfo.hbm.xml"></mapping>
+	<mapping resource="hbm/MonitorInfo.hbm.xml"></mapping>
+	<mapping resource="hbm/NewMonitorInfo.hbm.xml"></mapping>
+	<mapping resource="hbm/OnlyMonitorInfo.hbm.xml"></mapping>
+	<mapping resource="hbm/PowerLaw.hbm.xml"></mapping>
+	<mapping resource="hbm/EssKeywords.hbm.xml"></mapping>
+	<mapping resource="hbm/MonitorLight.hbm.xml"></mapping>
+	
+	
+	
+</session-factory>
+</hibernate-configuration>

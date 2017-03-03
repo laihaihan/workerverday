@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>load</title>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="start_menu_panel">
+  <div class="panel-user">
+    <div class="avatar"> <img src="images/avatar_0.jpg" align="absmiddle">
+      <div class="status_icon status_icon_3"></div>
+      <div id="on_status"> <a href="javascript:void(0);" class="on_status_1">在线</a> <a href="javascript:void(0);" class="on_status_2">忙碌</a> <a href="javascript:void(0);" class="on_status_3" >离开</a> </div>
+    </div>
+    <div class="name" title="部门：网络处角色：部门经理">陈然</div>
+
+	</div>
+  
+	<div class="panel-menu">
+		<!---一级菜单 开始--->
+		<!-- 一级菜单 -->
+		<div id="first_panel">
+				<ul id="first_menu">
+					<li><a href="javascript:void(0);" class="active"><img src="images/mytable.png" align="absMiddle"> 个人事务</a></li>
+					<li><a href="javascript:void(0);" ><img src="images/workflow.png" align="absMiddle">  工作流</a></li>
+				</ul>
+		</div>
+		<!---一级菜单 结束--->
+		<!-- 二级级菜单 -->
+		<div id="second_panel">
+			<div class="second-panel-menu">
+				<!------二级1---------->
+				<div class="jscroll-c" style="display:block;">
+					<ul>
+						<li>
+							<a  href="javascript:void(0);" class="expand" ><span>客户管理</span></a>
+							<ul style="display:none;">
+								<li><a href="javascript:void(0);" ><span>客户信息</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户联系人</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户活动</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户关怀</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0);"  class="expand" ><span>销售管理</span></a>
+							<ul style="display:none;">
+								<li><a href="javascript:void(0);" ><span>客户信息</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户信息</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户信息</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户信息</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户信息</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户信息</span></a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" class="expand"><span>报表分析与统计</span></a></li>
+					</ul>
+				</div>
+				<!------二级2---------->
+				<div class="jscroll-c" style="display:none;">
+					<ul>
+						<li>
+							<a  href="javascript:void(0);" class="expand" ><span>客户管理2</span></a>
+							<ul style="display:none;">
+								<li><a href="javascript:void(0);" ><span>客户信息2</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户联系人2</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户活动2</span></a></li>
+								<li><a href="javascript:void(0);" ><span>客户关怀2</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0);"  class="expand active" ><span>销售管理2</span></a>
+						</li>
+						<li><a href="javascript:void(0);" class="expand"><span>报表分析与统计2</span></a></li>
+					</ul>
+				</div>
+				
+			</div>
+			<!------登录退出---------->
+			
+			<div class="tools">
+				<!--<a class="logout" href="###" title="注销"></a>--> <a class="exit" href="###" title="退出"></a>
+			</div>
+
+		</div>
+	</div>
+<script>
+	$(function(){
+		//一级菜单展出二级
+		$("#first_menu li").each(function(index){
+			$(this).click(function(){
+				$(this).children().addClass("active").parent().siblings("li").children().removeClass("active");
+				$(".jscroll-c:eq("+ index +")").css("display","block").siblings(".jscroll-c").css("display","none");
+			});
+		});
+		//二级菜单展出三级
+		$(".jscroll-c .expand").click(function(){
+			$(this).toggleClass("active");
+			$(this).siblings("ul").toggle();
+			
+		
+		})
+		
+	});
+
+
+</script>	
+	
+	
+</body>
+</html>

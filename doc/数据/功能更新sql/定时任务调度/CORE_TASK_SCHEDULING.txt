@@ -1,0 +1,16 @@
+
+----------oracle 环境下－－－－－－－－－－－－
+alter table core_task_scheduling add(EXECUTECOUNT number);
+comment on column core_task_scheduling.EXECUTECOUNT is '运行次数';
+
+alter table core_task_scheduling add(EXECUTEDCOUNT number);
+comment on column core_task_scheduling.EXECUTEDCOUNT is '已运行次数';
+
+－－－－－－－－gbase环境下－－－－－－－－－－－－－－
+	
+ALTER TABLE `zjcore`.`core_task_scheduling`
+ADD COLUMN `EXECUTECOUNT` numeric(10,0) NULL;
+	
+ALTER TABLE `zjcore`.`core_task_scheduling`
+ADD COLUMN `EXECUTEDCOUNT` numeric(10,0) NULL;
+

@@ -1,0 +1,181 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中国南安-${msg.title}</title>
+<link href="../../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<script language="javascript" type="text/javascript"> 
+function getCount(unid,type){
+try{
+var url="../../${tomcatroot}/${cmsWebapp}/views/views.jsp?type="+type+"&unid="+unid;
+var xmlhttp;
+if(window.ActiveXObject)
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if(window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+
+		   xmlhttp.Open("get", url, false);
+    	   xmlhttp.Send(null); 
+		   var resultvalue=xmlhttp.responseText;
+		   //ret=resultvalue; 
+         document.all.browse.innerHTML=resultvalue;
+}catch(e){
+}
+}
+</script>
+<SCRIPT language=javascript type=text/javascript>
+	function doZoom(size){ 
+	document.getElementById('zoom').style.fontSize=size+'px' 
+} 
+</SCRIPT>
+<body class="other_body_bg" onload="getCount('${msg.unid}','document')">
+
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+   #parse("www.fjfa.gov.cn/topAndButton/document_top.html")
+	<tr>
+	<td height="418">&nbsp;</td>
+    <td valign="top">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+			<tr> 
+				#set( $nav =$list.getNavBar(${msg.cateunid},"&nbsp;-&gt;&nbsp;"))
+				<td height="40" colspan="2" class="art_border"><img src="../../images/ind_l_4.jpg" width="17" height="17" /></td>
+			  	<td width="954" class="art_border"> 当前位置：$nav</td>
+			</tr>		  
+		  	<tr>
+				<td height="15" colspan="3" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+			</tr>
+		  	<tr>
+				<td width="3" height="5"></td>
+			  	<td width="27"></td>
+			  	<td></td>
+			</tr>
+			<tr>
+				<td height="356"></td>
+			  	<td colspan="2" valign="top" class="art_cont_box_border">
+					<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td width="7" height="79">&nbsp;</td>
+							<td width="949" align="center" class="art_title_box">
+							<span class="art_title">${msg.title}</span><br/>
+							<span class="art_2title">发布日期：
+							#if( ${msg.publishdate} && $!{msg.publishdate} != "" && $!{msg.publishdate} != "null" )
+							&nbsp;
+							[$!{msg.getPublishdate(10)}]
+							#end
+							#if( ${msg.fromsite} && $!{msg.fromsite} != "" && $!{msg.fromsite} != "null" )
+								&nbsp;
+							来源：${msg.fromsite}
+							#end　　　　浏览次数：<font id=browse></font>　　　　字号：【　<a href="javascript:doZoom(16);">大</a>　<a href="javascript:doZoom(14);">中</a>　<a href="javascript:doZoom(12);">小</a>　】
+							</span>              
+							</td>
+							<td width="8"></td>
+						</tr>
+						<tr>
+							<td height="10"></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						 #if($msg.type=="3" && $msg.photo)
+						  <tr valign="top">
+						  <td align="center" height="25" colspan="2">
+							  <img src="${siteDomain}/${msg.photo}" width="640" height="480" />
+						  </td>
+						  </tr>  
+						  #end
+						  #if($msg.type=="4" && $msg.attrurl)
+						  <tr valign="top">
+						  <td align="center" colspan="2">
+						  <object id="nstv" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701standby=Loading" classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" width="433" height="360" components...type="application/x-oleobject" player="player" media?="media?" windows="windows" microsoft?="microsoft?">
+                                  <param name="URL" value="${siteDomain}/${msg.attrurl}" />
+                                  <param name="rate" value="1" />
+                                  <param name="balance" value="0" />
+                                  <param name="currentPosition" value="10.1248957" />
+                                  <param name="defaultFrame" value="" />
+                                  <param name="playCount" value="1" />
+                                  <param name="autoStart" value="-1" />
+                                  <param name="currentMarker" value="0" />
+                                  <param name="invokeURLs" value="-1" />
+                                  <param name="baseURL" value="" />
+                                  <param name="volume" value="50" />
+                                  <param name="mute" value="0" />
+                                  <param name="uiMode" value="full" />
+                                  <param name="stretchToFit" value="0" />
+                                  <param name="windowlessVideo" value="0" />
+                                  <param name="enabled" value="-1" />
+                                  <param name="enableContextMenu" value="-1" />
+                                  <param name="fullScreen" value="0" />
+                                  <param name="SAMIStyle" value="" />
+                                  <param name="SAMILang" value="" />
+                                  <param name="SAMIFilename" value="" />
+                                  <param name="captioningID" value="" />
+                                  <param name="enableErrorDialogs" value="0" />
+                                  <param name="_cx" value="11456" />
+                                  <param name="_cy" value="9525" />
+                                </object>
+						  </td>
+						  </tr>
+						 #end
+						<tr>
+							<td height="211">&nbsp;</td>
+							<td valign="top" class="art_cont_border">${msg.content}</td>                          
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td height="38">&nbsp;</td>
+							<td valign="top">
+								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+									  <td width="80" height="38" align="right"><a href="#"><img src="../../images/button_jc.gif" width="59" height="20" border="0" /></a></td>
+									  <td width="97" align="right"><a href="#"><img src="../../images/button_wz.gif" width="82" height="20" border="0" /></a></td>
+									  <td width="76" align="right">推荐给朋友</td>
+									  <td width="169" align="center"><input name="" value="您朋友的E-mail" size="20" onClick=""/>           </td>
+									  <td width="76"><input type="image" src="../../images/button_qd.gif" name=""/></td>
+									  <td width="448" align="right">
+										  【<a  href="">收藏</a>】
+										  【<a href="javascript:printPage();">打印</a>】
+										  【<a href="javascript:window.close();">关闭</a>】
+									  </td>
+									</tr>
+								</table>            
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td height="16"></td>
+							<td></td>
+							<td></td>
+						</tr>						
+						<!--============评论开始============-->
+						<tr>
+							<td height="38">&nbsp;</td>
+							<td valign="top" align="center">
+								<iframe scrolling="no" frameborder="0" valign="top" border="0" width="980" height="370" src="../../${cmsWebapp}/articleComment/articleComment.jsp?unid=${msg.unid}"></iframe>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+						<!--============评论结束============-->
+				  </table>
+			  	</td>
+			</tr>
+	  
+		  
+		</table>
+	</td>
+    
+  </tr>
+  <tr><td heigh=""></td></tr>
+  <tr>
+    <td height="180" colspan="2"  align="center">
+	
+#parse("www.fjfa.gov.cn/topAndButton/document_buttom.html")	</td>
+    
+  </tr>
+</table>
+</body>
+</html>

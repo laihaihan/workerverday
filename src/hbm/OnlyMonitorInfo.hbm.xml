@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.linewell.ess.monitor.info.OnlyMonitorInfo"
+		table="monitor_only_info">
+		<id column="UNID" name="unid" type="string">
+			<generator class="assigned" />
+		</id>
+		<property column="PUNID" name="punid" type="string" />
+		<property column="monitorType" name="monitorType" type="string" />
+		<property column="monitorCategory" name="monitorCategory" type="string" />
+		<property column="monitorTime" name="monitorTime" type="string" />
+		<property column="monitorResult" name="monitorResult" type="string" />
+		<property column="monitorState" name="monitorState" type="string" />
+		<property column="RULEID" name="ruleId" type="string" />
+		<property column="PICTURE" name="picture" type="string" />
+		<property column="PICPATH" name="picPath" type="string" />
+		<property column="OUNID" name="ounid" type="string" />
+		<property column="RULELEVEL" name="ruleLevel" type="string" />
+		<property column="SERVICEID" name="serviceId" type="string" />
+		<property column="DEPTUNID" name="deptUnid" type="string" />
+		<property column="DATATYPE" name="dataType" type="string" />
+		<property column="RULETYPE" name="ruletype" type="string" />
+		<property column="ASSESSMENTUNID" name="assessmentUnid" type="string" />
+		<property column="ASSESSMENT" name="assessment" type="string" />
+		<property column="BELONGSYS" name="belongsys" type="string" />
+		<property column="INTRO" name="intro" type="string" />
+		<property column="STEP" name="step" type="string" />
+	</class>
+</hibernate-mapping>

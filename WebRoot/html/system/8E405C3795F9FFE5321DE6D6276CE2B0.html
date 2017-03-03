@@ -1,0 +1,31 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<span style="display:none;">
+   <input type="text" class="inputbox" id="role_belong_to_app" name="role_belong_to_app"/>
+   <input type="text" class="inputbox" id="role_funid" name="role_funid" />
+</span>
+<table border="0" class="tableSet3" align="center">
+<COL width="20%">
+<COL width="80%">
+  <tr>
+    <th> 角色名称： </th>
+    <td><input  id="role_name" name="role_name" type="text" class="inputbox" size="20" /></td>
+  </tr>
+  <tr>
+    <th> 角色用户： </th>
+    <td><input  id="role_users" name="role_users" type="text" class="inputbox" size="20" /></td>
+  </tr>
+</table>
+<script language="JavaScript">
+	Ext.onReady(function(){
+		try{
+			var roleUnid = ucapCommonFun.getUrlParameter("roleUnid");
+			var obj = Ext.getDom("role_funid");
+			if(obj){
+				obj.value = roleUnid;
+				//modify by jc 将UNID转换为中文名称
+				var objCn = Ext.getDom("role_funid_Cn_");
+				if(objCn)objCn.value = ucapCommonFun.getDisplayNames("203",roleUnid)||roleUnid;
+			}
+		}catch(e){}
+	});
+</script>

@@ -1,0 +1,21 @@
+#*********************************************************************#
+
+#*设置当前[市政府网站]站点unid*#
+#set( $pagetitle = "市政府网站" )
+#set( $siteunid = "69538409AAC105BF5A861ADEDE772486" )
+#set( $siteDomain = $list.getSiteDomain($siteunid) )
+
+
+#*取得tomcat路径*#
+#set( $tomcatroot = $list.getRootUrl() )
+#*取得HTML输出路径*#
+#set( $siteoutputpath = $list.getCmsOutputPath())
+#set( $cmsWebapp =  "cmsWebapp/fj/fjfa/jsp" )
+
+#*取得[二级页面连接]，用于index.html文件*#
+#set($secondPageUrl="${tomcatroot}/${cmsWebapp}/views/list.jsp?cateunid=")
+
+#*取得[政府信息公开]，用于index.html文件*#
+#set( $zfxxgkgd="10C29BC961CD12E96BB0DBC25FF87F8A")
+#set( $zfxxgkzn="D9F754E844C3BC8F03642AD4E31B2830")
+#set( $zfxxgknb="721D177F6C73769ED973A4884F331D53")

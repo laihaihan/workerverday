@@ -1,0 +1,33 @@
+#*取得[走进福安]栏目，用于fuan.html文件*#
+#set( $unid_fuan = "69760A5D5D44BD499691DBC274AD550F" )
+#set( $cate_fuan = $list.getCmsArCategoryByUnid(${unid_fuan}) )
+#set( $catelist_fuan = $list.getCategoryList(${unid_fuan}, "") )
+
+#set( $unid_fagl = "9EF714679C19A84C8BA5CC1E950797E2")
+#set( $articlelist_fagl = $list.getList("cate",${unid_fagl},5,48,"MM-dd") )
+
+
+#*取得[产业经济]栏目名称，用于fuan.html文件*#
+#set( $cyjjunid="DA79E509EE4AF000DAED1E84CCF5C31B")
+#set( $cate_cyjj = $list.getCategoryByUnid(${cyjjunid}))
+#set( $articlelist_cyjj = $list.getList("cate",${cyjjunid},100,20,"yyyy-MM-dd"))
+
+
+#*取得[社会事业]栏目名称，用于fuan.html文件*#
+#set( $shsyunid="4863BA184CE7A417C1A5172FC713180C")
+#set( $cate_shsy = $list.getCategoryByUnid(${shsyunid}))
+#set( $articlelist_shsy = $list.getList("cate",${shsyunid},120,10,"yyyy-MM-dd")) 
+
+
+#*取得[乡镇概况]栏目名称，用于fuan.html文件*#
+#set( $xzgkunid="922E35F5B37AADD234C8BEBA49DE84AE")
+#set( $cate_xzgk = $list.getCategoryByUnid(${xzgkunid}))
+#set( $articlelist_xzgk = $list.getList("cate",${xzgkunid},12,12,"yyyy-MM-dd")) 
+
+#*取得[图片精选]栏目，用于fuan.html文件*#
+#set( $unid_tpjx = "D412DAEF89B3F0D4FC7D25C2AAA35CBB" )
+#set( $articlelist_tpjx= $list.getList("allphoto",${unid_tpjx},8,28,"yyyy-MM-dd") )
+
+#*取得[旅游风景]栏目，用于fuan.html文件*#
+#set( $unid_lyfj = "0A4BCC1AA18A00C183EC4C06DBCA9996" )
+#set( $articlelist_lyfj= $list.getList("photo",${unid_lyfj},0,28,"yyyy-MM-dd") )

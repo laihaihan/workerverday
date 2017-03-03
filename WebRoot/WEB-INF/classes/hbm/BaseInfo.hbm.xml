@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.linewell.ess.monitor.info.BaseInfo"  table="MONITOR_BASE">
+		<id column="UNID" name="unid" type="string">
+			<generator class="assigned"/>
+		</id>
+		<property column="OUNID" name="ounid" type="string"/>
+		<property column="DEPTNAME" name="deptname" type="string"/>
+		<property column="DEPTUNID" name="deptunid" type="string"/>
+		<property column="SERVICENUMBER" name="servicenumber" type="string"/>
+		<property column="SERVICENAME" name="servicename" type="string"/>
+		<property column="SERVICETYPE" name="servicetype" type="string"/>
+		<property column="PROJID" name="projid" type="string"/>
+		<property column="PROJPWD" name="projpwd" type="string"/>
+		<property column="PROJECTNAME" name="projectname" type="string"/>
+  		<property column="ACCEPTTIME" name="accepttime" type="string"/>
+		<property column="PROMISETIME" name="promisetime" type="string"/>
+  		<property column="PROMISEDAY" name="promiseday" type="integer"/>
+		<property column="CHARGETYPE" name="chargetype" type="string"/>
+		<property column="PROJECTTYPE" name="projecttype" type="string"/>
+		<property column="APPLYNAME" name="applyname" type="string"/>		
+		<property column="CONTACTMAN" name="contactman" type="string"/>
+		<property column="MOBILE" name="mobile" type="string"/>
+		<property column="TELEPHONE" name="telephone" type="string"/>
+		<property column="ADDRESS" name="address" type="string"/>
+		<property column="POSTCODE" name="postcode" type="string"/>
+		<property column="DEPTCODE" name="deptcode" type="string"/>
+		<property column="ACCEPTDEPT" name="acceptdept" type="string"/>
+		<property column="ACCEPTUSER" name="acceptuser" type="string"/>
+		<property column="USERCODE" name="usercode" type="string"/>
+		<property column="CREATEUSER" name="createuser" type="string"/>
+		<property column="CREATETIME" name="createtime" type="string"/>
+		<property column="APPLYFROM" name="applyfrom" type="string"/>
+		<property column="SEQNUMBER" name="seqnumber" type="string"/>
+		<property column="MEMO" name="memo" type="string"/>
+		<property column="MATERIALLIST" name="materiallist" type="string"/>
+		<property column="VERSION" name="version" type="integer"/>
+		<property column="MONITORSTATE" name="monitorstate" type="string"/>
+		<property column="COLLECTTIME" name="collecttime" type="string"/>
+		<property column="TRANSACTTIME" name="transacttime" type="string"/>
+		<property column="SERVICEID" name="serviceid" type="string"/>
+		<property column="CHARGEAMOUNT" name="chargeamount" type="double"/>
+		<property column="CHARGESTANDARD" name="chargestandard" type="double"/>
+		<property column="HANDLESTATE" name="handlestate" type="string"/>
+		<property column="AREANAME" name="areaname" type="string"/>
+		<property column="AREACODE" name="areacode" type="integer"/>
+		<property column="INFOUNID" name="infounid" type="string"/>
+		<property column="INFOTYPE" name="infotype" type="string"/>
+		<property column="PARENTID" name="parentid" type="string"/>
+	</class>
+</hibernate-mapping>

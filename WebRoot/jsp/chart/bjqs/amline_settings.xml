@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Value between [] brackets, for example [#FFFFFF] shows default value which is used if this parameter is not set -->
+<!-- This means, that if you are happy with this value, you can delete this line at all and reduce file size -->
+<!-- value or explanation between () brackets shows the range or type of values you should use for this parameter -->
+<!-- the top left corner has coordinates x = 0, y = 0                                                                -->
+<!-- "!" before x or y position (for example: <x>!20</x>) means that the coordinate will be calculated from the right side or the bottom -->
+<settings> 
+  <data_type></data_type>                                     <!-- [xml] (xml / csv) -->
+  <csv_separator></csv_separator>                             <!-- [;] (string) csv file data separator (you need it only if you are using csv file for your data) -->
+  <skip_rows></skip_rows>                                     <!-- [0] (Number) if you are using csv data type, you can set the number of rows which should be skipped here -->       
+  <font>Georgia</font>                                        <!-- [Arial] (font name) use device fonts, such as Arial, Times New Roman, Tahoma, Verdana... -->
+  <text_size>11</text_size>                                   <!-- [11] (Number) text size of all texts. Every text size can be set individually in the settings below -->
+  <text_color>#000000</text_color>                            <!-- [#000000] (hex color code) main text color. Every text color can be set individually in the settings below-->
+  <decimals_separator></decimals_separator>                  <!-- [,] (string) decimal separator. Note, that this is for displaying data only. Decimals in data xml file must be separated with dot -->
+  <thousands_separator> </thousands_separator>                <!-- [ ] (string) thousand separator. use "none" if you don't want to separate -->
+  <digits_after_decimal>0</digits_after_decimal>              <!-- [] (Number) if your value has less digits after decimal then is set here, zeroes will be added -->
+  <scientific_min></scientific_min>                           <!-- [0.000001] If absolute value of your number is equal or less then scientific_min, this number will be formatted using scientific notation, for example: 0.0000023 -> 2.3e-6 -->
+  <scientific_max></scientific_max>                           <!-- [1000000000000000] If absolute value of your number is equal or bigger then scientific_max, this number will be formatted using scientific notation, for example: 15000000000000000 -> 1.5e16 -->
+  <redraw></redraw>                                           <!-- [false] (true / false) if your chart's width or height is set in percents, and redraw is set to true, the chart will be redrawn then screen size changes -->
+                                                              <!-- Legend, buttons labels will not be repositioned if you set your x and y values for these objects -->  
+  <reload_data_interval></reload_data_interval>               <!-- [0] (Number) how often data should be reloaded (time in seconds) If you are using this feature I strongly recommend to turn off zoom function (set <zoomable>false</zoomable>) -->
+  <preloader_on_reload></preloader_on_reload>                 <!-- [false] (true / false) Whether to show preloaded when data or settings are reloaded -->
+  <add_time_stamp></add_time_stamp>                           <!-- [false] (true / false) if true, a unique number will be added every time flash loads data. Mainly this feature is useful if you set reload _data_interval >0 -->
+
+  <connect></connect>                                         <!-- [false] (true / false) whether to connect points if y data is missing -->
+  <hide_bullets_count></hide_bullets_count>                   <!-- [] (Number) if there are more then hideBulletsCount points on the screen, bullets can be hidden, to avoid mess. Leave empty, or 0 to show bullets all the time. This rule doesn't influence if custom bullet is defined near y value, in data file -->
+  <link_target>_blank</link_target>                                 <!-- [] (_blank, _top ...) -->
+  <start_on_axis></start_on_axis>                             <!-- [true] (true / false) if set to false, graph is moved 1/2 of one series interval from Y axis -->
+  <colors></colors>                                           <!-- [#FF0000,#0000FF,#00FF00,#FF9900,#CC00CC,#00CCCC,#33FF00,#990000,#000066,#555555] Colors of graphs. if the graph color is not set, color from this array will be used -->  
+  <rescale_on_hide></rescale_on_hide>                         <!-- [true] (true/false) When you show or hide graphs, the chart recalculates min and max values (rescales the chart). If you don't want this, set this to false. -->
+  <js_enabled></js_enabled>                                   <!-- [true] (true / false) In case you don't use any flash - JavaScript communication, you shuold set this setting to false - this will save some CPU and will disable the security warning message which appears when opening the chart from hard drive. -->
+  
+  <background>                                                <!-- BACKGROUND -->
+    <color>#DCEFFF</color>                                           <!-- [#FFFFFF] (hex color code) Separate color codes with comas for gradient -->
+    <alpha>100</alpha>                                           <!-- [0] (0 - 100) use 0 if you are using custom swf or jpg for background -->
+    <border_color></border_color>                             <!-- [#000000] (hex color code) -->
+    <border_alpha></border_alpha>                             <!-- [0] (0 - 100) -->
+    <file></file>            <!-- [] (filename) swf or jpg file of a background. -->
+                                                              <!-- The chart will look for this file in "path" folder ("path" is set in HTML) -->
+  </background>
+     
+  <plot_area>                                                 <!-- PLOT AREA (the area between axes) -->
+    <color>#F1F4F5</color>                                           <!-- [#FFFFFF](hex color code) Separate color codes with comas for gradient -->
+    <alpha></alpha>                                           <!-- [0] (0 - 100) if you want it to be different than background color, use bigger than 0 value -->
+    <border_color></border_color>                             <!-- [#000000] (hex color code) -->                                        
+    <border_alpha></border_alpha>                             <!-- [0] (0 - 100) -->
+    <margins>                                                 <!-- plot area margins -->
+      <left>60</left>                                         <!-- [60](Number / Number%) --> 
+      <top>0</top>                                            <!-- [60](Number / Number%) --> 
+      <right>40</right>                                       <!-- [60](Number / Number%) --> 
+      <bottom>162</bottom>                                    <!-- [80](Number / Number%) --> 
+    </margins>
+  </plot_area>
+  
+  <scroller>
+    <enabled></enabled>                                       <!-- [true] (true / false) whether to show scroller when chart is zoomed or not -->
+    <y>390</y>                                                <!-- [] (Number) Y position of scroller. If not set here, will be displayed above plot area -->    
+    <color>#BBBB00</color>                                    <!-- [#DADADA] (hex color code) scrollbar color. Separate color codes with comas for gradient -->
+    <alpha></alpha>                                           <!-- [100] (Number) scrollbar alpha -->
+    <bg_color>#00FF00</bg_color>                              <!-- [#F0F0F0] (hex color code) scroller background color. Separate color codes with comas for gradient -->
+    <bg_alpha>20</bg_alpha>                                   <!-- [100] (Number) scroller background alpha -->
+    <height></height>                                         <!-- [10] (Number) scroller height -->    
+  </scroller>  
+  
+<grid>
+  <x>
+    <enabled>false</enabled>
+    <color></color>
+    <alpha></alpha>
+    <dashed></dashed>
+	   <dash_length></dash_length>
+    <approx_count>10</approx_count>
+  </x>
+  <y_left>
+    <enabled>true</enabled>
+    <color></color>
+    <alpha></alpha>
+    <dashed></dashed>
+    <dash_length></dash_length>
+    <approx_count></approx_count>
+    <fill_color></fill_color>
+    <fill_alpha></fill_alpha>
+  </y_left>
+  <y_right>
+	   <enabled>true</enabled>
+    <color></color>
+    <alpha></alpha>
+    <dashed></dashed>
+    <dash_length></dash_length>
+    <approx_count></approx_count>
+    <fill_color></fill_color>
+    <fill_alpha></fill_alpha>
+  </y_right>
+</grid>
+
+  
+ <values>
+  <x>
+    <enabled>true</enabled>
+    <rotate></rotate>
+    <frequency></frequency>
+    <skip_first></skip_first>
+    <skip_last></skip_last>
+    <color></color>
+    <text_size></text_size>
+    <inside></inside>
+  </x>
+  <y_left>
+   <enabled>true</enabled>
+   <reverse></reverse>
+   <rotate></rotate>
+   <min></min>
+   <max></max>
+   <strict_min_max></strict_min_max>
+   <frequency></frequency>
+   <skip_first></skip_first>
+   <skip_last>true</skip_last>
+   <color></color>
+   <text_size></text_size>
+   <unit></unit>
+   <unit_position>left</unit_position>
+   <integers_only></integers_only>
+   <inside></inside>
+  </y_left>
+  <y_right>
+    <enabled></enabled>
+    <reverse></reverse>
+    <rotate></rotate>
+	   <min></min>
+    <max></max>
+    <strict_min_max></strict_min_max>
+    <frequency></frequency>
+    <skip_first></skip_first>
+    <skip_last></skip_last>
+    <color></color>
+    <text_size></text_size>
+    <unit></unit>
+    <unit_position></unit_position>
+    <integers_only></integers_only>
+    <inside></inside>
+  </y_right>
+</values>
+  
+ <axes>
+<x>
+<color>#FFFFFF</color>
+<alpha>15</alpha>
+<width>1</width>
+<tick_length></tick_length>
+</x>
+<y_left>
+<type></type>
+<color></color>
+<alpha>10</alpha>
+<width>1</width>
+<tick_length></tick_length>
+<logarithmic></logarithmic>
+</y_left>
+<y_right>
+<type></type>
+<color></color>
+<alpha></alpha>
+<width></width>
+<tick_length></tick_length>
+<logarithmic></logarithmic>
+</y_right>
+</axes>
+  
+ <indicator>
+<enabled>true</enabled>
+<zoomable></zoomable>
+<color></color>
+<line_alpha></line_alpha>
+<selection_color>#000000</selection_color>
+<selection_alpha></selection_alpha>
+<x_balloon_enabled></x_balloon_enabled>
+<x_balloon_text_color></x_balloon_text_color>
+</indicator>
+  
+  <balloon>
+<enabled>true</enabled>
+<only_one></only_one>
+<on_off></on_off>
+<color></color>
+<alpha></alpha>
+<text_color></text_color>
+<text_size></text_size>
+<max_width></max_width>
+<corner_radius></corner_radius>
+<border_width></border_width>
+<border_alpha></border_alpha>
+<border_color></border_color>
+</balloon>
+    
+  <legend>
+	 <enabled></enabled>
+  <x>100</x>
+  <y>180</y>
+  <width>200</width>
+  <max_columns></max_columns>
+  <color></color>
+  <alpha></alpha>
+  <border_color></border_color>
+  <border_alpha></border_alpha>
+  <text_color></text_color>
+  <text_color_hover>#000000</text_color_hover>
+  <text_size></text_size>
+  <spacing></spacing>
+  <margins></margins>
+  <graph_on_off>true</graph_on_off>
+  <reverse_order></reverse_order>
+  <align></align>
+  <key>
+    <size></size>
+    <border_color></border_color>
+   <key_mark_color></key_mark_color>
+  </key>
+  <values>
+   <enabled>true</enabled>
+   <width></width>
+   <align></align>
+   <text><![CDATA[{value}]]></text>  </values>
+</legend>
+<vertical_lines>
+<width></width>
+<alpha></alpha>
+<clustered></clustered>
+<mask></mask>
+</vertical_lines>
+ <zoom_out_button>
+<x>350</x>
+<y>410</y>
+<color></color>
+<alpha>100</alpha>
+<text_color>#FFFFFF</text_color>
+<text_color_hover>#000000</text_color_hover>
+<text_size></text_size>
+<text></text>
+</zoom_out_button>
+<help>
+<button>
+<x></x>
+<y></y>
+<color></color>
+<alpha>50</alpha>
+<text_color></text_color>
+<text_color_hover></text_color_hover>
+<text_size></text_size>
+<text></text>
+</button>
+<balloon>
+<color></color>
+<alpha></alpha>
+<width></width>
+<text_color></text_color>
+<text_size></text_size>
+<text><![CDATA[]]></text>
+</balloon>
+</help>
+
+<export_as_image>
+<file></file>
+<target></target>
+<x></x>
+<y></y>
+<color></color>
+<alpha></alpha>
+<text_color></text_color>
+<text_size></text_size>
+</export_as_image>
+<error_messages>
+<enabled></enabled>
+<x></x>
+<y></y>
+<color></color>
+<alpha></alpha>
+<text_color></text_color>
+<text_size></text_size>
+</error_messages>
+
+<strings>
+  <no_data></no_data>
+  <export_as_image></export_as_image>
+  <error_in_data_file></error_in_data_file>
+  <collecting_data></collecting_data>
+  <wrong_zoom_value></wrong_zoom_value>
+  <ss></ss>
+  <mm></mm>
+  <hh></hh>
+  <DD></DD>
+</strings>
+
+ <context_menu>
+  <default_items>
+    <zoom></zoom>
+    <print></print>
+  </default_items>
+</context_menu>
+  
+<labels>
+  <label lid="0">
+	   <x>98</x>
+    <y>130</y>
+    <rotate></rotate>
+    <width></width>
+    <align></align>
+    <text_color></text_color>
+    <text_size>15</text_size>
+    <text>
+<![CDATA[<b>办结趋势图</b>]]>    </text>
+  </label>
+</labels>
+  
+  
+  <graphs>                                                    <!-- GRAPHS SETTINGS. These settings can also be specified in data file, as attributes of <graph>, in this case you can delete everything from <graphs> to </graphs> (including) -->
+                                                              <!-- It is recommended to have graph settings here if you don't want to mix data with other params -->
+                                                              <!-- copy <graph>...</graph> (including) as many times as many graphs you have and edit settings individually -->
+                                                              <!-- if graph settings are defined both here and in data file, the ones from data file are used -->
+ <graph gid="1">
+	<axis>left</axis>
+	<title>正常办结</title>
+	<color>#888888</color>
+	<color_hover>#000000</color_hover>
+ 	<line_alpha></line_alpha>
+	<line_width></line_width>
+	<fill_color></fill_color>
+	<fill_alpha></fill_alpha>
+	<balloon_color></balloon_color>
+	<balloon_alpha></balloon_alpha>
+	<balloon_text_color>#000000</balloon_text_color>
+	<bullet>round</bullet>
+ <bullet_size></bullet_size>
+	<bullet_color></bullet_color>
+	<bullet_alpha></bullet_alpha>
+	<hidden></hidden>
+	<selected></selected>
+ <balloon_text>
+<![CDATA[<b>{value}</b><br>{description}]]> </balloon_text>
+ <data_labels>
+<![CDATA[]]> </data_labels>
+	<data_labels_text_color></data_labels_text_color>
+	<data_labels_text_size></data_labels_text_size>
+	<data_labels_position></data_labels_position>
+	<vertical_lines></vertical_lines>
+	<visible_in_legend></visible_in_legend>
+</graph>
+<graph gid="2">
+	<axis>left</axis>
+	<title>删除办结</title>
+	<color></color>
+	<color_hover>#000000</color_hover>
+ 	<line_alpha></line_alpha>
+	<line_width></line_width>
+	<fill_color></fill_color>
+	<fill_alpha></fill_alpha>
+	<balloon_color></balloon_color>
+	<balloon_alpha></balloon_alpha>
+	<balloon_text_color>#FFFFFF</balloon_text_color>
+	<bullet>round</bullet>
+	<bullet_alpha>100</bullet_alpha>
+ <balloon_text>
+<![CDATA[<b>{value}</b>]]> </balloon_text>
+	<vertical_lines>false</vertical_lines>
+</graph>
+<graph gid="3">
+	<axis>left</axis>
+	<title>预审驳回</title>
+	<color></color>
+	<color_hover>#000000</color_hover>
+ 	<line_alpha></line_alpha>
+	<line_width></line_width>
+	<fill_color></fill_color>
+	<fill_alpha></fill_alpha>
+	<balloon_color></balloon_color>
+	<balloon_alpha></balloon_alpha>
+	<balloon_text_color>#FFFFFF</balloon_text_color>
+	<bullet>round</bullet>
+	<bullet_alpha>100</bullet_alpha>
+ <balloon_text>
+<![CDATA[<b>{value}</b>]]> </balloon_text>
+	<vertical_lines>false</vertical_lines>
+</graph>
+<graph gid="4">
+	<axis>left</axis>
+	<title>不予受理</title>
+	<color></color>
+	<color_hover>#000000</color_hover>
+ 	<line_alpha></line_alpha>
+	<line_width></line_width>
+	<fill_color></fill_color>
+	<fill_alpha></fill_alpha>
+	<balloon_color></balloon_color>
+	<balloon_alpha></balloon_alpha>
+	<balloon_text_color>#FFFFFF</balloon_text_color>
+	<bullet>round</bullet>
+	<bullet_alpha>100</bullet_alpha>
+ <balloon_text>
+<![CDATA[<b>{value}</b>]]> </balloon_text>
+	<vertical_lines>false</vertical_lines>
+</graph>
+<graph gid="5">
+	<axis>left</axis>
+	<title>不受理</title>
+	<color></color>
+	<color_hover>#000000</color_hover>
+ 	<line_alpha></line_alpha>
+	<line_width></line_width>
+	<fill_color></fill_color>
+	<fill_alpha></fill_alpha>
+	<balloon_color></balloon_color>
+	<balloon_alpha></balloon_alpha>
+	<balloon_text_color>#FFFFFF</balloon_text_color>
+	<bullet>round</bullet>
+	<bullet_alpha>100</bullet_alpha>
+ <balloon_text>
+<![CDATA[<b>{value}</b>]]> </balloon_text>
+	<vertical_lines>false</vertical_lines>
+</graph>
+<graph gid="6">
+	<axis>left</axis>
+	<title>退件</title>
+	<color></color>
+	<color_hover>#000000</color_hover>
+ 	<line_alpha></line_alpha>
+	<line_width></line_width>
+	<fill_color></fill_color>
+	<fill_alpha></fill_alpha>
+	<balloon_color></balloon_color>
+	<balloon_alpha></balloon_alpha>
+	<balloon_text_color>#FFFFFF</balloon_text_color>
+	<bullet>round</bullet>
+	<bullet_alpha>100</bullet_alpha>
+ <balloon_text>
+<![CDATA[<b>{value}</b>]]> </balloon_text>
+	<vertical_lines>false</vertical_lines>
+</graph>
+   
+  </graphs>
+  
+	<guides>	                                                 <!-- guides are straight lines drawn through all plot area at a give value. Can also be filled with color -->
+	 <max_min></max_min>                                       <!-- [false] (true / false) whether to include guides' values when calculating min and max of a chart -->	
+	 <guide>                                                   <!-- there can be any number of quides. guides can also be set in data xml file, using the same syntax as here -->
+	   <axis></axis>                                           <!-- [left] (left / right) y axis of a guide. There should be at least one graph assigned to this axis in order guide to be visible --> 
+	   <start_value></start_value>                             <!-- (Number) value at which guide should be placed -->
+	   <end_value></end_value>                                 <!-- (Number) if you set value here too, another quide will be drawn. If you set fill alpha > 0, then the area between these quides will be filled with color -->
+	   <title></title>                                         <!-- [] (String) text which will be displayed near the guide -->
+	   <width></width>                                         <!-- [0] (Number) width of a guide line (0 for hairline) -->
+	   <color></color>                                         <!-- [#000000] (hex color code) color of guide line -->   
+	   <alpha></alpha>                                         <!-- [100] (0 - 100) opacity of guide line -->
+	   <fill_color></fill_color>                               <!-- [guide.color] (hex color code) fill color. If not defined, color of a guide will be used. Separate color codes with comas for gradient -->
+	   <fill_alpha></fill_alpha>                               <!-- [0] (0 - 100) opacity of a fill -->                                  
+	   <inside></inside>                                       <!-- [values.y_{axis}.inside] whether to place title inside plot area -->
+	   <centered></centered>                                   <!-- [true] (true / false) if you have start and end values defined, title can be placed in the middle between these values. If false, it will be placed near start_value -->
+	   <rotate></rotate>                                       <!-- [values.y_{axis}.rotate](0 - 90) angle of rotation of title -->
+	   <text_size></text_size>                                 <!-- [values.y_{axis}.text_size] (Number) -->
+	   <text_color></text_color>                               <!-- [values.y_{axis}.color](hex color code) -->
+     <dashed></dashed>                                       <!-- [false] (true / false) -->
+     <dash_length></dash_length>                             <!-- [5] (Number) -->     	   
+	 </guide>  
+	</guides>
+      
+</settings>

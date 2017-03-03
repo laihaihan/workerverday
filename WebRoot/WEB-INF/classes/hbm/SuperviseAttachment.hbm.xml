@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.attachment.SuperviseAttachment" table="SUPERVISE_ATTACHMENT">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="CASESN" name="casesn" type="string"/>
+<property column="NAME" name="name" type="string"/>
+<property column="EXPLAIN" name="explain" type="string"/>
+<property column="CONTENT" name="content" type="blob" lazy="true"/>
+<property column="TYPE" name="type" type="string"/>
+<property column="STEP" name="step" type="string"/>
+<property column="ESSENTIAL" name="essential" type="string"/>
+<property column="VERSION" name="version" type="string"/>
+<property column="CREATETIME" name="createtime" type="string"/>
+<property column="REMARK" name="remark" type="string"/>
+<property column="ISNEW" name="isnew" type="string"/>
+</class>
+</hibernate-mapping>

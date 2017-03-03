@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.linewell.ess.monitor.info.HandleInfo"  table="MONITOR_HANDLE">
+		<id column="UNID" name="unid" type="string">
+			<generator class="assigned"/>
+		</id>
+		<property column="PUNID" length="50" name="punid" type="string"/>
+		<property column="OUNID" length="50" name="ounid" type="string"/>
+		<property column="HANDLESTATE" name="handlestate" type="string"/>
+		<property column="NODENAME" name="nodename" type="string"/>
+		<property column="STARTTIME" name="starttime" type="string"/>
+		<property column="PROMISETIME" name="promisetime" type="string"/>
+		<property column="HANDLEUSER" name="handleuser" type="string"/>
+		<property column="HANDLEOPINION" name="handleopinion" type="string"/>
+		<property column="HANDLETIME" name="handletime" type="string"/>
+		<property column="PROMISEDAY" name="promiseday" type="integer"/>
+		<property column="ENDTIME" name="endtime" type="string"/>
+		<property column="acceptUser" name="acceptUser" type="string"/>
+		<property column="timeUnit" name="timeUnit" type="string"/>
+		<property column="isHandled" name="isHandled" type="string"/>
+		<property column="isOverTime" name="isOverTime" type="string"/>
+		<property column="overDay" name="overDay" type="string"/>
+		<property column="handleDay" name="handleDay" type="string"/>
+		<property column="monitorStatus" name="monitorStatus" type="string"/>
+		<property column="monitorTitle" name="monitorTitle" type="string"/>
+		<property column="NODEID" name="nodeid" type="string"/>
+		<property column="AREANAME" name="areaname" type="string"/>
+		<property column="AREACODE" name="areacode" type="integer"/>
+		<property column="TYPE" name="type" type="string"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,188 @@
+@import url("common.css");
+
+/*UMC 主页面样式 begin*/
+#headerBox
+{
+	maring:0;
+	padding:0;
+	overflow:hidden; 
+	clear:both;	
+}
+
+/* 页眉样式 begin */
+.umcheader {
+	height:80px;
+	margin:0;
+	padding:0;
+	clear:both;
+}
+/* 页眉样式 end */
+
+/* LOGO样式 begin */
+.umclogo {
+	float: left;	
+	width: 280px;
+	height:80px;
+	background: url('images/UMC_logo.png') 20px center no-repeat ;	
+}
+/* LOGO样式 end */
+
+/* 顶部导航 begin */
+.top_nav {
+	float: right;
+	margin-right: 10px;
+	margin-top: 60px;	
+}
+
+/* 顶部导航_无链接文字 */
+.top_nav_nolink{
+	color: #5d5e5e;
+}
+
+/* 顶部导航_用户名 */
+.top_nav_username {
+	margin-right: 15px;	
+	color:red;
+}
+
+.top_nav_username a{
+	color: #e42626;
+	text-decoration: none;
+}
+
+/* 顶部导航_操作 */
+.top_nav_operation {
+	
+}
+
+.top_nav_operation a{
+	color: #305ebb;
+	text-decoration: none;
+}
+
+/*顶部导航 end*/
+
+
+
+/* 分隔线 begin */
+.divider {
+	height: 4px;
+	background-color: #d0d0d0;
+	border-bottom: 1px #808080 solid;
+	clear:both;
+}
+/* 分隔线 end */
+
+
+/* 主区域 begin */
+.area_main{
+ 	position: absolute;
+	width: 100%;
+	top: 89px;
+	bottom: 36px;	
+	background-color: #FFFFFF;	
+}
+
+/*ie6*/
+*html .area_main
+{
+	height: expression(documentElement.clientHeight-36-84);
+}
+/*ie7*/
+*+html .area_main{
+	top: 85px;
+	height: expression(documentElement.clientHeight-36-84);
+}
+
+/* 主区域左 */
+.area_main_left{
+	float:left;	
+	width: 150px;
+	background-color: #e9eaeb;
+	border-right: 1px #c9cdce solid;
+	overflow:hidden; 
+	zoom:1;
+	height:100%;
+}
+
+/* 主区域右 */
+.area_main_right{
+	overflow:hidden; 
+	height:100%;
+	zoom:1;		
+}
+
+/*主区域*/
+.area_main_right #main_body{height:100%;z-index:2;}
+
+/*ie6*/
+*html .area_main_right 
+{  
+	float:left; 
+	overflow:hidden; 
+	zoom:1;		
+}
+
+#ucapView{
+	height:100%;
+	overflow:hidden;
+}
+
+
+/* 主区域 end */
+
+
+/* 目录 begin */
+
+/* 操作日志 */
+.list_act{
+	background: url('images/folder_user.png') no-repeat left center;
+	padding-left: 24px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 15px;
+}
+
+/* 目录_分隔线 */
+.list_separator{
+	margin: 0 10px 0 10px;
+	border-top: 1px #c7ccd1 solid;
+	border-bottom: 1px #ffffff solid;
+}
+
+/* 目录_文字 */
+.list_text a {
+	font: 14px/30px serif;
+	text-decoration: none;
+	color: #2a586f;
+}
+
+.list_text a:hover {
+	font: bold  14px/30px serif;
+	text-decoration: none;
+	color: #2a586f;
+}
+
+
+/* 目录_当前状态文字 */
+.list_text_selected a {
+	font: bold 14px/30px serif normal;
+	text-decoration: none;
+	color: #2a586f;
+}
+
+
+
+/* 目录 end */
+
+/* 模块 */
+.module{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*UMC 主页面样式样式 end*/
+
+/*修正EXT在文档加入标准后出现checkbox上移的bug for ext*/
+.ext-ie input.x-tree-node-cb{margin-bottom:-5px;}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="gb2312"?>
+<sessions>
+
+	<!-- name:全局变量名称 -->
+	<!-- tableName:表名称 -->
+	<!-- pkName:表主键名称 -->
+	<!-- displayName:显示名称（用于视图查询）-->
+	<!-- introductions:说明 -->
+	<!-- treatClassName:处理类名称 -->
+	<!-- containAllFields:是否包含所有字段信息；TRUE/FALSE -->
+	<!-- selectBoxDictValue:通用选择框字典值 -->
+	<!-- sqlWhere:通用选择框查询条件-->
+	<!-- belongToAppItemName:所属应用系统的字段名称-->
+	<!-- dataSelect:构成数据后台逻辑对象-->
+	<!-- sort:表所属元素名称-->
+	<!-- sortValue:表所属元素值-->
+	<session name="globalAssessCfg" tableName="monitor_assessment" pkName="unid" displayName="assessment" introductions="考核指标" treatClassName="com.linewell.monitor.session.EssGlobalResource" containAllFields="FALSE" selectBoxDictValue="401"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="设计管理" sortValue="04" selectBoxShowType="00" rootName="考核指标" actionType="assessment" actionName="getAssessTree"/>
+	<session name="globalDictionaryb" tableName="ucap_dictionary" pkName="dictionary_unid" displayName="dictionary_name" introductions="字典" treatClassName="com.linewell.ucap.session.GlobalDictionary" containAllFields="TRUE" selectBoxDictValue="404"   sqlWhere="" belongToAppItemName="DICTIONARY_BELONG_TO_APP" dataSelect="" sort="系统参数配置" sortValue="05" rootName="字典列表" selectBoxShowType="00" actionType="dictb" actionName="02"/>
+	<session name="globalNodeCfg" tableName="ucap_config_flow" pkName="flow_unid" displayName="flow_name" introductions="节点" treatClassName="com.linewell.ucap.session.GlobalDictionary" containAllFields="TRUE" selectBoxDictValue="408"   sqlWhere="" belongToAppItemName="DICTIONARY_BELONG_TO_APP" dataSelect="" sort="节点关联配置" sortValue="05" rootName="节点列表" selectBoxShowType="00" actionType="nodecfg" actionName="getNodeTree"/>
+	<session name="globalDept" tableName="ucap_dept" pkName="dept_unid" displayName="dept_name" introductions="部门" treatClassName="com.linewell.ucap.session.GlobalDept" containAllFields="TRUE" selectBoxDictValue="409"  sqlWhere=" dept_unid not in('5020CDA8B62135119675AE949C93864D','0147E62B5E55A30A25BA574F131B8345','6C4A1DE6FF1BB5566BA535C9CAC3C786')" belongToAppItemName="" dataSelect="" sort="用户管理" sortValue="05" selectBoxShowType="01" actionType="deptXmess" actionName="getDeptByConTree" />
+	</sessions>

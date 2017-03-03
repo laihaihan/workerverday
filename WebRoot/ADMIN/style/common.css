@@ -1,0 +1,35 @@
+﻿/****************************系统标签样式****************************/
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+	background:#d9e0e1;
+	overflow:hidden;
+}
+
+
+/****************************页脚****************************/
+.footer {
+	color:#555;
+    position: absolute;
+	bottom: 0px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+
+/****************************空白行****************************/
+.blank {
+	height: 8px;
+	line-height: 8px;
+	clear: both;
+	visibility: hidden;
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="gb2312"?>
+<doc>
+	<element tabName_cn="应用系统" tabName="ucap_app" type="" sourceUnid="" belongModule="" sysUnid="app_punid" unid="app_unid" paUnid="app_punid" 
+	content="" relSource="app_relsource_unid" condition="app_unid=app_pUnid" >
+		</element>
+	<element tabName_cn="界面方案" tabName="ucap_scheme" type="" sourceUnid="scheme_source_unid" belongModule="" sysUnid="scheme_belong_to_app" 
+	unid="scheme_unid" paUnid="scheme_punid" content="scheme_menu_unid" relSource="scheme_relsource_unid" 
+	flushField="scheme_use_scopes,scheme_unuse_scopes" condition="scheme_belong_to_users is null">
+	</element>
+	<element tabName_cn="按钮" tabName="ucap_button" type="" sysUnid="button_belong_to_app" unid="button_unid" paUnid="" 
+	content="button_module_unid" relSource="button_relsource_unid,button_relsource_module,button_relsource_app" 
+	flushField="button_use_scopes,button_unuse_scopes">
+	</element>
+	<element tabName_cn="快捷方式集" tabName="ucap_shortcuts" type="shortcuts" sysUnid="collection_belong_to_app" unid="collection_unid" 
+	paUnid="collection_punid" content="" relSource="collection_relsource_unid" condition="collection_unid=collection_pUnid">
+	</element>
+	<element tabName_cn="视图" tabName="ucap_view" type="view" sysUnid="view_belong_to_app" unid="view_unid" paUnid="view_punid"
+	 content="view_query_id,view_fixed_query_ids,view_source_unid,view_form_unid,view_module_unid" 
+	 relSource="view_relsource_unid,view_relsource_module,view_relsource_app" flushField="view_use_scopes,view_unuse_scopes" condition="view_unid=view_pUnid">
+	</element>
+
+	<element tabName_cn="数据库视图" tabName="ucap_db_view" type="dbView" sysUnid="dbview_belong_to_app" unid="dbview_unid" paUnid=""
+	 content="dbview_display_form_unid,dbview_module_unid" relSource="dbview_relsource_unid,dbview_relsource_module,dbview_relsource_app">
+	</element>
+
+	<element tabName_cn="视图查询" tabName="ucap_view_query" type="query" sysUnid="query_belong_to_app" 
+	unid="query_unid" paUnid="query_punid" content="query_form_unid,query_module_unid" 
+	relSource="query_relsource_unid,query_relsource_module,query_relsource_app" condition="query_unid=query_punid">
+	</element>
+
+	<element tabName_cn="组合表单" tabName="ucap_compose_form" type="composeForm" sysUnid="cform_belong_to_app" 
+	unid="cform_unid" paUnid="" content="cform_main_form,cform_module_unid" 
+	relSource="cform_relsource_unid,cform_relsource_module,cform_relsource_app">
+	</element>
+	
+	<element tabName_cn="显示表单" tabName="ucap_form_show" type="showForm" sysUnid="sform_belong_to_app" 
+	unid="sform_unid" paUnid="" content="sform_form_unid,sform_module_unid" 
+	relSource="sform_relsource_unid,sform_relsource_module,sform_relsource_app">
+	</element>
+
+	<element tabName_cn="表单" tabName="ucap_form" type="form" sysUnid="form_belong_to_app" unid="form_unid" paUnid="" 
+	content="form_primary,form_module_unid,form_verify_fields" relSource="form_relsource_unid,form_relsource_module,form_relsource_app" 
+	flushField="form_watch_users,form_editors,form_manager,form_creators">
+	</element>	
+	<element tabName_cn="界面布局" tabName="ucap_layout" type="" sysUnid="layout_belong_to_app" unid="layout_unid" 
+	paUnid="layout_punid" content="layout_column_contents" relSource="layout_relsource_unid" condition="layout_unid=layout_punid">
+	</element>
+	<element tabName_cn="频道显示" tabName="ucap_channel_dispaly" type="" sysUnid="display_belong_to_app" unid="display_unid" 
+	paUnid="display_punid" content="display_channel_unid" relSource="display_relsource_unid" 
+	flushField="display_use_scopes,display_unuse_scopes" condition="display_belong_to_users is null"></element>
+
+	<element tabName_cn="频道" tabName="ucap_channel" type="" sysUnid="channel_belong_to_app" unid="channel_unid" 
+	paUnid="" content="channel_source" relSource="channel_relsource_unid" flushField="channel_use_scopes,channel_unuse_scopes">
+	</element>
+	<element tabName_cn="导航栏" tabName="ucap_navigation" type="" sysUnid="navigation_belong_to_app" unid="navigation_unid" 
+	paUnid="navigation_punid" content="" relSource="navigation_relsource_unid" 
+	flushField="navigation_use_scopes,navigation_unuse_scopes" condition="navigation_unid=navigation_punid">
+	</element>
+
+	<element tabName_cn="版权信息" tabName="ucap_copyright" type="" sysUnid="copyright_belong_to_app" 
+	unid="copyright_unid" paUnid="copyright_punid" content="" relSource="copyright_relsource_unid"
+	condition="copyright_unid=copyright_punid">
+	</element>
+
+	<element tabName_cn="编号" tabName="ucap_sequence" type="" sysUnid="sequence_belong_to_app" unid="sequence_unid" paUnid="" content="sequence_module_unid" relSource="sequence_relsource_unid">
+	</element>
+	
+	<element tabName_cn="角色" tabName="ucap_role" type="" sysUnid="role_belong_to_app" unid="role_unid" paUnid="role_funid" content="" relSource="">
+	</element>
+	
+	<element tabName_cn="业务权限" tabName="ucap_bussiness_permission" type="" sysUnid="bp_belong_to_app" unid="bp_unid" paUnid="" content="bp_subjectid,bp_objectid" relSource=""></element>
+	<element tabName_cn="组合表单权限" tabName="ucap_cformtab_pemission" type="" sysUnid="cp_belong_to_app" unid="cp_unid" paUnid="" content="cp_subjectid,cp_objectid" relSource=""></element>
+	<element tabName_cn="子按钮权限" tabName="ucap_subbutton_pemission" type="" sysUnid="sp_belong_to_app" unid="sp_unid" paUnid="" content="sp_subjectid,sp_objectid" relSource=""></element>
+<!--	
+	为解决复制角色时，源角色树要挂到目标角色下面的问题，特把paUnid属性设置成判断条件role_funid
+	<element tabName_cn="文档模版" tabName="ucap_attr_config" type="" sysUnid="attr_cfg_belong_to_app" unid="attr_cfg_unid" paUnid="attr_cfg_punid" content="" relSource="attr_relsource_unid">
+	</element>
+
+<element tabName_cn="附件" tabName="ucap_attr" type="" sysUnid="attr_belong_to_app" unid="attr_unid" paUnid="attr_punid" content="">
+	</element>
+-->
+</doc>

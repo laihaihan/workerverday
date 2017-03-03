@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="gb2312"?>
+<doc>
+	<option name="应用系统配置" tabName="ucap_app"  pk="app_unid" punid="app_punid" displayName="app_name" 
+		relUnid ="app_relsource_unid"></option>
+	<option name="业务模块" tabName="ucap_manager"  pk="manager_unid" relUnid="manager_relsource_unid" 
+		relApp="manager_relsource_app" belongApp="manager_belong_app" 
+		childrenOption="ucap_form,ucap_db_view,ucap_view,ucap_view_query,ucap_button,ucap_form_show,ucap_compose_form">	
+	</option>
+	<option name="登陆配置" tabName="ucap_login"  pk="login_unid" punid="" ></option>
+	<option name="消息配置" tabName="ucap_tip"  pk="tip_unid" punid=""></option>
+	<option name="用户配置" tabName="ucap_user" pk="user_unid" punid=""  displayName="user_display_name">
+		<option name="常用意见" tabName="ucap_opinion" pk="opinion_unid" fk="opinion_user_unid">
+		</option>
+		<option name="出差代理" tabName="ucap_out_proxy" pk="proxy_unid" fk="proxy_user_unid">
+		</option>
+	</option>
+	<option name="职位配置" tabName="ucap_post" pk="post_unid" punid="" displayName="post_name"></option>
+	<option name="角色配置" tabName="ucap_role" pk="role_unid" punid="" displayName="role_name"></option>
+	<option name="数据表配置" tabName="ucap_form" pk="form_unid" punid=""  displayName="form_name_cn"
+	  relUnid="form_relsource_unid" relManager="form_relsource_module" relApp="form_relsource_app" belongToManager="form_module_unid" belongApp="form_belong_to_app">
+		<option name="字段属性" tabName="ucap_form_item" pk="fitem_unid" fk="fitem_form_unid" relUnid="fitem_relsource_unid">
+			<option name="字段事件" tabName="ucap_form_item_event" pk="ievent_unid" fk="ievent_show_unid" relUnid="ievent_relsource_unid"></option>
+			<option name="字段显示属性" tabName="ucap_form_item_show" pk="show_unid" fk="show_item_unid" relUnid="show_relsource_unid" ></option>
+		</option>
+		<option name="表单按钮" tabName="ucap_sub_button" pk="sbutton_unid" fk="sbutton_belong_unid" relUnid="sbutton_relsource_unid">
+		</option>
+		<option name="表单事件" tabName="ucap_form_event" pk="fevent_unid" fk="fevent_form_unid" relUnid="fevent_relsource_unid">
+		</option>
+		<option name="关联配置" tabName="ucap_form_foreign" pk="foreign_unid" fk="foreign_form_unid" relUnid="foreign_relsource_unid">
+		</option>
+		<option name="模版配置" tabName="ucap_attr_config" pk="attr_cfg_unid" fk="attr_cfg_punid" belongApp="attr_cfg_belong_to_app" relUnid="attr_relsource_unid">
+		</option>
+	</option>
+	<option name="数据库视图" tabName="ucap_db_view" pk="dbview_unid" punid=""  displayName="dbview_name_cn" relUnid="dbview_relsource_unid"
+	relManager="dbview_relsource_module" belongToManager="dbview_module_unid" belongApp="dbview_belong_to_app" relApp="dbview_relsource_app" >
+		<option name="视图字段" tabName="ucap_db_view_item" pk="dbvitem_unid" fk="dbvitem_db_view_unid" relUnid="dbview_relsource_unid">
+		</option>
+	</option>
+	<option name="视图配置" tabName="ucap_view" pk="view_unid" punid="view_punid"  displayName="view_name" relUnid="view_relsource_unid"
+	relManager="view_relsource_module" belongToManager="view_module_unid" belongApp="view_belong_to_app" relApp="view_relsource_app">
+
+		<option name="视图字段" tabName="ucap_view_item" pk="item_unid" fk="item_view_unid" relUnid="item_relsource_unid">
+		</option>
+		<option name="视图按钮" tabName="ucap_sub_button" pk="sbutton_unid" fk="sbutton_belong_unid" relUnid="sbutton_relsource_unid">
+		</option>
+		<option name="视图分类" tabName="ucap_view_categories_item" pk="view_categories_unid" fk="view_categories_view_unid" relUnid="view_categories_relsource_unid">
+		</option>
+		<option name="视图排序" tabName="ucap_view_sort_item" pk="view_sort_unid" fk="view_sort_view_unid" relUnid="view_sort_relsource_unid">
+		</option>		
+	</option>
+	<option name="视图查询配置" tabName="ucap_view_query" pk="query_unid" punid="query_punid" displayName="query_name" relUnid="query_relsource_unid"
+	relManager="query_relsource_module" belongToManager="query_module_unid" belongApp="query_belong_to_app" relApp="query_relsource_app" ></option>
+	<option name="固定查询配置" tabName="ucap_view_fixedquery" pk="fixedquery_unid" punid="fixedquery_punid" displayName="fixedquery_name"></option>
+	<option name="按钮配置" tabName="ucap_button" pk="button_unid" punid="" displayName="button_name" relUnid="button_relsource_unid"
+	relManager="button_relsource_module" belongToManager="button_module_unid" belongApp="button_belong_to_app" relApp="button_relsource_app" ></option>
+	<option name="显示表单配置" tabName="ucap_form_show" pk="sform_unid" punid=""  displayName="sform_name" relUnid="sform_relsource_unid"
+	relManager="sform_relsource_module" belongToManager="sform_module_unid" belongApp="sform_belong_to_app" relApp="sform_relsource_app">
+		<option name="按钮配置" tabName="ucap_sub_button" pk="sbutton_unid" fk="sbutton_belong_unid" relUnid="sbutton_relsource_unid">
+		</option>	
+	</option>
+	<option name="组合表单配置" tabName="ucap_compose_form" pk="cform_unid" punid=""  displayName="cform_name" relUnid="cform_relsource_unid"
+	relManager="cform_relsource_module" belongToManager="cform_module_unid" belongApp="cform_belong_to_app" relApp="cform_relsource_app">
+		<option name="页签配置" tabName="ucap_compose_form_tab" pk="tab_unid" fk="tab_cform_unid" relUnid="tab_relsource_unid">
+		</option>
+		<option name="按钮配置" tabName="ucap_sub_button" pk="sbutton_unid" fk="sbutton_belong_unid" relUnid="sbutton_relsource_unid">
+		</option>	
+	</option>
+	<option name="扩展配置" tabName="ucap_interaction" pk="interaction_unid" punid=""  displayName="interaction_name">
+		<option name="参数配置" tabName="ucap_interaction_arg" pk="arg_unid" fk="arg_interaction_unid">
+		</option>	
+	</option>
+	<option name="界面风格" tabName="ucap_style" pk="style_unid" punid="" displayName="style_name"></option>
+	<option name="导航栏" tabName="ucap_navigation" pk="navigation_unid" punid="navigation_punid" 
+	displayName="navigation_name">
+	</option>
+
+	<option name="频道" tabName="ucap_channel" pk="channel_unid" punid=""  displayName="channel_name">
+		<option name="频道显示" tabName="ucap_channel_display" pk="display_unid" fk="display_channel_unid" punid="display_punid">
+		</option>	
+	</option>
+	<option name="界面方案" tabName="ucap_scheme" pk="scheme_unid" punid="scheme_punid" displayName="scheme_name"></option>
+	<option name="系统参数" tabName="ucap_prar" pk="para_unid" punid="" displayName="para_name"></option>
+	<option name="版权信息" tabName="ucap_copyright" pk="copyright_unid" punid="copyright_punid" ></option>
+	<option name="字典"   tabName="ucap_dictionary" pk="dictionary_unid" punid="dictionary_punid" ></option>
+</doc>

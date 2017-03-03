@@ -1,0 +1,74 @@
+/*
+ * jquery.portlet 1.1.2
+ *
+ * Copyright (c) 2012
+ *   咖啡兔 (http://www.kafeitu.me)
+ *
+ * Dual licensed under the GPL (http://www.gnu.org/licenses/gpl.html)
+ * and MIT (http://www.opensource.org/licenses/mit-license.php) licenses.
+ *
+ * See Detail: http://www.kafeitu.me/jquery-ui-portlet.html
+ */
+body {
+	background-color: #FFFFFF;
+	font-size: 12px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:2px;
+}
+
+.highlight-content {
+	color: red;
+}
+
+.ui-portlet-column {
+	float: left;
+	padding-bottom: 50px;
+}
+
+.ui-portlet-header {
+	padding: .4em 0.7em
+}
+
+.ui-portlet-header .ui-icon {
+	float: right;
+}
+
+.ui-portlet-item {
+	margin: 0 6px 6px 0;
+}
+
+.ui-portlet-content {
+	overflow-y: hidden;
+}
+
+.ui-portlet-header .ui-portlet-header-icon {
+	float: left;
+	margin: 0 0.2em 0 -0.5em;
+}
+
+.ui-sortable-placeholder {
+	border: 2px dashed #a3c0e8;
+	visibility: visible !important;
+	height: 300px !important;
+}
+
+.ui-sortable-placeholder * {
+	visibility: hidden;
+}
+.content ul {
+  list-style:none;
+  margin:0px;
+}
+.content li {
+    list-style:none;
+    font-size: 14px;
+	padding: 2px;
+	margin:0px;
+	text-align:left;
+	border-bottom: 1px dashed  #C4D3E1;
+	white-space: normal;
+}
+.content li a {
+	text-decoration:none;
+}

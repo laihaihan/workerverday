@@ -1,0 +1,115 @@
+/* CSS Document */
+body{
+  margin:0px;
+	font-size:12px;
+	color:#000000;
+}
+
+.btn{
+  	border:#59A1C8 1px solid;
+	PADDING-TOP: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-RIGHT: 2px;
+	FONT-SIZE: 12px;
+	height:21px;
+	COLOR: #33301E;
+	background-color: #FFFFFF;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#59A1C8);
+	CURSOR: hand;
+} 
+
+a:link {color: #000000;	text-decoration: none;}
+a:visited {text-decoration: none;color: #000000;}
+a:hover {text-decoration:underline;color: #FF0000;}
+a:active {text-decoration: none;	color: #000000;}
+
+a.red:link {color: #FF0000;	text-decoration: none;}
+a.red:visited {text-decoration: none;color: #FF0000;}
+a.red:hover {text-decoration:underline;color: #000000;}
+a.red:active {text-decoration: none;	color: #FF0000;}
+
+.red_12{
+  font-size:12px;
+	color:#FF0000;
+}
+
+.red_12b{
+  font-size:12px;
+	color:#FF0000;
+	font-weight:bold;
+}
+
+.red_14b{
+  font-size:14px;
+	color:#FF0000;
+	font-weight:bold;
+}
+
+.red_16b{
+  font-size:16px;
+	color:#FF0000;
+	font-weight:bold;
+}
+
+.white_14b{
+  color:#FFFFFF;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.black_14b{
+  color:#000000;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.blue_14b{
+  color:#117ABB;
+	font-size:14px;
+	font-weight:bold;
+}
+.news_list_1{
+  color:#000000;
+	background-image:url(../images/1_dotted.gif);
+	background-repeat:repeat-x;
+	background-position:bottom;
+	line-height:17px;
+}
+
+
+.news_list_2{
+  color:#000000;
+	background-image:url(../images/1_dotted.gif);
+	background-repeat:repeat-x;
+	background-position:bottom;
+	line-height:20px;
+}
+
+.news_list_3{
+  color:#000000;
+	background-image:url(../images/1_dotted.gif);
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+
+.text_content{
+  color:#000000;
+	font-size:12px;
+	line-height:20px;
+}
+
+.text_content_2{
+  color:#000000;
+	font-size:14px;
+	line-height:30px;
+}
+
+/**** 2012/08/07Ìí¼Ó ****/
+.red, a.red:link, a.red:visited {
+	color:#F00;
+	text-decoration:none;
+}
+a.red:hover {
+	color:#F00;
+	text-decoration:underline;
+}

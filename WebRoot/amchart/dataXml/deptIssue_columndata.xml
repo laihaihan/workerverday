@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chart>
+  <series>
+    <value xid="1">发改委</value>
+  </series>
+  <graphs>
+    <graph gid="1">
+      <value xid="1" color="#FF6600">2</value>
+    </graph>
+  </graphs>
+</chart>
+

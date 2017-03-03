@@ -1,0 +1,104 @@
+<flow id="C4AD0A211606C5587F904928F9879802" name="流程配置" sort="" belongDept="" isSubFlow="0" useScope="" watchScope="" itemTitleName="" formid="D358934F2DCA9B50E61F88C3845BE8ED" belongToApp="30EF67ADD53C9554DB99D2039CC94D68" belongToModule="" toSms="" toIms="" participantType="0" smsFmt="" imsFmt="" punid="" createTime="" flowNo="">
+  <nodes>
+    <node id="8408C5C398A663D335FF4928F9E7A716" name="开始" formid="" auditType="" multipleParallel="" transferAction="" nodeType="0" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="" toSms="" toIms="" participantType="">
+      <coordinate x="100" y="100"/>
+      <transitions>
+        <transition id="E8F8D19674F9FD76881C49292369D31E" transitionType="0" remark="" lineType="0"/>
+      </transitions>
+    </node>
+    <node id="E44E688D5B6F45DDED804928F9E80AC3" name="结束" formid="" auditType="" multipleParallel="" transferAction="" nodeType="2" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="" toSms="" toIms="" participantType="">
+      <coordinate x="550" y="100"/>
+      <actions>
+        <action id="send" name="发送" actionName="发送"/>
+        <action id="diffluence_send" name="分流发送" actionName="分流发送"/>
+        <action id="node_call_back" name="本节点收回" actionName="本节点收回"/>
+        <action id="send_sub_flow" name="发送子流程" actionName="发送子流程"/>
+      </actions>
+    </node>
+    <node id="72595235EB6D2724D581492904EB28DA" name="总经理审批" formid="D358934F2DCA9B50E61F88C3845BE8ED" auditType="" multipleParallel="1" transferAction="" nodeType="1" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="" toSms="" toIms="" participantType="0">
+      <coordinate x="330" y="20"/>
+      <actions>
+        <action id="send" name="发送" actionName="发送"/>
+        <action id="diffluence_send" name="分流发送" actionName="分流发送"/>
+        <action id="node_call_back" name="本节点收回" actionName="本节点收回"/>
+        <action id="send_sub_flow" name="发送子流程" actionName="发送子流程"/>
+        <action id="A165D0B1D24503F2123B7144346BEEF8" name="办结" actionName="办结">
+          <participants>
+            <participant participantType="0" name="" defaultParticipant="">FB0AE28A24C6D564E41CD9467B92B9A4</participant>
+          </participants>
+        </action>
+        <action id="7E554DDAC1C4907E083161DC0598F6C0" name="退回上一环节" actionName="退回上一环节">
+          <participants>
+            <participant participantType="0" name="" defaultParticipant="">FB0AE28A24C6D564E41CD9467B92B9A4</participant>
+          </participants>
+        </action>
+      </actions>
+      <transitions>
+        <transition id="E44E688D5B6F45DDED804928F9E80AC3" transitionType="0" remark="" lineType="0"/>
+        <transition id="F3BA9FA786E97CF71F3A49292819210E" transitionType="0" remark="" lineType="0"/>
+        <transition id="E8F8D19674F9FD76881C49292369D31E" transitionType="0" remark="" lineType="0"/>
+      </transitions>
+      <participants>
+        <participant participantType="0" name="" defaultParticipant="FB0AE28A24C6D564E41CD9467B92B9A4">FB0AE28A24C6D564E41CD9467B92B9A4</participant>
+      </participants>
+    </node>
+    <node id="E8F8D19674F9FD76881C49292369D31E" name="经理审批" formid="D358934F2DCA9B50E61F88C3845BE8ED" auditType="" multipleParallel="1" transferAction="" nodeType="1" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="" toSms="" toIms="" participantType="0">
+      <coordinate x="210" y="100"/>
+      <actions>
+        <action id="send" name="发送" actionName="发送"/>
+        <action id="diffluence_send" name="分流发送" actionName="分流发送"/>
+        <action id="node_call_back" name="本节点收回" actionName="本节点收回"/>
+        <action id="send_sub_flow" name="发送子流程" actionName="发送子流程"/>
+        <action id="114DD6044956BFF83ED2AA02B58A29B8" name="提交" actionName="提交">
+          <participants>
+            <participant participantType="0" name="" defaultParticipant="">B934E4B9004683E1AAEC66F3A99372D1,75BA64F4919664C1B610EDFB7B068436,B2F85F6A1F359681727F8A81AEC98132,1B62B31A61500FB088F2868923D73847</participant>
+          </participants>
+        </action>
+      </actions>
+      <transitions>
+        <transition id="72595235EB6D2724D581492904EB28DA" transitionType="0" remark="" lineType="0"/>
+        <transition id="F3BA9FA786E97CF71F3A49292819210E" transitionType="0" remark="" lineType="0"/>
+      </transitions>
+      <participants>
+        <participant participantType="0" name="" defaultParticipant="B934E4B9004683E1AAEC66F3A99372D1,75BA64F4919664C1B610EDFB7B068436,B2F85F6A1F359681727F8A81AEC98132,1B62B31A61500FB088F2868923D73847">B934E4B9004683E1AAEC66F3A99372D1,75BA64F4919664C1B610EDFB7B068436,B2F85F6A1F359681727F8A81AEC98132,1B62B31A61500FB088F2868923D73847</participant>
+      </participants>
+      <defaultType>
+        <transactors>
+          <transactor transactorType="0">B934E4B9004683E1AAEC66F3A99372D1</transactor>
+        </transactors>
+      </defaultType>
+    </node>
+    <node id="F3BA9FA786E97CF71F3A49292819210E" name="人力资源" formid="D358934F2DCA9B50E61F88C3845BE8ED" auditType="" multipleParallel="1" transferAction="" nodeType="1" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="" toSms="" toIms="" participantType="0">
+      <coordinate x="330" y="180"/>
+      <actions>
+        <action id="send" name="发送" actionName="发送"/>
+        <action id="diffluence_send" name="分流发送" actionName="分流发送"/>
+        <action id="node_call_back" name="本节点收回" actionName="本节点收回"/>
+        <action id="send_sub_flow" name="发送子流程" actionName="发送子流程"/>
+        <action id="7E554DDAC1C4907E083161DC0598F6C0" name="退回上一环节" actionName="退回上一环节">
+          <participants>
+            <participant participantType="2" name="" defaultParticipant="">3DD876D32BF40E404E2AFFA4C3024885</participant>
+          </participants>
+        </action>
+        <action id="7E1345F951A4CBE546F47D65DE6D7537" name="退回" actionName="退回">
+          <participants>
+            <participant participantType="2" name="" defaultParticipant="">3DD876D32BF40E404E2AFFA4C3024885</participant>
+          </participants>
+        </action>
+        <action id="A165D0B1D24503F2123B7144346BEEF8" name="办结" actionName="办结">
+          <participants>
+            <participant participantType="2" name="" defaultParticipant="">3DD876D32BF40E404E2AFFA4C3024885</participant>
+          </participants>
+        </action>
+      </actions>
+      <transitions>
+        <transition id="E44E688D5B6F45DDED804928F9E80AC3" transitionType="0" remark="" lineType="0"/>
+        <transition id="E8F8D19674F9FD76881C49292369D31E" transitionType="0" remark="" lineType="0"/>
+        <transition id="72595235EB6D2724D581492904EB28DA" transitionType="0" remark="" lineType="0"/>
+      </transitions>
+      <participants>
+        <participant participantType="2" name="" defaultParticipant="3DD876D32BF40E404E2AFFA4C3024885">3DD876D32BF40E404E2AFFA4C3024885</participant>
+      </participants>
+    </node>
+  </nodes>
+</flow>

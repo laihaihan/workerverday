@@ -1,0 +1,71 @@
+package $package$;
+import com.linewell.ucapx.redevelop.interfaces.IRedevelopBean;
+import com.linewell.ucapx.redevelop.web.manager.FormBeanFlag;
+import java.util.List;
+
+/**
+ * XXXXX业务对象
+ * 
+ * @author ucap@linewell.com
+ *
+ */
+public class $BeanName$ implements IRedevelopBean{
+
+	/**
+	 * 缺省系列化标识
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public static final String _UcapFormName = "$tabName$";
+	
+	/**
+	 * 表单对应的Unid
+	 */
+	public static final String _UcapFormUnid="$formUnid$";
+
+	private FormBeanFlag ucapBeanFlg;//bean标志
+
+	[beginproperty]
+	private $type$ $name$;//$title$
+	[endproperty]
+	 
+	[beginMethod]
+	 /**
+	 * 设置$title$
+	 * @param $name$ $title$
+	 */
+	public void set$Name$($type$ $name$){
+		this.$name$ = $name$;
+	}
+
+	/**
+	 * 返回$title$
+	 * @return $name$ $title$
+	 */
+	public $type$ get$Name$(){
+		return this.$name$;
+	}
+	[endMethod]
+	/**
+	 * 获取bean标志
+	 * @return
+	 */
+	public FormBeanFlag getUcapBeanFlg() {
+		return ucapBeanFlg;
+	}
+	/**
+	 * 设置bean标志
+	 * @param ucapBeanFlg
+	 */
+	public void setUcapBeanFlg(FormBeanFlag ucapBeanFlg) {
+		this.ucapBeanFlg = ucapBeanFlg;
+	}
+	/**
+	 * 返回表名称
+	 * @return
+	 */
+	public String getUcapFormName(){
+		return _UcapFormName;
+	} 
+}
+

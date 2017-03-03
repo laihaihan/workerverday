@@ -1,0 +1,101 @@
+@charset "gb2312";
+/**** Global Style 全局样式 ****/
+body{margin:0px auto;padding:0px;color:#1B4959;font:12px/200% Tahoma;auto;
+	background-image: url(../images/login_bg.gif);
+	margin:0 auto;}
+img{border:0px;}
+.blue, a.blue:link, a.blue:visited{color:#045AD1;text-decoration:none}
+a.blue:hover{color:#F00;text-decoration:none}
+.red{color:#F00;}
+.inputbox{border:#87B1C7 1px solid;height:17px;color:#315071;}
+a, a:link, a:visited{color:#1B4959;text-decoration:none}
+a:hover{color:#F00;text-decoration:underline;}
+/**** 登录页面样式 ****/
+.loginHeader {
+	width:1000px;
+	height:190px;
+	background: url(../images/login_top.gif) no-repeat center top;
+
+}
+
+.loginBox {
+	width:702px;
+	height:268px;
+	margin:0 auto;
+	text-align:center;
+	clear:both;
+}
+.loginLeft {
+	width:345px;
+	height:268px;
+	background: url(../images/login_left.gif) no-repeat center top;
+	float:left;
+}
+.loginBetween {
+	width:12px;
+	height:268px;
+	background: url(../images/login_between.gif) no-repeat center top;
+	float:left;
+}
+.loginRight {
+	width:345px;
+	height:268px;
+	text-align:left;
+	float:left;
+}
+.loginFooter {
+	padding:45px 0px 0px 0px;
+	color:#057;
+	height:20px;
+	clear:both;
+	text-align:center;
+	
+}
+
+.ucapTable { /**** 表格样式2 ****/
+	width:100%;
+	*width:98%;
+	_width:100%;
+	border-collapse:collapse;
+	border:1px solid #B2CDD5;
+	text-align:left;
+	margin-left:0px;
+}
+.ucapTable th{    
+	border:1px solid #C8C8C8;
+	text-align:right;
+	padding-right:5px;
+	height:25px;
+	font:12px Arial;
+	background: #F4F9FD;
+	font-weight:normal;
+}
+.ucapTable td{    
+	border:1px solid #C8C8C8;
+	height:25px;
+	padding-left:5px;
+	color:#333;
+	background:#FFF;
+}
+/**** 对话框样式 ****/
+.styleBox {
+	font-size:12px;
+	width:98%;
+}
+.styleMainBox {
+	border:#36B0D6 1px dotted;
+	text-align:center;
+}
+.styleMainBox ul {
+	width:95%;
+	margin:8px;
+}
+.styleMainBox ul li {
+	width:194px;
+	height:120px;
+	float:left;
+}
+.styleMainBox ul li img {
+	border:#9EC8E6 2px solid;
+	cursor:pointer;
+}

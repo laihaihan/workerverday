@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.markscore.SuperviseCaseMarkScore" table="SUPERVISE_CASEMARKSCORE">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="CASESN" name="casesn" type="string"/>
+<property column="CASENAME" name="casename" type="string"/>
+<property column="EVALUATEUNID" name="evaluateunid" type="string"/>
+<property column="SCORE" name="score" type="float"/>
+<property column="USERNAME" name="username" type="string"/>
+<property column="USERUNID" name="userunid" type="string"/>
+<property column="SCORETYPE" name="scoretype" type="string"/>
+<property column="REASON" name="reason" type="string"/>
+<property column="ISNEW" name="isnew" type="string"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,55 @@
+﻿package $bean.getPackageName();
+
+import java.util.List;
+
+
+/**
+ * <p>
+ *  $bean.getTableComments()业务操作
+ * </p>
+ * 
+ * @author:$bean.getCreater() email:$bean.getCreaterEmail()
+ * @version 1.0.0 $bean.getCreateTime()
+ *
+ */
+public class $bean.getBeanName()Business {
+	
+	$bean.getBeanName()Manager manager = new $bean.getBeanName()Manager();
+	
+	/**
+	 * 新增
+	 */
+	public boolean doSave($bean.getBeanName() $bean.getBeanCName()){
+		return manager.doSave($bean.getBeanCName());
+	}
+	
+	/**
+	 * 更新
+	 */
+	public boolean doUpdate($bean.getBeanName() $bean.getBeanCName()){
+		return manager.doUpdate($bean.getBeanCName());
+		
+	}
+
+	/**
+	 * 根据主键找单个对象
+	 */
+	public $bean.getBeanName() doFindBeanByKey(String keyValue){
+		return manager.doFindBeanByKey(keyValue);
+	}
+	
+	/**
+	 * 自定义条件查询对象列表
+	 */
+	public List doFindListByCondition(String condition,Object[] objs){
+		return manager.doFindListByCondition(condition,objs);
+	}
+	
+		
+	/**
+	 * 根据主键删除对象
+	 */
+	public boolean doDeleteByCondition(String condition,Object[] objs){
+		return manager.doDeleteByCondition(condition,objs);
+	}
+}

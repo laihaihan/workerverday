@@ -1,0 +1,56 @@
+package $package$;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * BEAN对象设置类
+ * 
+ * @author UCAP@linewell.com
+ *
+ */
+public class $BeanName$Getter {
+	
+	/**
+	 * 通过request对象获取bean对象
+	 * 
+	 * @param request 请求对象 HttpServletRequest
+	 * 
+	 * @return $title$对象 $BeanName$
+	 */
+	public $BeanName$ get(HttpServletRequest request){
+		$BeanName$ $beanName$ = new $BeanName$();
+
+		[beginset]$beanName$.set$Name$($function$request.getParameter("$columnName$")$functionEnd$);
+		[endset]
+		return $beanName$;
+	}
+	
+	/**
+	 * 通过request对象获取bean对象列表
+	 * 
+	 * @param request 请求对象 HttpServletRequest
+	 * 
+	 * @return $title$对象列表 List<$BeanName$>
+	 */
+	public List<$BeanName$> getList(HttpServletRequest request){
+		List<$BeanName$> $beanName$List = null;
+
+		[begingets]String[] $name$s = request.getParameterValues("$columnName$");
+		[endgets]
+		if(null!=$mainKey$s && $mainKey$s.length>0){
+			$beanName$List = new ArrayList<$BeanName$>();
+			for(int i=0;i<$mainKey$s.length;i++){
+				$BeanName$ $beanName$ = new $BeanName$();
+
+				[beginsets]$beanName$.set$Name$($function$$name$s[i]$functionEnd$);
+				[endsets]
+				$beanName$List.add($beanName$);
+			}
+		}
+		
+		return $beanName$List;
+	}
+
+}

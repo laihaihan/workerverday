@@ -1,0 +1,8 @@
+压缩保留源文件的方法：
+
+
+gzip –c filename > filename.gzjs
+
+如果直接
+
+gzip filename 则默认生成一个压缩文件，并把源文件覆盖掉

@@ -1,0 +1,239 @@
+body {
+	margin:0px auto;
+	font-size:12px;
+	color:#333;
+}
+img{
+	border:0px;
+}
+ul,li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a, a:link, a:visited {
+	color:#333;
+	text-decoration:none;
+}
+a:hover {
+	color:#F00;
+	text-decoration:underline;
+}
+.cl {
+	clear:both;
+}
+
+.matters {
+	width:50%;
+	float:left;
+	padding-right:8px;
+}
+.mattersTitle {
+	background:url(../images/db_menu_2.gif) repeat-x center;
+}
+.mattersTitleArrow {
+	width:35px;
+	height:42px;
+	background:url(../images/db_menu_1.gif) no-repeat center;
+	float:left;
+}
+.mattersTitleMain {
+	height:28px;
+	width:auto;
+	background:url(../images/db_menu_2.gif) repeat-x center;
+	color:#393939;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:14px;
+}
+.mattersTitleMore {
+	width:54px;
+	height:28px;
+	background:url(../images/db_menu_3.gif) no-repeat center;
+	padding-top:14px;
+	color:#186DA6;
+	font-size:14px;
+	float:right;
+	margin-top:-42px;
+}
+.mattersTitleMore a {
+	color:#186DA6;
+}
+.mattersContentBox {
+	border:#CCDCE6 1px solid;
+	border-top:none;
+	clear:both;
+	height:230px;
+}
+.mattersContent ul {
+	padding:8px;
+}
+.mattersContent ul li {
+	line-height:24px;
+	color:#186DA6;
+	font-size:14px;	
+}
+.mattersContent ul li a {
+	color:#186DA6;	
+}
+.time {
+	color:#999;
+	float:right;
+	line-height:24px;
+	margin-top:0px;
+	*margin-top:-23px;
+	_margin-top:-23px;
+}
+/**** 我的待办事宜切换 ****/
+#mattersMenu {
+	text-align:left;
+	padding:8px 10px 0px 10px;
+	height:30px;
+}
+#mattersMenu ul {
+	list-style:none;
+	margin:0px;
+	padding-left:0px;
+}
+#mattersMenu ul li {
+	width:95px;
+	height:20px;
+	background: url(../images/menu_2.gif) no-repeat center bottom;
+	margin-right:-1px;
+	float:left;
+	text-align:center;
+	cursor:pointer;
+	padding-top:10px;
+}
+#mattersMenu ul li a {
+	color:#393939;
+}
+#mattersMenu ul li.mattersMenuSelected {
+	width:102px;
+	height:20px;
+	background: url(../images/menu_1.gif) no-repeat center bottom;
+	margin-right:-1px;
+	color:#FFF;
+	font-weight:bold;
+	float:left;
+	text-align:center;
+	cursor:pointer;
+	padding-top:10px;
+}
+#mattersMenu ul li.mattersMenuSelected a, #mattersMenu ul li.mattersMenuSelected a:link, #mattersMenu ul li.mattersMenuSelected a:visited, #mattersMenu ul li.mattersMenuSelected a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+.announcement {
+	float:left;
+	padding-right:8px;
+	width:23.3%;
+}
+.announcementContent {
+	border:#CCDCE6 1px solid;
+	border-top:none;
+	height:230px;
+}
+.announcementContent ul {
+	padding:8px;
+}
+.announcementContent ul li {
+	line-height:26px;
+	color:#186DA6;
+	font-size:14px;	
+}
+.shortcuts {
+	float:right;
+	width:25%;
+}
+.shortcutsContent {
+	border:#CCDCE6 1px solid;
+	border-top:none;
+	height:230px;
+}
+.shortcutsContent ul {
+	padding:12px;
+	text-align:center;
+}
+.shortcutsContent ul li {
+	width:70px;
+	height:72px;
+	*height:60px;
+	_height:60px;
+	line-height:30px;
+	*line-height:30px;
+	_line-height:20px;
+	font-size:14px;
+	color:#186DA6;
+	float:left;
+}
+.shortcutsContent ul li img {
+	padding-left:5px;
+}
+.shortcutsContent ul li a {
+	color:#186DA6;
+}
+.departmentlist {
+	width:100%;
+	clear:both;
+	padding-top:8px;
+}
+.departmentlistMenu {
+	background:url(../images/list_menu_2.gif) repeat-x center;
+}
+.departmentlistArrow {
+	width:35px;
+	height:42px;
+	background:url(../images/list_menu_1.gif) no-repeat center;
+	float:left;
+}
+.departmentlistTitle {
+	height:28px;
+	width:auto;
+	background:url(../images/list_menu_2.gif) repeat-x center;
+	color:#393939;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:14px;
+}
+.departmentlistRight {
+	width:6px;
+	height:42px;
+	background:url(../images/list_menu_3.gif) no-repeat center;
+	float:right;
+	margin-top:-42px;
+}
+.statisticsTitle {
+	color:#1570A5;
+	font-weight:normal;
+	font-size:14px;
+	padding-left:20px;
+}
+.redFont {
+	color:#F00;
+}
+.departmentlistContent {
+	border:#CCDCE6 1px solid;
+	border-top:none;
+	padding:15px;
+}
+.departmentlistContent ul li {
+	width:153px;
+	height:24px;
+	font-size:14px;
+	background:url(../images/btn_bg_1.gif) no-repeat center left;
+	padding:10px 0px 0px 8px;
+	float:left;
+}
+.departmentlistContent ul li:hover {
+	width:153px;
+	height:24px;
+	font-size:14px;
+	background:url(../images/btn_bg_2.gif) no-repeat center left;
+	padding:10px 0px 0px 8px;
+	float:left;
+	color:#FFF;
+}
+.departmentlistContent ul li:hover a {
+	color:#FFF;
+}

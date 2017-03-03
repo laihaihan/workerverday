@@ -1,0 +1,81 @@
+@charset "gb2312";
+body {
+	margin:0px;
+	font-size:12px;
+	color:#333;
+}
+a, a:link, a:visited {
+	color:#333;
+	text-decoration:none;
+}
+a:hover {
+	color:#F00;
+	text-decoration:underline;
+}
+img {
+	border:0;
+}
+.white_font, a.white_font:link, a.white_font:visited {
+	color:#FFF;
+	text-decoration:none;
+}
+a.white_font:hover {
+	color:#FF0;
+	text-decoration:underline;
+}
+.divR1 {width:80px;height:65px;margin-top:13px;position:absolute;top:87px \9;*top:100px;_top:100px;margin-left:0px;}
+.divR1 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR1 li {text-align:center;clear:both;}
+.divTitle {padding-bottom:15px;}
+.divR2 {width:80px;height:65px;margin-top:13px;position:absolute;top:87px \9;*top:100px;_top:100px;margin-left:80px;}
+.divR2 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR2 li {text-align:center;clear:both;}
+.divR3 {width:80px;height:65px;margin-top:13px;position:absolute;top:87px \9;*top:100px;_top:100px;margin-left:160px;}
+.divR3 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR3 li {text-align:center;clear:both;}
+.divR4 {width:80px;height:65px;margin-top:13px;position:absolute;top:87px \9;*top:100px;_top:100px;margin-left:240px;}
+.divR4 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR4 li {text-align:center;clear:both;}
+.divR5 {width:80px;height:65px;margin-top:13px;position:absolute;top:87px \9;*top:100px;_top:100px;margin-left:320px;}
+.divR5 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR5 li {text-align:center;clear:both;}
+.divR6 {width:80px;height:65px;margin-top:13px;position:absolute;top:87px \9;*top:100px;_top:100px;margin-left:400px;}
+.divR6 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR6 li {text-align:center;clear:both;}
+.divR7 {width:80px;height:65px;margin-top:13px;position:absolute;top:87px \9;*top:100px;_top:100px;margin-left:480px;}
+.divR7 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR7 li {text-align:center;clear:both;}
+.divR8 {width:80px;height:65px;margin-top:13px;position:absolute;top:87px \9;*top:100px;_top:100px;margin-left:560px;}
+.divR8 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR8 li {text-align:center;clear:both;}
+
+.divR9 {width:80px;height:55px;position:absolute;top:387px \9;*top:400px;_top:400px;margin-left:0px;}
+.divR9 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR9 li {text-align:center;clear:both;}
+.divTitle2 {padding-top:25px;}
+.divR10 {width:80px;height:55px;position:absolute;top:387px \9;*top:400px;_top:400px;margin-left:80px;}
+.divR10 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR10 li {text-align:center;clear:both;}
+.divR11 {width:80px;height:55px;position:absolute;top:387px \9;*top:400px;_top:400px;margin-left:160px;}
+.divR11 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR11 li {text-align:center;clear:both;}
+.divR12 {width:80px;height:55px;position:absolute;top:387px \9;*top:400px;_top:400px;margin-left:240px;}
+.divR12 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR12 li {text-align:center;clear:both;}
+.divR13 {width:80px;height:55px;position:absolute;top:387px \9;*top:400px;_top:400px;margin-left:320px;}
+.divR13 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR13 li {text-align:center;clear:both;}
+.divR14 {width:80px;height:55px;position:absolute;top:387px \9;*top:400px;_top:400px;margin-left:400px;}
+.divR14 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR14 li {text-align:center;clear:both;}
+.divR15 {width:80px;height:55px;position:absolute;top:387px \9;*top:400px;_top:400px;margin-left:480px;}
+.divR15 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR15 li {text-align:center;clear:both;}
+.divR16 {width:80px;height:55px;position:absolute;top:387px \9;*top:400px;_top:400px;margin-left:560px;}
+.divR16 ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divR16 li {text-align:center;clear:both;}
+
+.divRR {width:178px;height:55px;position:absolute;top:238px \9;*top:248px;_top:248px;margin-left:0px;}
+.divRR ul {list-style-type:none;margin-left:0px;padding-left:0px;}
+.divRR li {text-align:right;clear:both;}
+.divTitle3 {color:#F00;padding-right:42px;}

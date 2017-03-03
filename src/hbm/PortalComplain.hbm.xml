@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.portal.complain.PortalComplain" table="PTL_COMPLAIN">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="SUBJECT" name="subject" type="string"/>
+<property column="CONTENT" name="content" type="clob" lazy="true"/>
+<property column="COMPLAINOBJECT" name="complainobject" type="string"/>
+<property column="COMPLAINTYPE" name="complaintype" type="string"/>
+<property column="PUBLISH" name="publish" type="string"/>
+<property column="ISSUEPEOPLE" name="issuepeople" type="string"/>
+<property column="ISSUEPEOPLEPOST" name="issuepeoplepost" type="string"/>
+<property column="ISSUETIME" name="issuetime" type="string"/>
+<property column="ADDRESS" name="address" type="string"/>
+<property column="EMAIL" name="email" type="string"/>
+<property column="CONTACTPHONE" name="contactphone" type="string"/>
+<property column="REPLYSTATE" name="replystate" type="string"/>
+<property column="ACCEPTPEOPLE" name="acceptpeople" type="string"/>
+<property column="ACCEPTPEOPLEUNID" name="acceptpeopleunid" type="string"/>
+<property column="ACCEPTDEPT" name="acceptdept" type="string"/>
+<property column="ACCEPTDEPTUNID" name="acceptdeptunid" type="string"/>
+<property column="ACCEPTCONTENT" name="acceptcontent" type="string"/>
+<property column="ACCEPTTIME" name="accepttime" type="string"/>
+<property column="COMPLAINDEPT" name="complaindept" type="string"/>
+<property column="COMPLAINDEPTUNID" name="complaindeptunid" type="string"/>
+<property column="COMPLAINPELPLE" name="complainpeople" type="string"/>
+<property column="COMPLAINPELPLEUNID" name="complainpeopleunid" type="string"/>
+<property column="COMPLAINPOST" name="complainpeoplepost" type="string"/>
+<property column="HANDLETERM" name="handleterm" type="string"/>
+<property column="HANDLETYPE" name="handletype" type="string"/>
+<property column="HANDLENUM" name="handlenum" type="string"/>
+<property column="HANDLEPWD" name="handlepwd" type="string"/>
+<property column="SENDDEPT" name="senddept" type="string"/>
+<property column="SENDDEPTUNID" name="senddeptunid" type="string"/>
+<property column="DOCUMENTNUM" name="documentnum" type="string"/>
+<property column="CODE" name="code" type="string"/>
+<property column="REPLYACCEPTTYPE" name="replyaccepttype" type="string"/>
+<property column="ISACCEPTREPLY" name="isacceptreply" type="string"/>
+</class>
+</hibernate-mapping>

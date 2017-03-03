@@ -1,0 +1,287 @@
+/******************** 系统标签样式 ********************/
+*{
+	margin: 0;
+	padding: 0;	
+}
+
+html{
+	height:100%;
+	width:100%;
+	overflow:auto;/* IE6-7 下隐藏滚动条*/
+	overflow-x: hidden;
+}
+
+body {
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	font-size: 12px;
+	color:#333;
+	margin: 0;
+	padding: 0;
+	font-family: Arial,宋体;
+	background:#fff;
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+
+/*模块样式 */
+iframe{
+	width:100%;
+	height:100%;
+	border-style:none;
+}
+
+
+/********************** 页眉区域 **********************/
+/* 页眉 */
+.topBox {
+	width:100%;
+	height:64px;
+	background:#ddd url('images/systemManage/topBG.gif') repeat-x ;
+}
+
+/* LOGO */
+.logo {
+	width: 677px;
+	height: 64px;
+	background: url('images/systemManage/topLogo.gif') no-repeat ;
+}
+
+/*
+	mdy by wyongjian@linewell.com 2012-08-21
+	用浮动的方式（float）放置图片
+	解决BUG1237-IE6:分级管理中心的导航栏内容显示不出来
+*/
+.toolBar {
+	height:30px; 
+	line-height:30px;
+	position:absolute;
+	top:0;
+	right:20px; 
+	color:#dce6f4;
+	padding-left:23px;
+	padding-right:23px;
+	z-index:1001;
+}
+
+.toolBarLeft{
+	width:22px;
+	height:30px; 
+	background:url('images/systemManage/toolBarLeft.gif') no-repeat;
+	float:right;
+}
+.toolBarRight{
+	width:23px;
+	height:30px; 
+	background:url('images/systemManage/toolBarRight.gif') no-repeat;
+	float:right;
+}
+
+.toolBar ul{ 
+	padding-top:6px;
+	height:30px; 
+	background:url('images/systemManage/toolBarCenter.gif') repeat-x;	
+	list-style:none;
+	float:right;
+}
+/*
+end mdy by wyongjian@linewell.com 2012-08-21
+*/
+
+.toolBar ul li{ 
+	float:left;
+	height:16px;
+	line-height:16px;
+	margin-right:15px;
+	font-size:12px;
+	position:relative;
+	text-indent:20px;
+	word-break:keep-all;
+	white-space:nowrap;
+}
+.toolBar ul li img{ 
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:16px;
+	height:16px;
+}
+.toolBar ul li a{
+	color:#fff;
+}
+.toolBar ul li a:link{
+	color:#fff;
+}
+.toolBar ul li a:visited{
+	color:#fff;
+}
+.toolBar ul li a:hover{
+	color:#dce6f4
+}
+
+
+
+
+/********************** 当前位置区域 **********************/
+.siteBox{
+	width:100%;
+	height:28px;
+	background:#ddd url('images/systemManage/siteBG.gif') repeat-x ;
+}
+
+/* 图标 */
+.siteIcon{
+	float:left;
+	width: 24px;
+	height: 28px;
+	background: url('images/systemManage/siteIcon.gif') no-repeat ;
+}
+
+.siteBox ul{
+	float:left;
+}
+
+.siteBox li{
+	color:#0b4175;
+	float:left;
+	list-style:none;
+	line-height:28px;
+	margin-right:8px;
+}
+.siteBox li a{
+	color:#0b4175;
+}
+
+/********************** 工具栏区域 **********************/
+.toolbarBox{
+	width:100%;
+	height:29px;
+	line-height:29px;
+	background:#ddd url('images/systemManage/toolBarBG.gif') repeat-x ;
+	overflow:hidden;
+}
+
+/* 按钮列表 按钮*/
+.toolbarBox dd {
+	float:left;
+	height:29px;
+	line-height:29px;
+	width:83px;
+	margin-left:5px;
+	cursor:pointer;	
+}
+.toolbarBox dd:hover{
+	background:transparent url('images/systemManage/fileButtonOver.png') no-repeat;
+}
+
+/* 按钮列表 按钮 图片*/
+.toolbarBox dd img{
+	margin-left:8px;
+	position:relative;
+	top:4px;
+}
+
+/* 按钮列表 分隔线*/
+.toolbarBox dt {
+	float:left;
+	height:29px;
+	line-height:29px;
+	width:2px;
+	margin-left:5px;
+	background:transparent url('images/systemManage/toolBarSep.gif') no-repeat;
+}
+
+
+/********************** 页脚区域 **********************/
+/* 页脚 */
+.bottomBox {
+	color:#1c62a5;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:28px;
+	line-height:28px;
+	width:100%;
+	background:#ddd url('images/systemManage/footerBG.gif') repeat-x ;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+
+/******************** 主区域 ********************/
+/* 主区域 */
+.midBox{
+	position:absolute;
+	top:121px;
+	bottom:28px;
+	left:0px;
+	right:0px;
+	width:100%;
+	overflow:hidden;
+}
+/* IE6 */
+*html .midBox{   
+   height: expression(documentElement.clientHeight-64-28-28-29);
+}
+/* IE7 */
+*html .midBox{   
+   height: expression(documentElement.clientHeight-64-28-28-29);
+}
+
+
+/* 左区域 */
+.leftBox{
+	width: 230px;
+	float: left;
+	height:100%;
+	background:#fff;
+	position:relative;	
+	
+}
+/* 左侧树 */
+.leftBoxTree{
+	overflow:auto;
+	background:#000;
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	width:100%;
+	height:100%;
+}
+
+
+/* 分隔条 */
+.separatorBox{
+	width:9px;
+	background:gray url('images/systemManage/separatorBG.gif') repeat-y;
+	height:100%;
+	float:left;
+	position:relative;
+}
+/* 分隔条按钮 */
+.separatorBtn{
+	background:gray url('images/systemManage/separatorBtn.gif') no-repeat;
+	width:9px;
+	height:41px;
+	position:absolute;
+	top:50%;
+	margin-top:-20px;
+	cursor:pointer;
+}
+/* 分隔条按钮相反方向 */
+.separatorBtn.open{
+	background:url('images/systemManage/separatorBtnOpen.gif') no-repeat;
+}
+
+/* 右区域 */
+.rightBox{
+	margin-left: 239px;
+	height:100%;
+}
+

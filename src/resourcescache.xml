@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="gb2312"?>
+<resources>
+
+<!--登录相关-->
+	<resource type="scheme" caption="界面方案配置" mainTable="ucap_scheme" tables="" dbObserved="true" pkName="scheme_unid" cacheKey="scheme_punid" cacheDict="212"/>
+<!--首页相关-->
+	<resource type="portal" caption="门户配置" mainTable="ucap_layout" tables="" dbObserved="true" pkName="layout_unid" cacheKey="layout_belong_to_app" cacheDict="205"/>
+	<resource type="portletdisplay"  caption="显示频道配置" mainTable="ucap_channel_dispaly" tables="" dbObserved="true" pkName="display_unid" cacheKey="" cacheDict=""/>
+	<resource type="menu"  caption="菜单配置" mainTable="ucap_menu_root" tables="" dbObserved="true" pkName="mroot_unid" cacheKey="mroot_punid" cacheDict="213"/>
+	<resource type="menuitem" caption="菜单项" mainTable="ucap_menu_leaf" tables="" dbObserved="true" pkName="leaf_unid" cacheKey="leaf_punid" cacheDict="233"/>
+	<resource type="navigation" caption="导航配置" mainTable="ucap_navigation" tables="" dbObserved="true" pkName="navigation_unid" cacheKey="navigation_belong_to_app" cacheDict="210"/>
+	<resource type="shortcut" caption="快捷方式配置" mainTable="ucap_shortcut" tables="" dbObserved="true" pkName="shortcut_unid" cacheKey="shortcut_collection_unid" cacheDict="232"/>
+	<resource type="portlet" caption="频道配置" mainTable="ucap_channel" tables="" dbObserved="true" pkName="channel_unid" cacheKey="" cacheDict=""/>
+	<resource type="module" caption="模块配置" mainTable="ucap_module" tables="" dbObserved="true" pkName="module_unid" cacheKey="module_punid" cacheDict="215"/>
+	<resource type="moduleitem" caption="模块叶子配置" mainTable="ucap_module_leaf" tables="" dbObserved="true" pkName="leaf_unid" cacheKey="leaf_punid" cacheDict="235"/>
+	<resource type="composeformtab" caption="组合表单页签" mainTable="ucap_compose_form_tab" tables="" dbObserved="true" pkName="tab_unid" cacheKey="tab_cform_unid" cacheDict="237"/>
+	<resource type="formitemshow" caption="表单字段显示属性" mainTable="ucap_form_item_show" tables="" dbObserved="true" pkName="show_unid" cacheKey="show_form_unid" cacheDict="238"/>
+
+	<resource type="ucapopinion" observerManager="com.linewell.ucap.resourcecache.observer.UserObserverManager" caption="用户意见" mainTable="ucap_opinion" tables="ucap_user" dbObserved="true" pkName="opinion_unid" cacheKey="opinion_user_unid" cacheDict="231" dictKeys="user_login_name" dictValues="200"/>
+	<resource type="ucapproxy" observerManager="com.linewell.ucap.resourcecache.observer.UserObserverManager" caption="用户代理人" mainTable="ucap_out_proxy" tables="ucap_user" dbObserved="true" pkName="proxy_unid" cacheKey="proxy_user_unid" cacheDict="234" dictKeys="user_login_name" dictValues="200"/>
+	
+	<!--
+	<resource type="subbutton" caption="表单字段显示属性" mainTable="ucap_sub_button" tables="" dbObserved="true" pkName="sbutton_unid" cacheKey="sbutton_belong_unid" cacheDict="239"/>
+        <resource type="app" caption="应用系统配置" mainTable="ucap_app" tables="" dbObserved="true" pkName="app_unid" cacheKey="" cacheDict=""/>
+	<resource type="user" observerManager="com.linewell.ucap.resourcecache.observer.UserObserverManager" caption="用户配置" mainTable="ucap_user" tables="" dbObserved="true" pkName="user_unid" cacheKey="user_login_name" cacheDict="200" />
+	<resource type="userstyle" caption="用户界面风格配置" mainTable="ucap_user_style" tables="" dbObserved="true" pkName="style_unid" cacheKey="" cacheDict=""/>
+	<resource type="app" caption="应用系统配置" mainTable="ucap_app" tables="" dbObserved="true" pkName="app_unid" cacheKey="app_punid" cacheDict="205"/>
+	<resource type="dept" observerManager="com.linewell.ucap.resourcecache.observer.DeptObserverManager" caption="部门配置" mainTable="ucap_dept" tables="ucap_user" dbObserved="true" pkName="dept_unid" cacheKey="" cacheDict="" dictValues="" />
+	<resource type="role" caption="部门配置" mainTable="ucap_role" tables="ucap_user" dbObserved="true" pkName="role_unid" cacheKey="" cacheDict="" dictValues="" />
+	<resource type="unit" observerManager="com.linewell.ucap.resourcecache.observer.UnitObserverManager" caption="单位配置" mainTable="ucap_unit" tables="ucap_user" dbObserved="true" pkName="unit_unid" cacheKey="" cacheDict="" dictValues="" />
+	<resource type="style" caption="风格配置" single="true" mainTable="ucap_style" tables="" dbObserved="true" pkName="style_unid" cacheKey="style_punid" cacheDict="207"/>
+	-->
+</resources>

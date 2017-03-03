@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+
+<something-else-entirely>
+	<proxool>
+		<alias>3E2592D5DD95DA5C339C0935F7E9DAA8</alias>
+		<driver-url>jdbc:gbase://192.168.90.108:5258/xj_core</driver-url>
+		<driver-class>com.gbase.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="sysdba"/>
+			<property name="password" value="linewell."/>
+		</driver-properties>
+		<house-keeping-sleep-time>9000000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>10</simultaneous-build-throttle>
+		<prototype-count>5</prototype-count>
+		<maximum-connection-count>10</maximum-connection-count>
+		<minimum-connection-count>5</minimum-connection-count>
+	</proxool>
+	<proxool>
+		<alias>proxool</alias>
+		<driver-url>jdbc:gbase://192.168.90.108:5258/xj_ucap</driver-url>
+		<driver-class>com.gbase.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="sysdba"/>
+			<property name="password" value="linewell."/>
+		</driver-properties>
+		<house-keeping-sleep-time>9000000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>10</simultaneous-build-throttle>
+		<prototype-count>5</prototype-count>
+		<maximum-connection-count>10</maximum-connection-count>
+		<minimum-connection-count>5</minimum-connection-count>
+	</proxool>
+</something-else-entirely>

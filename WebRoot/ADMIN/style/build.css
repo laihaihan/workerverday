@@ -1,0 +1,482 @@
+/******************** 系统标签样式 ********************/
+html{
+	overflow:hidden;
+}
+
+body {
+    font-size: 14px;
+    color:#333;
+    background:#f0f9ff;
+    overflow:hidden;
+}
+a{
+    color:#000;
+    text-decoration:none;
+}
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/********************** 页眉区域 ***********************/
+/* 页眉 */
+.header {
+    background:#ddd url('images/common/headerBG.gif') repeat-x ;
+    width:100%;
+}
+
+/* LOGO */
+.logo {
+    width: 326px;
+    height: 87px;
+    background: url('images/common/logo.gif') no-repeat ;
+}
+
+
+/* 导航 */
+.nav{
+    background: #000 url('images/build/navBG.gif')  no-repeat;
+    width:680px;
+    height:87px;
+    position:absolute;
+    top:0px;
+    left:333px;
+    
+}
+
+/* 导航按钮区 */
+.navButtons{
+    position:absolute;
+    top:15px;
+    left:30px;  
+}
+
+/* 系统配置 */
+.navBtn1{
+    width:93px;
+    height:57px;
+    background:url('images/build/navBtn1.gif') no-repeat;
+    float:left; 
+}
+.navBtn1_on{
+	width:93px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOn1.gif') no-repeat;
+    
+}
+
+.navBtn1_over{
+	width:93px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOver1.gif') no-repeat;
+}
+
+/* 数据库配置 */
+.navBtn2{
+    width:108px;
+    height:57px;
+    background:url('images/build/navBtn2.gif') no-repeat;
+    float:left; 
+}
+.navBtn2_on{
+	width:108px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOn2.gif') no-repeat;
+}
+
+.navBtn2_over{
+	width:108px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOver2.gif') no-repeat;
+}
+
+/* 业务建模 */
+.navBtn3{
+    width:93px;
+    height:57px;
+    background:url('images/build/navBtn3.gif') no-repeat;
+    float:left; 
+}
+.navBtn3_on{
+	width:93px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOn3.gif') no-repeat;
+}
+
+.navBtn3_over{
+	width:93px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOver3.gif') no-repeat;
+}
+
+/* 界面建模 */
+.navBtn4{
+    width:98px;
+    height:57px;
+    background:url('images/build/navBtn4.gif') no-repeat;
+    float:left; 
+}
+.navBtn4_on{
+	width:98px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOn4.gif') no-repeat;
+}
+
+.navBtn4_over{
+	width:98px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOver4.gif') no-repeat;
+}
+
+/* 系统预览 */
+.navBtn5{
+    width:91px;
+    height:57px;
+    background:url('images/build/navBtn5.gif') no-repeat;
+    float:left; 
+}
+.navBtn5_on{
+	width:91px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOn5.gif') no-repeat;
+}
+
+.navBtn5_over{
+	width:91px;
+    height:57px;
+    float:left; 
+    background:url('images/build/navBtnOver5.gif') no-repeat;
+}
+
+/* 导航间隔 */
+.navGap{
+    width:38px;
+    height:57px;
+    background:url('images/build/navGap.gif') no-repeat;
+    float:left; 
+}
+
+
+/********************** 页脚区域 **********************/
+/* 页脚 */
+.footer {
+    /*position:absolute;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:55px;*/
+    background:#ddd url('images/common/footerBG.gif') repeat-x ;
+}
+
+/* 页脚按钮*/
+.footerBtn {    
+    position:absolute;
+    top:4px;
+    bottom:0px;
+    right:15px;    
+}
+
+/* 上一步 */
+.footerBtnPre{  
+    background:url('images/common/footerBtnPre.gif') no-repeat;
+    width:138px;
+    height:51px;
+    float:left;
+    cursor:pointer;
+}
+.footerBtnPre:hover{
+    background:url('images/common/footerBtnPreOver.gif') no-repeat;
+}
+
+
+/* 下一步 */
+.footerBtnNext{ 
+    background:url('images/common/footerBtnNext.gif') no-repeat;
+    width:138px;
+    height:51px;
+    float:left;
+    cursor:pointer;
+}
+.footerBtnNext:hover{
+    background:url('images/common/footerBtnNextOver.gif') no-repeat;
+}
+
+/******************** 主区域 ********************/
+
+/* 主区域 */
+.areaMain{
+    position:absolute !important;
+    top:87px !important;
+    bottom:55px !important;
+    left:0px !important;
+    right:0px !important;    
+    overflow:hidden !important;
+    padding-bottom:0 !important;
+}
+
+/* 标题 */
+.formTitle{
+    background:url('images/common/titleIcon.gif') no-repeat left  center;
+    height:30px;
+    line-height:30px;
+    padding-left:23px;
+    font-size:14px;
+    color:#1e3287;
+    cursor:pointer;
+}
+/* 标题_打开 */
+.formTitle.open{
+    background:url('images/common/titleIconOpen.gif') no-repeat left  center;
+}
+
+/* 内容 */
+.content{
+    background:#fff;
+    border:1px #aaa solid;
+    padding:15px;
+}
+/* 文本输入框 */
+.textInput{
+    height:30px;
+    border:#cfd3d4 1px solid; 
+    background:url('images/common/textInputBG.gif') repeat-x;
+}
+
+/******************** 页面留白 ********************/
+.blank {
+    height: 8px;
+    line-height: 8px;
+    clear: both;
+    visibility: hidden;
+}
+
+/********************************************************************************************* 界面建模 ****************/
+/******************** 左边区域 ********************/
+
+/* 主区域左 */
+.iMAreaLeft{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    width:207px;
+    background:#d9e7f5;
+    border-right:1px #77a1cb solid;
+    overflow:auto;
+    overflow-x:hidden;
+    *height: expression(documentElement.clientHeight);
+}
+
+/* 标题 */
+.iMTitle{
+    background: url('images/scheme/titleBG.gif') no-repeat;
+    width:207px;
+    height:33px;
+    color:black;
+    font-size:14px;
+    font-weight:bold;
+    color:#003366;
+    position:relative;
+}
+.iMTitle img{
+    position:absolute;
+    left:10px;
+    top:6px;
+}
+.iMTitle a{
+    position:absolute;
+    left:35px;
+    top:8px;
+    color:#003366;
+}
+
+/* 标题列表 */
+.iMTitleList{
+}
+
+.iMTitleList li{
+    background: url('images/scheme/listBG.gif') no-repeat;
+    width:100%;
+    height:36px;
+    color:black;
+    font-size:14px; 
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    position:relative;
+    cursor:pointer;
+
+}
+
+.iMTitleList li:hover{
+    background: url('images/scheme/listBGOver.gif') no-repeat;
+}
+.iMTitleList li.selected{
+    background: url('images/scheme/listBGOver.gif') no-repeat;
+}
+
+.iMTitleList li img{
+    position:absolute;
+    left:30px;
+    top:8px;
+}
+.iMTitleList li a{
+    position:absolute;
+    left:55px;
+    top:10px;
+}
+
+/******************** 右边区域 ********************/
+.iMAreaRight{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;    
+    left: 208px;
+    right: 0px;
+    background: #fff;
+    overflow:hidden;
+    *width: expression(documentElement.clientWidth-208);
+     *height: expression(documentElement.clientHeight);
+}
+
+/******** 子菜单 ********************/
+
+.subMenuToolbar{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:34px;
+    left:0px;
+    right:0px;
+    background:url('images/scheme/subMenuToolBarBG.gif') repeat-x;
+}
+
+.subMenuToolbarBtn{
+    float:left;
+    margin-left:10px;
+    height:25px;
+    line-height:25px;
+    margin-top:3px;
+    font-size:12px;
+    color:#333;
+    cursor:pointer;
+    border:1px transparent solid;
+    *border:0px;
+    padding-right:5px;
+}
+
+.subMenuToolbarBtn img{
+    position:relative;
+    top:4px;
+    margin-left:5px;
+    margin-right:5px;
+}
+.subMenuToolbarBtn:hover{
+    background: url('images/scheme/toolBarBtnOver.gif') repeat-x;
+    border:1px #a6d0e7 solid;
+}
+
+/* 左边区域 */
+.subMenuLeftBox{
+    position:absolute;
+    top:34px;
+    left:0px;
+    width:200px;
+    bottom:0px;
+    border-right: 1px #7eb7e9 solid;
+    overflow:auto;
+    background:#fff;
+    *height: expression(documentElement.clientHeight-34);
+}
+
+/* 右边区域 */
+.subMenuRightBox{
+    position:absolute;
+    top:34px;
+    left:202px;
+    right:0px;
+    bottom:0px;
+    border-left: 1px #fff solid;
+    overflow:auto;
+    height: expression(documentElement.clientHeight-34);
+}
+
+
+/******************** 预览 *************************************************************************************/
+
+/* 工具栏 */
+.previewToolBar{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+	right:0px;
+	background:url('images/build/previewToolBarBG.gif') repeat-x;
+	height:34px;
+	line-height:34px;
+	z-index:100;
+}
+
+/* 工具栏_标题 */
+.previewToolBar h1{
+	float:left;
+	font-size:16px;
+	font-weight:bold;
+	color:#003d7c;
+	margin-left:20px;
+	margin-right:5px;
+}
+/* 工具栏_标题 */
+.previewToolBar input{
+	*margin-top:3px;
+}
+
+/* 工具栏按钮 */
+.previewToolBarBtn{
+	background:url('images/build/previewToolBarbtn.gif') no-repeat;
+	border-style:none;
+	width:125px;
+	height:26px;
+	line-height:30px;
+	padding-left:25px;
+	margin-left:10px;
+	cursor:pointer;
+}
+/*经过效果*/
+.previewToolBarBtn:hover{
+	background:url('images/build/previewToolBarbtndOver.gif') no-repeat;
+	color:#003d7c;
+}
+
+/* 预览区 */
+.previewBox{
+	position:absolute;
+	width:100%;
+	top:34px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	overflow:auto;	
+}
+
+/* 完成 */
+.footerBtnOk{
+    background:url('images/common/footerBtnOk.gif') no-repeat;
+    width:138px;
+    height:51px;
+    float:left;
+    cursor:pointer;
+}
+.footerBtnOk:hover{
+    background:url('images/common/footerBtnOkOver.gif') no-repeat;
+}

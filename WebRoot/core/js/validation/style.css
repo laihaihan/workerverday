@@ -1,0 +1,11 @@
+.input-text {
+	border: 1px solid #999999;	
+}
+.validation-failed {
+	border: 1px solid #FF3300;	
+}
+.validation-advice {
+	color: #FF3300;
+	display: inline;
+	margin-left: 5px;
+}

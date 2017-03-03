@@ -1,0 +1,1 @@
+var appPath = "/" + window.location.pathname.split("/")[(window.location.pathname.indexOf("/")>0?0:1)] + "/";

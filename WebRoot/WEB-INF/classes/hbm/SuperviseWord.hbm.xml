@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.word.BusinessWord" table="SUPERVISE_WORD">
+<id column="WORD_UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="WORD_FLOWUNID" name="flowunid" type="string"/>
+<property column="WORD_NAME" name="name" type="string"/>
+<property column="WORD_EXPLAIN" name="explain" type="string"/>
+<property column="WORD_CONTENT" name="content" type="blob" lazy="true"/>
+<property column="WORD_TYPE" name="type" type="string"/>
+<property column="WORD_DEPT" name="dept" type="string"/>
+<property column="WORD_DEPTUNID" name="deptunid" type="string"/>
+<property column="WORD_SORT" name="sort" type="float"/>
+<property column="WORD_STEP" name="step" type="string"/>
+<property column="WORD_CREATETIME" name="createtime" type="string"/>
+<property column="WORD_FILE" name="file" type="string"/>
+<property column="WORD_FILETYPE" name="filetype" type="string"/>
+<property column="WORD_STEP_UNID" name="stepunid" type="string"/>
+</class>
+</hibernate-mapping>

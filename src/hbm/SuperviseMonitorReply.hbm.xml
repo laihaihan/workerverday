@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.monitor.SuperviseMonitorReply" table="SUPERVISE_MONITOR_REPLY">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="CASESN" name="casesn" type="string"/>
+<property column="MESSAGEUNID" name="messageunid" type="string"/>
+<property column="TYPE" name="type" type="string"/>
+<property column="REPLYPEOPLE" name="replypeople" type="string"/>
+<property column="PEOPLEUNID" name="peopleunid" type="string"/>
+<property column="REPLYTIME" name="replytime" type="string"/>
+<property column="CONTENT" name="contentclob" type="clob" lazy="true"/>
+</class>
+</hibernate-mapping>

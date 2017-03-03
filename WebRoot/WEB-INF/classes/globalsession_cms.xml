@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gb2312"?>
+<sessions>
+
+	<!-- name:全局变量名称 -->
+	<!-- tableName:表名称 -->
+	<!-- pkName:表主键名称 -->
+	<!-- displayName:显示名称（用于视图查询）-->
+	<!-- introductions:说明 -->
+	<!-- treatClassName:处理类名称 -->
+	<!-- containAllFields:是否包含所有字段信息；TRUE/FALSE -->
+	<!-- selectBoxDictValue:通用选择框字典值 -->
+	<!-- sqlWhere:通用选择框查询条件-->
+	<!-- belongToAppItemName:所属应用系统的字段名称-->
+	<!-- dataSelect:构成数据后台逻辑对象-->
+	<!-- sort:表所属元素名称-->
+	<!-- sortValue:表所属元素值-->
+
+	<session name="globalCmsSite" tableName="cms_site" pkName="site_unid" displayName="site_name" introductions="站点名称" treatClassName="com.linewell.cms.session.CmsGlobalResource" containAllFields="FALSE" selectBoxDictValue="400"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04" rootName="站点管理" selectBoxShowType="00" actionType="cmsSite" actionName="getCmsSiteTreeChecked" />	
+	<session name="globalCmsCategory" tableName="cms_category" pkName="category_unid" displayName="category_name" introductions="栏目名称" treatClassName="com.linewell.cms.session.CmsGlobalResource" containAllFields="FALSE" selectBoxDictValue="401"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04" rootName="栏目管理" selectBoxShowType="00" actionType="cmsCategorySelect" actionName="getCmsCategoryTreeChecked" />	
+	<session name="globalLinkCategory" tableName="cms_link_category" pkName="link_category_unid" displayName="link_category_name" introductions="链接分类名称" treatClassName="com.linewell.cms.session.CmsGlobalResource" containAllFields="FALSE" selectBoxDictValue="402"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04" rootName="链接分类管理" selectBoxShowType="00" actionType="linkCategory" actionName="getLinkCategoryTree" />
+	<session name="globalCmsPickSite" tableName="cms_pick_site" pkName="site_unid" displayName="site_name" introductions="采集站点名称" treatClassName="com.linewell.cms.session.CmsGlobalResource" containAllFields="FALSE" selectBoxDictValue="403"   sqlWhere="" belongToAppItemName="" dataSelect="" sort="界面配置" sortValue="04" rootName="采集站点管理" selectBoxShowType="00" actionType="PickSiteAction" actionName="getCmsPickSiteTreeChecked" />		
+	
+</sessions>

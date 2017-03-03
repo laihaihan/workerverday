@@ -1,0 +1,40 @@
+﻿package $bean.getPackageName();
+
+import javax.servlet.http.HttpServletRequest;
+import com.linewell.core.util.NumberUtil;
+
+/**
+ * <p>
+ * $bean.getBeanName() 表单数据对象构造器
+ * </p>
+ * 
+ * @author:$bean.getCreater() email:$bean.getCreaterEmail()
+ * @version 1.0.0 $bean.getCreateTime()
+ *
+ */
+public class $bean.getBeanName()Setter {
+	/**
+	 * 功能：提取web表单请求构造数据对象 - <$bean.getBeanName()>
+	 * 
+	 * @param request
+	 * @return
+	 */
+	public ${bean.getBeanName()} get${bean.getBeanName()}(HttpServletRequest request){
+		#set ($propertis =  $bean.getPropertis())
+		#foreach($property in $propertis)
+		String  ${property.getName()} = request.getParameter("${property.getName()}");
+		#end
+    	
+    	$bean.getBeanName() $bean.getBeanCName() = new ${bean.getBeanName()}();
+		#set ($propertis =  $bean.getPropertis())
+		#foreach($property in $propertis)
+		#if($property.getType()=="long")
+		${bean.getBeanCName()}.set${property.getHName()}(NumberUtil.parseLong(${property.getName()}));
+		#else
+		${bean.getBeanCName()}.set${property.getHName()}(#if($property.getType()=="Clob")Hibernate.createClob(${property.getName()})#elseif($property.getType()=="Blob")Hibernate.createBlob(${property.getName()}.getBytes())#elseif($property.getType()=="Date")Timestamp.valueOf(${property.getName()})#else${property.getName()}#end);
+		#end
+		#end
+		
+		return $bean.getBeanCName();
+	}
+}

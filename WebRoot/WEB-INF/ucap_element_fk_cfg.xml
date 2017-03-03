@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--复制记录时，记录中有其他外键的处理（单个外键不在此处理） 要跟 ucap_element_para_cfg.xml配合使用-->
+ <doc>
+	<table name="数据表配置" tabName="ucap_form" >
+		<field fk="form_primary" tbName="ucap_form_item" fieldName="fitem_unid"></field>
+		<field fk="form_verify_fields" tbName="ucap_form_item" fieldName="fitem_unid"></field>
+	</table>
+	<table name="表单字段属性" tabName="ucap_form_item" >
+		<field fk="fitem_source" category="fitem_source_type">
+			<sort categoryValue="02"  tbName="ucap_view" fieldName="view_unid"></sort>
+		    <sort categoryValue="03"  tbName="ucap_dictionary" fieldName="dictionary_unid"></sort>
+		</field>
+		<field fk="fitem_default_value" category="fitem_default_type">
+			<sort categoryValue="03" tbName="ucap_dictionary" fieldName="dictionary_unid"></sort>
+		</field>
+	</table>
+	<table name="表单字段显示属性" tabName="ucap_form_item_show" >
+		<field fk="show_form_unid" tbName="ucap_form" fieldName="form_unid"></field>
+	</table>
+	<table name="表单关联配置" tabName="ucap_form_foreign" >
+		<field fk="foreign_foreign_unid" tbName="ucap_form_item" fieldName="fitem_unid"></field>
+		<field fk="foreign_relation_table" tbName="ucap_form" fieldName="form_unid"></field>
+	</table>
+		<!-- 
+	<table name="按钮配置" tabName="ucap_button" >
+		<field fk="button_code" category="button_code_type">
+			<sort  categoryValue="03"  tbName="ucap_config_flow" fieldName="flow_unid"/>
+		</field>
+	</table>
+	-->
+	<table name="子按钮配置" tabName="ucap_sub_button" >
+		<field fk="sbutton_button_unid" tbName="ucap_button" fieldName="button_unid"></field>
+	</table>
+
+	<table name="数据库视图" tabName="ucap_db_view" >
+		<field fk="dbview_display_form_unid" category="dbview_display_form_type">
+			<sort  categoryValue="01"  tbName="ucap_form_show" fieldName="sform_unid"/>
+			<sort  categoryValue="02"  tbName="ucap_compose_form" fieldName="cform_unid"/>
+		</field>
+	</table>
+	<table name="数据库视图字段" tabName="ucap_db_view_item" >
+		<field  fk="dbview_item_id" tbName="ucap_form_item" fieldName="fitem_unid"></field>
+		<field  fk="dbview_form_id" tbName="ucap_form" fieldName="form_unid"></field>
+	</table>
+	<table name="视图配置" tabName="ucap_view" >
+		<field fk="view_query_id" tbName="ucap_view_query" fieldName="query_unid"></field>
+		<field fk="view_source_unid"  category="view_type">
+			<sort categoryValue="01"  tbName="ucap_form" fieldName="form_unid"/>
+			<sort categoryValue="02"  tbName="ucap_db_view" fieldName="dbview_unid"/>
+		</field>
+		<field fk="view_form_unid" category="view_form_type">
+			<sort categoryValue="01" tbName="ucap_form" fieldName="form_unid"/>
+			<sort categoryValue="02" tbName="ucap_form_show" fieldName="sform_unid"/>
+			<sort categoryValue="03" tbName="ucap_compose_form" fieldName="cform_unid"/>
+		</field>
+	</table>
+	<table name="视图字段" tabName="ucap_view_item" >
+		<field fk="item_item_unid" tbName="ucap_form_item" fieldName="fitem_unid"></field>
+	</table>
+	<table name="视图分类" tabName="ucap_view_categories_item" >
+		<field fk="view_categories_item_unid" tbName="ucap_form_item" fieldName="fitem_unid"></field>
+	</table>
+	<table name="视图排序" tabName="ucap_view_sort_item" >
+		<field fk="view_sort_sort_item" tbName="ucap_form_item" fieldName="fitem_unid"></field>
+	</table>
+	<table name="视图查询配置" tabName="ucap_view_query" >
+		<field fk="query_form_unid" category="query_form_type">
+			<sort categoryValue="01" tbName="ucap_form" fieldName="form_unid"/>
+			<sort categoryValue="02" tbName="ucap_form_show" fieldName="sform_unid"/>
+			<sort categoryValue="03" tbName="ucap_compose_form" fieldName="cform_unid"/>
+		</field>
+	</table>
+	
+	<table name="显示表单配置" tabName="ucap_form_show" >
+		<field fk="sform_form_unid" tbName="ucap_form" fieldName="form_unid"></field>
+	</table>
+	<table name="组合表单配置" tabName="ucap_compose_form" >
+		<field fk="cform_main_form" category="cform_main_form_type">
+			<sort categoryValue="01" tbName="ucap_form" fieldName="form_unid"/>
+			<sort categoryValue="02" tbName="ucap_form_show" fieldName="sform_unid"/>
+		</field>
+	</table>
+	<table name="页签配置" tabName="ucap_compose_form_tab" >
+		<field fk="tab_contents" category="tab_types">
+			<sort categoryValue="01" tbName="ucap_form" fieldName="form_unid"/>
+			<sort categoryValue="02" tbName="ucap_form_show" fieldName="sform_unid"/>
+			<sort categoryValue="03" tbName="ucap_view" fieldName="view_unid"/>
+		</field>
+	</table>
+</doc>

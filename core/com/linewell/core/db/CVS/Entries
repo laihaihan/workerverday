@@ -1,0 +1,19 @@
+/BuildDTO.java/1.1/Sat Apr 27 10:17:56 2013//
+/DataPage.java/1.3/Mon Apr 15 10:14:12 2013//
+/DbObjectBuilder.java/1.2/Sat Apr 27 10:17:56 2013//
+/DbObjectByTableBuilder.java/1.1/Sat Apr 27 10:17:56 2013//
+/DbObjectManager.java/1.4/Fri Apr 26 01:35:16 2013//
+/JDBCTool.java/1.4/Fri Apr 26 01:35:16 2013//
+/JDBCWrapper.java/1.6/Sun Sep 29 03:53:38 2013//
+/JdbcFactory.java/1.5/Tue Jul 30 01:29:42 2013//
+/JdbcFilter.java/1.3/Mon Apr 15 10:14:12 2013//
+/JdbcSession.java/1.2/Thu Apr 11 06:45:11 2013//
+/Log4jPoolAppender.java/1.1/Sun Sep 29 06:13:34 2013//
+/LoggableStatement.java/1.1/Tue Apr  9 08:50:34 2013//
+/LwBlob.java/1.1/Tue Apr  9 08:50:34 2013//
+/TableBean.java/1.1/Tue Apr  9 08:50:34 2013//
+/TableNameTool.java/1.4/Tue Jul 30 01:29:42 2013//
+/TableOpertionTool.java/1.2/Mon Apr 15 10:14:12 2013//
+D/impl////
+D/orm////
+D/test////

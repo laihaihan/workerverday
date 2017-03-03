@@ -1,0 +1,6 @@
+在文件的开头部分加入
+export LC_ALL="zh_CN.GBK"
+export LANG="zh_CN.GBK"
+
+
+参考startserver_参考.sh

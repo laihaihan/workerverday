@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312"?>
+<configFileBeans>
+	<configFileBean actionName="resourcescache" type="xml" xpathExpression="resources/resource" filePath="/classes/resourcescache.xml" bean="com.linewell.ucap.resourcecache.ResourceCacheBean" html="system/html/resourcescache.html" encoding="gb2312" />
+	<configFileBean actionName="resources" type="xml" xpathExpression="resources/resource" filePath="/classes/resources.xml" bean="com.linewell.ucap.resource.ResourceBean" html="system/html/resources.html" encoding="gb2312" />
+	<configFileBean actionName="memcached" type="perproties" xpathExpression="" filePath="/classes/memcached.properties"  html="system/html/perproties.html" bean="" encoding="gb2312" />
+	<configFileBean actionName="action" type="perproties" xpathExpression="" filePath="/verbs.properties"  html="system/html/perproties.html" bean="" encoding="gb2312" />
+	<configFileBean actionName="globalSession" type="xml" xpathExpression="sessions/session" filePath="/classes/globalsession.xml" bean="com.linewell.ucap.session.GlobalConfigItem" html="system/html/globalsession.html" encoding="gb2312" />
+	<configFileBean actionName="flowParams" type="xml" xpathExpression="doc/interface" filePath="/ucap_para_interface_configure.xml" bean="com.linewell.ucap.config.bean.InterfaceParamsBean" html="system/html/flowParams.html" encoding="gb2312" />
+</configFileBeans>

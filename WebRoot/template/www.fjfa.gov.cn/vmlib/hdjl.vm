@@ -1,0 +1,6 @@
+#*VM_BEGIN 取得[互动交流]栏目，用于hdjl_index.html文件*#
+#set($unid_hdjl ="A6365E419D4345EAD8FD297CF8CD5F92")  #*互动交流栏目UNID*#
+#set($cate_hdjl =$list.getCmsArCategoryByUnid(${unid_hdjl}))  #*根据互动交流栏目unid获取栏目对象*#
+#set($catelist_hdjl =$list.getCategoryList(${unid_hdjl}, ""))  #*根据互动交流栏目unid获取子栏目信息*#
+#*VM_END*#
+

@@ -1,0 +1,371 @@
+a:link {
+	color: #005893;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #005893;
+	text-decoration: none;
+}
+
+a:active {
+	color: #005893;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-size: 12px;
+	
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#Top {
+	background-color: #4891C6;
+	height: 20px;
+	margin-left: 1px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	width: 100%;
+}
+
+#Top ul {
+	height: 17px;
+	list-style-type: none;
+	margin: 0;
+	padding-top: 5px;
+}
+
+#Top li {
+	border-right: 1px solid #9CC2DF;
+	color: #B9D3E7;
+	cursor: pointer;
+	float: left;
+	font-family: ËÎÌו;
+	font-size: 12px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#Top img {
+	margin-bottom: -2px;
+}
+
+#Top a {
+	color: #B9D3E7;
+	text-decoration: none;
+}
+
+#Content {
+	overflow-y: auto;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#DesktopBlock {
+	float: left;
+	width: 100%;
+}
+
+#Block {
+	background-color: #FFFFFF;
+	border: 1px solid #4891C6;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 6px;
+}
+
+#BlockHead {
+	background: url("images/htmlTitlebg.jpg") repeat-x scroll left top
+		transparent !important;
+	height: 21px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
+	padding-left: 5px;
+	padding-top: 2px;
+}
+
+#BlockHead td {
+	color: #005892;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#BlockHead img {
+	cursor: pointer;
+	margin: 2px;
+}
+
+.BlockDetail {
+	height: 105px;
+	padding-left: 10px;
+	padding-right: 7px;
+	padding-top: 5px;
+	text-align: left;
+}
+
+.AdageTopLeft {
+	background: url("images/adage_top_left.gif") no-repeat scroll 0 0
+		transparent;
+}
+
+.AdageTopRight {
+	background: url("images/adage_top_right.gif") no-repeat scroll 0 0
+		transparent;
+}
+
+.AdageBottomLeft {
+	background: url("images/adage_bottom_left.gif") no-repeat scroll 0 0
+		transparent;
+}
+
+.AdageBottomRight {
+	background: url("images/adage_bottom_right.gif") no-repeat scroll 0 0
+		transparent;
+}
+
+.BlockDetailByAdage {
+	background: none repeat scroll 0 0 #D1E2F0;
+	text-align: left;
+}
+
+.BlockDetailByAddressQuery {
+	height: 60px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.BlockDetailByAwoke {
+	height: 100px;
+	padding: 6px;
+}
+
+.AwokeButton {
+	background: url("images/awokeBtn_bg.gif") repeat-x scroll 0 0
+		transparent;
+	border: 1px solid #BDDCF4;
+	color: #005893;
+	cursor: pointer;
+	font-size: 12px;
+	height: 30px;
+	line-height: 28px;
+	text-align: center;
+	width: 150px;
+}
+
+.AwokeNum {
+	color: #FF9700;
+	font-weight: bold;
+}
+
+.BlockMemo {
+	background-color: #FFFFFF;
+	height: 137px;
+	margin-top: 1px;
+	padding-bottom: 1px;
+	padding-top: 30px;
+	text-align: center;
+	width: 99.9%;
+}
+
+.DetailLine {
+	border-bottom: 1px solid #C4D3E1;
+	color: #005893;
+	height: 19px;
+	line-height: 18px;
+	list-style-type: none;
+	padding-left: 4px;
+	/*width: 100%;*/
+}
+
+.EndDetailLine {
+	color: #005893;
+	height: 19px;
+	line-height: 18px;
+	list-style-type: none;
+	padding-left: 4px;
+	width: 100%;
+}
+
+.DetailLineInfo {
+	color: #005893;
+	float: left;
+	text-align: left;
+}
+
+.DetailLineName {
+	color: #9F9F9F;
+	float: right;
+	padding-right: 10px;
+}
+
+.DetailLineTime {
+	background: url("images/date_bg.gif") no-repeat scroll 0 0 transparent;
+	color: #9F9F9F;
+	float: right;
+	font-size: 12px;
+	height: 14px;
+	text-align: center;
+	width: 38px;
+}
+
+#BlockFoot {
+	background: url("images/htmlbg.jpg") repeat-x scroll left bottom
+		transparent !important;
+	height: 22px;
+	padding-right: 11px;
+	padding-top: 5px;
+}
+
+#BlockFootMore {
+	float: right;
+	font-size: 12px;
+}
+
+#BlockFootMore a {
+	color: #005791;
+	text-decoration: none;
+}
+
+#Votting {
+	height: 142px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	text-align: left;
+}
+
+#Votting li {
+	color: #005892;
+	font-size: 13px;
+	line-height: 25px;
+}
+
+#VottingHeader {
+	border-bottom: 1px solid #ABCCE4;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#AddressQuery {
+	list-style-type: none;
+	padding-top: 30px;
+	text-align: center;
+}
+
+#AddressQuery li {
+	color: #005892;
+	font-size: 13px;
+	line-height: 30px;
+	padding-bottom: 5px;
+}
+
+.InputStyle {
+	background-color: #FFFFFF;
+	border: 1px solid #91C0E3;
+	color: #004779;
+	height: auto;
+	width: 100%;
+}
+
+.ButtonStyle {
+	background: url("images/func_btn_bg.gif") repeat-x scroll 0 0
+		transparent !important;
+	border-bottom: 1px solid #87A3C1;
+	border-left: 1px solid #87A3C1;
+	border-right: 1px solid #87A3C1;
+	border-top: 0 solid #87A3C1 !important;
+	color: #004A7D;
+	cursor: pointer;
+	height: 20px;
+	padding: 0 8px;
+}
+
+.QueryButton {
+	background: url("images/search.gif") no-repeat scroll 0 0 transparent;
+	border: 1px solid #87A3C1;
+	color: #004A7D;
+	height: 20px;
+	padding-left: 16px;
+	padding-right: 8px;
+	padding-top: 1px;
+}
+
+.Text_area_style {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #87A3C1;
+	color: #004A7D;
+	height: 100%;
+	padding: 5px;
+	width: 100%;
+}
+
+#AwokeInfo {
+	list-style-type: none;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+#AwokeInfo li {
+	color: #005892;
+	font-size: 13px;
+	line-height: 25px;
+}
+
+#pictureContent {
+	color: #005892;
+	float: left;
+	margin: 0;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+#pictureContent li {
+	line-height: 18px;
+	text-align: left;
+	text-indent: 2em;
+}
+
+.WeatherCity {
+	color: #A9A9A9;
+	font-size: 12px;
+	width: 100%;
+}
+
+.WeatherCurrent {
+	color: #1C83CB;
+	float: left;
+	font-family: ËÎÌו;
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 15px;
+	padding-top: 8px;
+}
+
+#WeatherDetail {
+	color: #1C83CB;
+	float: left;
+	font-family: ËÎÌו;
+	font-size: 12px;
+	margin: 0;
+	padding-left: 10px;
+}
+
+.WeatherMemo {
+	color: #1C83CB;
+	float: left;
+	font-size: 12px;
+	margin-top: 8px;
+	width: 100%;
+}

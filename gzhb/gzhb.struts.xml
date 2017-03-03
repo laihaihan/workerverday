@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+ <package name="gzhb" extends="struts-default">
+  <!--add action on here-->
+  <action name="worklog" class="com.linewell.work.worklog.WorkLogAction" />
+  <action name="worklog" class="com.linewell.work.worklog.WorkLogAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+  <action name="userjsxtcontancts" class="com.linewell.core.jstc.frecon.UserJsxtContanctsAction" />
+ </package>
+</struts>
+

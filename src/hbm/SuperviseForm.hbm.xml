@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.linewell.ess.fds.form.CfgForm" table="supervise_form">
+		<id column="UNID" name="unid" type="string">
+			<generator class="assigned"/>
+		</id>
+		<property name="formname" column="formname" type="string"/>
+		<property name="formtype" column="formtype" type="string"/>
+		<property name="formalias" column="formalias" type="string"/>
+		<property name="filePath" column="filePath" type="string"/>
+		<property name="createTime" column="createTime" type="string"/>
+		<property name="dept" column="dept" type="string"/>
+		<property name="deptUnid" column="deptUnid" type="string"/>
+		<property name="type" column="type" type="string"/>
+		<property name="listLinkUrl" column="listLinkUrl" type="string"/>
+		<property name="editLinkUrl" column="editLinkUrl" type="string"/>
+		<property name="confile" column="confile" type="blob" lazy="true"/>
+		<property name="wordType" column="wordType" type="string"/>
+		<property name="stepName" column="stepName" type="string"/>
+		<property name="sortId" column="sortId" type="int"/>
+		<property name="remark" column="remark" type="string"/>
+		<property name="stepUnid" column="stepUnid" type="string"/>
+	</class>
+</hibernate-mapping>

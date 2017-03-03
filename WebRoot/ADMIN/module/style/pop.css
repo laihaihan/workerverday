@@ -1,0 +1,104 @@
+﻿/******************** 系统标签样式 ********************/
+*{
+	margin: 0;
+	padding: 0;	
+}
+
+html{
+	height:100%;
+	width:100%;
+}
+
+body {
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	font-size: 14px;
+	color:#333;
+	margin: 0;
+	padding: 0;
+	font-family: Arial,宋体;
+	background:#f0f9ff;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+
+/********************** 弹出窗口样式 ******************************************/
+.pop{
+	position:absolute;
+	width:100%;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	height:100%;
+	background:#f1f1f1;
+}
+
+/* 标题 */
+.popTitle {
+	position:absolute;
+	top:18px;
+	left:20px;
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+}
+
+/* 关闭按钮 */
+.popCloseBtn{
+	background: url('images/module/popCloseBtn.gif') no-repeat;
+	position:absolute;
+	top:12px;
+	right:20px;
+	width:26px;
+	height:26px;
+	cursor:pointer;
+	border-style:none;
+}
+.popCloseBtn:hover{
+	background: url('images/module/popCloseBtnOver.gif') no-repeat;
+}
+
+
+/* 内容 */
+.popContent{
+	background:#fff;
+	position:absolute;
+	width:100%;
+	top:0px;
+	bottom:50px;
+	left:0px;
+	right:0px;
+	overflow:auto;
+	padding:10px;
+	border-bottom:1px #7b9ab9 solid;	
+}
+
+/* 按钮区 */
+.popBtns{
+	background:#cce1ee;
+	position:absolute;
+	height:49px;
+	line-height:49px;
+	width:100%;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	vertical-align:middle;
+	border-top:1px #fff solid;
+}
+.popBtns input{
+	float:right;
+	margin-top:10px;
+	width:68px;
+	height:29px;
+	border-style:none;
+	background:url('images/module/popBtn.gif') no-repeat;
+	margin-right:12px;
+}
+.popBtns input:hover{
+	background:url('images/module/popBtnOver.gif') no-repeat;
+}

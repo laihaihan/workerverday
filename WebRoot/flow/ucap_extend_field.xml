@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<!--参与者id超出-->
+<doc>
+	<field name="可查询用户集" fieldName="instance_viewer" length="4000" num="1"/>
+	<field name="节点办理人" fieldName="instance_node_transactor" length="4000" num="1"/>
+	<field name="节点代理人" fieldName="instance_node_proxy" length="4000" num="1"/>
+	<field name="非节点办理人" fieldName="instance_notnode_transactor" length="4000" num="1"/>
+	<field name="非节点代理人" fieldName="instance_not_node_proxy" length="4000" num="1"/>
+	<field name="文档所有办理人" fieldName="instance_doc_all_transactor" length="4000" num="1"/>
+	<field name="多人顺序中其他未办的人员" fieldName="instance_moreorder_not_tran" length="4000" num="1"/>
+
+	<field name="文档所有已办过的节点发送用户" fieldName="instance_alltrannode_sender" length="4000" num="1"/>
+	<field name="文档所有已办过的节点UNID" fieldName="instance_all_tran_node_unid" length="4000" num="1"/>
+	<field name="本节点已办人员" fieldName="instance_has_been_transactor" length="4000" num="1"/>
+	<field name="本节点已办人员对应的代理人" fieldName="instance_hasbeen_tran_proxy" length="4000" num="1"/>
+	<field name="文档所有已办过的节点用户" fieldName="instance_doc_all_node_tran" length="4000" num="1"/>
+	<field name="所有办过节点用户代理人" fieldName="instance_alltrannode_proxy" length="4000" num="1"/>
+	<field name="文档所有已办过的非节点用户" fieldName="instance_doc_allnotnode_tran" length="4000" num="1"/>
+	<field name="所有办过非节点用户代理人" fieldName="instance_trannotnode_proxy" length="4000" num="1"/>		
+
+
+	<field name="子流程发送用户" fieldName="instance_subflow_sender" length="4000" num="1"/>
+	<field name="子流程实例UNID" fieldName="instance_sub_instance_unid" length="4000" num="1"/>
+	<field name="子流程对应的节点UNID" fieldName="instance_subflow_nodeid" length="4000" num="1"/>
+	
+	<field name="转办人" fieldName="instance_trans_transactor" length="4000" num="1"/>
+	<field name="转办对应办理人" fieldName="instance_transactor" length="4000" num="1"/>
+	<field name="多路分支出口id" fieldName="instance_mul_branch_exitid" length="4000" num="1"/>
+</doc>

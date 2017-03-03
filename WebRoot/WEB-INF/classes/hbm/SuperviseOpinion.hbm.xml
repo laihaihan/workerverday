@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.opinion.SuperviseOpinion" table="SUPERVISE_OPINION">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="CASESN" name="casesn" type="string"/>
+<property column="STEPNAME" name="stepname" type="string"/>
+<property column="HANDLEPEOPLE" name="handlepeople" type="string"/>
+<property column="OPINION" name="opinion" type="string"/>
+<property column="HANDLETIME" name="handletime" type="string"/>
+<property column="OPINIONTYPE" name="opiniontype" type="string"/>
+<property column="REMARK" name="remark" type="string"/>
+<property column="ISNEW" name="isnew" type="string"/>
+</class>
+</hibernate-mapping>

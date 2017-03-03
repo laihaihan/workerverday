@@ -1,0 +1,101 @@
+﻿@charset "utf-8";
+/****************************系统样式****************************/
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+body {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+	min-width:985px;
+	min-height:29px;
+	background:#f5f4f4 url('style/images/bj.gif') repeat-x left bottom;
+	overflow:hidden
+
+}
+a img {
+	border: none;
+}
+
+a:link {
+	text-decoration: none; 
+}
+a:visited {
+	color:#376184;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus {
+	text-decoration: none; 
+	color:#0096ff;
+	cursor:pointer;
+
+}
+
+
+
+.search{
+	font-size:14px; 
+	position:absolute;
+	width:100%;
+	height:29px;
+	line-height:29px;
+	left:0px;
+	top:50%;
+	margin-top:-14px;
+	font-weight:bold;
+	color:black;
+	text-indent:35px;
+	overflow:hidden
+}
+
+.home{
+	float:left;
+	width:75px;
+	background:url('style/images/home.gif') no-repeat 5px 2px;
+}
+
+.intranet{
+	float:left;
+	width:160px;
+	background: url('style/images/intranet.gif') no-repeat 0px 2px;
+}
+
+.welcome{
+	font-size:12px; 
+	color:#3c3c3c;
+	background: url('style/images/intranetRight.gif') no-repeat top left;
+}
+
+.search span:hover{
+	cursor:pointer;
+}
+
+.searchLeft{
+	position:absolute;
+	left:0px;
+	
+}
+
+.searchRight{
+	position:absolute;
+	right:10px;
+	
+}
+
+.button{
+	width:83px;
+	height:23px;
+	background: url('style/images/button.png') no-repeat;
+	border:0px transparent none;
+	color:#565656;
+	font-size:14px;
+	cursor:pointer;
+}

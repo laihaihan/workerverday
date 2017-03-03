@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "../struts-2.0.dtd">
+
+<struts>
+ <constant name="struts.custom.i18n.resources" value="message" />
+ <constant name="struts.multipart.maxSize" value="999999999" />
+ <package name="struts2" extends="struts-default">
+  <interceptors>
+   <interceptor name="ucapInterceptor" class="com.linewell.ucap.interceptor.UcapInterceptor" />
+   <!-- 拦截器栈 -->
+   <interceptor-stack name="ucapStack">
+    <interceptor-ref name="ucapInterceptor" />
+    <!-- 防止表单重复提交 -->
+    <!--<interceptor-ref name="token"></interceptor-ref>	-->
+    <interceptor-ref name="defaultStack" />
+   </interceptor-stack>
+  </interceptors>
+  <default-interceptor-ref name="ucapStack" />
+  <!-- 全局跳转 -->
+  <global-results>
+   <result name="login" type="redirect">/login.jsp</result>
+   <result name="error" type="redirect">/error.jsp</result>
+  </global-results>
+  <!--  全局异常-->
+  <global-exception-mappings>
+   <exception-mapping result="error" exception="com.linewell.ucap.resource.ManageException" />
+  </global-exception-mappings>
+  <action name="BaseAction" class="com.linewell.ucap.action.base.BaseAction">
+   <result name="success">/result.jsp</result>
+   <!-- <result name="invalid.token">/login2.jsp</result>-->
+  </action>
+  <action name="login" class="com.linewell.ucap.action.LoginAction">
+   <result name="success">/result.jsp</result>
+   <!-- <result name="invalid.token">/login2.jsp</result>-->
+  </action>
+  <!-- 用户管理中心登录Action配置 -->
+  <action name="umcAction" class="com.linewell.ucap.umc.action.UMCAction">
+   <result name="success">/result.jsp</result>
+  </action>
+  <action name="app" class="com.linewell.ucapx.redevelop.web.action.CommonAction">
+   <result name="success">/success.jsp</result>
+   <result name="fail">/fail.jsp</result>
+   <result name="ucapForward">/ucapForward.jsp</result>
+  </action>
+ </package>
+ <include file="core.struts.xml" />
+ <include file="gzhb.struts.xml" />
+ <include file="staffwork.struts.xml" />
+</struts>
+

@@ -1,0 +1,25 @@
+
+	#inputArea input, #inputArea textarea
+	{
+	    font-family: Arial, Sans-Serif;
+	    font-size: 14px;
+	    margin-bottom: 3px;
+	    margin-top:3px;
+	    display: block;
+	    padding: 6px;
+	    width: 300px;
+	}
+ 
+        .activeField
+        {
+            background-image: none;
+            background-color: #ffffff;
+            border: solid 1px #33677F;
+        }
+        .idle
+        {
+	    border: solid 1px #85b1de;
+	    background-image: url( 'blue_bg.png' );
+	    background-repeat: repeat-x;
+	    background-position: top;
+        }

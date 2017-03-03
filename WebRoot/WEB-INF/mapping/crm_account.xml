@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GBK"?>
+ <ucap-mapping>
+  <class  name="com.linewell.crm.account.CrmAccount" table="crm_account" title="客户">
+<id>
+<property column="account_id" name="id" title="客户标识" type="String"/>
+</id>
+<property column="account_id" name="id" title="客户标识" type="String"/>
+<property column="account_name" name="name" title="客户名" type="String"/>
+<property column="account_hoder" name="hoder" title="客户所有人" type="String"/>
+<property column="account_address" name="address" title="客户地点" type="String"/>
+<property column="account_punid" name="punid" title="父级客户" type="String"/>
+<property column="account_number" name="number" title="客户编号" type="String"/>
+<property column="account_type" name="type" title="类型" type="String"/>
+<property column="account_industry" name="industry" title="行业" type="String"/>
+<property column="account_earning" name="earning" title="年收入" type="String"/>
+<property column="account_grade" name="grade" title="分级" type="String"/>
+<property column="account_tel" name="tel" title="电话" type="String"/>
+<property column="account_fax" name="fax" title="传真" type="String"/>
+<property column="account_weburl" name="weburl" title="网址" type="String"/>
+<property column="account_code" name="code" title="公司股票代码" type="String"/>
+<property column="account_fee" name="fee" title="所有权" type="String"/>
+<property column="account_staff_count" name="staffCount" title="职员数" type="int"/>
+<property column="account_industry_code" name="industryCode" title="标准行业分类代码" type="String"/>
+<property column="account_kd_country" name="kdCountry" title="开单地址-国家/地区" type="String"/>
+<property column="account_kd_postcode" name="kdPostcode" title="开单地址-邮政编码" type="String"/>
+<property column="account_kd_state" name="kdState" title="开单地址-州/省" type="String"/>
+<property column="account_kd_city" name="kdCity" title="开单地址-城市" type="String"/>
+<property column="account_kd_street" name="kdStreet" title="开单地址-街道" type="String"/>
+<property column="account_fh_country" name="fhCountry" title="发货地址-国家/地区" type="String"/>
+<property column="account_fh_postcode" name="fhPostcode" title="发货地址-邮政编码" type="String"/>
+<property column="account_fh_state" name="fhState" title="发货地址-州/省" type="String"/>
+<property column="account_fh_city" name="fhCity" title="发货地址-城市" type="String"/>
+<property column="account_fh_street" name="fhStreet" title="发货地址-街道" type="String"/>
+<property column="account_description" name="description" title="描述" type="String"/>
+  </class>
+ </ucap-mapping>

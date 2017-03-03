@@ -1,0 +1,10 @@
+
+#*取得[市长]，用于index.html文件*#
+#set( $szunid="FD3B7AA9123D22BD5BA63B7DF3A68DDA")
+#set( $articlelist_sz = $list.getList("cate",${szunid},1,10,"yyyy-MM-dd") )
+
+#*取得[市长]，用于index.html文件*#
+#set( $fszunid="D3A1AF9F46FB23ADDD45C5EE6CD551B2")
+#set( $articlelist_fsz = $list.getList("cate",${fszunid},0,10,"yyyy-MM-dd") )
+
+

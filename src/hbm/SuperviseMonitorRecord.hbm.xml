@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.monitor.SuperviseMonitorRecord" table="SUPERVISE_MONITOR_RECORD">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="CASESN" name="casesn" type="string"/>
+<property column="SUPERVISEOBJ" name="superviseobj" type="string"/>
+<property column="INTRO" name="intro" type="string"/>
+<property column="TYPE" name="type" type="string"/>
+<property column="STEP" name="step" type="string"/>
+<property column="SUPERVISEWAY" name="superviseway" type="string"/>
+<property column="SUPERVISETYPE" name="supervisetype" type="string"/>
+<property column="SUPERVISESTATUS" name="supervisestatus" type="string"/>
+<property column="SUPERVISETIME" name="supervisetime" type="string"/>
+<property column="REMARK" name="remark" type="string"/>
+<property column="ISNEW" name="isnew" type="string"/>
+</class>
+</hibernate-mapping>

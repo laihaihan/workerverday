@@ -1,0 +1,598 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace ns "http://dockable.goozo.net";
+
+@namespace controls "flexlib.controls.*";
+@namespace containers "flexlib.containers.*";
+@namespace cl "flexlib.controls.tabBarClasses.*";
+
+
+/***************** 全局样式 *****************/
+global{
+	fontSize:12;
+	horizontalGap:3;
+	fontFamily:Arial,宋体;
+	verticalGap:3;
+	chrome-color: #C1D7ED;
+}
+
+/* 全局提示文字*/
+mx|ToolTip{
+	
+	fontSize:12;
+}
+
+/* 全局错误提示文字*/
+.errorTip {
+	fontSize: 12;
+	fontWeight: normal;
+}
+
+
+
+/*工具栏按钮*/
+.toolBarButton {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('ButtonBarDown.png');
+	overSkin:Embed('ButtonBarOver.png');
+	disabledSkin:Embed('ButtonBarUp.png');
+	disabledColor:#555555;	
+	paddingTop:2;
+	textAlign:left;
+}
+
+/*布局按钮*/
+.layoutButton {
+	
+	upSkin:Embed('blank.png');
+	overSkin:Embed('layoutBtnOver.png');
+	downSkin:Embed('layoutBtnDown.png');
+	disabledSkin:Embed('blank.png');
+	disabledColor:#555555;	
+	horizontalAlign:center;
+	verticalAlign:middle;
+	paddingTop:2;
+}
+
+.roundedTextInput{
+	
+	borderStyle: solid; 
+	borderThickness: 0; 
+	cornerRadius: 4; 
+	
+}
+	
+
+
+
+/*帮助按钮*/
+.help {
+	
+	upSkin:Embed('blank.png');
+	downSkin:Embed('fileButtonDown.png');
+	overSkin:Embed('fileButtonOver.png');
+	color:#174574;
+	disabledSkin:Embed('blank.png');
+	disabledColor:#555555;	
+	icon:Embed('helpIcon.png');
+}
+
+/*菜单按钮*/
+.menu {	
+	upSkin:Embed('menuUp.png');
+	downSkin:Embed('menuDown.png');
+	overSkin:Embed('menuOver.png');
+	
+	selectedUpSkin:Embed('menuDown.png');
+	selectedDownSkin:Embed('menuDown.png');
+	selectedOverSkin:Embed('menuDown.png');
+	
+	
+	color:#174574;
+	disabledSkin:Embed('blank.png');
+}
+
+/*菜单子按钮*/
+.menuItem {	
+	textAlign:left;
+	upSkin:Embed('blank.png');
+	downSkin:Embed('menuItemDown.png');
+	overSkin:Embed('menuItemOver.png');
+	
+	
+	selectedUpSkin:Embed('blank.png');
+	selectedDownSkin:Embed('menuItemDown.png');
+	selectedOverSkin:Embed('menuItemOver.png');
+	
+	icon:Embed('menuCheckboxUnchecked.png');
+	
+	selectedUpIcon:Embed('menuCheckboxChecked.png');
+	selectedDownIcon:Embed('menuCheckboxChecked.png');
+	selectedOverIcon:Embed('menuCheckboxChecked.png');
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('checkboxUncheckedDis.png');
+	
+	
+	color:#333333;
+	disabledSkin:Embed('blank.png');
+	disabledColor:#555555;
+	horizontalGap:6;
+}
+
+.toolBar{
+	backgroundImage:Embed('toolbar.jpg');
+	color: #FFFF00;
+	
+}
+
+/*文件操作按钮*/
+.fileButton {
+	
+	upSkin:Embed('blank.png');
+	downSkin:Embed('fileButtonDown.png');
+	overSkin:Embed('fileButtonOver.png');
+	disabledSkin:Embed('blank.png');
+	disabledColor:#555555;	
+}
+
+/*文件操作按钮 短 32宽 28高*/
+.fileButtonShort {	
+	upSkin:Embed('blank.png');
+	downSkin:Embed('fileButtonShortDown.png');
+	overSkin:Embed('fileButtonShortOver.png');
+	disabledSkin:Embed('blank.png');
+	disabledColor:#555555;	
+}
+
+
+/*文件操作按钮 长 92宽 28高*/
+.fileButtonLong {	
+	upSkin:Embed('blank.png');
+	downSkin:Embed('fileButtonLongDown.png');
+	overSkin:Embed('fileButtonLongOver.png');
+	disabledSkin:Embed('blank.png');
+	disabledColor:#555555;	
+}
+
+/*页脚按钮*/
+.footerButton {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('FooterBtnDown.png');
+	overSkin:Embed('FooterBtnOver.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('FooterBtnDown.png');
+	selectedOverSkin:Embed('FooterBtnOver.png');
+
+	icon:Embed('checkboxUnchecked.png');
+	
+	selectedUpIcon:Embed('checkboxChecked.png');
+	selectedDownIcon:Embed('checkboxChecked.png');
+	selectedOverIcon:Embed('checkboxChecked.png');
+	paddingTop:0;
+	
+	paddingLeft:0;
+	paddingRight:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('checkboxUncheckedDis.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+
+
+/*页脚按钮  锁定*/
+.footerButtonLock {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('FooterBtnDown.png');
+	overSkin:Embed('FooterBtnOver.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('FooterBtnDown.png');
+	selectedOverSkin:Embed('FooterBtnOver.png');
+	
+	icon:Embed('lockOpen.png');
+	
+	selectedUpIcon:Embed('lockClosed.png');
+	selectedDownIcon:Embed('lockClosed.png');
+	selectedOverIcon:Embed('lockClosed.png');
+	paddingTop:0;
+	
+	paddingLeft:0;
+	paddingRight:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('lockClosed.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+/*页脚按钮  Show*/
+.footerButtonShow {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('FooterBtnDown.png');
+	overSkin:Embed('FooterBtnOver.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('FooterBtnDown.png');
+	selectedOverSkin:Embed('FooterBtnOver.png');
+	
+	icon:Embed('eyeNo.png');
+	
+	selectedUpIcon:Embed('eye.png');
+	selectedDownIcon:Embed('eye.png');
+	selectedOverIcon:Embed('eye.png');
+	paddingTop:0;
+	
+	paddingLeft:0;
+	paddingRight:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('eye.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+
+/*页脚按钮  页面属性*/
+.footerButtonPage {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('FooterBtnDown.png');
+	overSkin:Embed('FooterBtnOver.png');
+	
+	selectedUpSkin:Embed('FooterBtnDown.png');
+	selectedDownSkin:Embed('FooterBtnDown.png');
+	selectedOverSkin:Embed('FooterBtnOver.png');
+	
+	icon:Embed('pagePropertiesIcon.png');
+	
+	selectedUpIcon:Embed('pagePropertiesIcon.png');
+	selectedDownIcon:Embed('pagePropertiesIcon.png');
+	selectedOverIcon:Embed('pagePropertiesIcon.png');
+	paddingTop:0;
+	
+	paddingLeft:0;
+	paddingRight:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('pagePropertiesIcon.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+/*显示全部按钮*/
+.showAllButton {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('FooterBtnDown.png');
+	overSkin:Embed('FooterBtnOver.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('FooterBtnDown.png');
+	selectedOverSkin:Embed('FooterBtnOver.png');	
+	
+	icon:Embed('showFull.png');
+	
+	selectedUpIcon:Embed('showAll.png');
+	selectedDownIcon:Embed('showAll.png');
+	selectedOverIcon:Embed('showAll.png');
+	paddingTop:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('checkboxUncheckedDis.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+
+/*全屏显示按钮*/
+.fullScreenButton {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('FooterBtnDown.png');
+	overSkin:Embed('FooterBtnOver.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('FooterBtnDown.png');
+	selectedOverSkin:Embed('FooterBtnOver.png');
+	
+	icon:Embed('fullScreen.png');
+	
+	selectedUpIcon:Embed('fullScreenCancel.png');
+	selectedDownIcon:Embed('fullScreenCancel.png');
+	selectedOverIcon:Embed('fullScreenCancel.png');
+	paddingTop:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('checkboxUncheckedDis.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+/*空白按钮*/
+.blankButton {	
+	upSkin:Embed('blank.png');
+	downSkin:Embed('blank.png');
+	overSkin:Embed('blank.png');
+}
+
+/*放大按钮*/
+.enlargeButton {	
+	upSkin:Embed('enlarge.png');
+	downSkin:Embed('enlargeDown.png');
+	overSkin:Embed('enlargeOver.png');
+	disabledSkin:Embed('enlargeDis.png');
+}
+
+/*缩小按钮*/
+.narrowButton {	
+	upSkin:Embed('narrow.png');
+	downSkin:Embed('narrowDown.png');
+	overSkin:Embed('narrowOver.png');
+	disabledSkin:Embed('narrowDis.png');
+}
+
+
+.cvsSubjectBg{
+	backgroundImage:Embed('cvsBg.png');
+	backgroundImageFillMode:repeat;
+	background-size: "100%";
+}
+
+
+
+/*新增下拉*/
+.newExpand{
+	upSkin:Embed('saveExpandUp.png');
+	downSkin:Embed('saveExpandDown.png');
+	overSkin:Embed('saveExpandOver.png');
+	disabledSkin:Embed('saveExpandDisabled.png');
+	
+	selectedUpSkin:Embed('saveExpandDown.png');
+	selectedDownSkin:Embed('saveExpandDown.png');
+	selectedOverSkin:Embed('saveExpandDown.png');
+}
+
+
+/*******************************************************  多页签样式  ****************************************************/
+
+ns|DockablePanel
+{
+	backgroundColor: #b0cfea;
+	backgroundAlpha:0.4;
+	borderAlpha: 0.4;
+	borderColor: #E2E2E2;
+	borderThicknessBottom: 8;
+	borderThicknessLeft: 10;
+	borderThicknessRight: 10;
+	borderThicknessTop: 2;
+	cornerRadius: 4;
+	dropShadowEnabled: true;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	roundedBottomCorners: true;
+	statusStyleName: "windowStatus";
+	titleStyleName: "windowStyles";
+	headerHeight:0;
+	dropShadowVisible:true;
+	borderVisible:false;
+	
+}
+
+ns|FloatPanel {
+	backgroundColor: #b0cfea;
+	backgroundAlpha:0.4;
+	borderAlpha: 0.4;
+	borderColor: #E2E2E2;
+	borderThicknessBottom: 8;
+	borderThicknessLeft: 10;
+	borderThicknessRight: 10;
+	borderThicknessTop: 2;
+	cornerRadius: 4;
+	dropShadowEnabled: true;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	roundedBottomCorners: false;
+	statusStyleName: "windowStatus";
+	titleStyleName: "windowStyles";
+	headerHeight:25;
+	
+	resizeButtonOverSkin: Embed(source="ResizeButton.swf",symbol="ResizeButtonDown");
+	resizeButtonUpSkin: Embed(source="ResizeButton.swf",symbol="ResizeButtonUp");
+	resizeButtonDownSkin: Embed(source="ResizeButton.swf",symbol="ResizeButtonDown");
+	resizeButtonWidth: 7;
+	resizeButtonHeight: 7;
+	borderVisible:false;	
+}
+
+ns|DockableHDividedBox{
+	horizontalGap:3;
+	verticalGap:3;
+	borderVisible:false;
+}
+ns|DockableVDividedBox{
+	horizontalGap:3;
+	verticalGap:3;
+	borderVisible:false;
+}
+
+/*** 页签内容样式 ***/
+ns|DockableTabNavigator
+{
+	borderColor:#5e748a;
+	horizontalAlign: "left";
+	horizontalGap: -1;
+	paddingTop: 0;
+	tabOffset: 0;
+	borderVisible:true;
+}
+
+ns|DockHint {
+	hintSkin:ClassReference("net.goozo.mx.dockable.DockHint");
+	hintColorIn: #FFFF00;
+	hintColorOut: #FF0000;
+	hintAlpha: 0.3;
+	hintRadius: 4;
+	
+}
+
+
+
+/*页签页面样式*/
+containers|SuperTabNavigator{
+	paddingTop:1;
+	leftButtonStyleName:"leftButton";
+	rightButtonStyleName:"rightButton";
+	/*	popupButtonStyleName:"popupButton";*/
+}
+
+
+
+
+
+/*页签栏样式*/
+controls|SuperTabBar{
+	
+}
+
+/*页签栏感应区样式*/
+containers|ButtonScrollingCanvas{
+}
+
+/*页签样式*/
+cl|SuperTab{
+	paddingRight:10;	
+	tabCloseButtonStyleName:"tabCloseButton";
+	icon:Embed('tabIcon.png');
+}
+
+/*页签关闭按钮*/
+.tabCloseButton{
+}
+
+/*页签左移按钮*/
+.leftButton{
+}
+
+/*页签右移按钮*/
+.rightButton{
+	
+}
+/*页签下拉按钮*/
+.popupButton{	
+}
+
+
+
+
+
+
+/*向上顶按钮*/
+.topCloseButton {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('ButtonBarUp.png');
+	overSkin:Embed('ButtonBarUp.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('ButtonBarUp.png');
+	selectedOverSkin:Embed('ButtonBarUp.png');
+	
+	icon:Embed('topCloseN.png');
+	
+	selectedUpIcon:Embed('topCloseY.png');
+	selectedDownIcon:Embed('topCloseY.png');
+	selectedOverIcon:Embed('topCloseY.png');
+	paddingTop:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('checkboxUncheckedDis.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+/*向下顶按钮*/
+.bottomCloseButton {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('ButtonBarUp.png');
+	overSkin:Embed('ButtonBarUp.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('ButtonBarUp.png');
+	selectedOverSkin:Embed('ButtonBarUp.png');
+	
+	icon:Embed('bottomCloseN.png');
+	
+	selectedUpIcon:Embed('bottomCloseY.png');
+	selectedDownIcon:Embed('bottomCloseY.png');
+	selectedOverIcon:Embed('bottomCloseY.png');
+	paddingTop:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('checkboxUncheckedDis.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+
+/*向左顶按钮*/
+.leftCloseButton {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('ButtonBarUp.png');
+	overSkin:Embed('ButtonBarUp.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('ButtonBarUp.png');
+	selectedOverSkin:Embed('ButtonBarUp.png');
+	
+	icon:Embed('leftCloseN.png');
+	
+	selectedUpIcon:Embed('leftCloseY.png');
+	selectedDownIcon:Embed('leftCloseY.png');
+	selectedOverIcon:Embed('leftCloseY.png');
+	paddingTop:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('checkboxUncheckedDis.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}
+
+
+/*向右顶按钮*/
+.rightCloseButton {
+	
+	upSkin:Embed('ButtonBarUp.png');
+	downSkin:Embed('ButtonBarUp.png');
+	overSkin:Embed('ButtonBarUp.png');
+	
+	selectedUpSkin:Embed('ButtonBarUp.png');
+	selectedDownSkin:Embed('ButtonBarUp.png');
+	selectedOverSkin:Embed('ButtonBarUp.png');
+	
+	icon:Embed('rightCloseN.png');
+	
+	selectedUpIcon:Embed('rightCloseY.png');
+	selectedDownIcon:Embed('rightCloseY.png');
+	selectedOverIcon:Embed('rightCloseY.png');
+	paddingTop:0;
+	
+	selectedDisabledSkin:Embed('ButtonBarUp.png');
+	selectedDisabledIcon:Embed('checkboxUncheckedDis.png');
+	disabledColor:#555555;
+	disabledSkin:Embed('ButtonBarUp.png');
+}

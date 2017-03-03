@@ -1,0 +1,67 @@
+package $package$;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import com.linewell.ucap.action.base.ActionException;
+import com.linewell.ucap.db.JDBCTool;
+import com.linewell.ucap.jdbc.core.JdbcTemplate;
+import com.linewell.ucapx.redevelop.RedevelopException;
+import com.linewell.ucapx.redevelop.interfaces.IRedevelopAction;
+import com.linewell.ucap.session.Session;
+import com.linewell.ucapx.common.WebAppUtils;
+import com.linewell.ucapx.redevelop.web.manager.FormInterfaceManager;
+import com.linewell.ucapx.redevelop.web.manager.FormJsonBean;
+
+
+/**
+ * Action的功能逻辑调用
+ * 
+ * @author ucap@linewell.com
+ *
+ */
+public class $BeanName$Action implements IRedevelopAction{
+	
+	/**
+	 * 日志记录文件
+	 */
+	private static final Log log = LogFactory.getLog($BeanName$Action.class);
+	/**
+	 * 
+	 * @param request HttpServletRequest
+	 * @param response HttpServletResponse
+	 * @return  执行相应的逻辑
+	 * @throws ActionException 抛出的异常
+	 */
+	public Object execute(HttpServletRequest request,HttpServletResponse response) throws RedevelopException {
+	        
+	        FormJsonBean formJsonBean = FormInterfaceManager.getFormJsonBean(request);		
+		Session ucapSession = WebAppUtils.getSession(request);
+		
+		JdbcTemplate jt = JDBCTool.getAppDBTool(ucapSession);
+		try {
+			jt.open();
+			jt.setAutoCommit(false);
+			
+			//$BeanName$处理逻辑调用
+			$BeanName$Manager manager = new $BeanName$Manager();
+			manager.formJsonSaveAll(formJsonBean, ucapSession, jt);
+			
+			//进行事务性处理
+			jt.commit();
+			
+		} catch (Exception e) {
+			//回滚
+			jt.rollback();
+			log.error(e);
+		}finally{
+			jt.close();
+		}
+		
+		return null;
+	}
+		
+}

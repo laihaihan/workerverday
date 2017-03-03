@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="gb2312"?>
+<flow id="001C77D646124A25806F130000006C00" name="新流程" sort="" belongDept="" isSubFlow="0" useScope="" watchScope="" itemTitleName="" formid="E7A3DF2FFA2789CF50341D358E54B003">
+<nodes>
+<node
+ id="FC5190F3055B4473000025007B000B00"
+ name="开始"
+ formid=""
+ auditType=""
+ multipleParallel=""
+ transferAction="" nodeType="0" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<transitions>
+<transition id="FD7FBF283E8C439A0035254E2C00000A" transitionType="0" remark="">
+</transition>
+</transitions>
+<coordinate x="100" y="100"/>
+</node>
+<node
+ id="1B7F13471D434C510072000018000054"
+ name="结束"
+ formid=""
+ auditType=""
+ multipleParallel=""
+ transferAction="" nodeType="2" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<coordinate x="500" y="100"/>
+<actions>
+<action id="send" name="发送"></action>
+<action id="diffluence_send" name="分流发送"></action>
+<action id="node_call_back" name="本节点收回"></action>
+<action id="front_node_call_back" name="上一节点收回"></action>
+<action id="sub_flow_call_back" name="子流程收回"></action>
+<action id="send_sub_flow" name="发送子流程"></action>
+<action id="opinion" name="阅批意见"></action>
+<action id="read_over" name="阅批办理结束"></action>
+<action id="multitask_over" name="多人办理结束"></action>
+<action id="change_flow" name="更改流程"></action>
+</actions>
+</node>
+<node
+ id="FD7FBF283E8C439A0035254E2C00000A"
+ name="新建节点2"
+ formid=""
+ auditType="0"
+ multipleParallel="1"
+ transferAction="0" nodeType="1" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<transitions>
+<transition id="379255E15C504FE2004F1F49006D0067" transitionType="0" remark="">
+</transition>
+</transitions>
+<coordinate x="246" y="133"/>
+<participants>
+<participant participantType="0" name="" defaultParticipant="">457917F931B64E2A4A5D5090AEA1A854,1000D01F</participant></participants>
+<actions>
+<action id="send" name="发送"></action>
+<action id="diffluence_send" name="分流发送"></action>
+<action id="node_call_back" name="本节点收回"></action>
+<action id="front_node_call_back" name="上一节点收回"></action>
+<action id="sub_flow_call_back" name="子流程收回"></action>
+<action id="send_sub_flow" name="发送子流程"></action>
+<action id="opinion" name="阅批意见"></action>
+<action id="read_over" name="阅批办理结束"></action>
+<action id="multitask_over" name="多人办理结束"></action>
+<action id="change_flow" name="更改流程"></action>
+</actions>
+</node>
+<node
+ id="379255E15C504FE2004F1F49006D0067"
+ name="新建节点3"
+ formid=""
+ auditType="0,1,2,3,4"
+ multipleParallel="1"
+ transferAction="0" nodeType="1" convergePattern="" branchPattern="" transactorType="0" convergeNodeId="">
+<transitions>
+<transition id="1B7F13471D434C510072000018000054" transitionType="0" remark="">
+</transition>
+</transitions>
+<coordinate x="386" y="136"/>
+<participants>
+<participant participantType="0" name="" defaultParticipant="">1000D01F,F9782B25B83619742F6B86CF647972CA,457917F931B64E2A4A5D5090AEA1A854</participant></participants>
+<actions>
+<action id="send" name="发送"></action>
+<action id="diffluence_send" name="分流发送"></action>
+<action id="node_call_back" name="本节点收回"></action>
+<action id="front_node_call_back" name="上一节点收回"></action>
+<action id="sub_flow_call_back" name="子流程收回"></action>
+<action id="send_sub_flow" name="发送子流程"></action>
+<action id="opinion" name="阅批意见"></action>
+<action id="read_over" name="阅批办理结束"></action>
+<action id="multitask_over" name="多人办理结束"></action>
+<action id="change_flow" name="更改流程"></action>
+</actions>
+</node>
+</nodes>
+</flow>

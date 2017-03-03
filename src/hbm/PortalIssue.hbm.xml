@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.portal.issue.PortalIssue" table="PTL_ISSUE">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="SUBJECT" name="subject" type="string"/>
+<property column="CONTENT" name="content" type="string"/>
+<property column="TYPE" name="type" type="string"/>
+<property column="PUBLISH" name="publish" type="string"/>
+<property column="ISSUEPEOPLE" name="issuepeople" type="string"/>
+<property column="ISSUETIME" name="issuetime" type="string"/>
+<property column="EMAIL" name="email" type="string"/>
+<property column="CONTACTPHONE" name="contactphone" type="string"/>
+<property column="REPLYSTATE" name="replystate" type="string"/>
+<property column="REPLYPEOPLE" name="replypeople" type="string"/>
+<property column="REPLYPEOPLEUNID" name="replypeopleunid" type="string"/>
+<property column="REPLYDEPT" name="replydept" type="string"/>
+<property column="REPLYDEPTUNID" name="replydeptunid" type="string"/>
+<property column="REPLYCONTENT" name="replycontent" type="string"/>
+<property column="REPLYTIME" name="replytime" type="string"/>
+<property column="SENDDEPT" name="senddept" type="string"/>
+<property column="SENDDEPTUNID" name="senddeptunid" type="string"/>
+<property column="HANDLETERM" name="handleterm" type="string"/>
+<property column="HANDLETYPE" name="handletype" type="string"/>
+<property column="ACCEPTDEPT" name="acceptdept" type="string"/>
+<property column="ACCEPTDEPTUNID" name="acceptdeptunid" type="string"/>
+<property column="SENDTIME" name="sendtime" type="string"/>
+<property column="ENDTIME" name="endtime" type="string"/>
+<property column="SENDREASON" name="sendreason" type="string"/>
+<property column="DROPREASON" name="dropreason" type="string"/>
+<property column="DROPTIME" name="droptime" type="string"/>
+<property column="SENDTOPUBLICDEPTNAME" name="sendtopublicdeptname" type="string"/>
+<property column="SENDTOPUBLICDEPTUNID" name="sendtopublicdeptunid" type="string"/>
+<property column="SENDTOPUBLICREASON" name="sendtopublicreason" type="string"/>
+<property column="SENDTOPUBLICTIME" name="sendtopublictime" type="string"/>
+<property column="CODE" name="code" type="string"/>
+<property column="REPLYACCEPTTYPE" name="replyaccepttype" type="string"/>
+<property column="ISACCEPTREPLY" name="isacceptreply" type="string"/>
+<property column="ISCOMMONQUESTION" name="iscommonquestion" type="string"/>
+<property column="REMOTEADDR" name="remoteaddr" type="string"/>
+</class>
+</hibernate-mapping>

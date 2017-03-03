@@ -1,0 +1,10 @@
+-- Add/modify columns 
+alter table CORE_BUILDERMODULE_INFO add TABLENAME VARCHAR2(50);
+-- Add comments to the columns 
+comment on column CORE_BUILDERMODULE_INFO.TABLENAME
+  is '����';
+  
+--视图表添加区分SQL语句复杂度字段
+alter table core_view add(VIEW_SQL_TYPE varchar2(1))
+comment on column core_view.VIEW_SQL_TYPE is 'sql语句复杂度{0:简单(单表);1:复杂(多表)}'
+  

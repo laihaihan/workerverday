@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<doc>
+<action name="发送" type="1" id="send" funcType="1" picture="">ucapFlowFun.sendFlow(1);</action>
+<action name="分流发送" type="1" id="diffluence_send" funcType="1" picture="">ucapFlowFun.sendFlow(2);</action>
+<action name="退回" type="1" id="untread" funcType="0" picture="">ucapFlowFun.sendFlow("5","1");</action>
+<action name="退回上一节点" type="1" id="untread_front_node" funcType="0" picture="">ucapFlowFun.completeFlow(6,98,"退回上一节点")</action>
+<action name="本节点收回" type="1" id="node_call_back" funcType="1" picture="">ucapFlowFun.completeFlow(2);</action>
+<action name="撤办" type="1" id="front_node_call_back" funcType="0" picture="">ucapFlowFun.completeFlow(1);</action>
+<action name="子流程收回" type="1" id="sub_flow_call_back" funcType="0" picture="">ucapFlowFun.completeFlow(5);</action>
+<action name="收回转办" type="1" id="trans_call_back" funcType="0" picture="">ucapFlowFun.completeFlow(9);</action>
+<action name="发送子流程" type="1" id="send_sub_flow" funcType="1" picture="">ucapFlowFun.sendFlow(3);</action>
+<action name="转办" type="1" id="transfer" funcType="0" picture="">ucapFlowFun.sendFlow("6");</action>
+<action name="阅批意见" type="1" id="opinion" funcType="0" picture="">功能内容</action>
+<action name="阅批办理结束" type="1" id="read_over" funcType="0" picture="">ucapFlowFun.completeFlow(3);</action>
+<action name="多人办理结束" type="1" id="multitask_over" funcType="0" picture="">ucapFlowFun.completeFlow(0);</action>
+<action name="更改流程" type="" id="change_flow" funcType="0" picture="">ucapFlowFun.sendFlow(4);</action>
+<action name="子流程退回" type="2" id="untread_sub_flow" funcType="0" picture="">ucapFlowFun.completeFlow(8,95,"子流程退回");</action>
+<action name="挂起流程" type="1" id="wait_flow" funcType="0" picture="">ucapFlowFun.waitFlow(10);</action>
+<action name="恢复流程" type="1" id="resume_flow" funcType="0" picture="">ucapFlowFun.waitFlow(11);</action>
+<action name="转办返回办理人" type="1" id="transfer_back" funcType="0" picture="">ucapFlowFun.completeFlow(12);</action>
+</doc>

@@ -1,0 +1,187 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+#parse("www.fjfa.gov.cn/vmlib/zwgk_leaderdoc.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中国福安-${msg.title}</title>
+<link href="../../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+ <script language="javascript" type="text/javascript"> 
+function getCount(unid,type){
+try{
+var url="../../${tomcatroot}/${cmsWebapp}/views/views.jsp?type="+type+"&unid="+unid;
+var xmlhttp;
+if(window.ActiveXObject)
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if(window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+
+		   xmlhttp.Open("get", url, false);
+    	   xmlhttp.Send(null); 
+		   var resultvalue=xmlhttp.responseText;
+		   //ret=resultvalue; 
+         document.all.browse.innerHTML=resultvalue;
+}catch(e){
+}
+}
+</script>
+<SCRIPT language=javascript type=text/javascript>
+	function doZoom(size){ 
+	document.getElementById('zoom').style.fontSize=size+'px' 
+} 
+</SCRIPT>
+<body onload="getCount('${msg.unid}','document')">
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+<!--DWLayoutTable-->
+   #parse("www.fjfa.gov.cn/topAndButton/document_top.html")
+  <tr><td><table width="1000" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <!--DWLayoutTable-->
+  
+  <tr>
+    <td width="1000" height="40" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <td height="40" colspan="2" align="center" bgcolor="#eff9fd" class="art_border"><img src="../../images/ind_l_4.jpg" width="17" height="17" /></td>
+	  #set( $nav =$list.getNavBar(${msg.cateunid},"&nbsp;-&gt;&nbsp;"))
+          <td width="954" bgcolor="#eff9fd" class="art_border"> 当前位置：$nav</td>
+    </table></td>
+  </tr>
+  <tr><td height="12"></td>
+    </tr>
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="721" valign="top" background="../../images/sc_bg2.jpg" style="background-repeat:no-repeat"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="157" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="158" height="170" align="center"><img src="${siteoutputpath}/${msg.photo}" width="115" height="145" /></td>
+                        </tr>
+              <tr>
+                <td height="41" align="center"><p class="bold">${msg.keyword}</p></td>
+                        </tr>
+              <tr>
+                <td></td>
+                        </tr>
+            </table></td>
+                    <td width="564" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <!--DWLayoutTable-->
+                        <tr>
+                          <td width="11" height="30" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                          <td colspan="2"> <img src="../../images/fz_ic1.gif" width="13" height="13" /><span class="bold" style="color:#f90"> 简介</span></td>
+                        </tr>
+                        <tr>
+                          <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                          <td width="546" valign="top" class="intro_cont">
+						  ${msg.intro}
+						  </td>
+                        <td width="7" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                        </tr>
+                        
+                        <tr>
+                          <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                          <td colspan="2"> <img src="../../images/fz_ic1.gif" width="13" height="13" /> <span class="bold" style="color:#f90">分工</span></td>
+                        </tr>
+                        <tr>
+                          <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                          <td colspan="2" valign="top"><p class="intro_cont">
+						  ${msg.content}
+						  </p>                          </td>
+                        </tr>
+                    </table></td>
+                  </tr>
+        </table></td>
+            <td width="279" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="9" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td width="270" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f4fcfe">
+                    <!--DWLayoutTable-->
+                    <tr>
+                      <td width="270" height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <!--DWLayoutTable-->
+                        <tr>
+                          <td width="136" height="25" align="center" background="../../images/active_07.jpg" class="ac_rig_title">领导介绍</td>
+                                <td width="136" align="right" valign="top" background="../../images/active_08.jpg"><a href="#"></a>&nbsp;</td>
+                              </tr>
+                        
+                        </table></td>
+                        </tr>
+                    
+                    <tr>
+                      <td valign="top" class="ac_rig_border"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f4fcfe" >
+                        <!--DWLayoutTable-->
+                        <tr>
+                          <td width="16" height="12" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td colspan="2" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                              <tr>
+                                <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td colspan="2" valign="top"><span class="bold"><img src="../../images/contact_icon.jpg" width="9" height="9" /> 市长：</span></td>                  
+                              <tr>
+                                <td height="14" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td colspan="2" valign="top"><img src="../../images/online_left_line_16_16.jpg" width="191" height="3" /></td>
+                              <tr>
+                                <td height="32" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td colspan="2" valign="top"> &nbsp;&nbsp;
+								#foreach($article in $articlelist_sz)
+								<a href="${siteDomain}/${article.path}" title="${article.fullTitle}" >${article.title}</a>
+							    #end 
+								</td>                              
+                          <tr>
+                            <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td colspan="2" valign="top"><span class="bold"><img src="../../images/contact_icon.jpg" width="9" height="9" /> 副市长：</span></td>                              
+                          <tr>
+                            <td height="14" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                  <td colspan="2" valign="top"><img src="../../images/online_left_line_16_16.jpg" width="191" height="3" /></td>
+								  
+								  			  #set( $col = 2)
+											  #set ($articlecount=0)
+											  #set( $flag = 0 ) ##每一列的标记
+											  #foreach($article in $articlelist_fsz)
+											  	  #set ($articlecount=$articlecount+1)
+											 	  #set( $flag= $flag +1 )
+				      							  #if($flag==1)
+												   <tr>
+                                					<td height="32" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+												  #end
+												   <td width="125" valign="top">&nbsp;&nbsp; <a href="${siteDomain}/${article.path}" title="${article.fullTitle}">
+												${article.title}</a></td>  
+												  #if($articlecount % $col==0)
+												  #set( $flag = 0 )
+												  </tr>
+												  #end
+											   #end 
+												  
+												  #if($articlecount%$col!=0)
+													#set( $other = $articlecount%$col)
+												   #foreach($td in [$other..$col])
+												   <td>&nbsp;</td>
+												   #end
+												  </tr>
+												  #end
+                        </table></td>
+                        </tr>
+                    <tr>
+                      <td height="71" align="center"><img src="../../images/active_q39.jpg" width="180" height="48" /></td>
+                    </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+        </tr>
+    </table></td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+   #parse("www.fjfa.gov.cn/topAndButton/document_buttom.html")
+</table>
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+<tr>
+    <td height="145" >
+<table width="1000px" border="0" cellpadding="0" cellspacing="0" align="center">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="1000" height="34" valign="top">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/index_146.jpg">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="157" height="34" valign="top"></td>
+		#set( $count =1)
+		#foreach($linkcate in $link_cate)
+		#if($count==1)
+		 <td width="120" id="tab_44_${count}" class="dh_tab1" onmouseover="tabFun('tab_44',this,'dh_tab1','dh_tab2');return false;">${linkcate.name}</td>
+		#else
+		 <td width="120" id="tab_44_${count}" class="dh_tab2" onmouseover="tabFun('tab_44',this,'dh_tab1','dh_tab2');return false;">${linkcate.name}</td>
+		#end
+		#set( $count =$count +1)
+		#end
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+  			  #set( $col = 8)
+			  #set ($catecount=0)
+ 			  #foreach($linkcate in $link_cate)
+			  #set ($catecount=$catecount+1)
+			  #set( $linkcount = 0 ) ##计算总数
+              #set( $flag = 0 ) ##每一列的标记 
+			  #if($catecount==1)  
+    		<td height="111" valign="top" id="tab_44_${catecount}_c">
+			  #else
+			<td height="111" valign="top" id="tab_44_${catecount}_c" style="display:none;">
+			  #end
+	<table width="100%"  height="111" border="0" cellpadding="0" cellspacing="0"  class="cont_tab1">
+			  #set( $linklist = $list.getLinkList(${linkcate.unid},"text","-1","") )
+              #if( $linklist )
+				  #foreach($link in $linklist)
+				      #set ( $linkcount = $linkcount + 1 )
+					  #set( $flag= $flag +1 )
+				      #if($flag==1)
+					  <tr>
+					  <td width="47" height="28" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+					  #end
+					  <td  width="150" valign="middle"><a href="${link.url}" title="${link.name}" target="_blank">${link.name}</a></td>
+					  #if($linkcount % $col==0)
+					  #set( $flag = 0 )
+					  </tr>
+					  #end ##end if($linkcount % $col==0)
+					  
+					  #end  ##end foreach($link...)
+					  
+			#end  ##end if( $linkOfficesNav )
+		      
+		      #if($linkcount%$col!=0)
+		      	#set( $other = $linkcount%$col)
+			   #foreach($td in [$other..$col])
+			   <td>&nbsp;</td>
+			   #end
+		      </tr>
+              #end
+			  </table></td>
+			  #end
+  </tr>
+</table>
+	</td>
+  </tr>

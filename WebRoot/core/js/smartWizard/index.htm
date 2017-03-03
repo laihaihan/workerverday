@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Smart Wizard 2 - Basic Example - a javascript jQuery wizard control plugin</title>
+		<link href="styles/smart_wizard.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.smartWizard-2.0.js"></script>
+		<script type="text/javascript">
+		    $(document).ready(function(){
+		    	// Smart Wizard 	
+		  		$('#wizard').smartWizard();
+			});
+		</script>
+	</head>
+	<body>
+		<table align="center" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<!-- Smart Wizard -->
+					<div id="wizard" class="swMain">
+						<ul>
+							<li>
+								<a href="#step-1"> 
+									<label class="stepNumber">1</label> 
+									<span class="stepDesc"> 
+										步骤一 <br /> <small>填写职权基本信息</small>
+									</span> 
+								</a>
+							</li>
+							<li>
+								<a href="#step-2"> 
+									<label class="stepNumber">2</label> 
+									<span class="stepDesc"> 
+										步骤二<br /> <small>设置法律依据</small>
+									</span> 
+								</a>
+							</li>
+							<li>
+								<a href="#step-3"> 
+									<label class="stepNumber">3</label> 
+									<span class="stepDesc"> 
+										步骤三<br /> <small>规则配置</small>
+									</span> 
+								</a>
+							</li>
+							<li>
+								<a href="#step-4"> 
+									<label class="stepNumber">4</label> 
+									<span class="stepDesc"> 
+										步骤四<br /> <small>流程配置</small>
+									</span> 
+								</a>
+							</li>
+							<li>
+								<a href="#step-5"> 
+									<label class="stepNumber">5</label> 
+									<span class="stepDesc"> 
+										步骤四<br /> <small>流程配置</small>
+									</span> 
+								</a>
+							</li>
+						</ul>
+						<div id="step-1">
+							<table align="center">
+								<col width="150" align="right" style="background: #eafdfc">
+								<col width="240" align="left">
+								<col width="150" align="right" style="background: #eafdfc">
+								<col width="240" align="left">
+								<tr>
+									<th>
+										<font color="red">*</font>权力名称：
+									</th>
+									<td colspan="3">
+										<input type="text" name="name" id="name" style="width:90%"
+											value="" />
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<font color="red">*</font>执法机关：
+									</th>
+									<td colspan="3">
+										<input type="text" name="dept_name" id="dept_name"
+											style="width:30%" readonly value="" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div id="step-2">
+							<h2 class="StepTitle">
+								Step 2 Title
+							</h2>
+							<p>
+								Step 2 Content
+							</p>
+						</div>
+						<div id="step-3">
+							<h2 class="StepTitle">
+								Step 3 Title
+							</h2>
+							<p>
+								Step 3 Content
+							</p>
+						</div>
+						<div id="step-4">
+							<h2 class="StepTitle">
+								Step 4 Title
+							</h2>
+							<p>
+								Step 4 Content
+							</p>
+						</div>
+						<div id="step-5">
+							<h2 class="StepTitle">
+								Step 5 Title
+							</h2>
+							<p>
+								Step 5 Content
+							</p>
+						</div>
+					</div>
+					<!-- End SmartWizard Content -->
+
+				</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

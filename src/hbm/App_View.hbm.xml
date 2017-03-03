@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.linewell.view.cfg.appview.AppView" table="APP_VIEW">
+        <id column="VIEW_UNID" name="viewUnid" type="string">
+            <generator class="assigned"/>
+        </id>    
+        <property column="VIEW_NAME"  name="viewName" type="string"/>   
+        <property column="VIEW_ALIAS"  name="viewAlias" type="string"/>   
+        <property column="VIEW_JNDI"  name="viewJndi" type="string"/>   
+        <property column="VIEW_TYPE"  name="viewType" type="string"/>   
+        <property column="VIEW_SHOW_TYPE"  name="viewShowType" type="string"/>   
+        <property column="VIEW_PAGE_SIZE"  name="viewPageSize" type="string"/>   
+        <property column="VIEW_SOURCE_TYPE"  name="viewSourceType" type="string"/>   
+        <property column="VIEW_CUSTOM"  name="viewCustom" type="string"/>   
+        <property column="VIEW_SQL"  name="viewSql" type="string"/>   
+        <property column="VIEW_OPEN_TYPE"  name="viewOpenType" type="string"/>   
+        <property column="VIEW_OPEN_CONTENT"  name="viewOpenContent" type="string"/>   
+        <property column="VIEW_TREE_CLASS"  name="viewTreeClass" type="string"/>   
+        <property column="VIEW_PARAMS_CLASS"  name="viewParamsClass" type="string"/>   
+        <property column="VIEW_SEARCH_STYLE"  name="viewSearchStyle" type="string"/>   
+    </class>
+</hibernate-mapping>

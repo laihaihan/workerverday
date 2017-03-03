@@ -1,0 +1,283 @@
+package $package$;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import com.linewell.ucap.jdbc.core.JdbcTemplate;
+import com.linewell.ucapx.redevelop.codetool.util.BeanConverter;
+import com.linewell.ucapx.redevelop.codetool.util.ConverterException;
+import $package$.$BeanName$;
+
+
+/**
+ * 实现数据访问、插入、更新、删除等相关操作
+ * 
+ * @author ucap@linewell.com
+ */
+class $BeanName$DAO {
+	
+	/**
+	 * 日志记录文件
+	 */
+	private static final Log log = LogFactory.getLog($BeanName$DAO.class);	
+	
+	
+	/**
+	 * 根据标识从数据表中查询对象
+	 * 
+	 * @param unid 标识
+	 * 
+	 * @return 查询结果对象
+	 */
+	public  $BeanName$ get(String unid,JdbcTemplate jt){
+		
+		$BeanName$ obj = null;
+		
+		String sql = "select * from "+$BeanName$._UcapFormName+" where $unid$='"+unid+"'";
+		
+		try {
+			String[][] rs = jt.queryForArray(sql);
+			BeanConverter bc = new BeanConverter();
+			//调用通用的方法进行转换
+			obj =($BeanName$)bc.translateArrayToBean(rs, $BeanName$._UcapFormName);
+		} catch (SQLException e) {
+			log.error(e);
+		}catch (ConverterException e) {
+				log.error(e);
+				e.printStackTrace();
+			}
+		
+		return obj;
+	}
+	
+	/**
+	 * 根据外键查询获取对象列表
+	 * 
+	 * @param fkName 外键 String
+	 * 
+	 * @param mainUnid 对应主表的文档unid
+	 * 
+	 * @param jt 数据库连接对象 JdbcTemplate
+	 * 
+	 * @return 对象列表 List<Object>
+	 */
+	public  List<$BeanName$> getList(String fkName,String mainUnid,JdbcTemplate jt){
+		
+		List<$BeanName$> $beanName$List = null;
+		
+		String sql ="select * from  "+$BeanName$._UcapFormName+"  where "+fkName+"='"+mainUnid+"'";  //构造sql语句
+		
+		try {
+			String[][] rs = jt.queryForArray(sql);
+			BeanConverter bc = new BeanConverter();
+			//调用通用的方法进行转换
+			$beanName$List =(List<$BeanName$>)bc.translateArrayToBeanList(rs, $BeanName$._UcapFormName);
+			
+		} catch (SQLException e) {
+			log.error(e);
+		}catch (ConverterException e) {
+				log.error(e);
+				e.printStackTrace();
+			}
+		
+		return $beanName$List;
+	}
+	
+	/**
+	 * 实现对象的新增保存
+	 * 
+	 * @param bean 要保存的对象
+	 * 
+	 * @param jt 数据访问对象
+	 * 
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public  boolean save($BeanName$ bean,JdbcTemplate jt){
+		boolean result = true;
+		BeanConverter bc = new BeanConverter();
+		//调用一个通用方法把bean转换为sql语句
+		try {
+		String sql = bc.getInsertSql(bean);
+		
+		
+			int num = jt.execute(sql);
+			
+			result = true;
+		} catch (SQLException e) {
+			result = false;
+			
+			log.error(e);
+		}catch (ConverterException e) {
+				log.error(e);
+				e.printStackTrace();
+			}
+		
+		return result;
+	}
+	
+	/**
+	 * 实现对象的批量新增保存
+	 * @param beanList 对象列表
+	 * @param jt 数据库连接对象
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public  boolean saveList(List<$BeanName$> beanList,JdbcTemplate jt){
+		boolean result = true;
+		List<String> sqlList = new ArrayList<String>();
+		BeanConverter bc = new BeanConverter();
+		try {
+		if(null !=beanList && beanList.size()>0){
+			for(int i=0;i<beanList.size();i++){
+				//调用一个通用方法把对象列表转换为sql语句列表
+				sqlList.add(bc.getInsertSql(beanList.get(i)));
+			}
+			
+		}
+			int[] num = jt.batchUpdate(sqlList);
+			
+			result = true;
+		} catch (SQLException e) {
+			result = false;
+			
+			log.error(e);
+		}catch (ConverterException e) {
+			log.error(e);
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+
+	/**
+	 * 实现对象的更新保存
+	 * 
+	 * @param bean 要保存的对象
+	 * 
+	 * @param jt 数据访问对象
+	 * 
+	 * @return 根据操作结果返回成功与否
+	 */
+	public  boolean update($BeanName$ bean,JdbcTemplate jt){
+		boolean result = true;
+		BeanConverter bc = new BeanConverter();
+		//调用一个通用方法把bean转换为sql语句
+		try {
+		String sql = bc.getUpdateSql(bean);
+		
+		
+			int num = jt.execute(sql);
+			
+			result = true;
+		} catch (SQLException e) {
+			result = false;
+			
+			log.error(e);
+		}catch (ConverterException e1) {
+			e1.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 实现对象的批量更新保存
+	 * @param beanList 对象列表
+	 * @param jt 数据库连接对象
+	 * @return 根据操作结果返回成功与否 true/false
+	 */
+	public  boolean updateList(List<$BeanName$> beanList,JdbcTemplate jt){
+		boolean result = true;
+		List<String> sqlList = new ArrayList<String>();
+		BeanConverter bc = new BeanConverter();
+		try {
+		if(null !=beanList && beanList.size()>0){
+			for(int i=0;i<beanList.size();i++){
+				//调用一个通用方法把对象列表转换为sql语句列表
+				sqlList.add(bc.getUpdateSql(beanList.get(i)));
+			}
+			
+		}
+			int[] num = jt.batchUpdate(sqlList);
+			
+			result = true;
+		} catch (SQLException e) {
+			result = false;
+			
+			log.error(e);
+		}catch (ConverterException e) {
+			log.error(e);
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 根据标识删除数据
+	 * 
+	 * @param unid 标识
+	 * 
+	 * @param jt 数据访问对象
+	 * 
+	 * @return 操作结果
+	 */
+	public  boolean delete(String unid,JdbcTemplate jt){
+		boolean result = true;
+		// 本地构建好
+		String sql = "delete from   "+$BeanName$._UcapFormName+"  where $unid$ ='"+unid+"'";
+		
+		try {
+			int num = jt.execute(sql);
+			
+			result = true;
+		} catch (SQLException e) {
+			result = false;
+			
+			log.error(e);
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 根据多个标识删除数据
+	 * 
+	 * @param unid 标识
+	 * 
+	 * @param jt 数据访问对象
+	 * 
+	 * @return 操作结果
+	 */
+	public  boolean deleteList(String[] unids,JdbcTemplate jt){
+		boolean result = true;
+		//本地构建好
+		StringBuffer sb= new StringBuffer("delete from  "+$BeanName$._UcapFormName+"  where ");
+		if(unids !=null && unids.length>0){
+			for(int i=0;i<unids.length;i++){
+				String unid=unids[i];
+				if(i==unids.length-1){
+					sb.append( " $unid$ ='"+unid+"'");
+				}else{
+					sb.append( " $unid$ ='"+unid+"' or ");
+				}
+				
+			}
+			
+		}
+		try {
+			int num = jt.execute(sb.toString());
+			
+			result = true;
+		} catch (SQLException e) {
+			result = false;
+			
+			log.error(e);
+		}
+		
+		return result;
+	}
+
+}

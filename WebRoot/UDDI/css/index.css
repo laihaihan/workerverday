@@ -1,0 +1,155 @@
+@import url("common.css");
+@import url("commonImages.css");
+@import url("table.css");
+.header{
+	height:44px;
+	background:url(../images/headerBk.gif) repeat-x;
+}
+	.header .logo{
+		float:left;	
+		width:226px;
+		height:44px;
+		background:url(../images/logo.gif) no-repeat;
+	}
+	
+	.header .searchBox{
+		 float:right;
+		 width:300px;		 
+	}
+	.header .searchBox .searchTextBox{
+	   width:200px; 
+	   border:0 white solid;
+	   color:#8a8a8a;
+	   font-style:italic;
+	   margin-top:10px;
+	   height:20px;
+	   line-height:20px;
+	 }
+	 .header .searchBox .searchButton{
+	   margin-top:10px;	   
+     margin:0;
+     padding:0;
+	 }
+/**
+ * 内容区域
+ */
+.contentPlaceHolder{
+	border-width:1px;
+	text-align:left;
+	width:100%;
+	border-bottom-style:none;
+}
+
+
+.parameter{font-style:italic}
+  .paramDesc{margin-left:40px;}
+/**
+ * 导航
+ */
+.navigation{
+  border-right:1px Solid #E1DDDA;  
+  
+  margin-right:-1px;
+  float:left;
+  overflow:hidden;
+  width:280px;
+  vertical-align:top;
+  text-align:left;
+  padding-bottom:96px
+}
+  .nav{padding-top:5px;line-height:16px}
+  .nav .nav_currentroot{float:left;margin-left:13px;margin-right:5px;margin-top:7px}
+  .nav .nav_div_currentroot{overflow:hidden;white-space:nowrap;height:16px;line-height:16px}
+  .nav_root{float:left;margin-right:5px;margin-top:7px}
+  .nav_dots{float:left;margin-right:5px;margin-left:-2px}
+  .nav_arrows{float:left;margin-right:5px;margin-top:4px;margin-left:-1px}
+  .nav_dots_current{float:left;margin-left:14px;margin-right:5px}
+  .nav_currentroot{float:left;margin-left:13px;margin-right:5px;margin-top:7px}
+  .nav_div_currentroot{overflow:hidden;white-space:nowrap;height:16px}
+  .nav a{text-decoration:none;text-align:left;white-space:nowrap;overflow:hidden;padding-top:4pt;padding-bottom:4pt;}
+  .nav a:hover{text-decoration:underline;}
+  .nav a:visited{color:#960bb4;}
+  .nav .toclevel0{padding-left:13px}
+  .nav .toclevel0 .nav_dots{margin-left:1px;}
+  .nav .toclevel1{padding-left:16px}
+  .nav .toclevel2{padding-left:24px}
+  .nav .ancestry{}
+  .nav .current{white-space:nowrap;overflow:hidden;padding-left:0;height:16px}
+  .nav .current a{font-weight:bold;color:#e66a38}
+  .nav .children{padding-bottom:13px}
+  .nav .children div,.nav .current div,.nav .related div{height:16px;overflow:hidden;white-space:nowrap}
+  .nav .moreresource div{overflow:hidden;white-space:nowrap}
+  .nav .related{padding-top:5px;padding-left:13px;float:left}
+  .nav .related .subheader,.nav .moreresource .subheader{color:#3f529c;font-weight:bold;padding-bottom:5px}
+  .nav .moreresource .results{padding-left:23px}
+  .nav .navSeperator{height:5px;width:100%;float:left}
+  .searchBoxContainer{padding:0;border:none;margin:13px;width:256px;white-space:nowrap;height:23px;margin-bottom:0}
+  .searchBox{border:none;width:100%}
+  .searchBox td{border:none;padding:0;margin:0;height:21px}
+  .searchBox td.searchTextBoxTd{width:100%}
+  .searchBox td.searchButtonTd{width:19px;cursor:pointer}
+  .searchTextBox{width:100%;border:0 white solid;color:#8a8a8a;font-style:italic}
+  .searchTextBoxTrue{width:100%;border:1px white solid;color:#000;font-style:normal}
+  
+  
+
+/*
+ * 内容
+ */
+.content{
+	padding-top:13px;
+	text-align:left;
+	border-width:1px;
+	overflow:auto;
+	width:auto;
+	border-left:1px solid #E1DDDA;
+	border-bottom:0;
+}
+  .content .summary{color:#000}
+  .content .topicContainer{padding-left:13px;padding-right:13px;padding-bottom:96px;}
+  .LW_CollapsibleArea_Title{font-size:1.538em;color:#3f529c;font-weight:bold;word-break:break-all;word-wrap:break-word;padding-left:6px}
+  .LW_CollapsibleArea_HrDiv{padding-top:12px}
+  .LW_CollapsibleArea_TitleAhref{cursor:hand;outline:none;float:left;}
+  .LW_CollapsibleArea_TitleDiv{margin-top:19px;margin-bottom:19px}
+  .LW_CollapsibleArea_TitleDiv a{text-decoration:none;}
+  .LW_CollapsibleArea_TitleDiv a:hover{color:#1364c4;text-decoration:none}
+  .LW_CollapsibleArea_Img{border-right-width:0;border-top-width:0;border-bottom-width:0;vertical-align:middle;border-left-width:0}
+  .LW_CollapsibleArea_HrDiv{padding-top:12px}
+  .LW_CollapsibleArea_Hr{border-bottom:#e5e5e5 1px solid;border-top:none;border-right:none;color:#e5e5e5;margin-left:4px}
+  .sectionblock{padding-left:15px;display:block;clear:both}
+    .sectionblock td{padding:10px;}
+  .pageTitle{position:relative;}
+
+/*页脚样式 begin*/
+.footer{
+	/*margin-top:10px;*/
+  float:none;
+  clear:both;
+  
+  /*position: absolute;
+  left:0px;
+  bottom: 0px;
+  width:100%;*/
+}
+.footerContainer{
+  margin:0;
+  padding-left:0;
+  padding-right:0;
+  border-top-width:1px;
+  border-top-color:#E1DDDA;
+  border-top-style:solid;
+  
+  border-bottom-width:1px;
+  border-bottom-color:#E1DDDA;
+  border-bottom-style:solid;
+  
+  color:#999999;
+  font-size:12px;
+  text-align:center;
+  line-height:25px;
+  background-color:#FBFBFB;
+  
+  
+  
+}
+/*页脚样式 end*/

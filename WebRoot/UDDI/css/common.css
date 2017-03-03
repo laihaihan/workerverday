@@ -1,0 +1,45 @@
+*{ margin:0; padding:0; word-break: break-all;}
+
+.h1,h1{font-size:1.769em;color:#3f529c;font-weight:bold;}
+.h2,h2{font-size:1.538em;color:#3f529c;font-weight:bold;}
+.h3,h3{font-family:'Segoe UI',Verdana,Arial;font-size:1.077em;color:#3f529c;font-weight:bold}
+.h4,h4{font-family:'Segoe UI',Verdana,Arial;font-size:1em;color:#3f529c;font-weight:bold}
+
+/*系统标签样式 begin*/
+body {	
+	margin: 0;
+	padding: 0;	
+	scrolling:auto;
+}
+
+body{font-family:Verdana;font-size:12px;line-height:200%;}
+p{line-height:200%;}
+img{border:0}
+body a{text-decoration:none;line-height:100%;}
+body a:hover{text-decoration:underline}
+button{padding:0 5px;height:30px;margin:0;}
+/*定义区域块 begin*/
+.clip3x3,.clip5x9,.clip6x20,.clip6x22,.clip9x8,.clip10x10,.clip10x46,.clip13x9,.clip19x19,.clip20x21,.clip25x25,.clip117x31,.clip269x23{position:relative;overflow:hidden;}
+.clip3x3{width:3px;height:3px;}
+.clip5x9{width:5px;height:9px;}
+.clip13x9{width:13px;height:9px;}
+/*定义区域块 end*/
+
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/*ie6 bug*/
+*html .clearfix {
+	height: 1%;
+}
+/*ie bug*/
+*+html .clearfix {
+	height: 1%;
+}
+/*系统标签样式 begin*/
+

@@ -1,0 +1,771 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>$!{pagetitle}</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"> 
+function tabFun(tabName,own,avCss,unCss){
+	for(var i=1;i<20;i++){
+		if(document.getElementById(tabName+"_"+i)){
+		document.getElementById(tabName+"_"+i).className=unCss;	
+		var con=document.getElementById(tabName+"_"+i+"_c");
+		if(con)con.style.display="none";
+		}else break;
+	}
+	own.className=avCss;
+	var con=document.getElementById(own.id+"_c");
+	if(con)con.style.display="block";
+}
+</script>
+</head>  
+
+<body>
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+ <!--DWLayoutTable-->
+  <tr>
+   #parse("www.fjfa.gov.cn/topAndButton/top.html")  
+  </tr>
+  <tr><td><table width="1000" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">   
+    <tr>
+    <td height="664" valign="top"><table width="1000px" border="0" cellpadding="0" cellspacing="0" align="center">
+      <!--DWLayoutTable-->
+      <tr>
+        <td height="52" colspan="5" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/online_top_02.jpg" style="background-repeat:no-repeat" align="center">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="156" height="32" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+              <td width="844" valign="bottom">&nbsp;&nbsp;&nbsp;
+				#*取得[在线办事]栏目名称，用于XXXX.html文件*#
+				#set( $zxbsunid="1E99AB7FF8EC918B12B053AEEADB4B23")
+				#set( $catelist_zxbs=$list.getCategoryList(${zxbsunid}))
+			  #foreach($cate in $catelist_zxbs)
+			  <a href="${cate.url}">${cate.name}</a>|
+			  #end</td>
+              </tr>
+          
+            <tr>
+              <td height="20" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+              <td valign="top"><img class="img_middle" src="images/index_47.jpg" /></td>
+            </tr>
+          </table></td>
+        </tr>
+      <tr>
+        <td width="208" rowspan="4" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="208" height="4"></td>
+              </tr>
+          <tr>
+            <td height="258" valign="top" class="ac_rig_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td height="25" colspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="137" height="25" background="images/active_07.jpg" class="ac_rig_title">&nbsp;&nbsp;&nbsp;办事事项查询</td>
+                            <td width="71" align="right" background="images/active_08.jpg"><a href="#"></a>&nbsp;</td>
+                        </tr>
+                  </table></td>
+                    </tr>
+              <tr>
+                <td width="200" height="231" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td height="23" colspan="3" valign="bottom">&nbsp;&nbsp;<img src="images/fz_ic1.gif" width="13" height="13" /> 办事指南查询</td>
+                            <td width="5"></td>
+                          </tr>
+                  <tr>
+                    <td width="20" height="28" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td colspan="2" valign="bottom"><select>
+                                <option>---政府部门1---</option>
+                            </select></td>
+                            <td></td>
+                          </tr>
+                  <tr>
+                    <td height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td colspan="2" align="left"><input name="text" type="text" size="18" /></td>
+                            <td></td>
+                          </tr>
+                  <tr>
+                    <td height="27" colspan="2" align="center" valign="bottom"><input value="&nbsp;" type="submit" valign="middle" class="serach_btn"/></td>
+                            <td width="97" valign="bottom"><input value="&nbsp;" type="submit" valign="middle" class="serach_btn22"/></td>
+                            <td></td>
+                          </tr>
+                  
+                  <tr>
+                    <td height="18" colspan="3" align="center" valign="middle"><img src="images/online_left_line_16_16.jpg" width="191" height="3" /></td>
+                            <td></td>
+                          </tr>
+                  <tr>
+                    <td height="23" colspan="3" valign="bottom"><span class="font_14px">&nbsp;&nbsp;<img src="images/fz_ic1.gif" width="13" height="13" /> </span>表格下载查询</td>
+                            <td></td>
+                          </tr>
+                  <tr>
+                    <td height="28" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td colspan="2" valign="bottom"><select name="select">
+                                <option>---政府部门1---</option>
+                                </select></td>
+                            <td></td>
+                          </tr>
+                  <tr>
+                    <td height="28" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td colspan="2" valign="bottom"><input name="text2" type="text" size="18" /></td>
+                            <td></td>
+                          </tr>
+                  
+                  <tr>
+                    <td height="25" colspan="2" align="center" valign="bottom"><input value="&nbsp;" type="submit" valign="middle" class="serach_btn"/></td>
+                            <td valign="bottom"><input value="&nbsp;" type="submit" valign="middle" class="serach_btn22"/></td>
+                            <td></td>
+                          </tr>
+                  <tr>
+                    <td height="6"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                  <tr>
+                    <td height="1"></td>
+                            <td width="76"></td>
+                            <td></td>
+                            <td></td>
+                          </tr> 
+                  </table></td>
+                      <td width="2"></td>
+                    </tr> 
+              </table></td>
+              </tr>
+          <tr>
+            <td height="8"></td>
+              </tr>
+          
+          <tr>
+            <td height="139" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td height="25" colspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="137" height="25" background="images/active_07.jpg" class="ac_rig_title">&nbsp;&nbsp;&nbsp;快速通道</td>
+                            <td width="73" align="right" background="images/active_08.jpg"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                          </tr>
+                  </table></td>
+              </tr> 
+              <tr>
+                <td height="106"></td>
+                      <td valign="top" class="ac_rig_border">
+					  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <!--DWLayoutTable-->
+						  <tr>
+							<td height="8"></td>
+							<td  ></td>
+							<td ></td>
+							<td  ></td>
+							<td  ></td>
+						  </tr>
+						  
+						  #set( $kstd_cateunid = "9C4C2A7045361899C67F3EDC5BAD0334" )
+						  #set( $kstd_catelist=$list.getCategoryList(${kstd_cateunid}))
+						  #set( $kstd_col = 2)
+						  #set( $kstd_linkcount = 0 ) ##计算总数
+						  #set( $kstd_flag = 1 ) ##每一列的标记
+						  
+						   #if( $kstd_catelist )
+							 #foreach($kstd_child in $kstd_catelist)
+								#set( $kstd_linkcount = $kstd_linkcount + 1 )  
+								#if($kstd_flag==1)
+								  <tr>
+									<td></td>
+									<td height="30" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+								#end 
+								#set( $kstd_flag= $kstd_flag +1 )
+								<td valign="top">&nbsp;&nbsp;
+								<a href="${tomcatroot}${cmsWebapp}/kstd/view.jsp?cateunid=${kstd_child.unid}" target="_blank" >
+								<img src="../images/dot3.gif" width="10" height="10" />
+									&nbsp;${kstd_child.name}</a>  
+								</td> 
+								#if($kstd_linkcount % $kstd_col==0)
+								#set( $kstd_flag = 1 )
+									<td></td>
+                          			</tr>
+								#end 
+							 #end
+							 #if($kstd_linkcount%$kstd_col!=0)
+								#set( $kstd_other = $kstd_linkcount%$kstd_col)
+								#foreach($kstd_td in [$kstd_other..$kstd_col])
+								<td>&nbsp;</td>
+								#end
+								<td></td>
+                          		</tr>
+							 #end
+						  #end   
+						   
+                          
+                          </table></td>
+                    </tr>
+              <tr>
+                <td height="6"></td>
+                      <td></td>
+                    </tr> 
+              </table></td>
+              </tr>
+          <tr>
+            <td height="127" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="208" height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="137" height="25" background="images/active_07.jpg" class="ac_rig_title">&nbsp;&nbsp;&nbsp;网上审批查询</td>
+                            <td width="74" align="right" background="images/active_08.jpg"><a href="#"></a>&nbsp;</td>
+                          </tr>
+                  </table></td>
+                    </tr>
+              
+              <tr>
+                <td height="98" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="ac_rig_border">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="69" height="30" align="center" valign="middle">受理编号</td>
+                            <td colspan="3"><input name="text22" type="text" size="14" /></td>
+                            <td width="14"></td>
+                          <tr>
+                            <td height="30" align="center" valign="middle">查询密码</td>
+                            <td colspan="2" valign="top"><input name="text222" type="text" size="14" /></td>                      
+                            <td width="4">&nbsp;</td>
+                            <td>&nbsp;</td>
+                          <tr>
+                            <td height="35" colspan="2" align="center"><input value="&nbsp;" type="submit" valign="middle" class="serach_btn"/></td>
+                            <td width="103"><input value="&nbsp;" type="submit" valign="middle" class="serach_btn"/></td>
+                            <td></td>
+                            <td></td>
+                          <tr>
+                            <td height="1"></td>
+                            <td width="18"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                  </table></td>
+                    </tr> 
+              </table></td>
+              </tr>
+          <tr><td height="8"></td></tr>
+          <tr>
+            <td height="166" valign="top"><table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="208" height="28"><img src="images/index_24.jpg"/></td>
+      </tr>
+              <tr>
+                <td height="137" valign="top" class="cont_bstj">
+                  <table  width="100%" height="137" border="0" cellspacing="0" cellpadding="0" >
+                    <!--DWLayoutTable-->
+                    <tr>
+                      <td width="185" height="5"></td>
+          </tr>
+                    <tr>
+                      <td height="28" align="center" valign="top" class="red_bstj">截止2010年09月05日</td>
+            </tr>
+                    <tr>
+                      <td height="24" valign="top"><img src="images/redPoin.jpg"/> 累计收件:69623件</td>
+            </tr>
+                    <tr>
+                      <td height="24" valign="top"><img src="images/redPoin.jpg"/> 累计办结:68098件</td>
+            </tr>
+                    <tr>
+                      <td height="24" valign="top"><img src="images/redPoin.jpg"/> 昨日收件:4件</td>
+            </tr>
+                    <tr>
+                      <td height="24
+		  " valign="top"><img src="images/redPoin.jpg"/> 昨日办结:0件</td>
+            </tr>
+                    </table></td>
+      </tr>
+              <tr>
+                <td height="6"><img src="images/index_66.jpg"/></td>
+      </tr>
+              
+              </table></td>
+              </tr> 
+        </table></td>
+        <td width="10" height="699">&nbsp;</td>
+        <td width="515" rowspan="3" valign="top">
+		
+		<!--办事指南-->
+		  #set( $bszn_cateunid = "94F31ECF559840B524386C37DB89413A" )
+		  #set( $bszn_catelist=$list.getCategoryList(${bszn_cateunid})) 
+		
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          
+		   <!--   subject type-->	 
+		  <tr>
+            <td width="515" height="260" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="533" height="32" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/online_mid_04.jpg" style="background-repeat:no-repeat">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="45" height="32" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td width="132" valign="middle" class="ac_mid_title">按办事主题分类</td>
+                            <td width="222" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td width="125" align="center"><a href="#"></a></td>
+                            <td width="17">&nbsp;</td>
+                        </tr>
+                  </table></td>
+                    </tr>
+              <tr>
+                <td height="226" valign="top" class="ac_mid_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="10" height="13"></td>
+                    <td width="492"></td>
+                    <td width="11"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td valign="top"> 
+					
+					
+					<!--bszn-->
+					#set( $bszn_tab_row = 0)
+				    #if( $bszn_catelist )  
+					<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <!--DWLayoutTable--> 
+						 <tr>
+							<td width="492" height="35" valign="top"> 
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							  <!--DWLayoutTable--> 
+							  
+							  <tr>
+							     #set( $bszn_tab_count = 0) 
+                     			 #foreach($bszn_child in $bszn_catelist)
+								   #set( $bszn_tab_count= $bszn_tab_count +1 )
+								   <td width="123" height="35" align="center" class="js_tab2" id="tab_ab_${bszn_tab_count}" onmouseover="tabFun('tab_ab',this,'js_tab1','js_tab2');return false;">${bszn_child.name}</td>
+							     #end 
+							  </tr> 
+							</table>
+							</td>
+						  </tr> 
+                      <tr> 
+					    #set( $bszn_tab_count = 0) 
+					    #foreach($bszn_child in $bszn_catelist)
+							#set( $bszn_tab_count= $bszn_tab_count +1 ) 
+							#if($bszn_tab_count==1)
+							<td valign="top" id="tab_ab_${bszn_tab_count}_c" > 
+							#end 
+							#if($bszn_tab_count!=1)
+							<td valign="top" id="tab_ab_${bszn_tab_count}_c" style="display:none" > 
+							#end 
+								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								  #set( $bszn_child_catelist=$list.getCategoryList(${bszn_child.unid}))
+								  #set( $bszn_child_col = 4)
+			 					  #set( $bszn_child_linkcount = 0 ) ##计算总数
+                                  #set( $bszn_child_flag = 1 ) ##每一列的标记
+                                  #set( $bszn_child_change = 0 ) ## 每行是否改变颜色
+								  #if($bszn_child_catelist) 
+									#foreach($bszn_child_child in $bszn_child_catelist) 
+									#set( $bszn_child_linkcount = $bszn_child_linkcount + 1 )  
+										#if($bszn_child_flag==1)
+										  <tr>
+											<td width="492" height="35" valign="top">
+											 #if($bszn_child_change==1)    
+											 	#set( $bszn_child_change = 0 ) 
+											 	<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f3f9fe"> 
+											  #elseif($bszn_child_change==0)   
+											 	#set( $bszn_child_change = 1 )  
+											 	<table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+											 #end
+										     <tr>
+										#end 
+										#set( $bszn_child_flag= $bszn_child_flag +1 )
+										<td width="123" height="35" align="center"><a href="${tomcatroot}${cmsWebapp}/bszn/view.jsp?cateunid=${bszn_child_child.unid}" target="_blank" >&nbsp;【${bszn_child_child.name}】</a> 
+										</td> 
+										#if($bszn_child_linkcount % $bszn_child_col==0)
+										#set( $bszn_child_flag = 1 )
+											</tr>
+									  		</table>
+									 		</td>
+								  		   </tr>
+										#end 
+									#end
+								    #if($bszn_child_linkcount%$bszn_child_col!=0)
+										#set( $bszn_child_other = $bszn_child_linkcount%$bszn_child_col)
+										#foreach($bszn_child_td in [$bszn_child_other..$bszn_child_col])
+										<td>&nbsp;</td>
+										#end
+										</tr>
+										</table>
+										</td>
+									   </tr>
+								    #end
+								  #end   
+								</table>
+							 </td>	 
+					        #end 
+						   </tr> 
+						</table>
+						#end 	
+					
+					<!--bszn-->
+					
+					</td> 
+                  </tr>
+                  <tr>
+                    <td height="37">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+   
+                  </table></td>
+                    </tr>
+ 
+              </table></td>
+          </tr>
+		  
+		  <!--end  subject type-->	  
+		  
+          <tr> <td height="10"></td></tr>
+		  
+		  
+		  <!-- dept type-->	  
+          <tr>
+            <td height="260" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="533" height="32" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/online_mid_04.jpg" style="background-repeat:no-repeat">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="45" height="32" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td width="132" valign="middle" class="ac_mid_title">按部门分类</td>
+                            <td width="222" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                            <td width="125" align="center" valign="middle"><a href="#"></a></td>
+                            <td width="17">&nbsp;</td>
+                        </tr>
+                  </table></td>
+                    </tr>
+              <tr>
+                <td height="226" valign="top" class="ac_mid_border"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <!--DWLayoutTable-->
+                  <tr>
+                    <td width="75" height="28" align="center">市工商联</td>
+                            <td width="75" align="center">市档案局</td>
+                            <td width="75" align="center">市人防办</td>
+                            <td width="75" align="center" valign="middle">市人事局</td>
+                            <td width="75" align="center">市信访局</td>
+                            <td width="75" align="center" valign="middle">市移民局</td>
+                            <td width="81" align="center">市发改局</td>
+                          </tr>
+                  <tr>
+                    <td height="28" align="center">市物价局</td>
+                            <td align="center">劳动保障局</td>
+                            <td align="center"> 市统计局</td>
+                            <td align="center"> 市粮食局</td>
+                            <td align="center">市建设局</td>
+                            <td align="center"> 市国土局</td>
+                            <td align="center">市环保局</td>
+                          </tr>
+                  <tr>
+                    <td height="28" align="center">市旅游局</td>
+                            <td align="center"> 公交公司</td>
+                            <td align="center">自来水公司</td>
+                            <td align="center">市农办市</td>
+                            <td valign="middle"> 农业局 </td>
+                            <td align="center">市水利局</td>
+                            <td align="center">海洋渔业局</td>
+                          </tr>
+                  <tr>
+                    <td height="28" align="center">市外经贸局</td>
+                            <td align="center">市农机局</td>
+                            <td align="center">市民政局</td>
+                            <td align="center"> 市气象局</td>
+                            <td align="center"> 市民宗局</td>
+                            <td align="center">市脱贫办</td>
+                            <td align="center">市残联 </td>
+                          </tr>
+                  <tr>
+                    <td height="28" align="center">市外经贸局</td>
+                            <td align="center">市交通局</td>
+                            <td align="center">市药监局</td>
+                            <td align="center"> 市安监局</td>
+                            <td align="center">市公路局</td>
+                            <td align="center">市电信局</td>
+                            <td align="center">市财政局</td>
+                          </tr>
+                  <tr>
+                    <td height="28" align="center">市工商局 </td>
+                            <td align="center">市国税局</td>
+                            <td align="center" valign="middle">市地税局</td>
+                            <td align="center"> 团市委</td>
+                            <td align="center">市总工会</td>
+                            <td align="center"> 市老龄委</td>
+                            <td align="center">市广电局</td>
+                          </tr>
+                  <tr>
+                    <td height="28" align="center">市卫生局</td>
+                            <td align="center">市计生委</td>
+                            <td align="center" valign="middle">市教育局 </td>
+                            <td align="center">市文体局</td>
+                            <td align="center">市文明办</td>
+                            <td align="center"> 市司法局 </td>
+                            <td align="center">市公安局</td>
+                          </tr>
+                  <tr>
+                    <td height="28" align="center">交警大队</td>
+                            <td align="center">消防大队</td>
+                            <td align="center">机电检验科</td>
+                            <td align="center" valign="middle">市质监局</td>
+                            <td align="center" valign="middle">市房管局</td>
+                            <td align="center">市外侨办</td>
+                            <td align="center">住房公…</td>
+                          </tr>
+                  <tr>
+                    <td height="2"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr> 
+                  </table></td>
+                    </tr>  
+              </table></td>
+         </tr>
+		  <!--end  dept type-->	  
+			  
+          <tr> <td height="10"></td></tr>
+          <tr>
+            <td height="174" valign="top">
+			
+			<table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+			  <tr>
+			  <td height="31" class="bg_pingtai">
+			  <table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+			  <tr>
+			  <td width="160" class="title_pingtai">
+				网上审批服务平台</td>
+			  <td valign="middle">办事状态查询:<input type="text" size="12" value="--输入受理编号--">
+			  <input type="text" size="12" value="--输入查询密码--">
+			  <input type="submit" value="&nbsp;" class="serach_btn" /></td>
+			  </tr>
+			  </table></td>
+			  </tr>
+			  <tr>
+			  <td>
+			  <table width="520" border="1" cellspacing="0" cellpadding="0">
+                        <tr class="tr_table_title">
+                        <td  height="20" width="81" valign="bottom">受理部门</td><td width="200" >受理事项</td><td width="90">申报人或单位</td><td width="75">申报日期</td><td width="64">办件状态</td>
+                        </tr>
+						</table>
+<iframe scrolling="No" frameborder="0" width="518" height="100" valign="top" src="${tomcatroot}/${cmsWebapp}/bsjg.jsp" border="0"></iframe>
+			  </td>
+			  </tr>
+			 </table>
+		 </td>
+		 </tr> 
+ </table>
+		
+ <!--end 办事指南-->
+		
+		</td>
+          <td width="9" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+          <td width="258" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <!--DWLayoutTable-->
+            <tr>
+              <td width="255" height="203" valign="top"><table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+                <!--DWLayoutTable-->
+                <tr>
+                  <td width="237" height="26" valign="bottom" class="top_bssswsb2" >
+                    <table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+                      <tr>
+                        <td width="30"></td>
+        <td class="color_white"  valign="bottom">公共服务平台</td>
+        
+<td width="80"></td>
+        
+<td width="25"  valign="bottom"><a href="ggfwpt/" class="color_5D5D5D">更多</a></td>
+        
+<td width="10"></td>
+        </tr>
+                      </table></td>
+        </tr>
+                <tr>
+                  <td height="176" valign="top" class="cont_bssswsb">
+            <table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+              <!--DWLayoutTable-->
+			  <tr>
+			  <td colspan="3" height="10"></td>
+			  </tr>
+			   #set( $ggfwpt_cateunid = "C757F57C05B4E44D289B24263686FA7E" )
+			  #set( $ggfwpt_catelist=$list.getCategoryList(${ggfwpt_cateunid}))
+			  #set( $ggfwpt_col = 2)
+			  #set( $ggfwpt_linkcount = 0 ) ##计算总数
+			  #set( $ggfwpt_flag = 1 ) ##每一列的标记
+			  
+			   #if( $ggfwpt_catelist )
+				 #foreach($ggfwpt_child in $ggfwpt_catelist)
+					#set( $ggfwpt_linkcount = $ggfwpt_linkcount + 1 )  
+					#if($ggfwpt_flag==1)
+					  <tr> 
+					#end 
+					#set( $ggfwpt_flag= $ggfwpt_flag +1 )
+					<td valign="top"  height="26" >
+					<a href="${tomcatroot}${cmsWebapp}/ggfwpt/view.jsp?cateunid=${ggfwpt_child.unid}"  >
+					<img  class="img_middle" src="../images/modify_index_23.gif"  />
+						&nbsp;${ggfwpt_child.name}</a>  
+					</td> 
+					#if($ggfwpt_linkcount % $ggfwpt_col==0)
+					#set( $ggfwpt_flag = 1 )
+						<td></td>
+						</tr>
+					#end 
+				 #end
+				 #if($ggfwpt_linkcount%$ggfwpt_col!=0)
+					#set( $ggfwpt_other = $ggfwpt_linkcount%$ggfwpt_col)
+					#foreach($ggfwpt_td in [$ggfwpt_other..$ggfwpt_col])
+					<td>&nbsp;</td>
+					#end
+					<td></td>
+					</tr>
+				 #end
+			  #end   
+		
+		 </table></td>
+                <td width="3"></td>
+              </tr>
+            <tr>
+              <td height="34" valign="top"><table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+                <!--DWLayoutTable-->
+                <tr>
+                  <td width="182" height="34" valign="top"><img src="images/ind_l_6.jpg" /></td>
+      <td width="55" align="center"><a href="#" class="color_5D5D5D">更多</a></td>
+      </tr>
+
+                  </table></td>
+                <td></td>
+              </tr>
+            <tr>
+              <td  height="155" valign="top">
+                  <table  width="100%" height="155" border="0" cellspacing="0" cellpadding="0" >
+  <!--DWLayoutTable-->
+<tr>
+                      <td><a href="#"><img src="images/index_75.jpg" /></a></td><td><a href="#"><img src="images/index_77.jpg" /></a></td>
+      </tr>
+                    <tr>
+                      <td><a href="#"><img src="images/index_93.jpg" /></a></td><td><a href="#"><img src="images/index_94.jpg" /></a></td>
+      </tr>
+                    <tr>
+                      <td><a href="#"><img src="images/index_106.jpg" /></a></td><td><a href="#"><img src="images/index_107.jpg" /></a></td>
+      </tr>
+</table></td>
+                <td></td>
+              </tr>
+            <tr><td height="10"></td>
+		        <td></td>
+		      </tr>
+            <tr>
+              <td height="218" valign="top">
+			  
+			  #set( $bmfw_cateunid = "8D55EC82C1120910279EF4F0297A63B9" )
+			  #set( $bmfw_catelist=$list.getCategoryList(${bmfw_cateunid}))
+			  #set( $bmfw_col = 2)
+			  #set( $bmfw_linkcount = 0 ) ##计算总数
+			  #set( $bmfw_flag = 1 ) ##每一列的标记
+			  
+		 <table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+						<!--DWLayoutTable-->
+						<tr>
+						  <td width="254" height="31" valign="bottom" class="top_bmfw2">
+							<table  width="100%" height="26" border="0" cellspacing="0" cellpadding="0" >
+							  <tr>
+								<td width="40"></td>
+			  <td class="title_bmfw"  valign="middle">便民服务</td>
+			  
+		<td width="80"></td>
+			  
+		<td width="25" ><a href="${tomcatroot}/${cmsWebapp}/bmfw/view.jsp?cateunid=${bmfw_cateunid}" class="color_5D5D5D">更多</a></td>
+			  
+		<td width="10"></td>
+			  </tr>
+							  </table></td>
+			  </tr>
+						<tr>
+						  <td height="186" valign="top" class="cont_bmfw">
+							
+       <table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" >
+		  <!--DWLayoutTable--> 
+					
+		 #if( $bmfw_catelist )
+			 #foreach($bmfw_child in $bmfw_catelist)
+				#set( $bmfw_linkcount = $bmfw_linkcount + 1 )  
+				#if($bmfw_flag==1)
+				  <tr>  
+				#end 
+				#set( $bmfw_flag= $bmfw_flag +1 )
+				<td width="121" height="31" align="center" valign="bottom"><a href="${tomcatroot}${cmsWebapp}/bmfw/viewMore.jsp?cateunid=${bmfw_child.unid}" target="_blank" ><img src="${bmfw_child.image}" width="111" height="26"  border="0" /></a>
+				</td> 
+				#if($bmfw_linkcount % $bmfw_col==0)
+				#set( $bmfw_flag = 1 )
+					<td >&nbsp;</td>
+					</tr>
+				#end 
+			 #end
+			 #if($bmfw_linkcount%$bmfw_col!=0)
+				#set( $bmfw_other = $bmfw_linkcount%$bmfw_col)
+				#foreach($bmfw_td in [$bmfw_other..$bmfw_col])
+				<td>&nbsp;</td>
+				#end
+				<td >&nbsp;</td>
+				</tr>
+			 #end
+		  #end 
+		
+		</table>
+		</td>
+		</tr>  
+		</table>
+				  
+				  
+				  
+				  
+				  </td>
+                <td></td>
+              </tr>
+            <tr>
+              <td height="75" colspan="2" align="center"><img src="images/sengPi_btn_45.jpg" width="213" height="48" /></td>
+              </tr>
+            <tr>
+              <td height="17">&nbsp;</td>
+              <td></td>
+            </tr> 
+          </table></td>
+      </tr>
+      
+      <tr>
+        <td height="13">&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="2"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td height="2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr> 
+    </table></td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+#parse("www.fjfa.gov.cn/topAndButton/buttom.html")
+</table>
+</body>
+</html>

@@ -1,0 +1,321 @@
+/*系统标签样式 begin*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+	background-color:#f5f4f2;
+}
+
+
+/*页面留白 begin*/
+.blank {
+	height: 8px;
+	line-height: 8px;
+	clear: both;
+	visibility: hidden;
+}
+
+
+/* 页眉样式 begin */
+.header {
+	background: #129bc7 url('../images/logo.gif') no-repeat;
+	height: 63px;
+}
+
+
+
+/* 页眉分隔线 */
+.header_separator {
+	background: #006599;
+	height: 4px;
+}
+
+.nav{
+	height:20px;
+	line-height:20px;
+	background:#e4e3e1;
+	padding:2px 0 2px 10px;
+}
+
+
+
+/* 顶部导航 begin */
+.top_nav {
+	float: right;
+	margin-right: 10px;
+	margin-top: 60px;
+}
+
+/* 顶部导航_无链接文字 */
+.top_nav_nolink{
+	color: #5d5e5e;
+}
+
+/* 顶部导航_用户名 */
+.top_nav_username {
+	margin-right: 15px;	
+}
+
+.top_nav_username a{
+	color: #e42626;
+	text-decoration: none;
+}
+
+/* 顶部导航_操作 */
+.top_nav_operation {
+	
+}
+
+.top_nav_operation a{
+	color: #305ebb;
+	text-decoration: none;
+}
+
+/*顶部导航 end*/
+
+
+
+/* 分隔线 begin */
+.divider {
+	height: 4px;
+	background-color: #d0d0d0;
+	border-bottom: 1px #808080 solid;
+}
+/* 分隔线 end */
+
+
+/* 主区域 begin */
+.area_main{
+	padding:10px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 91px;
+	bottom: 26px;
+}
+.table_maximize{
+	width:100%;
+	height:100%;
+	border:0;
+}
+
+
+/* 主区域左 */
+.area_main_left{
+	position: absolute;
+	left: 10px;
+	top: 101px;
+	bottom:36px;
+	width: 198px;
+}
+
+.area_main_left_top{
+	height:12px;
+	background-image:url('../images/area_main_left_top.gif');
+}
+
+.area_main_left_bottom{
+	height:12px;
+	background-image:url('../images/area_main_left_bottom.gif');
+}
+
+.area_main_left_mid{
+	border-left: 1px #d9d9d9 solid;
+	border-right: 1px #d9d9d9 solid;
+	background-color: #ffffff;
+	vertical-align: top;
+}
+
+
+/* 主区域右 */
+.area_main_right{
+
+	position: absolute;
+	left: 218px;
+	top: 101px;
+	bottom:36px;
+	right:10px;
+
+}
+
+.area_main_right_corner{
+	width:12px;
+	height:12px;
+}
+
+.area_main_right_corner.lt{
+	background-image:url('../images/area_main_right_lt.gif')
+}
+
+.area_main_right_corner_mt{
+	border-top: 1px #d9d9d9 solid;
+	background:#ffffff;
+	font-size:3px;
+}
+
+.area_main_right_corner_mb{
+	border-bottom: 1px #d9d9d9 solid;
+	background:#ffffff;
+	font-size:3px;
+}
+
+.area_main_right_corner_lm{
+	border-left: 1px #d9d9d9 solid;
+	background:#ffffff;
+}
+
+.area_main_right_corner_rm{
+	border-right: 1px #d9d9d9 solid;
+	background:#ffffff;
+}
+
+
+.area_main_right_corner.rt{
+	background-image:url('../images/area_main_right_rt.gif')
+}
+
+.area_main_right_corner.lb{
+	background-image:url('../images/area_main_right_lb.gif')
+}
+
+.area_main_right_corner.rb{
+	background-image:url('../images/area_main_right_rb.gif')
+}
+
+.area_main_right_main{
+	vertical-align:top;
+	background:#ffffff;
+	padding:10px;
+}
+
+/* 内容上方标题 */
+.content_top_title{
+	font-size:14px;
+}
+
+/* 内容上方内容 */
+.content_top_content{
+}
+
+
+
+/* 主区域间隔 */
+.area_main_interval{
+	width:12px;
+	height:100%;
+
+}
+
+
+/* 主区域 end */
+
+
+/* 目录 begin */
+
+/* 目录_菜单 */
+.list_menu{
+	padding-left: 10px;
+	height: 22px;
+	line-height:22px;
+	margin-left: 10px;
+}
+
+
+.list_menu.selected {
+	background: url('../images/list_menu_selected.gif') no-repeat left center;
+}
+
+.list_menu:hover {
+	background: url('../images/list_menu_over.gif') no-repeat left center;
+}
+
+
+.list_menu_icon{
+	margin-bottom:-5px;
+	width:16px;
+	height:16px;
+	
+}
+
+
+.list_menu a{
+
+	font-size:12px;
+	text-decoration: none;
+	color: #333333;
+}
+
+
+
+
+/* 目录_子菜单 */
+.list_submenu{
+	padding-left: 30px;
+	height: 26px;
+	line-height:26px;
+	margin-left: 10px;
+}
+.list_submenu.selected {
+	background: url('../images/list_menu_selected.gif') no-repeat left center;
+}
+
+.list_submenu:hover {
+	background: url('../images/list_menu_over.gif') no-repeat left center;
+}
+
+
+.list_submenu a{
+	font-size:12px;
+	text-decoration: none;
+	color: #555555;
+}
+
+
+/* 目录_分隔线 */
+.list_separator{
+	margin: 0 10px 0 10px;
+	border-top: 1px #c7ccd1 solid;
+	border-bottom: 1px #ffffff solid;
+}
+
+
+
+/* 目录 end */
+
+/*页脚样式 begin*/
+.footer {
+	border-bottom: 1px #ebebeb solid;
+	border-top: 1px #ebebeb solid;
+	background:#fbfbfb;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 2px;
+	height: 24px;
+	line-height:24px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#9b9b9b;
+}
+
+/**/
+.formtable {
+	border-collapse:collapse;
+	
+}
+.formtable td {
+	padding:5px;
+	background:#ffffff;
+	
+}
+.formtable th {
+	text-align:right;
+	padding:5px;
+	background:#e3effd;
+	
+}

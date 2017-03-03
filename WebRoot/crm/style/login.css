@@ -1,0 +1,68 @@
+﻿@import url("common.css");
+
+/********************** 页面样式  **********************/
+body{
+	background:#7fcbe5 ;
+}
+
+/********************** 登录区域 **********************/
+/* 主区域*/
+.login_outer {
+	background: url('images/login_bg_left.gif') 0 center repeat-x #1fa3d3;	
+	height: 323px;
+}
+
+.login_center{	
+	background: url('images/login_bg.gif') no-repeat left center #7cc9e5;
+	height: 323px;
+  width: 910px;
+}
+
+/* 左右区域 */
+.login_left {
+	background: url('images/login_bg_left.gif')  repeat-x;
+}
+
+/* 上区域 */
+.login_top {
+	background: #1fa3d3;
+}
+
+/* 下区域 */
+.login_bottom {
+	background:#7cc9e5;
+}
+
+
+/* 登录区域信息区 */
+.login_inner {
+	margin: 25px 0 0 510px;
+}
+
+
+/* 登录按钮 */
+.login_button {
+	color: #e82f34;
+	padding-left:30px;
+}
+
+.login_button input{
+	width: 50px;
+	height: 24px;
+	CURSOR: hand;	
+	margin-right:10px;
+}
+
+/* 登录扩展信息 */
+.login_expand {
+
+}
+.login_expand a{
+	margin-left:15px;
+	text-decoration: none;
+	color: #000;
+}
+.login_expand input{
+	vertical-align:text-bottom; 
+	margin-right:5px;
+}

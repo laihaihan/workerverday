@@ -1,0 +1,58 @@
+<%@page contentType="text/html;charset=UTF-8"%>
+<%@page import="java.util.List" %>
+<%@page import="org.apache.commons.lang.StringUtils"%>
+<%@page import="com.linewell.ucap.session.Session" %>
+<%@page import="com.linewell.ucapx.form.FormType" %>
+<%@page import="com.linewell.ucapx.redevelop.codetool.util.FormMappingUtil" %>
+
+<%@include file="../common.jsp"%>
+<%
+/**
+ * 表单的最终展示页面
+ * @author xhuatang@linewell.com
+ * @since 2011-07-14
+ */
+//表单的UNID
+String ___formUnid = request.getParameter("formId");
+//表单的类型
+String ___formType = request.getParameter("type");
+//当前对象的unid
+String ___unid = request.getParameter("unid");
+if(StringUtils.isEmpty(___unid)) ___unid = "";
+
+//该表单所属的类名
+String ___className = FormMappingUtil.getClassName(___formUnid, ___formType);
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>客户信息</title>
+	<%@include file="/default/form/header.jsp"%>	
+  <script language="javascript">
+  /**
+   * 配置当前表单的参数信息
+   */
+  linewell.form.FormOptions = {
+      //提交的Action地址
+      actionUrl : "<%= systemPath%>app.action?type=<%=___className%>",
+      
+      //当前表单的unid
+      formUnid  : "<%= ___formUnid%>",
+      
+      //表单的类型
+      formType  : "<%= ___formType%>",
+      
+      //扩展的linewell.form.FormItem数组对象
+      formItems : [],
+      
+      //需要提交的表单的名称，以css样式的方式命名
+      formName  : "#ucapForm"
+  };
+  </script>
+</head>
+<body>
+<!-- TODO 在此加入相应的HTML代码 -->
+<%@include file="/default/form/formContent.jsp"%>
+</body>
+</html>

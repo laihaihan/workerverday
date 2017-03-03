@@ -1,0 +1,154 @@
+@charset "utf-8";
+/********************** 邮件列表 ************************/
+.t{
+	background:url('../images/mailList/t.png') repeat-x;
+	height:35px;
+	width:100%;
+	position:absolute;
+	top:0px;
+}
+.lt{
+	background:url('../images/mailList/lt.png') no-repeat;
+	height:35px;
+	width:17px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.rt{
+	background:url('../images/mailList/rt.png') no-repeat;
+	height:35px;
+	width:17px;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+
+.b{
+	background:url('../images/mailList/b.png') repeat-x;
+	height:11px;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+}
+
+.lb{
+	background:url('../images/mailList/lb.png') no-repeat;
+	height:11px;
+	width:17px;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+
+.rb{
+	background:url('../images/mailList/rb.png') no-repeat;
+	height:11px;
+	width:17px;
+	position:absolute;
+	bottom:0px;
+	right:0px;
+}
+
+.l{
+	background:url('../images/mailList/l.png') repeat-y;
+	height:100%;
+	width:17px;
+	position:absolute;
+	left:0px;
+}
+
+.r{
+	background:url('../images/mailList/r.png') repeat-y;
+	height:100%;
+	width:17px;
+	position:absolute;
+	right:0;
+}
+
+.icon{
+	width:16px;
+	height:16px;
+	position:absolute;
+	top:10px;
+	left:15px;
+	background: url('../images/mailList/email.png') no-repeat;
+}
+
+.title{
+	position:absolute;
+	font-size:16px;
+	color:#19368b;
+	font-weight:bold;
+	left:35px;
+	top:10px;
+}
+
+.info{
+	position:absolute;
+	font-family:14px;
+	font-weight:bold;
+	color:#19368b;
+	height:35px;
+	line-height:35px;
+	right:20px;
+
+}
+
+.dl{
+	position:absolute;
+	top:35px;
+	background:#fff;
+	left:8px;
+	right:8px; 
+}
+
+.dl dt{
+	color:#0d3b71;
+	font-size:14px;
+	font-weight:bold;
+	position:relative;
+	margin-bottom:10px;
+	height:35px;
+	line-height:35px;
+}
+
+.dl dt div{
+	height:40px;
+	line-height:40px;
+	width:33%;
+	float:left;
+	text-align:center;
+	position:relative;
+
+
+	
+}
+
+.dl dd{
+	font-size:14px;
+	position:relative;
+	cursor:pointer;
+	height:35px;
+	line-height:35px;
+}
+.dl dd:hover{
+	color:#f00;
+}
+
+.dl dd div{
+	height:35px;
+	line-height:35px;
+	width:33%;
+	float:left;
+	text-align:center;
+	position:relative;
+	
+
+}
+
+.blueBg{
+	background:#e4f0fc;
+}

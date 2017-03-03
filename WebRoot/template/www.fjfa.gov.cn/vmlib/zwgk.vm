@@ -1,0 +1,111 @@
+#*取得[福安要闻]栏目名称，用于index.html文件*#
+#set( $faywunid="AD48E0943A4D7BC0A0B35FC2A04269DB")
+#set( $cate_fayw = $list.getCategoryByUnid(${faywunid}))
+#set( $articlelist_fayw = $list.getList("cate",${faywunid},8,38,"yyyy-MM-dd") )
+
+#*取得[部门动态]栏目名称，用于index.html文件*#
+#set( $bmdtunid="3142E4CBD59EE2EEA9585A050DE3CC49")
+#set( $cate_bmdt = $list.getCategoryByUnid(${bmdtunid}))
+#set( $articlelist_bmdt = $list.getList("cate",${bmdtunid},8,38,"yyyy-MM-dd") )
+
+#*取得[乡镇动态]栏目名称，用于index.html文件*#
+#set( $xsqdtunid="943C3FCD0E961ED32248DAE0FD5808EF")
+#set( $cate_xsqdt = $list.getCategoryByUnid(${xsqdtunid}))
+#set( $articlelist_xsqdt = $list.getList("cate",${xsqdtunid},8,38,"yyyy-MM-dd") )
+
+#*取得[图片新闻]栏目名称，用于index.html文件*#
+#set( $tpxmunid="E231DB83277B9CB18A8A7D20EDCAFF7D")
+#set( $cate_tpxm = $list.getCategoryByUnid(${tpxmunid}))
+#set( $articlelist_tpxm= $list.getList("cate",${tpxmunid},7,28,"yyyy-MM-dd") )
+
+#*取得[政务公开]栏目名称，用于index.html文件*#
+#set( $zwgkunid="B14A9819FB14B9260FD390E116E52846")
+#set( $catelist_zwgk=$list.getCategoryList(${zwgkunid}))
+
+#*取得[公示公告]栏目名称，用于index.html文件*#
+#set( $gsggunid="F42DE0B91A5588DB925565677CD8937B")
+#set( $articlelist_gsgg = $list.getList("cate",${gsggunid},8,25,"yyyy-MM-dd") )
+
+#*取得[二级页面连接]，用于index.html文件*#
+#set($secondPageUrl="${siteDomain}${tomcatroot}/${cmsWebapp}/views/list.jsp?cateunid=")
+
+#*取得[政府机构页面连接]，用于index.html文件*#
+#set($secondPageZfjgUrl="${siteDomain}${tomcatroot}/${cmsWebapp}/views/zfjgList.jsp?cateunid=")
+
+#*取得[政府工作报告]，用于index.html文件*#
+#set( $zfgzbgunid="EEB15595E5E671D0AEDC25C013EF3CCA")
+#set( $cate_zfgzbg = $list.getCategoryByUnid(${zfgzbgunid}))
+#set( $articlelist_zfgzbg = $list.getList("cate",${zfgzbgunid},5,70,"yyyy-MM-dd") )
+
+#*取得[发展计划报告]，用于index.html文件*#
+#set( $fzjhbgunid="1E4307AE1222CC32AD077D9FA984C03B")
+#set( $cate_fzjhbg = $list.getCategoryByUnid(${fzjhbgunid}))
+#set( $articlelist_fzjhbg = $list.getList("cate",${fzjhbgunid},5,70,"yyyy-MM-dd") )
+
+#*取得[市政府文件]，用于index.html文件*#
+#set( $szfwjunid="BFF0020FBD55D0431DF423647CCE6FC3")
+#set( $cate_szfwj = $list.getCategoryByUnid(${szfwjunid}))
+#set( $articlelist_szfwj = $list.getList("cate",${szfwjunid},5,70,"yyyy-MM-dd") )
+
+#*取得[市政府办文件]，用于index.html文件*#
+#set( $szfbwjunid="91921C68DE0CA641CE9A24ACFA96EB7D")
+#set( $cate_szfbwj = $list.getCategoryByUnid(${szfbwjunid}))
+#set( $articlelist_szfbwj = $list.getList("cate",${szfbwjunid},5,70,"yyyy-MM-dd") )
+
+#*取得[规划信息]，用于index.html文件*#
+#set( $ghxxunid="309F45B2D2DC3D727059498B3D8DD3DA")
+#set( $cate_ghxx = $list.getCategoryByUnid(${ghxxunid}))
+#set( $articlelist_ghxx = $list.getList("cate",${ghxxunid},5,50,"yyyy-MM-dd") )
+
+#*取得[政策法规]，用于index.html文件*#
+#set( $zcfgunid="AAA3A461E427F9A464601EAE8D5C05B5")
+#set( $cate_zcfg = $list.getCategoryByUnid(${zcfgunid}))
+#set( $cateList_zcfg = $list.getCategoryList(${zcfgunid}))
+
+#*取得[统计信息]，用于index.html文件*#
+#set( $tjxxunid="852CC4EC6F385020332F9CD1C964A395")
+#set( $cate_tjxx = $list.getCategoryByUnid(${tjxxunid}))
+#set( $cateList_tjxx = $list.getCategoryList(${tjxxunid}))
+
+#*取得[资金信息]，用于index.html文件*#
+#set( $zjxxunid="782F084DBE8272CA33DF70575274C5CC")
+#set( $cate_zjxx = $list.getCategoryByUnid(${zjxxunid}))
+#set( $cateList_zjxx = $list.getCategoryList(${zjxxunid}))
+
+#*取得[应急管理]，用于index.html文件*#
+#set( $yjglunid="1A24FD0FFDAAA918EB8B3D51E9DE4E35")
+#set( $cate_yjgl = $list.getCategoryByUnid(${yjglunid}))
+#set( $cateList_yjgl = $list.getCategoryList(${yjglunid}))
+
+#*取得[专题专栏]，用于index.html文件*#
+#set( $ztzlunid="ECE9E50308FC5F347C09EC9EA70E0754")
+#set( $cate_ztzl = $list.getCategoryByUnid(${ztzlunid}))
+#set( $articlelist_ztzl = $list.getList("cate",${ztzlunid},7,25,"yyyy-MM-dd") )
+
+#*取得[人事任免]，用于index.html文件*#
+#set( $rsrmunid="561D14F64B704D1AE3274A45A8E5D938")
+#set( $cate_rsrm = $list.getCategoryByUnid(${rsrmunid}))
+#set( $articlelist_rsrm = $list.getList("cate",${rsrmunid},9,22,"yyyy-MM-dd") )
+
+#*取得[规则信息]，用于index.html文件*#
+#set( $ghxxunid="309F45B2D2DC3D727059498B3D8DD3DA")
+#set( $cate_ghxx = $list.getCategoryByUnid(${ghxxunid}))
+#set( $cateList_ghxx = $list.getCategoryList(${ghxxunid}))
+
+#*取得[政府机构]，用于index.html文件*#
+#set( $zfjgunid="D98C29E3863BD3C3BE9A948723C62C10")
+
+#*取得[福安市人民政府组成部门]，用于index.html文件*#
+#set( $fasrmzfzcbmunid="00008EA134E86654270EDB2E288AA313")
+#set( $articlelist_fasrmzfzcbm = $list.getList("cate",${fasrmzfzcbmunid},8,30,"yyyy-MM-dd") )
+
+
+#*取得[市长]，用于index.html文件*#
+#set( $szunid="FD3B7AA9123D22BD5BA63B7DF3A68DDA")
+#set( $articlelist_sz = $list.getList("cate",${szunid},1,10,"yyyy-MM-dd") )
+
+#*取得[副市长]，用于index.html文件*#
+#set( $fszunid="D3A1AF9F46FB23ADDD45C5EE6CD551B2")
+#set( $articlelist_fsz = $list.getList("cate",${fszunid},0,10,"yyyy-MM-dd") )
+
+

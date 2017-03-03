@@ -1,0 +1,37 @@
+-- Create table
+create table CORE_SQL_LOG
+(
+  UNID       VARCHAR2(32) not null,
+  APP_UNID   VARCHAR2(32),
+  VIEW_UNID  VARCHAR2(32),
+  SQL        CLOB,
+  CREATETIME VARCHAR2(20)
+)
+tablespace CORE
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CORE_SQL_LOG
+  is '视图SQL语句历史记录';
+-- Add comments to the columns 
+comment on column CORE_SQL_LOG.UNID
+  is '主键UNID';
+comment on column CORE_SQL_LOG.APP_UNID
+  is '应用系统主键UNID';
+comment on column CORE_SQL_LOG.VIEW_UNID
+  is 'SQL语句所属视图UNID';
+comment on column CORE_SQL_LOG.SQL
+  is 'SQL语句';
+comment on column CORE_SQL_LOG.CREATETIME
+  is 'SQL语句创建时间';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table CORE_SQL_LOG
+  add constraint PK_SQL_LOG primary key (UNID)
+  using index 

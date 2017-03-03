@@ -1,0 +1,101 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>$pagetitle</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+ 
+<body>
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+<!--DWLayoutTable-->
+  #parse("www.fjfa.gov.cn/topAndButton/top.html")
+  <tr><td><table width="1000" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <!--DWLayoutTable-->
+  
+  <tr>
+    <td width="1000" height="40" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <td height="40" colspan="2" align="center" bgcolor="#eff9fd" class="art_border"><img src="images/ind_l_4.jpg" width="17" height="17" /></td>
+	   #set( $tpxwunid="E231DB83277B9CB18A8A7D20EDCAFF7D")
+	   #set( $nav =$list.getNavBar($tpxwunid,"&nbsp;-&gt;&nbsp;")) 
+          <td width="954" bgcolor="#eff9fd" class="art_border"> 当前位置：${nav}</td>
+    </table></td>
+  </tr>
+  <tr><td height="8"></td>
+    </tr>
+  <tr>
+    <td valign="top" class="xzgk_border" style="padding-top:5px">
+	<table width="96%" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#f7fcff">
+	   
+        <tbody>
+		#set( $tpxwlist = $list.getList("photo",${tpxwunid},16,25,"yyyy-MM-dd") )
+				  #set( $col = 4)
+			 	  #set( $count = 0 ) ##计算总数
+              	  #set( $flag = 0 ) ##每一列的标记
+              	  #if( $tpxwlist )
+				  	#foreach($aritlce in $tpxwlist)
+				      #set ( $count = $count + 1 )
+					  #set( $flag= $flag +1 )
+				      #if($flag==1)
+					  <tr>
+					  #end
+          <td width="20%" align="center">
+		  <table class="bgg" width="230" border="0" cellpadding="0" cellspacing="0" height="170">
+		
+          <tbody>
+		  
+		  <tr>
+            <td align="center"><a href=""><img src="${siteoutputpath}/${aritlce.photo}" width="220" border="0/" height="150"></a></td>
+          </tr>
+          <tr>
+            <td align="center"><a href="${aritlce.path}" target="_blank" title="${aritlce.title}">${aritlce.title}</a></td>
+
+          </tr>
+        </tbody></table>
+		<table width="100%" border="0">
+  <tbody><tr>
+    <td height="8"></td>
+  </tr>
+</tbody></table>
+
+          </td>
+		   #if($count % $col==0)
+					  #set( $flag = 1 )
+					  </tr>
+					  #end ##end if($count % $col==0)
+					  
+					  #end  ##end foreach($article...)
+					  
+				#end  ##end if( $tpxwlist )
+		      
+		      #if($count%$col!=0)
+		      	#set( $other = $linkcount%$col)
+			   #foreach($td in [$other..$col])
+			    <td width="20%" align="center">
+				<table class="bgg" width="230" border="0" cellpadding="0" cellspacing="0" height="170">
+		  <tr>
+            <td align="center">&nbsp;
+			</td>
+			</tr></table>
+			<table width="100%" border="0">
+  			<tbody><tr>
+    		<td height="8"></td>
+ 			 </tr>
+			</tbody></table>
+			</td>
+			   #end
+		      </tr>
+              #end
+      </tbody></table>
+</td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+   #parse("www.fjfa.gov.cn/topAndButton/buttom.html")
+</table>
+</body>
+</html>
+

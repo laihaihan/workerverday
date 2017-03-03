@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <script type="text/javascript" src="../../../amline/swfobject.js"></script>
+  <div id="flashcontent">
+		<strong>请选择对应的内容进行统计</strong>
+	</div>
+	<script type="text/javascript">
+	function rand(n) {          
+        return (Math.floor(Math.random() * n + 1));          
+        }
+        var randrandom_number = rand(10000);
+		// <![CDATA[		
+		var so = new SWFObject("../../../amline/amline.swf?num="+randrandom_number, "amline", "850", "500", "8", "#FFFFFF");
+		so.addVariable("path", "../../../amline/");
+		so.addVariable("settings_file", encodeURIComponent("amline_settings.xml?num="+randrandom_number));
+		so.addVariable("data_file", encodeURIComponent("amline_data.xml?num="+randrandom_number));
+	//	so.write("flashcontent");
+		// ]]>
+	</script>
+</body>
+</html>

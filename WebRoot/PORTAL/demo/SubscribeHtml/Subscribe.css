@@ -1,0 +1,187 @@
+﻿@charset "utf-8";
+/****************************系统样式****************************/
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+body {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+	background:#fff;
+	overflow:hidden
+
+}
+	
+.topicTF{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:144px;
+	height:39px;
+ 	background:url('style/images/topicTF.png') no-repeat;
+}
+
+.topicTC{
+	position:absolute;
+	top:0px;
+	left:144px;
+	right:130px;
+	height:39px;
+ 	background:url('style/images/topicTC.png') repeat-x;
+	*width:100%;
+}
+
+.topicTR{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:130px;
+	height:39px;
+ 	background:url('style/images/topicTR.png') no-repeat;
+}
+
+.topicTR:hover{
+ 	background:url('style/images/topicTR.png') repeat-x -130px 0px;
+	cursor:pointer;
+}
+
+	
+.topicF{
+	position:absolute;
+	top:39px;
+	left:0px;
+	bottom:13px;
+	width:2px;
+ 	background:url('style/images/topicF.png') repeat-y;
+	_height: expression(documentElement.clientHeight-0 -13)
+}
+
+.topicCT{
+	position:absolute;
+	top:50px;
+	left:2px;
+	width:307px;
+	height:39px;
+ 	background:url('style/images/topicCT.png') no-repeat;
+}
+
+.topicCTB{
+	position:absolute;
+	top:50px;
+	left:309px;
+	right:3px;
+	height:39px;
+ 	background:url('style/images/topicCTB.png') repeat-x;
+	*width:100%;
+}
+
+.topicR{
+	position:absolute;
+	top:39px;
+	right:0px;
+	bottom:13px;
+	width:1px;
+ 	background:#b7cdf3;
+	_height: expression(documentElement.clientHeight-0 -13)
+}
+
+.topicCF{
+	position:absolute;
+	top:100px;
+	bottom:20px;
+	left:2px;
+	width:168px;
+ 	background:url('style/images/topicCF.png') no-repeat bottom;
+	_height: expression(documentElement.clientHeight -0 -125)
+}
+
+.topicCF ul{
+	float:left;
+	margin-left:20px;
+ 	color:#1b3d5c;
+}
+
+.topicCF ul li{
+	float:left;
+	height:30px;
+	width:135px;
+	line-height:30px;
+	text-indent:13px;
+	word-break:keep-all;/* 不换行 */
+	white-space:nowrap;/* 不换行 */
+	overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+ 	background:url('style/images/topicLi.png') no-repeat left center;
+}
+
+.topicCR{
+	position:absolute;
+	top:100px;
+	bottom:20px;
+	right:13px;
+	width:220px;
+}
+
+.topicCR ul{
+	float:left;
+ 	color:#1b3d5c;
+}
+
+.topicCR ul li{
+	float:left;
+	height:30px;
+	width:230px;
+	line-height:30px;
+}
+
+.topicBF{
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:31px;
+	height:13px;
+ 	background:url('style/images/topicBF.png') no-repeat;
+}
+
+.topicBC{
+	position:absolute;
+	left:31px;
+	right:20px;
+	bottom:0px;
+	height:13px;
+ 	background:url('style/images/topicBC.png') repeat-x;
+	_width:100%;
+}
+
+.topicBR{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:20px;
+	height:13px;
+ 	background:url('style/images/topicBR.png') no-repeat;
+}
+
+.more{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:55px;
+	height:30px;
+	font-size:14px;
+	color:#4c4e68;
+}
+
+.more:hover{
+	color:#5983dd;
+	cursor:pointer;
+}
+

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<control>
+	<control label="构件">
+		<!--<control label="标签"  data="ControlsLabel" icon="ICON_LABEL"/>-->
+		<control label="按钮"  data="ControlsButton" icon="ICON_BUTTON"/>
+		<control label="下拉框"  data="ControlsComboBox" icon="ICON_COMBOBOX"/>
+		<control label="文本框"  data="ControlsTextInput" icon="ICON_TEXTINPUT"/>
+		<control label="多行文本框"  data="ControlsTextArea" icon="ICON_TEXTAREA"/>
+		<control label="单选框组"  data="ControlsRadioButton" icon="ICON_RADIOBUTTON"/>
+		<control label="复选框组"  data="ControlsCheckBox" icon="ICON_CHECKBOX"/>
+		<control label="隐藏域"  data="ControlsHiddenField" icon="ICON_HIDDENFIELD"/>
+		<control label="水平线"  data="ControlsHr" icon="ICON_HR"/>
+		<control label="日期选择框"  data="ControlsDateField" icon="ICON_DATEFIELD"/>
+		<control label="通用选择框"  data="ControlsCommonSelected" icon="ICON_COMMONSELECTED"/>
+		<control label="视图列选择框"  data="ControlsViewColumnSelected" icon="ICON_VIEWCOLUMNSELECTED"/>
+		<control label="文本编辑器"  data="ControlsRichTextEditor" icon="ICON_RICHTEXTEDITOR"/>
+		<control label="文件上传"  data="ControlsFileUpload" icon="ICON_FILEUPLOAD"/>
+	</control>
+	<control label="容器" isBranch="true">
+		<control label="层(DIV)"  data="ControlsDiv" icon="ICON_DIV"/>
+		<control label="行内块(SPAN)"  data="ControlsSpan" icon="ICON_SPAN"/>
+		<control label="段落(P)"  data="ControlsP" icon="ICON_P"/>
+		<control label="居中块(CENTER)"  data="ControlsCenter" icon="ICON_CENTER"/>
+	</control>
+</control>

@@ -1,0 +1,117 @@
+﻿@charset "utf-8";
+/****************************系统样式****************************/
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+body {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+	min-width:985px;
+	min-height:90px;
+	overflow:hidden;
+	background:#b5bdca url('style/images/navRightBottom.png') no-repeat bottom left;
+
+}
+a img {
+	border: none;
+}
+
+		
+.navRightTop{
+	float:left;
+	width:100%;
+	height:33px;
+	background:url('style/images/navRightTop.gif') no-repeat top left;
+}
+
+ul{
+	float:left;
+	width:100%;
+}
+
+
+ul li{
+	height:82px;
+	list-style:none;
+	cursor:pointer;
+	background:url('style/images/navRightLiB.gif') repeat-x;
+	margin-bottom:3px;
+}
+
+
+ul .gwgl{
+	background:#ebebeb url('style/images/navRight.png') no-repeat;
+
+}
+
+ul .gwgl:hover{
+	background:#ebebeb url('style/images/navRightH.png') no-repeat;
+}
+
+.jbgl{
+	background:#ebebeb url('style/images/navRight.png') no-repeat 0px -82px;
+
+}
+
+.jbgl:hover{
+	background:#ebebeb url('style/images/navRightH.png') no-repeat 0px -82px;
+}
+
+.xjgl{
+	background:#ebebeb url('style/images/navRight.png') no-repeat 0px -164px;
+
+}
+
+.xjgl:hover{
+	background:#ebebeb url('style/images/navRightH.png') no-repeat 0px -164px;
+}
+
+.wjzlk{
+	background:#ebebeb url('style/images/navRight.png') no-repeat 0px -246px;
+
+}
+
+.wjzlk:hover{
+	background:#ebebeb url('style/images/navRightH.png') no-repeat 0px -246px;
+}
+
+.spdb{
+	background:#ebebeb url('style/images/navRight.png') no-repeat 0px -328px;
+
+}
+
+.spdb:hover{
+	background:#ebebeb url('style/images/navRightH.png') no-repeat 0px -328px;
+}
+
+.dzyj{
+	background:#ebebeb url('style/images/navRight.png') no-repeat 0px -410px;
+
+}
+
+.dzyj:hover{
+	background:#ebebeb url('style/images/navRightH.png') no-repeat 0px -410px;
+}
+
+.navRightBottom{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:274px;
+	
+}
+
+
+
+
+

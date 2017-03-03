@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.linewell.ess.monitor.info.FlowInfo" table="monitor_flow">
+		<id column="UNID" name="unid" type="string">
+			<generator class="assigned" />
+		</id>
+		<property column="punid" name="punid" type="string" />
+		<property column="nodename" name="nodename" type="string" />
+		<property column="receiveuser" name="receiveuser" type="string" />
+		<property column="senduser" name="senduser" type="string" />
+		<property column="action" name="action" type="string" />
+		<property column="when" name="when" type="string" />
+		<property column="ounid" name="ounid" type="string" />
+		<property column="AREANAME" name="areaname" type="string" />
+		<property column="AREACODE" name="areacode" type="integer" />
+	</class>
+</hibernate-mapping>

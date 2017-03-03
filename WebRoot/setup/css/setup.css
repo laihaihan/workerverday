@@ -1,0 +1,151 @@
+/************************* 系统页面 *************************/
+body {
+	background: #4E6C84 url('../images/setup_bg.jpg') no-repeat center top;
+	background-image: none;
+	background-position: 100% 100%;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+}
+/************************* 背面背景 *************************/
+.setup_bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+}
+.setup_bg > img {
+	height: 100%;
+	width: 100%;
+	border: 0;
+}
+/*************************  安装区域 *************************/
+.setup_div {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+/************************* 安装左侧 *************************/
+.setup_left {
+	_filter: alpha(opacity=80); moz-opacity: 0.8; opacity: 0.8;
+	width: 159px;
+	height: 562px;
+	background-image: url('../images/left_bg.png');
+}
+.setup_left ul {
+	padding: 13px;
+}
+.setup_left li {
+	background: url(../images/ico1.gif) no-repeat left center;
+	padding-left: 20px;
+	line-height: 23px;
+	font-size: 14px;
+}
+.setup_left_logo {
+	_filter: alpha(opacity=30); moz-opacity: 0.2; opacity: 0.2;
+	width: 159px;
+	height: 120px;
+	z-index: 0;
+	background-image: url('../images/logo.png');
+}
+.setup_left_title {
+	padding-left: 35px;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #517892;
+}
+.setup_left_title.current {
+	color: #eb6100;
+}
+
+.setup_left_title.complete{
+	background: url('../images/complete.png') no-repeat 15px;
+}
+
+
+
+/************************* 安装右侧 *************************/
+.setup_right {
+	width: 556px;
+	height: 562px;
+	_filter: alpha(opacity=80); moz-opacity: 0.2; opacity: 0.2;
+	background-image: url('../images/right_bg.png');
+}
+.setup_right_title {
+	height: 60px;
+	line-height: 80px;
+	color: #045aa3;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 30px;
+}
+.setup_right_separator {
+	margin: 0 28px 0 22px;
+	border-bottom: 1px #91bcd9 solid;
+	border-top: 1px #ffffff solid;
+}
+.setup_right_content {
+	padding: 10px 28px 10px 22px;
+	height: 370px;
+	_height:350px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #222222;
+}
+.setup_right_button {
+	float: right;
+	padding-right: 20px;
+}
+.setup_right_button input {
+	color: #125395;
+	font-size: 14px;
+	font-weight:bold;
+	background-image: url('../images/button.gif');
+	height: 23px;
+	width: 81px;
+	border-style: none;
+	background-color: transparent;
+}
+.connCheck {
+	color: #125395;
+	font-size: 12px;
+	font-weight:bold;
+	background-image: url('../images/button.gif');
+	height: 23px;
+	width: 81px;
+	border-style: none;
+	background-color: transparent;
+}
+
+/************************* 其它样式 *************************/
+.red {
+	color: #FF0000;
+}
+.setup_box {
+	width: 800px;
+}
+.setup_table {
+	border: 1px solid #ccc;
+}
+.setup_menu {
+	border-right: 1px solid #ccc;
+	min-height: 350px;
+}
+.setup_menu td.now {
+	font-weight: bold;
+}
+.setup_menu td.installed {
+	color: #0000FF;
+}
+.setup_buttons {
+	border-top: 1px solid #ccc;
+	padding-right: 30px;
+}

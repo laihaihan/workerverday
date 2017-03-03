@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.markscore.SuperviseCaseMarkItem" table="SUPERVISE_CASEMARKITEM">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="PUNISHTYPE" name="punishtype" type="string"/>
+<property column="PUNID" name="punid" type="string"/>
+<property column="CONTENT" name="content" type="string"/>
+<property column="CONTENTTYPE" name="contenttype" type="string"/>
+<property column="SCORE" name="score" type="int"/>
+<property column="CONTENTLEVEL" name="contentlevel" type="string"/>
+<property column="SEQUENCE" name="sequence" type="string"/>
+<property column="SORTID" name="sortid" type="int"/>
+</class>
+</hibernate-mapping>

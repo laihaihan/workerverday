@@ -1,0 +1,110 @@
+/* 加载公共样式 */
+
+/********************** 弹出窗口样式 ************************************************************************/
+.uploadPop{
+    position:fixed;
+    *position:absolute;
+    width:420px;
+    height:220px;
+    background:url('images/build/popImportingBG.png') no-repeat;
+    left:50%;
+    top:50%;
+    margin-left:-210px;
+    margin-top:-110px;
+    overflow:hidden;
+    
+}
+
+/* 标题 */
+.popTitle {
+    position:absolute;
+    top:16px;
+    left:20px;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+    z-index:999;
+}
+
+/* 关闭按钮 */
+.popCloseBtn{
+    background: url('images/build/popCloseBtn.gif') no-repeat;
+    position:absolute;
+    top:12px;
+    right:20px;
+    width:26px;
+    height:26px;
+    cursor:pointer;
+    border-style:none;
+}
+.popCloseBtn:hover{
+    background: url('images/build/popCloseBtnOver.gif') no-repeat;
+}
+
+
+/* 内容 */
+.popContent{
+    position:absolute;
+    top:44px;
+    bottom:8px;
+    left:9px;
+    right:8px;
+    overflow:hidden;   
+    *height:168px;;
+    *width:403px;
+}
+
+.popContent iframe{
+	height:100%;
+    width:100%;
+	*height:168px;;
+    *width:403px;
+
+
+}
+
+
+/* 按钮区 */
+.popBtns{
+    
+    position:absolute;
+    height:40px;
+    line-height:40px;
+    left:0px;
+    right:0px;
+    bottom:0;
+    vertical-align:middle;
+    border-top:1px #fff solid;
+}
+.popBtns input{
+    float:right;
+    width:68px;
+    height:29px;
+    margin-top:5px;
+    border-style:none;
+    background:url('images/build/popBtn.gif') no-repeat;
+    margin-right:12px;
+    cursor:pointer;
+}
+.popBtns input:hover{
+    background:url('images/build/popBtnOver.gif') no-repeat;
+}
+
+
+/* 视图选择列表 */
+.popViewSel{    
+    
+}
+
+/*列表*/
+.popViewSel li{
+    list-style:none;
+    height:30px;
+    line-height:30px;
+    border-bottom:1px #bbb dashed;
+}
+/*选择框*/
+.popViewSel li input{
+    margin-left:20px;
+    margin-right:20px;
+}

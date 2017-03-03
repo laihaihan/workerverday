@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.dutypeople.SuperviseDutyPeople" table="SUPERVISE_DUTYPEOPLE">
+<id column="UNID" name="unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="CASESN" name="casesn" type="string"/>
+<property column="TYPE" name="type" type="string"/>
+<property column="NAME" name="name" type="string"/>
+<property column="DUTYPEOPLE" name="dutypeople" type="string"/>
+<property column="SEX" name="sex" type="string"/>
+<property column="CONTACTPHONE" name="contactphone" type="string"/>
+<property column="ADDRESS" name="address" type="string"/>
+<property column="IDCARD" name="idcard" type="string"/>
+<property column="REMARK" name="remark" type="string"/>
+<property column="ISNEW" name="isnew" type="string"/>
+</class>
+</hibernate-mapping>

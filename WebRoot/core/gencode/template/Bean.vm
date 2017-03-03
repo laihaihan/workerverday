@@ -1,0 +1,49 @@
+﻿package $bean.getPackageName();
+#set ($importList =  $bean.getImportList())
+#foreach($imporProperty in $importList)
+$imporProperty.getImportContent()
+#end
+ 
+/**
+ * <p>
+ * 	$bean.getTableComments()实体
+ * </P>
+ * 
+ * @author $bean.getCreaterEmail()
+ * @date $bean.getCreateTime()
+ * @version 1.00
+ * <p>
+ * 	Copyright (c) 2012 www.linewell.com
+ * </p>
+ */
+ 
+public class $bean.getBeanName() {
+	#set ($propertis =  $bean.getPropertis() )
+	#foreach($property in $propertis)
+	
+	/**
+	 * $property.getComment()
+	 */
+	private $property.getType() $property.getName() #if($property.getType()=="String") = "" #end;
+	#end
+	#foreach($property in $propertis)
+
+	/**
+	 * 获取$property.getComment()
+	 * @return $property.getType()
+	 */
+	public $property.getType() get$property.getHName()() {
+		return $property.getName();
+	}
+
+	/**
+	 * 设置$property.getComment()
+	 * @param $property.getName()
+	 *               $property.getType() $property.getComment()
+	 */
+	public void set$property.getHName()($property.getType() $property.getName()) {
+		this.$property.getName() = $property.getName();
+	}
+	#end
+	
+}

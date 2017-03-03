@@ -1,0 +1,80 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<table border="0" cellpadding="0" cellspacing="0" class="tableSet3" align="center">
+<COL width="20%">
+<COL width="30%">
+<COL width="20%">
+<COL width="30%">
+  <tr>
+    <th><span class="red">*</span> 用户名：</th>
+    <td><input name="user_display_name"  id="user_display_name"type="text" class="inputbox" />    </td>
+    <th><span class="red">*</span> 登录名：</th>
+    <td><input name="user_login_name"  id="user_login_name"type="text" class="inputbox" />    </td>
+  </tr>
+  <tr>    
+    <th><span class="red">*</span>密码：</th>
+    <td><input name="user_password"  id="user_password"type="password" class="inputbox" itemValue="" />    </td>    
+    <th><span class="red">*</span>是否禁用：</th>
+    <td><input type="text" name="user_forbid" id="user_forbid" /></td>
+  </tr>
+  <tr>
+    <th>性别：</th>
+    <td><input type="text" name="user_sex" id="user_sex" /></td>
+    <th><span class="red"></span> 身份证：</th>
+    <td><input name="user_id_card"  id="user_id_card"type="text" class="inputbox" />    </td>
+    
+  </tr>
+  <tr>
+    <th> 手机： </th>
+    <td><input name="user_mobile" id="user_mobile" type="text" class="inputbox" />    </td>
+    <th>即时通讯号码：</th>
+    <td><input name="user_message_number"  id="user_message_number"type="text" class="inputbox" />    </td>
+  </tr>
+  <tr>
+    <th> 电子邮箱： </th>
+    <td><input name="user_mail"  id="user_mail"type="text" class="inputbox" />    </td>
+    <th>排序号：</th>
+    <td><input name="user_sort"  id="user_sort"type="text" class="inputbox" />    </td>
+  </tr>
+
+  <tr>
+    <th>所属部门：</th>
+  <td><textarea readonly class="inputred"         
+             name="user_depts_Cn_" id="user_depts_Cn_" cols="2"></textarea>
+          <input type="text"
+             class="inputbox" name="user_depts" id="user_depts"
+              style="display:none" source="201" sourceType="20" value=""/><input 
+          type="button" class="btnOnlyChannel" 
+          onclick="selectDataSD('201','0','user_depts','','','','','umc');"/></td>
+    <th>分管部门：</th>
+  <td>    
+    <textarea readonly class="inputred"         
+             name="user_manage_depts_Cn_" id="user_manage_depts_Cn_" cols="2"></textarea>
+          <input type="text"
+             class="inputbox" name="user_manage_depts" id="user_manage_depts"
+              style="display:none" source="201" sourceType="20" value=""/><input 
+          type="button" class="btnOnlyChannel" 
+          onclick="selectDataSD('201','0','user_manage_depts','','','','','umc');"/>
+  </td>
+   
+  </tr>
+  <tr>
+    <th>直属上级：</th>
+    <td>
+      <textarea readonly class="inputred"         
+             name="user_leaders_Cn_" id="user_leaders_Cn_" cols="2"></textarea>
+	    <input type="text" class="inputbox" name="user_leaders" id="user_leaders" style="display:none"/><input 
+          type="button" class="btnOnlyChannel" 
+          onclick="selectDataSD('200','0','user_leaders','','','','','umc');"/>
+    </td>
+    <th>职位：</th>
+  <td><input name="user_posts" id="user_posts" type="text" class="inputbox"/></td>
+  </tr>  
+  <tr>
+    <th>密码问题：</th>
+    <td colspan="3"><input name="user_question"  id="user_question"type="text" class="inputbox" /></td>
+  </tr>
+  <tr>
+    <th>密码答案：</th>
+    <td colspan="3"><input name="user_answer" id="user_answer" type="text" class="inputbox" /></td>
+  </tr>
+</table>

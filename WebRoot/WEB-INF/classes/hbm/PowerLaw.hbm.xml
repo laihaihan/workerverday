@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.util.web.PowerLaw" table="SFDS_BUSINESS_POWERLAW">
+<id column="POWERLAW_UNID" name="powerlaw_unid" type="string">
+<generator class="assigned"/>
+</id>
+<property column="POWERLAW_POWER_UNID" name="powerlaw_power_unid" type="string"/>
+<property column="POWERLAW_DEFAULT_FLAG" name="powerlaw_default_flag" type="string"/>
+<property column="POWERLAW_SORT_ID" name="powerlaw_sort_id" type="long"/>
+<property column="POWERLAW_CONTENT" name="powerlaw_content" type="string"/>
+<property column="POWERLAW_REMARK" name="powerlaw_remark" type="string"/>
+<property column="POWERLAW_CREATETIME" name="powerlaw_createtime" type="string"/>
+<property column="VERSION" name="version" type="string"/>
+<property column="ISNEW" name="isnew" type="string"/>
+
+</class>
+</hibernate-mapping>

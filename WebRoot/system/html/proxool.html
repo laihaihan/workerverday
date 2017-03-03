@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>proxool.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   
+ 
+  </head>
+  
+  <body>
+   	<table  width=100% border="1" bordercolor="#cccccc" cellspacing="0"  class="formtable" cellpadding="0" >
+				                  
+        <tr>
+          <th>数据库连接名称：</th>
+          <td ><input id="alias" value="" readonly name="alias" type="text" size="20" />
+              </td>
+        </tr>
+        <tr>
+          <th>连接字符串：</th>
+          <td ><input id="driverUrl" value="" message="不能为空" name="driverUrl" type="text" size="80" />
+              </td>
+        </tr>
+        <tr>
+          <th>连接驱动：</th>
+          <td ><input id="driverClass"  value="" message="不能为空" name="driverClass" type="text" size="80" />
+             </td>
+        </tr>
+        <tr>
+          <th id="tbNameText">houseKeepingSleepTime：</th>
+          <td ><input id="houseKeepingSleepTime" value="" message="不能为空并且只能位数字" checkType="3"  name="houseKeepingSleepTime" type="text" size="20" />
+              </td>
+        </tr>
+        <tr>
+          <th id="tbNameText">minimumConnectionCount：</th>
+          <td ><input id="minimumConnectionCount" value=""  message="不能为空并且只能位数字" checkType="3" name="minimumConnectionCount" type="text" size="20" />
+              </td>
+        </tr>
+        <tr>
+          <th id="tbNameText">maximumConnectionCount：</th>
+          <td ><input id="maximumConnectionCount" value=""  message="不能为空并且只能位数字" checkType="3" name="maximumConnectionCount" type="text" size="20" />
+              </td>
+        </tr>
+        <tr>
+          <th id="tbNameText">prototypeCount：</th>
+          <td ><input id="prototypeCount" value=""  message="不能为空并且只能位数字" checkType="3" name="prototypeCount" type="text" size="20" />
+              </td>
+        </tr>
+        <tr>
+          <th id="tbNameText">simultaneousBuildThrottle：</th>
+          <td ><input id="simultaneousBuildThrottle"  message="不能为空并且只能位数字" checkType="3" value="" name="simultaneousBuildThrottle" type="text" size="20" />
+              </td>
+        </tr>
+        <tr>
+          <th>数据库用户名：</th>
+          <td ><input id="userName" value="" name="userName"  message="不能为空并且只能位数字" type="text" size="20" />
+             <span class="hint">连接数据库的用户名</span></td>
+        </tr>
+        <tr>
+          <th>数据库密码：</th>
+          <td >
+          	<input id="pwd" name="pwd" value=""   message="不能为空并且只能位数字" type="password" size="20" />
+              <span class="hint">连接数据库的密码 </span>
+              <input type="submit" name="Submit23" onclick="docForm.checkedDBConn();" value="测试数据库连接" /></td>
+        </tr>
+        <tr><td align="right" colspan="2"><input type="button" id="_saveButton" onclick="docForm.saveForm();" value="保存"/></td></tr>
+   </table>
+    <script type="text/javascript">
+      document.getElementById("_saveButton").disabled=true;
+    </script>
+  </body>
+</html>

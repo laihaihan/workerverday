@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+	<something-else-entirely>
+		<proxool>
+			<alias>3E2592D5DD95DA5C339C0935F7E9DAA8</alias>
+			<driver-url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</driver-url>
+			<driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+			<driver-properties>
+				<property name="user" value="workcore"/>
+				<property name="password" value="workcore"/>
+			</driver-properties>
+			<house-keeping-sleep-time>9000000</house-keeping-sleep-time>
+			<simultaneous-build-throttle>10</simultaneous-build-throttle>
+			<prototype-count>5</prototype-count>
+			<maximum-connection-count>20</maximum-connection-count>
+			<minimum-connection-count>5</minimum-connection-count>
+		</proxool>
+		<proxool>
+			<alias>DC7DDA0F25A3AE3AC8CCA148FF48B64B</alias>
+			<driver-url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</driver-url>
+			<driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+			<driver-properties>
+				<property name="user" value="workerverday"/>
+				<property name="password" value="workerverday"/>
+			</driver-properties>
+			<house-keeping-sleep-time>9000000</house-keeping-sleep-time>
+			<simultaneous-build-throttle>10</simultaneous-build-throttle>
+			<prototype-count>5</prototype-count>
+			<maximum-connection-count>20</maximum-connection-count>
+			<minimum-connection-count>5</minimum-connection-count>
+		</proxool>
+		<proxool>
+			<alias>30EF67ADD53C9554DB99D2039CC94D68</alias>
+			<driver-url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</driver-url>
+			<driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+			<driver-properties>
+				<property name="user" value="staff"/>
+				<property name="password" value="staff"/>
+			</driver-properties>
+			<house-keeping-sleep-time>9000000</house-keeping-sleep-time>
+			<simultaneous-build-throttle>10</simultaneous-build-throttle>
+			<prototype-count>5</prototype-count>
+			<maximum-connection-count>20</maximum-connection-count>
+			<minimum-connection-count>5</minimum-connection-count>
+		</proxool>
+		<proxool>
+			<alias>A8504E156D1098E5E32209875D3B8D43</alias>
+			<driver-url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</driver-url>
+			<driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+			<driver-properties>
+				<property name="user" value="log"/>
+				<property name="password" value="log"/>
+			</driver-properties>
+			<house-keeping-sleep-time>9000000</house-keeping-sleep-time>
+			<simultaneous-build-throttle>10</simultaneous-build-throttle>
+			<prototype-count>5</prototype-count>
+			<maximum-connection-count>20</maximum-connection-count>
+			<minimum-connection-count>5</minimum-connection-count>
+		</proxool>
+		<proxool>
+			<alias>proxool</alias>
+			<driver-url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</driver-url>
+			<driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+			<driver-properties>
+				<property name="user" value="workucap"/>
+				<property name="password" value="workucap"/>
+			</driver-properties>
+			<house-keeping-sleep-time>9000000</house-keeping-sleep-time>
+			<simultaneous-build-throttle>10</simultaneous-build-throttle>
+			<prototype-count>5</prototype-count>
+			<maximum-connection-count>20</maximum-connection-count>
+			<minimum-connection-count>5</minimum-connection-count>
+		</proxool>
+	</something-else-entirely>

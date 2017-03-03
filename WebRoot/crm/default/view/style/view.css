@@ -1,0 +1,395 @@
+﻿/************************ 系统标签 ************************/
+*{
+	margin:0;
+	padding:0;	
+}
+
+body {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+}
+
+/************************* 主区域 *************************/
+.area_main{
+	position: absolute;
+	left: 0px;
+	right: 0px;;
+	top: 0px;
+	bottom: 0px;
+}
+
+/************************* 树区域 *************************/
+.area_tree {
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	width: 175px;
+	background-color: #e9eaeb;
+	border-right: 1px #c9cdce solid;
+}
+
+.iframe_tree {
+	width:100%;
+	height:100%;
+	}
+
+
+/************************ 视图区域 ************************/
+.area_view {
+	position: absolute;
+	left:0px;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	background-color: #FFFFFF;
+	min-height:250px;
+	min-width:720px;
+}
+
+.iframe_view {
+	width:100%;
+	height:100%;
+}
+
+
+/*********************** 搜索栏区域 ***********************/
+.area_searchBar{
+	height: 30px;
+	line-height: 30px;
+	background-image: url('images/searchBar_bg.gif');
+}
+
+.area_searchBar{
+	height: 30px;
+	line-height: 30px;
+	background-image: url('images/searchBar_bg.gif');
+	color: #1b4959;
+}
+
+/********************** 搜索图标 **********************/
+.icon_search{
+	margin: 0 5px 0 5px;
+	float: left;
+	width: 18px;
+	height: 30px;
+	background-image: url('images/icon_search.gif');
+}
+
+/********************** 高级搜索区域 **********************/
+.table_advancedSearch{
+	border-top: 1px #b2cdd5 solid;
+	border-left: 1px #b2cdd5 solid;
+	width:100%;
+}
+
+.table_advancedSearch tr{
+	height:30px;
+	line-height:30px;
+}
+
+.table_advancedSearch td{
+	border-right: 1px #c8c8c8 solid;
+	border-bottom: 1px #c8c8c8 solid;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+
+
+/******************** 高级搜索子项区域 *********************/
+.tr_advancedSearch_child{
+	height:30px;
+	line-height:30px;
+}
+.advancedSearch_child{
+	border-bottom: 1px #c8c8c8 solid;
+	float: left;
+	width: 50%;
+}
+
+
+.advancedSearch_child_title{
+	text-align:right;
+	padding-right:5px;
+	background-color:#f4f9fd;
+	border-right: 1px #c8c8c8 solid;
+}
+
+.advancedSearch_child_input{
+	height: 30px;
+	line-height: 30px;
+	border-right: 1px #c8c8c8 solid;
+}
+
+.advancedSearch_child_input input{
+	margin-left:5px;
+	margin-top:5px;
+}
+
+
+/******************** 高级搜索按钮区域 *********************/
+.area_advancedSearch_button{
+	height:30px;
+	line-height:30px;
+	text-align:right;
+
+}
+
+
+/*********************** 公共按钮 ************************/
+.button_public{
+	color:#315071;
+	border-top: 1px #d1dee3 solid;
+	border-left: 1px #d1dee3 solid;
+	border-right: 1px #7daad4 solid;
+	border-bottom: 1px #7daad4 solid;
+	background-image:url('images/publicButton_bg.gif');
+	padding:0px 5px 0px 5px;
+	height:20px;
+	line-height:20px;
+	cursor:pointer;
+}
+
+/*********************** 按钮栏区域 ***********************/
+.area_buttonBar {
+	height: 30px;
+	line-height: 30px;
+	background: url('images/buttonBar_bg.gif') repeat-x ;
+	border-bottom:1px #bbb solid;
+}
+
+.button_buttonBar{
+	color: #1b4959;
+	vertical-align:middle;
+	line-height:21px;
+	height: 21px;
+	padding-left:5px;
+	padding-right:5px;
+	border:1px transparent solid;
+	cursor:pointer;
+	margin-left:10px;
+	position:relative;
+	top:4px;
+	float:left;
+
+}
+.button_buttonBar:hover{
+	background: url('images/buttonBar.gif') repeat-x;
+	border:1px #9ebae1 solid;
+}
+
+
+.ico_buttonBar{
+	position:relative;
+	top:4px;
+	width:16px;
+	height:16px;
+	margin-right:4px;
+}
+
+
+
+/********************** 表格标题区域 **********************/
+.area_table_title {
+	height:25px;
+	line-height:25px;
+	border-width: 1px 0px 0px 1px;
+	border-style: solid;
+	border-color: #d0d0d0;
+
+}
+
+.area_table_title ty {
+	background-color: #800000;
+}
+
+/************************ 表格标题 ************************/
+.table_title {
+	width: 100%;
+	height:25px;
+	line-height:25px;
+	background-image:url('images/tr_title_bg.gif');
+}
+
+.table_title td {
+	border-width: 0px 1px 0px 0px;
+	border-style: solid;
+	border-color: #d0d0d0;
+	padding-left: 5px;
+	color: #1b4959;
+}
+
+/********************** 表格标题区域 **********************/
+.area_table_data {
+	position: absolute;
+	top:125px;
+	bottom:25px;
+	width:100%;
+	overflow:auto; 
+
+}
+
+.area_table_data ty {
+	background-color: #800000;
+}
+
+
+
+/************************ 数据表格 ************************/
+.table_data {
+	width: 100%;
+	border-width: 0px 0px 0px 1px;
+	border-style: solid;
+	border-color: #ededed;
+}
+
+.table_data thead {
+	border-top:10px gray solid;
+	border-bottom:10px gray solid;
+	background-image:url('images/tr_title_bg.gif');
+}
+.table_data thead tr:hover {
+	background-image:url('images/tr_title_bg.gif');
+}
+
+.table_data thead td:hover {
+	background: url('images/tr_title_over.gif');
+}
+
+
+
+.table_data tr{
+	height:23px;
+	line-height:23px;
+}
+
+.table_data tr:hover{
+	background:#edf5fb;
+}
+
+
+.table_data td {
+	border-width: 0px 1px 1px 0px;
+	border-style: solid;
+	border-color: #ededed;
+	padding-left: 6px;
+	color: #1b4959;
+	word-break:keep-all;/* 不换行 */
+	white-space:nowrap;/* 不换行 */
+	overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/	
+}
+
+
+/************************* 奇数行 *************************/
+.tr_odd {
+	border: 1px #008000 solid;
+	background-color:#ffffff;
+	width: 100%;
+}
+
+
+/************************* 偶数行 *************************/
+.tr_even {
+	background-color:#fafafa;
+}
+
+
+/********************** 复选框单元格 **********************/
+.td_check {
+	background-color:#f0f1f3;
+	border-width: 0px 1px 1px 0px;
+	border-style: solid;
+
+	border-color:#00ffff;
+	width:20px;
+	}
+
+
+
+/************************ 页码区域 ************************/
+.area_pageNumber{
+	position: absolute;
+	left:0;
+	right:0;
+	bottom: 0;
+	height: 25px;
+	line-height: 25px;
+	background-image: url('images/pageNumber_bg.gif');
+}
+
+/************************* 页码按钮 *************************/
+.button_pageNumber{
+	border-style: none;
+	background-color: transparent;
+	vertical-align:middle;
+	width:16px;
+	height:16px;
+	cursor:pointer;
+}
+.button_pageNumber.first{
+	background-image: url('images/page_first.gif');
+	margin-left:10px;
+}
+
+.button_pageNumber.first_disabled{
+	background-image: url('images/page_first_disabled.gif');
+	margin-left:10px;
+}
+
+.button_pageNumber.prev{
+	background-image: url('images/page_prev.gif');
+}
+
+.button_pageNumber.prev_disabled{
+	background-image: url('images/page_prev_disabled.gif');
+}
+
+
+.button_pageNumber.next{
+	background-image: url('images/page_next.gif');
+}
+
+.button_pageNumber.next_disabled{
+	background-image: url('images/page_next_disabled.gif');
+}
+
+.button_pageNumber.last{
+	background-image: url('images/page_last.gif');
+}
+
+.button_pageNumber.last_disabled{
+	background-image: url('images/page_last_disabled.gif');
+}
+
+
+
+/************************ 页码分隔线 ************************/
+.separator_pageNumber{
+	margin: 0 6px 0 6px;
+	border-left: 1px #9ac6ff solid;
+	border-right: 1px #ffffff solid;
+	height: 13px;
+}
+
+/************************ 页码输入框 ************************/
+.input_pageNumber{
+	width:24px;
+	height:14px;
+	padding:0;
+	vertical-align:middle;
+	margin:0px;
+	text-align:center;
+}
+
+
+/************************* 置右 *************************/
+.onright{
+	position:absolute;
+	right:0;
+	margin-right:15px;
+}
+

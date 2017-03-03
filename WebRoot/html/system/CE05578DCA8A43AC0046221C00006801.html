@@ -1,0 +1,199 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<SPAN style="DISPLAY: none">
+    <INPUT class=inputbox id=form_unid name=form_unid/>
+	<INPUT class=inputbox id=form_module_unid name=form_module_unid/>
+	<INPUT class=inputbox id=form_belong_to_app name=form_belong_to_app/>
+</SPAN>
+<TABLE class=table2>
+    <TBODY>
+	<TR>
+		<td>
+<div onclick="toggleClick('ucap_form_basic');" style="margin:10px 0 10px 0;background: url(../../uistyle/images/doc/line.gif)  80px 50% no-repeat;cursor:hand;color:#3f529c;font-size:14px;font-weight:bold;">
+	<img id="ucap_form_basic_img" src="../../uistyle/images/doc/display.gif"></img>
+		基本属性
+</div>
+<TABLE id="ucap_form_basic" class=table2>
+	<COL width="20%">
+	<COL width="30%">
+	<COL width="20%">
+	<COL width="30%">
+    <TBODY>
+        <TR>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                中文名称：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_name_cn name=form_name_cn/>
+            </TD>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                英文名称：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_name_en name=form_name_en/>
+            </TD>
+        </TR>
+        <TR>
+            <TH>
+                <SPAN class=red>
+                    *
+                </SPAN>
+                主键：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_primary name=form_primary conValue="form_unid"
+                />
+            </TD>
+			<TH>
+                唯一性检验字段：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_verify_fields name=form_verify_fields conValue="form_unid"
+                />
+            </TD>
+           
+        </TR>
+    </TBODY>
+</TABLE>
+<div onclick="toggleClick('ucap_form_show');" style="margin:10px 0 10px 0;background: url(../../uistyle/images/doc/line.gif)  80px 50% no-repeat;cursor:hand;color:#3f529c;font-size:14px;font-weight:bold;">
+	<img id="ucap_form_show_img" src="../../uistyle/images/doc/hide.gif"></img>
+		显示属性
+</div>
+<TABLE id="ucap_form_show" style="display:none;" class=table2 >
+	<COL width="20%">
+	<COL width="30%">
+	<COL width="20%">
+	<COL width="30%">
+    <TBODY>
+		<TR>
+			 <TH>
+                文档记录标题：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_title_style name=form_title_style/>
+                <IMG title=帮助 onclick="searchHelp('form_title')" src="../../uistyle/images/help.gif">
+                </IMG>
+            </TD>
+            <TH>
+                显示的HTML页面：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_html_url name=form_html_url/>
+                <IMG title=帮助 onclick="searchHelp('form_showHtmlUrl')" src="../../uistyle/images/help.gif">
+                </IMG>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+<div onclick="toggleClick('ucap_form_advanced');" style="margin:10px 0 10px 0;background: url(../../uistyle/images/doc/line.gif)  80px 50% no-repeat;cursor:hand;color:#3f529c;font-size:14px;font-weight:bold;">
+	<img id="ucap_form_advanced_img" src="../../uistyle/images/doc/hide.gif"></img>
+		高级属性
+</div>
+<TABLE id="ucap_form_advanced" style="display:none;" class=table2 >
+	<COL width="20%">
+	<COL width="30%">
+	<COL width="20%">
+	<COL width="30%">
+    <TBODY>	
+        <TR>
+            <TH>
+                唯一性验证对象：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_unique_achieve_object name=form_unique_achieve_object />
+            </TD>
+			<TH>
+                数据集成配置：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_data_source_unid name=form_data_source_unid/>
+            </TD>
+        </TR>
+        <TR>
+            <TH>
+                可查看用户：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_watch_users name=form_watch_users/>
+            </TD>
+			<TH>
+                可编辑用户：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_editors name=form_editors/>
+            </TD>
+            
+        </TR>
+        <TR>
+            <TH>
+                可创建用户：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_creators name=form_creators/>
+            </TD>
+            <TH>
+                可编辑JS：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_edit_js name=form_edit_js/>
+                <IMG title=帮助 onclick="searchHelp('form_editJs')" src="../../uistyle/images/help.gif">
+                </IMG>
+            </TD>
+        </TR>
+        <TR>
+            <TH>
+                数据维护者：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_manager name=form_manager/>
+                <IMG title=帮助 onclick="searchHelp('form_dataVindicator')" src="../../uistyle/images/help.gif">
+                </IMG>
+            </TD>
+            <TH>
+                公共类型：
+            </TH>
+            <TD>
+                <INPUT class=inputbox id=form_public_type name=form_public_type/>
+            </TD>
+        </TR>
+        <TR style="DISPLAY: none">
+            <TH>
+                操作日志记录：
+            </TH>
+            <TD colSpan=3>
+                <INPUT class=inputbox id=form_logs name=form_logs/>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+
+		</td>
+	</TR>
+	</TBODY>
+</TABLE>
+
+<div onclick="toggleClick('ucap_FF09126DA1D2CB1C9E704925B122041A');" style="margin:10px 0 10px 0;background: url(../../uistyle/images/doc/line.gif)  80px 50% no-repeat;cursor:hand;color:#3f529c;font-size:14px;font-weight:bold;">
+	<img id="ucap_FF09126DA1D2CB1C9E704925B122041A_img" src="../../uistyle/images/doc/display.gif"></img>
+		表单字段
+</div>
+<script>
+function toggleClick(id){
+	var obj = Ext.get(id);
+	if(obj){
+		if(obj.isDisplayed()){
+			var imgObj = Ext.getDom(id+"_img");
+			imgObj.setAttribute("src","../../uistyle/images/doc/hide.gif");
+		}else{
+			var imgObj = Ext.getDom(id+"_img");
+			imgObj.setAttribute("src","../../uistyle/images/doc/display.gif");
+		}
+		obj.setVisibilityMode(2);
+		obj.toggle(true);
+	}
+}
+</script>

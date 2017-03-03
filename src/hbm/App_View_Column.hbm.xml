@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.linewell.view.cfg.column.Column" table="APP_VIEW_COLUMN">
+        <id column="column_unid" name="columnUnid" type="string">
+            <generator class="assigned"/>
+        </id>    
+        <property column="COLUMN_VIEW_UNID"  name="columnViewUnid" type="string"/>   
+        <property column="COLUMN_TITLE"  name="columnTitle" type="string"/>   
+        <property column="COLUMN_FIELD"  name="columnField" type="string"/>   
+        <property column="COLUMN_WIDTH"  name="columnWidth" type="string"/>   
+        <property column="COLUMN_SORT"  name="columnSort" type="integer"/>   
+        <property column="COLUMN_FORMATTER"  name="columnFormatter" type="string"/>   
+        <property column="COLUMN_ALIGN"  name="columnAlign" type="string"/>   
+        <property column="COLUMN_SORTABLE"  name="columnSortable" type="string"/>   
+        <property column="COLUMN_ROWSPAN"  name="columnRowspan" type="integer"/>   
+        <property column="COLUMN_COLSPAN"  name="columnColspan" type="integer"/>   
+        <property column="COLUMN_CHECKBOX"  name="columnCheckbox" type="string"/>   
+        <property column="COLUMN_ONCLICK"  name="columnOnclick" type="string"/>   
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,117 @@
+
+#*取得[福安要闻]栏目名称，用于index.html文件*#
+#set( $faywunid="AD48E0943A4D7BC0A0B35FC2A04269DB")
+#set( $cate_fayw = $list.getCategoryByUnid(${faywunid}))
+#set( $articlelist_fayw = $list.getList("cate",${faywunid},5,38,"yyyy-MM-dd") )
+
+#*取得[部门动态]栏目名称，用于index.html文件*#
+#set( $bmdtunid="3142E4CBD59EE2EEA9585A050DE3CC49")
+#set( $cate_bmdt = $list.getCategoryByUnid(${bmdtunid}))
+#set( $articlelist_bmdt = $list.getList("cate",${bmdtunid},5,38,"yyyy-MM-dd") )
+
+#*取得[乡镇动态]栏目名称，用于index.html文件*#
+#set( $xsqdtunid="943C3FCD0E961ED32248DAE0FD5808EF")
+#set( $cate_xsqdt = $list.getCategoryByUnid(${xsqdtunid}))
+#set( $articlelist_xsqdt = $list.getList("cate",${xsqdtunid},5,38,"yyyy-MM-dd") )
+
+#*取得[图片新闻]栏目名称，用于index.html文件*#
+#set( $tpxmunid="E231DB83277B9CB18A8A7D20EDCAFF7D")
+#set( $cate_tpxm = $list.getCategoryByUnid(${tpxmunid}))
+#set( $articlelist_tpxm= $list.getList("cate",${tpxmunid},7,28,"yyyy-MM-dd") )
+
+#*取得[视频点播]栏目名称，用于index.html文件*#
+#set( $spdpunid="D083670F817F4BCE4BFA3FC186887BD0")
+#set( $cate_spdp = $list.getCategoryByUnid(${spdpunid}))
+#set( $articlelist_spdp = $list.getList("cate",${spdpunid},7,28,"yyyy-MM-dd") )
+
+
+#*取得[公告公示]栏目名称，用于index.html文件*#
+#set( $gggsunid="F42DE0B91A5588DB925565677CD8937B")
+#set( $cate_gggs = $list.getCategoryByUnid(${gggsunid}))
+#set( $articlelist_gggs = $list.getList("cate",${gggsunid},8,20,"yyyy-MM-dd") )
+
+
+#*取得[热点关注]栏目名称，用于index.html文件*#
+#set( $rdgzunid="D5FDE71BC20E47633715D9A7E82DFF07")
+#set( $cate_rdgz = $list.getCategoryByUnid(${rdgzunid}))
+#set( $articlelist_rdgz = $list.getList("cate",${rdgzunid},6,20,"MM-dd") )
+
+
+#*取得[政府工作报告]栏目名称，用于index.html文件*#
+#set( $zfgzbgunid="EEB15595E5E671D0AEDC25C013EF3CCA")
+#set( $cate_zfgzbg = $list.getCategoryByUnid(${zfgzbgunid}))
+#set( $articlelist_zfgzbg = $list.getList("cate",${zfgzbgunid},5,70,"yyyy-MM-dd") )
+
+#*取得[人事任免]栏目名称，用于index.html文件*#
+#set( $rsrmunid="561D14F64B704D1AE3274A45A8E5D938")
+#set( $cate_rsrm = $list.getCategoryByUnid(${rsrmunid}))
+#set( $articlelist_rsrm = $list.getList("cate",${rsrmunid},5,70,"yyyy-MM-dd") )
+
+#*取得[总体应急预案]栏目名称，用于index.html文件*#
+#set( $ztyjyaunid="C2B4048212BDBF4AE31917B0796086F9")
+#set( $cate_ztyjya = $list.getCategoryByUnid(${ztyjyaunid}))
+#set( $articlelist_ztyjya = $list.getList("cate",${ztyjyaunid},5,70,"yyyy-MM-dd") )
+
+#*取得[政府文件]栏目名称，用于index.html文件*#
+#set( $zfwjunid="BFF0020FBD55D0431DF423647CCE6FC3")
+#set( $cate_zfwj = $list.getCategoryByUnid(${zfwjunid}))
+#set( $articlelist_zfwj = $list.getList("cate",${zfwjunid},5,70,"yyyy-MM-dd") )
+
+#*取得[统计数据]栏目名称，用于index.html文件*#
+#set( $tjsjunid="6066C96C023199DF33A8CDCE822724F8")
+#set( $cate_tjsj = $list.getCategoryByUnid(${tjsjunid}))
+#set( $articlelist_tjsj = $list.getList("cate",${tjsjunid},5,70,"yyyy-MM-dd") )
+
+#*取得[专题专栏]栏目名称，用于XXXX.html文件*#
+#set( $ztzlunid="ECE9E50308FC5F347C09EC9EA70E0754")
+#set( $cate_ztzl = $list.getCategoryByUnid(${ztzlunid}))
+#set( $articlelist_ztzl = $list.getList("allcate",${ztzlunid},6,20,"MM-dd") )
+
+#*取得[连接分类]，用于index.html文件*#
+#set( $link_cate = $list.getLinkCategoryList(${siteunid},"1,6"))
+
+#*取得[公共服务平台]，用于index.html文件*#
+#set( $ggfwptunid="C757F57C05B4E44D289B24263686FA7E")
+#set( $cate_ggfwpt = $list.getCategoryByUnid(${ggfwptunid}))
+#set( $ggfwpt_url ="${tomcatroot}/${cmsWebapp}/ggfwpt/view.jsp?cateunid=")
+
+#*取得[便民服务]，用于index.html文件*#
+#set( $bmfwunid="8D55EC82C1120910279EF4F0297A63B9")
+#set( $cate_bmfw = $list.getCategoryByUnid(${bmfwunid}))
+#set( $bmfw_url ="${tomcatroot}/${cmsWebapp}/bmfw/view.jsp?cateunid=")
+#set( $bmfwmore_url ="${tomcatroot}/${cmsWebapp}/bmfw/viewMore.jsp?cateunid=")
+
+#*取得[快速通道]，用于index.html文件*#
+#set( $kstdunid="9C4C2A7045361899C67F3EDC5BAD0334")
+#set( $cate_kstd = $list.getCategoryList(${kstdunid}))
+#set( $kstd_url ="${tomcatroot}/${cmsWebapp}/kstd/view.jsp?cateunid=")
+
+#*取得[办事指南]栏目名称，用于XXXX.html文件*#
+#set( $bsznunid="94F31ECF559840B524386C37DB89413A")
+#set( $catelist_bszn=$list.getCategoryList(${bsznunid}))
+
+#*取得[二级页面连接]，用于index.html文件*#
+#set($secondPageUrl="${tomcatroot}/${cmsWebapp}/views/list.jsp?cateunid=")
+
+#*取得[领导信箱]，用于index.html文件*#
+#set($ldxxunid="C418200D55F0A6517002EBD42E9E7CCA")
+
+#*取得[效能投诉]，用于index.html文件*#
+#set($sntsunid="AA7C6EC65C4D4AA99450732E02C79390")
+
+#*取得[法律咨询]，用于index.html文件*#
+#set($flzsunid="647192FC3ED2FD0D1787EDFA23DFB1F5")
+
+#*取得[民意征集]，用于index.html文件*#
+#set($myzzunid="84A576C6145AB0980CE46FC455D89A54")
+
+#*取得[建言献策]，用于index.html文件*#
+#set($jyxcunid="82F3A1E1AF549AE70C13A2C268E7C951")
+
+
+#*取得[政民互动]栏目名称，用于XXXX.html文件*#
+#set( $zmhdunid="A6365E419D4345EAD8FD297CF8CD5F92")
+#set( $catelist_zmhd=$list.getCategoryList(${zmhdunid}))
+
+
+

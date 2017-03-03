@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.linewell.ess.fds.form.BusinessShareItem" table="SUPERVISE_SHAREITEM">
+	<id column="UNID" name="unid" type="string">
+		<generator class="assigned"/>
+	</id>
+	<property column="PUNID" name="punid" type="string"/>
+	<property column="TABLENAME" name="tableName" type="string"/>
+	<property column="TABLEINTRO" name="tableIntro" type="string"/>
+	<property column="ITEMNAME" name="itemName" type="string"/>
+	<property column="ITEMINTRO" name="itemIntro" type="string"/>
+	<property column="USEABLE" name="useAble" type="string"/>
+	<property column="CREATETIME" name="createTime" type="string"/>
+	<property column="SORTID" name="sortId" type="int"/>
+</class>
+</hibernate-mapping>

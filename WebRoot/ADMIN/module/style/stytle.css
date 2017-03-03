@@ -1,0 +1,498 @@
+/******************** 系统标签样式 ********************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, 宋体;
+    background: #f0f9ff;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/********************** 页眉区域 **********************/ 
+/* 页眉 */
+.header {
+    position: absolute;
+    top: 0px;
+    width:100%;
+    left: 0px;
+    right: 0px;
+    height: 87px;
+    background: #ddd url('images/common/headerBG.gif') repeat-x;
+}
+
+/* LOGO */
+.logo {
+    width: 326px;
+    height: 87px;
+    background: url('images/common/logo.gif') no-repeat;
+}
+
+/* 子LOGO */
+.logoSub {
+    width: 127px;
+    height: 87px;
+    background: url('images/module/logoBusinessModeling.gif') no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 326px;
+}
+
+/* 导航 */
+.nav {
+    position: absolute;
+    top: 87px;
+    left: 0px;
+    right:0px;
+    width:100%;
+    background:url('images/module/navBG.gif') repeat-x;    
+}
+
+/* 导航按钮区 */
+.navButtons {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+/* 导航按钮 */
+.navBtn {
+    width: 162px;
+    height: 40px;
+	line-height:40px;
+    background: url('images/module/BMNav.gif') no-repeat;
+    float: left;
+    position: relative;
+    margin-left: -20px;
+}
+
+.navBtn h1 {
+    position: absolute;    
+    left: 37px;
+    color: #1b498f;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.navBtn h2 {
+    position: absolute;
+    left: 60px;
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* 当前执行 */
+.navBtn.on {
+    background: url('images/module/BMNavOn.gif') no-repeat;
+}
+
+/* 执行结束 */
+.navBtn.over {
+    background: url('images/module/BMNavOver.gif') no-repeat;
+}
+
+/********************** 页脚区域 **********************/ /* 页脚 */
+.footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 55px;
+    background: #ddd url('images/common/footerBG.gif') repeat-x;
+    width:100%
+}
+
+/* 页脚按钮*/
+.footerBtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+/* 上一步 */
+.footerBtnPre {
+    background: url('images/common/footerBtnPre.gif') no-repeat;
+    width: 138px;
+    height: 51px;
+    float: left;
+    cursor: pointer;
+}
+
+.footerBtnPre:hover {
+    background: url('images/common/footerBtnPreOver.gif') no-repeat;
+}
+
+/* 下一步 */
+.footerBtnNext {
+    background: url('images/common/footerBtnNext.gif') no-repeat;
+    width: 138px;
+    height: 51px;
+    float: left;
+    cursor: pointer;
+}
+
+.footerBtnNext:hover {
+    background: url('images/common/footerBtnNextOver.gif') no-repeat;
+}
+
+/******************** 主区域 ********************/ 
+/* 主区域 */
+.areaMain {
+    position: absolute;
+    top: 127px;
+    bottom: 55px;
+    left: 0px;
+    right: 0px;
+    width:100%;
+    width:expression(documentElement.clientWidth);
+    height:expression(documentElement.clientHeight-182);
+}
+
+/* 标题 */
+.title {
+    background: url('images/common/titleIcon.gif') no-repeat left center;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 23px;
+    font-size: 14px;
+    color: #1e3287;
+    cursor: pointer;
+}
+
+/* 标题_打开 */
+.title.open {
+    background: url('images/common/titleIconOpen.gif') no-repeat left center
+        ;
+}
+
+/* 内容 */
+.content {
+    background: #fff;
+    border: 1px #aaa solid;
+    padding: 15px;
+}
+
+/* 文本输入框 */
+.textInput {
+    height: 30px;
+    border: #cfd3d4 1px solid;
+    background: url('images/common/textInputBG.gif') repeat-x;
+}
+
+/******************** 页面留白 ********************/
+.blank {
+    height: 8px;
+    line-height: 8px;
+    clear: both;
+    visibility: hidden;
+}
+
+/*************************表单、视图配置页面*****************************/ 
+.formCfgToolBar {
+    background: url('images/module/formCfgToolBarBG.gif') repeat-x;
+    height: 34px;
+    line-height: 34px;
+    z-index: 100;
+    width:100%;
+}
+
+
+/* 工具栏_标题 */
+.formCfgToolBar h1 {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #003d7c;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+/* 工具栏_说明 */
+.formCfgToolBar h2 {
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+}
+
+/* 工具栏_数量 */
+.formCfgToolBar h3 {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6600;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* 工具栏_按钮 */
+.formCfgToolBar input {
+	_margin-top:3px;
+}
+
+/* 工具栏添加按钮 */
+.toolBarAdd {
+    background: url('images/module/toolBarAdd.gif') no-repeat;
+    border-style: none;
+    width: 63px;
+    height: 26px;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-left: 10px;
+    cursor:pointer;
+}
+
+/*经过效果*/
+.toolBarAdd:hover {
+    background: url('images/module/toolBarAddOver.gif') no-repeat;
+}
+
+/* 工具栏管理按钮 */
+.toolBarMg {
+    background: url('images/module/toolBarMg.gif') no-repeat;
+    border-style: none;
+    width: 63px;
+    height: 26px;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-left: 0px;
+    cursor:pointer;
+}
+/*经过效果*/
+.toolBarMg:hover {
+    background: url('images/module/toolBarMgOver.gif') no-repeat;
+}
+
+/* 工具栏生成按钮 */
+.toolBarGenerate{
+	background:url('images/module/toolBarGenerate.gif') no-repeat;
+	border-style:none;
+	width:63px;
+	height:26px;
+	line-height:30px;
+	padding-left:20px;
+	margin-left:10px;
+	cursor:pointer;
+}
+/*经过效果*/
+.toolBarGenerate:hover{
+	background:url('images/module/toolBarGenerateOver.gif') no-repeat;
+}
+
+/*工具栏导入按钮*/
+.toolBarImport{
+	background:url('images/module/toolBartoolBarImport.gif') no-repeat;
+	border-style:none;
+	width:63px;
+	height:26px;
+	line-height:30px;
+	padding-left:20px;
+	margin-left:10px;
+	cursor:pointer;
+}
+/*经过效果*/
+.toolBarImport:hover{
+	background:url('images/module/toolBartoolBarImportOver.gif') no-repeat;
+}
+
+/* 工具栏刷新按钮 */
+.toolBarRefresh{
+	background:url('images/module/toolBarRefresh.gif') no-repeat;
+	border-style:none;
+	width:63px;
+	height:26px;
+	line-height:30px;
+	padding-left:20px;
+	margin-left:10px;
+	cursor:pointer;
+}
+/*经过效果*/
+.toolBarRefresh:hover{
+	background:url('images/module/toolBarRefreshOver.gif') no-repeat;
+}
+
+/* 按钮区 */
+.formCfgBtns {
+    position: absolute;
+    top: 34px;
+    bottom: 55px;
+    left: 0px;
+    right: 0px;
+    overflow: auto;
+    
+    width:expression(documentElement.clientWidth);
+}
+
+/**************************** 按钮样式 ****************************/
+.formCfgBtn {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.formCfgBtn img.cancleIcon{
+    position:absolute;
+    width:16px;
+    height:16px;
+    top:15px;
+    right:25px;
+}
+
+.formCfgBtn:hover {
+    background: url('images/module/formCfgBtnOver.gif') no-repeat;
+}
+
+.formCfgBtn img.btnImg {
+    width: 59px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    top: 15px;
+}
+
+.formCfgBtn a {
+    font-size: 14px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    color: #003366;
+}
+
+/* 主区域 */
+.areaViewFormMain {
+    position: absolute;
+    height:expression(document.body.clientHeight-1);
+    width:100%;
+    top: 0px;
+    bottom: 1px;
+    left: 0px;
+    right: 0px;
+    overflow: auto;
+}
+
+/**********虚线表单样式*****************************************************************************************************/
+.dialogHtml{
+    width:100%;
+}
+
+.generalFrom{
+    width:80%;
+    margin-top:20px;
+    border:1px #ebebeb solid;
+    border-collapse:collapse;  
+}
+.generalFrom tr{
+}
+.generalFrom td{
+    /*border-bottom:1px #999 dashed;*/
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+    padding-left:15px;
+    height:25px;
+    border:1px #ebebeb solid;
+    background-color:#fff;
+}
+
+.generalFrom tr td input{
+    width:100%;
+}
+
+
+.generalFrom td.titleTd{
+    text-align:right;
+    background-color:#f9f9f9;
+    padding-right:5px;
+}
+.iconSelect
+{
+    float:left;
+    width:80px;
+    height:25px;
+    margin-right:10px;
+    margin-top:17px;
+}
+.iconShow{
+    float:left;
+}
+
+/* 文本输入框 */
+/* 蓝色 25PX高度   100%宽度 */
+.textInputBlue25px{
+	border:#678db3 1px solid; 
+	background:url('images/common/textInputBG.gif') repeat-x;
+	width:100%;
+	height:25px;
+	line-height:25px;
+}
+
+/* 蓝色 25PX高度   100%宽度 */
+.textInputBlue25px:focus{
+	border:#678db3 1px solid !important; 
+	background:url('images/common/textInputBG.gif') repeat-x !important;
+	width:100% !important;
+	height:25px !important;
+	line-height:25px !important;
+}
+/* 完成 */
+.footerBtnOk{
+    background:url('images/common/footerBtnOk.gif') no-repeat;
+    width:138px;
+    height:51px;
+    float:left;
+    cursor:pointer;
+}
+.footerBtnOk:hover{
+    background:url('images/common/footerBtnOkOver.gif') no-repeat;
+}
+
+/********* 展示配置****************************************/
+
+/* 展示配置_左区域 */
+.showCfgLeftBox{
+	position:absolute; 
+	width:250px; 
+	top:0px; 
+	bottom:0px; 
+	left:0px; 
+	background:#eee;
+	height:expression(document.body.clientHeight);
+}
+/* 展示配置_右区域 */
+.showCfgRightBox{
+	position:absolute; 
+	top:0px;
+	bottom:0px; 
+	left:250px; 
+	right:0px; 
+	background:#fff;
+	height;100%;
+	*height:expression(document.body.clientHeight);
+	*width: expression(documentElement.clientWidth-250);
+}

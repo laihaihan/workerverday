@@ -1,0 +1,22 @@
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/util/common.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/portal/menuConfig.js">	</script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/portal/form.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/view/view.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/view/viewTree.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/view/viewConfig.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/view/viewConditionCfg.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/dept/dept.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/dict/dictTree.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/util/validator.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/util/treeUi.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/select/listSelect.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/shortCut/shortConfig.js"></script>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/calendar/WdatePicker.js" ></SCRIPT>
+<SCRIPT type="text/javascript" src="<%=sSystemPath%>js/ucap/flow/ucapFlow.js"></SCRIPT>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/configLog/configLog.js" ></SCRIPT>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/userInfo/modifyPassword.js" ></SCRIPT>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/changeDB/changeDB.js" ></SCRIPT>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/function/function.js" ></SCRIPT>
+<script type="text/javascript" src="<%=sSystemPath%>js/ucap/permission/permission.js"></script>
+<SCRIPT language=javascript src="<%=sSystemPath%>js/ucap/portal/sysindex.js"></SCRIPT>
+<SCRIPT language=javascript src="<%=sSystemPath%>js/ucap/unit/unit.js"></SCRIPT>

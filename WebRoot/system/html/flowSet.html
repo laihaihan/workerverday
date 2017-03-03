@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>flowSet.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+  <table width=100% border="1"  bordercolor="#cccccc" cellspacing="0"  class="formtable" cellpadding="0">
+      <tr>
+        <th style="width:20%;">保存方式</th>
+        <td class="input_box">
+          <select id="isLocal" name="flowFileSaveType">
+            <option value="0">保存到本地文件</option>
+            <option value="1">保存到数据库</option>
+          </select>
+            <span class="hint">具体流程实例保存的地址</span></td>
+      </tr>
+      <tr id="flowAddr" >
+        <th >流程文件保存地址</th>
+        <td class="input_box"><br><input id="filePath"  name="filePath" type="text" value="" size="20" />
+           <span class="hint">为系统的物理路径，如:c:/flow/，可配置为空，当选择数据库时：为流程设计器的配置信息</span></td>
+      </tr>
+      <tr><td align="right" colspan="2"><input type="button" onclick="docForm.saveForm();" value="保存"/></td></tr>
+  </table>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+-- Create table
+create table CORE_ICON
+(
+  ICON_UNID  VARCHAR2(32) not null,
+  APP_UNID   VARCHAR2(32),
+  VIEW_UNID  VARCHAR2(32),
+  ICON_CLASS VARCHAR2(50),
+  ICON_PATH  VARCHAR2(500)
+)
+tablespace CORE
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CORE_ICON
+  is '按钮图标';
+-- Add comments to the columns 
+comment on column CORE_ICON.ICON_UNID
+  is '图标主键';
+comment on column CORE_ICON.APP_UNID
+  is '应用系统主键';
+comment on column CORE_ICON.VIEW_UNID
+  is '视图主键';
+comment on column CORE_ICON.ICON_CLASS
+  is '图标css文件的class名称';
+comment on column CORE_ICON.ICON_PATH
+  is '图标路径';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table CORE_ICON
+  add constraint PK_ICON_UNID primary key (ICON_UNID)
+  using index; 
+
+
+-----------初始化数据
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('C84F189F3F0BED58967F21E30B6A6711', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-del', '/core/js/easyui/themes/icons/delete.gif');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('969E65F256DE0A42CF429AC26433902F', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-ok', '/core/js/easyui/themes/icons/ok.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('F5B2CB6C9A0649E70F5C715C33708D17', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-print', '/core/js/easyui/themes/icons/print.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('CF08E47B2714F2C81F22BFA7DDE69AAF', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-next', '/core/js/easyui/themes/icons/next.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('7295B04B053677E58D9717AA5D822944', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-plus', '/core/js/easyui/themes/icons/icon_j.jpg');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('A888DDD65CF46E556E3EFA04A2131011', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-remove', '/core/js/easyui/themes/icons/edit_remove.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('D74B6205E720AFCD49A933E5B39467AD', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-cancel', '/core/js/easyui/themes/icons/cancel.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('9820C6A6EDD0F1E75ECDC49E5A0C75E2', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-undo', '/core/js/easyui/themes/icons/undo.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('B1955D168A6EDDE8C0506E90D835A7DE', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-set', '/core/js/easyui/themes/icons/set.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('15FCDB02534165670CC8F19BE6BF0D08', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-bin-arrow', '/core/js/easyui/themes/icons/bin--arrow.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('6016D86D068C44D2AE1819FBC5C0AAFA', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-add', '/core/js/easyui/themes/icons/add.gif');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('5906DC8DC0DB50A4A88A61B3CC148314', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-cut', '/core/js/easyui/themes/icons/cut.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('6CDBFE7B715A860828B874A3B339FDF6', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-search', '/core/js/easyui/themes/icons/search.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('2143734032AA7483FE3E002FBC609B44', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-back', '/core/js/easyui/themes/icons/back.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('EF51108FBC0ABF80EC40B6C43691E52F', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'tab-delete', '/core/js/easyui/themes/icons/delete.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('DBFD68CB4DE9BBE2BE26CDDB0738D5B4', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-message', '/core/js/easyui/themes/icons/message.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('BF2006CC3B27E9CE88ADA5BB4AF75CCF', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-edit', '/core/js/easyui/themes/icons/pencil.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('FDAE5C46E6E842443A1FEB359E52B506', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-no', '/core/js/easyui/themes/icons/no.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('6314B9C4A01DC9A9924061C690FE7765', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-help', '/core/js/easyui/themes/icons/help.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('E00FC7A4FCA5D6F77DEB5B984E081509', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-home', '/core/js/easyui/themes/icons/home.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('DC6188CC3AD831EFA5E8C60F118B40EA', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-minus', '/core/js/easyui/themes/icons/icon_jj.jpg');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('E2AE987B5BDB4421CA75AAD7D0A1BBCD', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-save', '/core/js/easyui/themes/icons/filesave.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('2449D90738F59E40F4D3242AB14A44E7', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-reload', '/core/js/easyui/themes/icons/reload.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('164605A50C321E6732846D49761F40B5', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-redo', '/core/js/easyui/themes/icons/redo.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('A82E0A407E22A1A1DE4E46DA8864D7A1', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'tab-cog', '/core/js/easyui/themes/icons/cog.png');
+
+insert into core_icon (ICON_UNID, APP_UNID, VIEW_UNID, ICON_CLASS, ICON_PATH)
+values ('103BFBF9ABC3E236EDE98DE55DEC0FEC', '3E2592D5DD95DA5C339C0935F7E9DAA8', '', 'icon-application', '/core/js/easyui/themes/icons/application.png');

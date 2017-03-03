@@ -1,0 +1,139 @@
+
+/******************** 系统标签样式 ********************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, 宋体;
+    background: #f0f9ff;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/********************** 弹出窗口样式 ************************************************************************/
+.pop{
+    position:fixed;
+    width:420px;
+    height:430px;
+    background:url('images/build/popBG.png') no-repeat;
+    left:50%;
+    top:50%;
+    margin-left:-210px;
+    margin-top:-215px;
+}
+
+/* 标题 */
+.popTitle {
+    position:absolute;
+    top:18px;
+    left:20px;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* 关闭按钮 */
+.popCloseBtn{
+    background: url('images/build/popCloseBtn.gif') no-repeat;
+    position:absolute;
+    top:12px;
+    right:20px;
+    width:26px;
+    height:26px;
+    cursor:pointer;
+    border-style:none;
+}
+.popCloseBtn:hover{
+    background: url('images/build/popCloseBtnOver.gif') no-repeat;
+}
+
+
+/* 内容 */
+.popContent{
+    background:#fff;
+    /* 2012-08-22 mdf by chuiting@linewell.com
+	BUG1170-建模向导：“请选择要生成频道的视图”窗口，视图数据多的时候，没有滚动条 */
+   	height:94%;
+   	*height: expression(documentElement.clientHeight-20);
+   	*width: expression(documentElement.clientWidth-20);
+    overflow:auto;
+    /* end 2012-08-22 mdf by chuiting@linewell.com */
+    padding:10px;
+    border-bottom:1px #7b9ab9 solid;
+      
+}
+
+/* 按钮区 */
+.popBtns{
+    background:#7cabd6;
+    position:absolute;
+    height:40px;
+    line-height:40px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    *top:expression(documentElement.clientHeight-40);;
+    width:100%;
+    vertical-align:middle;
+    border-top:1px #fff solid;
+}
+.popBtns input{
+    float:right;
+    width:68px;
+    height:29px;
+    margin-top:5px;
+    border-style:none;
+    background:url('images/build/popBtn.gif') no-repeat;
+    margin-right:12px;
+    cursor:pointer;
+}
+.popBtns input:hover{
+    background:url('images/build/popBtnOver.gif') no-repeat;
+}
+
+
+/* 导入的浏览框 */
+.inputXlsImportingBrowse{
+	width:100%; 
+	height: 30px;
+	margin:15px 0 10px 0;
+	
+}
+
+
+
+/* 视图选择列表 */
+.popViewSel{    
+    
+}
+
+/*列表*/
+.popViewSel li{
+    list-style:none;
+    height:30px;
+    line-height:30px;
+    border-bottom:1px #bbb dashed;
+}
+/*选择框*/
+.popViewSel li input{
+    margin-left:20px;
+    margin-right:20px;
+}

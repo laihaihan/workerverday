@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+ <mapping>
+  <module  id="751F81FACC98339F241BA40259FD5C2F" name="客户" src="com.linewell.crm.account">
+<form id="0A76A92D4E4CD9CE5CDF4E646B58FA0F" title="文档记录信息" tableName="crm_doc_information" beanName="com.linewell.crm.account.CrmDocInformation"/>
+<form id="1002BAC5AFD7D22D23805DFDAA268CDF" title="客户" tableName="crm_account" beanName="com.linewell.crm.account.CrmAccount"/>
+<form id="80CFDE6D10176EF34EF40146E9CFAAB2" title="客户拜访记录" tableName="crm_account_visit" beanName="com.linewell.crm.account.CrmAccountVisit"/>
+  </module>
+ </mapping>

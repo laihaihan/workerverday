@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.linewell.view.cfg.query.Query" table="APP_VIEW_QUERY">
+        <id column="QUERY_UNID" name="queryUnid" type="string">
+            <generator class="assigned"/>
+        </id>    
+        <property column="QUERY_NAME"  name="queryName" type="string"/>   
+        <property column="QUERY_FIELD"  name="queryField" type="string"/>   
+        <property column="QUERY_DISPLAY_TYPE"  name="queryDisplayType" type="string"/>   
+        <property column="QUERY_VIEW_UNID"  name="queryViewUnid" type="string"/>   
+        <property column="QUERY_DISPLAY_SIMPLE"  name="queryDisplaySimple" type="string"/>   
+        <property column="QUERY_DIC_UNID"  name="queryDicUnid" type="string"/>   
+        <property column="QUERY_SORT"  name="querySort" type="integer"/>   
+    </class>
+</hibernate-mapping>

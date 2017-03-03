@@ -1,0 +1,69 @@
+﻿package $bean.getPackageName();
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONObject;
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.linewell.core.util.PrintUtil;
+import com.linewell.core.util.BeanUtil;
+
+/**
+ * <p>
+ * 	$bean.getTableComments() Action
+ * </P>
+ * 
+ * @author $bean.getCreaterEmail()
+ * @date $bean.getCreateTime()
+ * @version 1.00
+ * <p>
+ * 	Copyright (c) 2012 www.linewell.com
+ * </p>
+ */
+public class $bean.getBeanName()Action  extends ActionSupport {
+
+	private static final long serialVersionUID = 1L;
+	
+	public String execute(){
+		HttpServletRequest request = ServletActionContext.getRequest();	
+		HttpServletResponse response = ServletActionContext.getResponse();	
+		
+		boolean result = true;
+		String fn = request.getParameter("fn");
+		$bean.getBeanName()Business business = new $bean.getBeanName()Business();
+		
+        //1、新增
+        if("add".equals(fn)){
+        	${bean.getBeanName()} ${bean.getBeanCName()} = new ${bean.getBeanName()}();
+        	BeanUtil.updateBean(request, ${bean.getBeanCName()});    
+        	result = business.doSave($bean.getBeanCName());
+        }
+        //2、修改
+        else if("update".equals(fn)){
+			String ${bean.getPk_Name()} = request.getParameter("${bean.getPk_Name()}".toLowerCase());
+        	${bean.getBeanName()} ${bean.getBeanCName()} = business.doFindBeanByKey(${bean.getPk_Name()});
+        	BeanUtil.updateBean(request, ${bean.getBeanCName()});
+        	result = business.doUpdate(${bean.getBeanCName()});
+        }
+        //3、删除
+        else if("del".equals(fn)){
+        	String ids = request.getParameter("ids");
+        	String[] objsStr = ids.replace("'", "").split(",");
+        	String condition = "${bean.getPk_Name()} = ?";
+			for (int i = 0; i < objsStr.length; i++) {
+				Object[] objs = new Object[1];
+        		objs[0] = objsStr[i];
+        		result = business.doDeleteByCondition(condition,objs);
+			}
+        }
+		
+        //返回值
+		JSONObject json = new JSONObject();
+		json.put("result", result);
+		PrintUtil.print(response, json.toString());
+		
+        return null;		
+	}
+}

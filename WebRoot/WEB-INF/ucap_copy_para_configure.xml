@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="gb2312"?>
+<doc>
+	<options name="应用系统配置" tabName="ucap_app"  pk="app_unid" punid="app_punid" displayName="app_name"></options>
+	<options name="登陆配置" tabName="ucap_login"  pk="login_unid" punid=""></options>
+	<options name="消息配置" tabName="ucap_tip"  pk="tip_unid" punid=""></options>
+	<options name="用户配置" tabName="ucap_user" pk="user_unid" punid="" type="father" displayName="user_display_name">
+		<option name="常用意见" tabName="ucap_opinion" pk="opinion_unid" fk="opinion_user_unid">
+		</option>
+		<option name="出差代理" tabName="ucap_out_proxy" pk="proxy_unid" fk="proxy_user_unid">
+		</option>
+	</options>
+	<options name="职位配置" tabName="ucap_post" pk="post_unid" punid="" displayName="post_name"></options>
+	<options name="角色配置" tabName="ucap_role" pk="role_unid" punid="" displayName="role_name"></options>
+	<options name="数据表配置" tabName="ucap_form" pk="form_unid" punid="" type="father" displayName="form_name_cn">
+		<option name="字段属性" tabName="ucap_form_item" pk="fitem_unid" fk="fitem_form_unid">
+			<subOption name="字段事件" tabName="ucap_form_item_event" pk="ievent_unid" fk="ievent_show_unid"></subOption>
+			<subOption name="字段显示属性" tabName="ucap_form_item_show" pk="show_unid" fk="show_item_unid" formId="show_form_unid"></subOption>
+		</option>
+		<option name="表单按钮" tabName="ucap_sub_button" pk="sbutton_unid" fk="sbutton_belong_unid">
+		</option>
+		<option name="表单事件" tabName="ucap_form_event" pk="fevent_unid" fk="fevent_form_unid">
+		</option>
+		<option name="关联配置" tabName="ucap_form_foreign" pk="foreign_unid" fk="foreign_form_unid">
+		</option>
+		<option name="模版配置" tabName="ucap_attr_config" pk="attr_cfg_unid" fk="attr_cfg_punid">
+		</option>
+	</options>
+	<options name="数据库视图" tabName="ucap_db_view" pk="dbview_unid" punid="" type="father" displayName="dbview_name_cn">
+		<option name="视图字段" tabName="ucap_db_view_item" pk="dbvitem_unid" fk="dbvitem_db_view_unid">
+		</option>
+	</options>
+	<options name="视图配置" tabName="ucap_view" pk="view_unid" punid="view_punid" type="father" displayName="view_name">
+
+		<option name="视图字段" tabName="ucap_view_item" pk="item_unid" fk="item_view_unid">
+		</option>
+		<option name="视图按钮" tabName="ucap_sub_button" pk="sbutton_unid" fk="sbutton_belong_unid">
+		</option>
+		<option name="视图分类" tabName="ucap_view_categories_item" pk="view_categories_unid" fk="view_categories_view_unid">
+		</option>
+		<option name="视图排序" tabName="ucap_view_sort_item" pk="view_sort_unid" fk="view_sort_view_unid">
+		</option>		
+	</options>
+	<options name="视图查询配置" tabName="ucap_view_query" pk="query_unid" punid="query_punid" displayName="query_name"></options>
+	<options name="固定查询配置" tabName="ucap_view_fixedquery" pk="fixedquery_unid" punid="fixedquery_punid" displayName="fixedquery_name"></options>
+	<options name="按钮配置" tabName="ucap_button" pk="button_unid" punid="" displayName="button_name"></options>
+	<options name="显示表单配置" tabName="ucap_form_show" pk="sform_unid" punid="" type="father" displayName="sform_name">
+		<option name="按钮配置" tabName="ucap_sub_button" pk="sbutton_unid" fk="sbutton_belong_unid">
+		</option>	
+	</options>
+	<options name="组合表单配置" tabName="ucap_compose_form" pk="cform_unid" punid="" type="father" displayName="cform_name">
+		<option name="页签配置" tabName="ucap_compose_form_tab" pk="tab_unid" fk="tab_cform_unid">
+		</option>
+		<option name="按钮配置" tabName="ucap_sub_button" pk="sbutton_unid" fk="sbutton_belong_unid">
+		</option>	
+	</options>
+	<options name="扩展配置" tabName="ucap_interaction" pk="interaction_unid" punid="" type="father" displayName="interaction_name">
+		<option name="参数配置" tabName="ucap_interaction_arg" pk="arg_unid" fk="arg_interaction_unid">
+		</option>	
+	</options>
+	<options name="界面风格" tabName="ucap_style" pk="style_unid" punid="" displayName="style_name"></options>
+	<options name="导航栏" tabName="ucap_navigation" pk="navigation_unid" punid="navigation_punid" 
+	displayName="navigation_name">
+	</options>
+
+	<options name="频道" tabName="ucap_channel" pk="channel_unid" punid="" type="father" displayName="channel_name">
+		<option name="频道显示" tabName="ucap_channel_display" pk="display_unid" fk="display_channel_unid" punid="display_punid">
+		</option>	
+	</options>
+	<options name="界面方案" tabName="ucap_scheme" pk="scheme_unid" punid="scheme_punid" displayName="scheme_name"></options>
+	<options name="系统参数" tabName="ucap_prar" pk="para_unid" punid="" displayName="para_name"></options>
+	<options name="版权信息" tabName="ucap_copyright" pk="copyright_unid" punid="copyright_punid" ></options>
+</doc>

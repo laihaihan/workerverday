@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    	<table  width=100% border="1" bordercolor="#cccccc" cellspacing="0" cellpadding="0" class="formtable">
+  
+    		<tr>
+    			<th align="right" >类型名称：</th>
+    			<td><input type=text size="35" message="类型名称不能为空！" name="type" id="type"/></td>
+    			
+    		</tr>
+    		<tr>
+    		<th >标题：</th>
+    			<td><input type=text size="35" name="caption" message="标题名称不能为空！" id="caption"/></td>
+    		</tr>
+	    	 <tr>
+    			<th >主表名称：</th>
+    			<td><input type=text size="35" name="mainTable" id="mainTable"/></td>
+    			
+    		</tr>
+    		<tr>
+    		<th >子表名称：</th>
+    			<td><input type=text  size="35" name="tables" id="tables"/></td>
+    		</tr>
+	    	<tr>
+	   			<th >主键名称：</th>
+	   			<td><input type=text size="35" name="pkName"   message="主键名称不能为空！" id="pkName"/></td>
+	   			
+	   		</tr>
+	   		<tr>
+	   			<th >缓存标示：</th>
+	   			<td><input type=text size="35" name="cacheKey" id="cacheKey"/></td>
+	   		</tr>
+	   		<tr>
+	   			<th >是否被观察：</th>
+	   			<td>
+	   				<input type="radio"  name="dbObserved" id="dbObserved" value="true" />是
+	   				<input type="radio"  name="dbObserved" id="dbObserved" value="false" />否
+				</td>
+	   			
+	   		</tr>
+	   		<tr>
+	   			<th >观察实现类：</th>
+	   			<td><input type=text  size="35" name="observerManager" id="observerManager"/></td>
+	   		</tr>
+	   		<tr>
+	   			<th >字典主键：</th>
+	   			<td><input type=text name="dictKeys" size="35" id="dictKeys"/>多值用逗号隔开</td>
+	   			
+	   		</tr>
+	   		<tr>
+	   			<th >字典值：</th>
+	   			<td><input type=text name="dictValues" size="35" id="dictValues"/>多值用逗号隔开</td>
+	   		</tr>
+	   		<tr>
+	   			
+	   			<th >外键值：</th>
+	   			<td ><input type=text name="fkName" size="35" id="fkName"/></td>
+	   		
+	   		</tr>
+	   		<tr>
+	   			<th >缓存字典值：</th>
+	   			<td colspan="3"><input type=text size="35" name="cacheDict" id="cacheDict"/></td>
+	   		</tr>
+    	</table>
+  </body>
+</html>

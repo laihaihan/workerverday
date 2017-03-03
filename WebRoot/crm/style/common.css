@@ -1,0 +1,75 @@
+﻿/******************** 系统标签样式 ********************/
+*{
+	margin: 0;
+	padding: 0;	
+}
+html{
+  height:100%;
+  width:100%;
+}
+
+body {
+	height:100%;
+	width:100%;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: Arial,宋体;
+	background:#fff ;
+}
+td{
+	font-size:12px;
+}
+form{
+	margin:0;
+	padding:0;
+}
+h3{
+	font-size:12px;
+	font-weight:bold;
+}
+h4{
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+}
+
+a{
+	color:#000;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*ie6 bug*/
+*html .clearfix {
+  height: 1%;
+}
+/*ie bug*/
+*+html .clearfix {
+  height: 1%;
+}
+
+/******************** 页脚样式 ********************/
+.footer {
+    position: absolute;
+	bottom: 0px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+/******************** 页面留白 ********************/
+.blank {
+	height: 8px;
+	line-height: 8px;
+	clear: both;
+	visibility: hidden;
+}
+/*修正EXT在文档加入标准后出现checkbox上移的bug for ext*/
+.ext-ie input.x-tree-node-cb{margin-bottom:-5px;}

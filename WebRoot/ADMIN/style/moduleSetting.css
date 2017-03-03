@@ -1,0 +1,289 @@
+/* 加载公共样式 */
+@import url("buildCommon.css");
+
+/******************** 主区域 ********************/
+
+/* 主区域 */
+.areaMain{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+    /*cgc*/
+    height:expression(documentElement.clientHeight-134);
+}
+
+
+/******************** 业务建模 ********************/
+
+/* 工具栏 */
+.businessModelingToolBar{
+   /* position:absolute;
+    width:100%;
+    top:0px;
+    left:0px;
+    right:0px;
+    */
+    background:url('images/build/businessModelingToolBarBG.gif') repeat-x;
+    height:34px;
+    line-height:34px;
+}
+
+/* 工具栏_标题 */
+.businessModelingToolBar h1{
+    float:left;
+    font-size:16px;
+    font-weight:bold;
+    color:#003d7c;
+    margin-left:20px;
+    margin-right:10px;
+}
+
+/* 工具栏_说明 */
+.businessModelingToolBar h2{
+    float:left;
+    font-size:14px;
+    font-weight:normal;
+    color:#000;
+
+}
+
+/* 工具栏_数量 */
+.businessModelingToolBar h3{
+    float:left;
+    font-size:16px;
+    font-weight:bold;
+    color:#ff6600;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+/* 工具栏 按钮*/
+.businessModelingToolBar input{
+    cursor:pointer;
+    _margin-top:3px;
+}
+
+/* 工具栏添加按钮 */
+.toolBarAdd{
+    background:url('images/build/toolBarAdd.gif') no-repeat;
+    border-style:none;
+    width:63px;
+    height:26px;
+    line-height:30px;
+    padding-left:20px;
+    margin-left:10px;
+}
+/*经过效果*/
+.toolBarAdd:hover{
+    background:url('images/build/toolBarAddOver.gif') no-repeat;
+}
+
+
+/* 工具栏管理按钮 */
+.toolBarMg{
+    background:url('images/build/toolBarMg.gif') no-repeat;
+    border-style:none;
+    width:63px;
+    height:26px;
+    line-height:30px;
+    padding-left:20px;
+    margin-left:0px;
+}
+/*经过效果*/
+.toolBarMg:hover{
+    background:url('images/build/toolBarMgOver.gif') no-repeat;
+}
+
+/* 工具栏快速添加按钮 */
+.toolBarFastAdd{
+    background:url('images/build/toolBarFastAdd.gif') no-repeat;
+    border-style:none;
+    width:88px;
+    height:26px;
+    line-height:30px;
+    padding-left:20px;
+}
+/*经过效果*/
+.toolBarFastAdd:hover{
+    background:url('images/build/toolBarFastAddOver.gif') no-repeat;
+}
+
+
+/* 按钮区 */
+.businessModelingBtns{
+    position:absolute;
+    width:100%;
+    top:34px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+
+    
+}
+
+/**************************** 按钮样式 ****************************/
+.businessModelingBtn{
+    width:173px;
+    height:128px;
+    float:left; 
+    margin:10px;
+    position:relative;
+    cursor:pointer;
+    
+    
+}
+.businessModelingBtn:hover{
+    background:url('images/build/businessModelingBtnOver.gif') no-repeat;
+}
+
+.businessModelingBtn img.moduleIcon{
+    width:59px;
+    height:60px;
+    position:absolute;
+    left:50%;
+    margin-left:-30px;
+    top:20px;   
+}
+
+.businessModelingBtn img.cancleIcon{
+	position:absolute;
+	width:16px;
+	height:16px;
+	top:15px;
+	right:50px;
+}
+
+.businessModelingBtn a{
+    font-size:14px;
+    width:100%;
+    height:20px;
+    line-height:20px;
+    position:absolute;
+    bottom:20px;
+    text-align:center;
+    color:#003366;
+}
+
+/**************************** 添加按钮样式 ****************************/
+.businessModelingBtnAdd{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    background:url('images/build/businessModelingBtnAdd.png') no-repeat center top;
+    width:100px;
+    height:20px;
+    cursor:pointer;
+    text-align:center;
+    vertical-align:text-bottom;
+    padding-top:60px;
+    color:#003366;
+    
+}
+.businessModelingBtnAdd:hover{
+    background:url('images/build/businessModelingBtnAddOver.png') no-repeat center top;
+}
+
+/********************** 弹出窗口样式 ************************************************************************/
+.pop{
+    position:absolute;
+    width:420px; 
+    height:430px;
+    background:url('images/build/popBG.png') no-repeat;
+    left:50%;
+    top:50%;
+    margin-left:-210px;
+    margin-top:-215px;
+    z-index:999;
+}
+
+/* 标题 */
+.popTitle {
+    position:absolute;
+    top:18px;
+    left:20px;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* 关闭按钮 */
+.popCloseBtn{
+    background: url('images/build/popCloseBtn.gif') no-repeat;
+    position:absolute;
+    top:12px;
+    right:20px;
+    width:26px;
+    height:26px;
+    cursor:pointer;
+    border-style:none;
+}
+.popCloseBtn:hover{
+    background: url('images/build/popCloseBtnOver.gif') no-repeat;
+}
+
+
+/* 内容 */
+.popContent{
+    background:#fff;
+    position:absolute;
+    top:43px;
+    height:338px;
+    left:9px;
+    width:403px;
+    overflow:hidden;
+    border-bottom:1px #7b9ab9 solid;    
+}
+.popContent iframe{
+	width:403px;
+	height:338px;
+	
+}
+
+/* 按钮区 */
+.popBtns{
+    background:#7cabd6;
+    position:absolute;
+    height:40px;
+    line-height:40px;
+    left:9px;
+    right:8px;
+    bottom:8px;
+    vertical-align:middle;
+    border-top:1px #fff solid;
+}
+.popBtns input{
+    float:right;
+    width:68px;
+    height:29px;
+    margin-top:5px;
+    border-style:none;
+    background:url('images/build/popBtn.gif') no-repeat;
+    margin-right:12px;
+    cursor:pointer;
+}
+.popBtns input:hover{
+    background:url('images/build/popBtnOver.gif') no-repeat;
+}
+
+
+/* 视图选择列表 */
+.popViewSel{    
+    
+}
+
+/*列表*/
+.popViewSel li{
+    list-style:none;
+    height:30px;
+    line-height:30px;
+    border-bottom:1px #bbb dashed;
+}
+/*选择框*/
+.popViewSel li input{
+    margin-left:20px;
+    margin-right:20px;
+}

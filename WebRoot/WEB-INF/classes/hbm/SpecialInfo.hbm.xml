@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.linewell.ess.monitor.info.SpecialInfo"  table="MONITOR_SPECIAL">
+		<id column="UNID" name="unid" type="string">
+			<generator class="assigned"/>
+		</id>
+		<property column="PUNID" length="32" name="punid" type="string"/>
+		<property column="OUNID" length="32" name="ounid" type="string"/>
+		<property column="STATE" length="40" name="state" type="string"/>
+		<property column="STARTTIME" length="20" name="starttime" type="string"/>
+		<property column="ENDTIME" length="20" name="endtime" type="string"/>
+		<property column="STARTUSER" length="50" name="startuser" type="string"/>
+		<property column="ENDUSER" length="50" name="enduser" type="string"/>
+		<property column="ISUSED" length="1" name="isused" type="string"/>
+		<property column="NODENAME" length="50" name="nodename" type="string"/>
+		<property column="REASON" length="2000" name="reason" type="string"/>
+		<property column="MYBYTIME" length="50" name="mybytime" type="string"/>
+		<property column="AREANAME" name="areaname" type="string"/>
+		<property column="AREACODE" length="10" name="areacode" type="integer"/>
+	</class>
+</hibernate-mapping>

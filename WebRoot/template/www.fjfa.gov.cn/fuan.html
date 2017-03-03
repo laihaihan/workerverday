@@ -1,0 +1,508 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+#parse("www.fjfa.gov.cn/vmlib/fuan.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>$pagetitle</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+ <!--DWLayoutTable-->
+ #parse("www.fjfa.gov.cn/topAndButton/top.html")
+<tr><td>  <table width="1000" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  
+  <tr>
+  
+    <td height="52" colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/fuan_02.jpg">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="156" height="32" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+             <td width="844" valign="bottom">
+			  
+			  #foreach( $info_cate in $catelist_fuan)
+				  #set( $cateurl = "${info_cate.url}" )
+				  #if( ($cateurl) && ($!{cateurl} != "") && ($!{cateurl} != "null") )
+					#set($cateurl="${siteDomain}${cateurl}")
+				  #else
+					 #set($cateurl="${siteDomain}${secondPageUrl}${info_cate.unid}")
+				  #end
+			  <a href="${cateurl}">${info_cate.name}</a> |
+			  #end</td>
+        </tr>
+          
+            <tr>
+              <td height="20" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+              <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+            </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="8"></td>
+    <td></td>
+    <td></td>
+  </tr>
+		
+		<tr>
+		  <td height="906" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		    <!--DWLayoutTable-->
+		    <tr>
+		      <td width="266" height="518" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		        <!--DWLayoutTable-->
+		        <tr>
+		          <td width="266" height="90" align="right" background="images/fuan_03.jpg"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/views/zjfaList.jsp?cateunid=3E9EFEEDD84D9465BFD00F59A9C5FFC6" style="color:#fff">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+              </tr>
+		        <tr>
+		          <td height="405" valign="top"  background="images/fuan_06.jpg">
+				  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		            <!--DWLayoutTable-->
+		           #set( $col = 2)
+			  #set( $linkcount = 0 ) ##计算总数
+              #set( $flag = 0 ) ##每一列的标记
+              #if( $articlelist_tpjx )
+				  #foreach($link in $articlelist_tpjx)
+				      #set ( $linkcount = $linkcount + 1 )
+					  #set( $flag= $flag +1 )
+				      #if($flag==1)
+					  <tr>
+					  #end
+		           <td width="16" height="70" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td width="106" rowspan="2" valign="top">
+				  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <!--DWLayoutTable-->
+                    <tr>
+                      <td width="106" height="70" valign="top"><a href="${siteDomain}/${link.path}" title="${link.title}"><img src="${siteDomain}/${link.photo}" width="106" height="70" border="0" /></a></td>
+                  </tr>
+                    <tr>
+                      <td height="27" align="center"><a href="${siteDomain}/${link.path}">${link.title}</a></td>
+                  </tr>
+                  </table>                  </td>
+				  #if($linkcount % $col==0)
+					  #set( $flag = 1 )
+					  <td width="21" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+					  </tr>
+					  <tr>
+		              <td height="27" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  </tr>
+					  #end ##end if($linkcount % $col==0)
+					  
+					  #end  ##end foreach($link...)
+					  
+			#end  ##end if( $linkOfficesNav )
+		      
+		      #if($linkcount%$col!=0)
+		      	#set( $other = $linkcount%$col)
+			   #foreach($td in [$other..$col])
+			   <td width="16" height="70" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td width="106" rowspan="2" valign="top">
+				  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+				  <tr><td>&nbsp;</td></tr>
+				  </table>
+				  </td>
+			   #end
+			   <td width="21" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		      </tr>
+			  <tr>
+		      	  <td height="27" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  </tr>
+              #end	
+		            <tr>
+		              <td height="17" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                </tr>
+	              </table>
+				  </td>
+		        </tr>
+		        <tr>
+		          <td height="23" valign="top"><img src="images/fuan_14.jpg" width="266" height="23" /></td>
+            </tr>
+	          </table></td>
+          </tr>
+		  <tr><td height="8"></td></tr>
+		    <tr>
+		      <td height="380" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f9fdfe">
+		        <!--DWLayoutTable-->
+		        <tr>
+		          <td width="266" height="100" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		            <!--DWLayoutTable-->
+		            <tr>
+		              <td width="266" height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		                <!--DWLayoutTable-->
+		                <tr>
+		                  <td width="137" height="25" background="images/active_07.jpg" class="ac_rig_title">&nbsp;&nbsp;&nbsp;产业经济</td>
+	                      <td width="129" align="right" background="images/active_08.jpg"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/views/list.jsp?cateunid=${cyjjunid}">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+		                </tr>
+	                  </table></td>
+	                </tr>
+		            <tr>
+		              <td height="75" valign="top" align="center"><table width="95%" border="0" cellpadding="0" cellspacing="0">
+		                <!--DWLayoutTable-->
+		                <tr>
+		                  <td height="12" colspan="2" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		                  </tr>
+		              
+					   
+			  #set( $col = 2)
+			  #set( $linkcount = 0 ) ##计算总数
+              #set( $flag = 0 ) ##每一列的标记
+              #if( $articlelist_cyjj )
+				  #foreach($link in $articlelist_cyjj)
+				      #set ( $linkcount = $linkcount + 1 )
+					  #set( $flag= $flag +1 )
+				      #if($flag==1)
+					  <tr>
+					  #end
+					  <td  height="26" valign="top" align="left"><img src="images/45.gif" width="7" height="7" />&nbsp;&nbsp;<a href="${link.path}" title="${link.fullTitle}"  target="_blank">${link.title}</a></td>
+					  #if($linkcount % $col==0)
+					  #set( $flag = 1 )
+					  </tr>
+					  #end ##end if($linkcount % $col==0)
+					  
+					  #end  ##end foreach($link...)
+					  
+			#end  ##end if( $linkdzjg )
+		      
+		      #if($linkcount%$col!=0)
+		      	#set( $other = $linkcount%$col)
+			   #foreach($td in [$other..$col])
+			   <td>&nbsp;</td>
+			   #end
+		      </tr>
+              #end
+				         
+		                </table>		              </td>
+	                </tr>
+		            
+	              </table></td>
+	            </tr>
+		        <tr>
+		          <td height="100" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		            <!--DWLayoutTable-->
+		            <tr>
+		              <td width="266" height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		                <!--DWLayoutTable-->
+		                <tr>
+		                  <td width="137" height="25" background="images/active_07.jpg" class="ac_rig_title">&nbsp;&nbsp;&nbsp;社会事业</td>
+	                      <td width="129" align="right" background="images/active_08.jpg"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/views/list.jsp?cateunid=${shsyunid}">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+		                </tr>
+	                  </table></td>
+	                </tr>
+		            <tr>
+		              <td height="75" valign="top" align="center"><table width="95%" border="0" cellpadding="0" cellspacing="0">
+		                <!--DWLayoutTable-->
+		                <tr>
+		                  <td height="12" colspan="2" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		                  </tr>
+		                		   
+			  #set( $col = 2)
+			  #set( $linkcount = 0 ) ##计算总数
+              #set( $flag = 0 ) ##每一列的标记
+              #if( $articlelist_shsy )
+				  #foreach($link in $articlelist_shsy)
+				      #set ( $linkcount = $linkcount + 1 )
+					  #set( $flag= $flag +1 )
+				      #if($flag==1)
+					  <tr>
+					  #end
+					  <td  height="26" valign="top" align="left"><img src="images/45.gif" width="7" height="7" />&nbsp;&nbsp;<a href="${link.path}" title="${link.fullTitle}"  target="_blank">${link.title}</a></td>
+					  #if($linkcount % $col==0)
+					  #set( $flag = 1 )
+					  </tr>
+					  #end ##end if($linkcount % $col==0)
+					  
+					  #end  ##end foreach($link...)
+					  
+			#end  ##end if( $linkdzjg )
+		      
+		      #if($linkcount%$col!=0)
+		      	#set( $other = $linkcount%$col)
+			   #foreach($td in [$other..$col])
+			   <td>&nbsp;</td>
+			   #end
+		      </tr>
+              #end
+					   
+		                
+		                
+		                
+		                
+		                </table>		              </td>
+	                </tr>
+		            
+	              </table></td>
+	            </tr>
+		        <tr>
+		          <td height="180" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		            <!--DWLayoutTable-->
+		            <tr>
+		              <td width="266" height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		                <!--DWLayoutTable-->
+		                <tr>
+		                  <td width="137" height="25" background="images/active_07.jpg" class="ac_rig_title">&nbsp;&nbsp;&nbsp;乡镇概况</td>
+	                      <td width="129" align="right" background="images/active_08.jpg"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/views/list.jsp?cateunid=${xzgkunid}">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+		                </tr>
+	                  </table></td>
+	                </tr>
+		            <tr>
+		              <td height="155" valign="top" align="center"><table width="95%" border="0" cellpadding="0" cellspacing="0">
+		                <!--DWLayoutTable-->
+		             
+					 
+					 
+					   <tr>
+		                  <td  height="12" valign="top"></td>
+		               
+		                </tr>
+					
+		              
+		                
+		                
+						 #set( $col = 2)
+			  #set( $linkcount = 0 ) ##计算总数
+              #set( $flag = 0 ) ##每一列的标记
+              #if( $articlelist_xzgk )
+				  #foreach($link in $articlelist_xzgk)
+				      #set ( $linkcount = $linkcount + 1 )
+					  #set( $flag= $flag +1 )
+				      #if($flag==1)
+					  <tr>
+					  #end
+					  <td height="23" valign="top" align="left">．<a href="${link.path}" title="${link.fullTitle}"  target="_blank">${link.title}</a></td>
+					  #if($linkcount % $col==0)
+					  #set( $flag = 1 )
+					  </tr>
+					  #end ##end if($linkcount % $col==0)
+					  
+					  #end  ##end foreach($link...)
+					  
+			#end  ##end if( $linkdzjg )
+		      
+		      #if($linkcount%$col!=0)
+		      	#set( $other = $linkcount%$col)
+			   #foreach($td in [$other..$col])
+			   <td>&nbsp;</td>
+			   #end
+		      </tr>
+              #end
+		                </table>		              </td>
+	                </tr>
+		            
+	              </table></td>
+	            </tr>
+	          </table></td>
+        </tr>
+	          </table></td>
+    <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		  <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+		    <!--DWLayoutTable-->
+		    <tr>
+		      <td width="721" height="336" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/fuan_05.jpg" style="background-repeat:no-repeat">
+		        <!--DWLayoutTable-->
+		        <tr>
+		          <td width="69" height="334" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	              <td width="404" valign="top">
+				  <div id="demo" style="OVERFLOW: hidden; WIDTH: 404px; HEIGHT: 330px; "> 
+<table border="0" cellpadding="0" cellspacing="0"> 
+<tr> 
+   <td id="demo1"><table width="100%" height="328px" border="0" cellpadding="0" cellspacing="0"> 
+          <tr> 
+		  <td>
+            #foreach( $article in $articlelist_fagl)
+					#if(${article.title}=="概况")
+					<p class="intro_cont">
+					${article.content} </p>
+			#end
+			#end
+		   </td>
+          </tr> 
+        </table></td> 
+</tr> 
+<tr> 
+   <td id="demo2"></td> 
+</tr> 
+<SCRIPT> 
+var speed=50 
+var MyMarh=setInterval(Marqueeh,speed) 
+demo2.innerHTML=demo1.innerHTML 
+//原理是不断的向demoh2中填入demoh1中的内容，然后将已经看不见的清除 
+//用一个两行一列的表格，上一列再放一个装填有内容的表格，定义为demoh1，下一列是空的TD，定义为demoh2 
+//SPEED是用来控制速度的。 
+demo.onmouseover=function(){ clearInterval(MyMarh) } 
+demo.onmouseout=function(){ MyMarh=setInterval(Marqueeh,speed) } 
+function Marqueeh(){ 
+if(demo2.offsetHeight-demo.scrollTop<=0) 
+   demo.scrollTop-=demo1.offsetHeight 
+else{ 
+   demo.scrollTop++ 
+} 
+} 
+</SCRIPT>
+</table> 
+</div> 
+				                   </td>
+		          <td width="248" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		        </tr>
+	          </table></td>
+            </tr>
+		    <tr>
+		      <td height="10"></td>
+            </tr>
+		    <tr>
+		      <td height="203" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/fuan_13.jpg" style="background-repeat:no-repeat">
+		        <!--DWLayoutTable-->
+				 #set($zlzypath="#")
+				  #set($lsygpath="#")
+				  #foreach( $article in $articlelist_fagl)
+					#if(${article.title}=="自然资源")
+					 #set($zlzypath=${article.path})
+				  	#end
+					#if(${article.title}=="历史沿革")
+					 #set($lsygpath=${article.path})
+				  	#end
+				  #end
+		        <tr>
+		          <td height="35" colspan="2" align="right"><a href="${siteDomain}/${zlzypath}">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+                  <td colspan="2" align="right"><a href="${siteDomain}/${lsygpath}">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+		        </tr>
+		        <tr>
+		          <td width="123" height="168" align="center"><img src="images/p1.jpg" width="94" height="114" /></td>
+		          <td width="238" valign="middle"><span class="intro_cont">
+				  #foreach( $article in $articlelist_fagl)
+					#if(${article.title}=="自然资源")
+					${article.intro}
+					#end
+				  #end
+				  </span></td>
+		          <td width="123" align="center"><img src="images/p2.jpg" width="94" height="114" /></td>
+	              <td width="237" valign="middle"><span class="intro_cont">
+				   #foreach( $article in $articlelist_fagl)
+					#if(${article.title}=="历史人物")
+					${article.intro}
+					#end
+				  #end
+				  </span></td>
+		        </tr>
+		        
+	          </table></td>
+	        </tr>
+		    <tr>
+		      <td height="9"></td>
+            </tr>
+		    <tr>
+		      <td height="203" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/fuan_17.jpg" style="background-repeat:no-repeat">
+		        <!--DWLayoutTable-->
+				#set($csjspath="#")
+				  #set($xzqypath="#")
+				  #foreach( $article in $articlelist_fagl)
+					#if(${article.title}=="城市建设")
+					 #set($csjspath=${article.path})
+				  	#end
+					#if(${article.title}=="行政区域")
+					 #set($xzqypath=${article.path})
+				  	#end
+				  #end
+		        <tr>
+		          <td height="35" colspan="2" align="right"><a href="${siteDomain}/${csjspath}">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+                  <td colspan="2" align="right"><a href="${siteDomain}/${xzqypath}">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+		        </tr>
+		        <tr>
+		          <td width="123" height="168" align="center"><img src="images/p3.jpg" width="93" height="114" /></td>
+		          <td width="238" valign="middle"><span class="intro_cont">#foreach( $article in $articlelist_fagl)
+					#if(${article.title}=="城市建设")
+					${article.intro}
+					#end
+				  #end</span></td>
+		          <td width="123" align="center"><img src="images/p4.jpg" width="94" height="122" /></td>
+	              <td width="237" valign="middle"><span class="intro_cont">
+				  #foreach( $article in $articlelist_fagl)
+				  #if(${article.title}=="行政区域")
+					${article.intro}
+					#end
+				  #end</span></td>
+		        </tr>
+		        
+	          </table></td>
+	        </tr>
+		    <tr>
+		      <td height="7"></td>
+            </tr>
+		    <tr>
+		      <td height="138" valign="top">
+			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	            <!--DWLayoutTable-->
+	            <tr>
+	              <td width="43" height="138" valign="top"><a href="${siteDomain}${tomcatroot}/${cmsWebapp}/views/list.jsp?cateunid=${unid_lyfj}"><img src="images/fuan_19.jpg" width="54"/></a></td>
+                  <td width="610" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/fuan_20.jpg">
+                    <!--DWLayoutTable-->
+                    <tr>
+                      <td width="13" height="25">&nbsp;</td>
+                        <td width="565">&nbsp;</td>
+                        <td width="49">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="92">&nbsp;</td>
+                      <td valign="top">
+					  <div id="leftdemo" style="overflow:hidden;height:92px;width:610px;">
+					  <table cellpadding="0" cellspace="0" border="0">
+					<tr>
+					<td id="leftdemo1">
+					  <table width="610" border="0" cellpadding="0" cellspacing="0">
+                        <!--DWLayoutTable-->
+                        <tr>
+						 #foreach( $article in $articlelist_lyfj)
+					  <td width="130" valign="top"><a href="${siteDomain}/${article.path}" title="${article.title}"><img src="${siteDomain}/${article.photo}" width="130" height="92" border="0" /></a></td>
+                      <td width="16" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+					  #end
+                          </tr>
+                      </table>
+					  </td>
+					<td id="leftdemo2"></td>
+					</tr>
+					</table>
+					  </div>
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="21">&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table></td>
+	              <td width="42" valign="top"><img src="images/fuan_22.jpg" width="43" height="138" /></td>
+	            </tr>
+              </table>
+			  <script>
+					var speed=30
+					var MyMar=setInterval(Marquee,speed)
+					leftdemo2.innerHTML=leftdemo1.innerHTML
+					leftdemo.onmouseover=function() {clearInterval(MyMar)}
+					leftdemo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+					function Marquee(){
+					if(leftdemo2.offsetWidth-leftdemo.scrollLeft<=0)
+					   leftdemo.scrollLeft-=leftdemo1.offsetWidth
+					else{
+					   leftdemo.scrollLeft++
+					}
+					}
+					</script>
+			  </td>
+		    </tr>
+		    </table>		  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  #parse("www.fjfa.gov.cn/topAndButton/buttom.html")
+</table>
+</body>
+</html>

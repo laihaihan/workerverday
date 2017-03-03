@@ -1,0 +1,86 @@
+﻿@charset "utf-8";
+/****************************系统样式****************************/
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+body {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	font-family: 宋体;
+	background:#fff;
+	min-width:985px;
+	min-height:142px;
+	height:100%;
+	overflow:hidden;
+}
+a img {
+	border: ntop;
+}
+
+a:link {
+	text-decoration: ntop; 
+}
+a:visited {
+	color:#376184;
+	text-decoration: ntop;
+}
+a:hover, a:active, a:focus {
+	text-decoration: ntop; 
+	color:#0096ff
+}
+
+.top{ 
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background:#c3e9fb;
+}
+
+.topLeft{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:646px;
+	height:100%;
+	background:url('style/images/topleft.jpg') repeat-y 0px 0px;
+	overflow:hidden;
+
+}
+
+.topLogo{
+	position:absolute;
+	width:646px;
+	height:142px;
+	top:50%;
+	margin-top:-71px;
+	background:url('style/images/logo.jpg') no-repeat 0px 0px;
+}
+
+
+.topRight{
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:280px;
+	height:100%;
+	background:url('style/images/topRightBj.png') repeat-y 0px 0px;
+}
+
+.logoRight{
+	position:absolute;
+	width:280px;
+	height:142px;
+	top:50%;
+	margin-top:-71px;
+	background:url('style/images/logoRight.jpg') no-repeat 0px 0px;
+}
+
+

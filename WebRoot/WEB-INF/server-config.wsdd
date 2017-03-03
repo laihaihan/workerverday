@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+	xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+<!--
+ ******************************************************************************************
+ *	时间					    操作		操作者	电子邮箱					  标记		备注
+ *
+ *	2013-03-12 16：49		添加		黄和润	hherun@linewell.com	      100		添加共享资源库webservice接口
+ *
+ ******************************************************************************************
+-->
+	<globalConfiguration>
+		<parameter name="sendMultiRefs" value="true" />
+		<parameter name="disablePrettyXML" value="true" />
+		<parameter name="dotNetSoapEncFix" value="true" />
+		<parameter name="enableNamespacePrefixOptimization" value="false" />
+		<parameter name="sendXMLDeclaration" value="true" />
+		<parameter name="sendXsiTypes" value="true" />
+		<parameter name="attachments.implementation"
+			value="org.apache.axis.attachments.AttachmentsImpl" />
+	</globalConfiguration>
+	<handler type="java:org.apache.axis.handlers.http.URLMapper"
+		name="URLMapper" />
+	<transport name="http">
+		<requestFlow>
+			<handler type="URLMapper" />
+		</requestFlow>
+	</transport>
+	
+	<!-- 获取表单相关信息服务 -->
+	<service name="FD_FormInfo.asmx" provider="java:RPC">
+		<parameter name="className" value="com.linewell.ucap.formdesigner.services.FormInfo" />
+		<parameter name="scope" value="request" />
+		<parameter name="allowedMethods" value="*" />
+		<messageReceiver
+			class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+	</service>
+
+</deployment>

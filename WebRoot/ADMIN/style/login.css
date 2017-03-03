@@ -1,0 +1,110 @@
+﻿/****************************引用公共样式****************************/
+
+@import url(common.css);
+
+/**************************** 底层背景 ****************************/
+
+.lower{
+	background: url('images/login_bg.gif');
+	height: 680px;
+	width:100%;
+	position: absolute;
+	left: 0px;
+	right:0px;
+	top: 50%;
+	margin-top: -340px;
+
+	
+}
+
+/**************************** LOGO ****************************/
+.logo {
+	position:absolute;
+	background: url('images/login_logo.jpg') no-repeat left center;
+	top:51px;
+	left:396px;
+	height:91px;
+	width: 424px;
+}
+
+
+/**************************** 登录区域 ****************************/
+.login {
+	background: url('images/login_bg2.gif') no-repeat left center;
+	width: 1200px;
+	height: 680px;
+	
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -600px;
+	margin-top: -340px;
+}
+
+
+/* 登录区域信息区 */
+.login_info {
+	position:absolute;
+	top:255px;
+	left:405px;
+	
+}
+
+/* 信息区文字 */
+.login_info_text {
+	height:30px;
+	line-height:30px;
+	color: #555;
+	font-size: 14px;
+}
+
+/* 信息区输入框背景 */
+.login_info_input {
+	height: 32px;
+	width: 388px;
+}
+
+.login_info_input.user {
+	background: url('images/login_input1.gif') no-repeat left center;
+}
+
+.login_info_input.password {
+	background: url('images/login_input2.gif') no-repeat left center;
+}
+
+
+
+/* 信息区输入框 */
+.login_info_input  input{
+	background:transparent;
+	margin: 5px 0 0 35px;
+	border: none;
+	height: 25px;
+	width: 350px;
+	line-height: 25px;
+	color: #505050;
+	font-size: 14px;
+}
+
+/* 信息区错误信息 */
+.login_info_error {
+	color: #e82f34;
+	font-size: 12px;
+	height:16px;
+}
+
+/* 登录按钮 */
+.login_button input{
+	background: url('images/login_button.gif') no-repeat left center;
+	width: 122px;
+	height: 47px;
+	CURSOR: hand;
+	display:block;
+	margin-top:2px;
+	margin-left: 270px;
+	border:0;
+	cursor:pointer;
+}
+.login_button input:hover{
+	background: url('images/login_button_over.gif') no-repeat left center;
+}

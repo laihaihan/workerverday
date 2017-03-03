@@ -1,0 +1,154 @@
+@import url("pageCommon.css");
+*html{ overflow-x:hidden;}
+body,html{ overflow-y:auto;}
+/*UMC 新增用户页面样式 begin*/
+
+
+/* 标题 */
+.title{
+	height: 40px;
+	background-image: url('images/user_title_bg.jpg');
+}
+
+
+/* 标题文字 */
+.title_text{
+	color: #2a586f;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 25px;
+	margin-left: 15px;
+	background: url('images/group_add.png') no-repeat left center;
+	font-size: 14px;
+}
+
+/*表单内容*/
+ul.form_content
+{		
+	list-style:none;
+	margin:0;
+	padding:0;
+	margin-top:
+}
+
+	
+	/* 输入行*/
+	ul.form_content li
+	{		
+		border-bottom: 1px #eaeaea solid;			
+		clear:both;
+		background-color: #fafafa;
+		overflow:hidden;
+		zoom:1;
+	}
+	*html ul.form_content li
+	{
+		display:inline;
+	}
+	
+	*+html ul.form_content li
+  {
+    margin-bottom:-2px;
+  }
+	
+	/* 输入说明 */
+	ul.form_content .input_hint{	
+		float: left;
+		width: 120px;		
+		text-align: right;			
+		line-height: 36px;
+		overflow:hidden; 
+		zoom:1;
+	}
+	
+	ul.form_content .input_content
+	{
+		overflow:hidden;		
+		zoom:1;
+		background-color: #fff;
+		border-left: 1px #eaeaea solid;	
+		min-height:36px;
+		height:100%;
+	}
+	
+	*html ul.form_content .input_content
+	{
+		
+		height:36px;
+		overflow:visible;	
+		
+	}
+	
+	/* 输入外框 */
+	ul.form_content .input_out{
+		float: left;
+		padding:5px;
+	}
+	
+	ul.form_content .input_tips{
+		float: left;
+		overflow;hidden;
+		zoom:1;
+		padding:5px;
+	}
+	
+	
+	/* 信息输入框 */
+	ul.form_content .info_textinput{
+		border: 1px #c4c4c4 solid;		
+		height: 22px;
+		line-height: 22px;
+		width: 250px;		
+	}
+	
+	/* 重设原有的form样式 */
+	ul.form_content .inputbox, ul.form_content .inputbox_focus{
+	  border: 1px #c4c4c4 solid;    
+    height: 22px;
+    line-height: 22px;
+    width: 250px; 
+	}
+	
+	
+	/* 单选按钮 */
+	ul.form_content .info_radiobutton{
+		margin-top:5px;
+	}
+	
+	
+	/* 大文本框（用于显示选取数据） */
+	ul.form_content .info_textarea {
+		border: 1px #c4c4c4 solid;		
+		height: 40px;
+		width: 250px;		
+		background-color:#EEE;
+		font-size:12px;
+	}
+	
+	ul.form_content .inputred{
+	  border: 1px #c4c4c4 solid;    
+    font-size:12px;
+    
+    width: 250px;   
+	}
+	
+	
+	/* 选取按钮 */
+	ul.form_content .button_election{
+		margin: 28px 0 0 5px;
+		height:20px;
+	}
+	
+	/* 按钮 */
+	ul.form_content .info_button{
+		padding-left:210px;
+		height: 40px;
+		line-height: 40px;
+	}
+	
+	ul.form_content .info_button input{
+		width: 80px;
+		color: #444444;
+	}
+/*UMC 新增用户页面样式样式 end*/

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>换肤</title>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.2.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="ContentMain">
+	<!--Top start-->
+	<!--Top End-->
+	<!--Middle Start-->
+	<div class="CM_Middle">
+		<div class="CM_MiddleC">
+			<div class="CM_MiddleT"><h3>系统换肤</h3></div>
+			<div class="CM_MiddleC_Sub">
+				<!--系统默认 Start---->
+				<div class="CM_MiddleC_Sub01">
+					<div class="CM_MiddleC_Sub01T">
+						<span><img src="images/icons05.gif" /></span>
+						<h3>默认(1)</h3>
+						<div class="CM_T_rightbtn">
+							<a href="javascript:void(0);">上传更多主题</a>
+						</div>
+					</div>
+					<div class="CM_MiddleC_Sub01C">
+						<ul>
+							<li>
+								<a href="javascript:void(0);" class="CM_current">
+									<span><img src="images/pic.gif" /></span>
+									<h3>默认主题</h3>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<span><img src="images/pic.gif" /></span>
+									<h3>默认主题</h3>
+								</a>
+							</li>							
+						
+						</ul>
+					</div>
+				</div>
+				<!--系统默认 End---->
+				<div class="clear1"></div>
+				<!--自定义 Start---->
+				<div class="CM_MiddleC_Sub01">
+					<div class="CM_MiddleC_Sub01T">
+						<span><img src="images/icons05.gif" /></span>
+						<h3>自定义(10)</h3>
+						<div class="CM_T_rightbtn">
+							<a href="javascript:void(0);">上传更多主题</a>
+						</div>
+					</div>
+					<div class="CM_MiddleC_Sub01C">
+						<ul>
+							<li>
+								<a href="javascript:void(0);" class="CM_current">
+									<span><img src="images/pic.gif" /></span>
+									<h3>默认主题</h3>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" >
+									<span><img src="images/pic.gif" /></span>
+									<h3>默认主题</h3>
+								</a>
+							</li>							
+						</ul>
+					</div>
+				</div>
+				<!--自定义 End---->				
+			</div>
+			<div class="clear1"></div>
+			<!--按钮 Start-->
+			<div class="bc_btnDiv">
+				<div class="bc_btnDivC">
+					<a href="javascript:void(0);" class="btn_bc01">保存</a>
+					<a href="javascript:void(0);" class="btn_gb02">关闭</a>
+				</div>
+			</div>	
+			
+			<!--按钮 End-->
+		
+		</div>
+	</div>
+	<!--Middle End-->
+</div>
+<script>
+	$(function(){
+		var objT=$(".CM_MiddleC_Sub01T span");
+		$(".CM_MiddleC_Sub01T span").click(function(){
+			var objC=$(this).parent().siblings();
+			if(objC.is(":visible")){
+				$(this).children("img").attr("src","images/icons06.gif");
+				objC.css("display","none");
+			}else
+			{
+				$(this).children("img").attr("src","images/icons05.gif");
+				objC.css("display","block");
+			}
+		
+		})
+	
+	});
+
+</script>
+</body>
+</html>

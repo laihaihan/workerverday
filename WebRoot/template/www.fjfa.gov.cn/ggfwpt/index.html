@@ -1,0 +1,498 @@
+#parse("www.fjfa.gov.cn/vmlib/common.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>$!{pagetitle}</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="1000" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" align="center">
+ <!--DWLayoutTable-->
+  <tr>
+   #parse("www.fjfa.gov.cn/topAndButton/top.html") 
+   #set( $cateunid = "C757F57C05B4E44D289B24263686FA7E" )
+   #set( $catelist=$list.getCategoryList(${cateunid}))
+   #set( $navBar = $list.getNavBar(${cateunid}))
+  </tr>
+  <tr><td><table width="1000" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td height="40" colspan="5" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable--> 
+      <td height="40" colspan="2" align="center" bgcolor="#eff9fd" class="art_border"><img src="../images/ind_l_4.jpg" width="17" height="17" /></td>
+          <td width="954" bgcolor="#eff9fd" class="art_border"> 当前位置：${navBar}</td>
+    </table></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="8"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="4" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+	    <!--DWLayoutTable-->
+		<tr>
+	      <td width="250" height="220" valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" background="../images/bbhbg02.jpg">
+	          <!--DWLayoutTable-->
+	          <tr>
+	            <td width="34" height="35" align="center"><img src="../images/47.gif" width="10" height="12" /></td>
+	            <td width="169" class="bold font_14px">百件实事网上办</td>
+	          <td width="47" align="right" valign="bottom"><img src="../images/sc1004081_17.gif" width="28" height="28" /></td>
+	          </tr> 
+	          <tr>
+	            <td height="185" colspan="3" align="left" valign="top" class="intro_cont bai_tab">为进一步整合政府网站办事服务资源，提高政府网站服务功能实效性，扩大政府网站社会影响力，本网对首批推出的<a href="" class="red" target="_blank">教育</a>、<a href="" class="red" target="_blank">医疗卫生</a>、<a href="" class="red" target="_blank">劳动保障</a>、<a href="" class="red" target="_blank">交通出行</a>和<a href="" class="red" target="_blank">公用事业</a>等5个重点领域的办事服务进行内容深化和事项拓展，并新增<a href="" class="red" target="_blank">住房</a>、<a href=""  class="red"target="_blank">户籍</a>、<a href="" class="red" target="_blank">社区服务</a>和<a href="" class="red" target="_blank">企业开办设立</a>4 个领域的办事服务。</td>
+              </tr> 
+		        
+          </table></td>
+        </tr>
+		<tr><td height="8"></td></tr>
+	    <tr>
+	      <td height="99" valign="top"><table width="250" border="0" cellpadding="0" cellspacing="0" bgcolor="#f6fafe">
+	          <!--DWLayoutTable--> 
+	          <tr>
+	            <td height="29" colspan="4" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/other_top.jpg" style="background-repeat:no-repeat;" >
+		            <!--DWLayoutTable-->
+		            <tr>
+		              <td width="34" height="29" align="center"><img src="../images/46.gif" width="10" height="12" /></td>
+	                  <td width="94" class="online_left_title">快速通道</td>
+		              <td width="122" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		            </tr>
+                </table></td>
+              </tr> 
+	          <tr>
+	            <td width="12" height="8"></td>
+                <td width="78"></td>
+                <td width="78"></td>
+                <td width="82"></td>
+	          </tr>
+			  #set( $kstd_cateunid = "9C4C2A7045361899C67F3EDC5BAD0334" )
+   			  #set( $kstd_catelist=$list.getCategoryList(${kstd_cateunid}))
+			  #set( $kstd_col = 3)
+			  #set( $kstd_linkcount = 0 ) ##计算总数
+              #set( $kstd_flag = 1 ) ##每一列的标记
+			  #if( $kstd_catelist )
+			     #foreach($kstd_child in $kstd_catelist)
+			   		#set( $kstd_linkcount = $kstd_linkcount + 1 )  
+					#if($kstd_flag==1)
+					  <tr>
+					  <td height="24" valign="top">&nbsp;</td>
+					#end 
+					#set( $kstd_flag= $kstd_flag +1 )
+					<td><img src="../images/jiao.gif" width="6" height="5" />
+						<a href="${tomcatroot}/cmsWebapp/fj/fjfa/jsp/kstd/view.jsp?cateunid=${kstd_child.unid}" target="_blank" >&nbsp;${kstd_child.name}</a>
+					</td> 
+					#if($kstd_linkcount % $kstd_col==0)
+					#set( $kstd_flag = 1 )
+						</tr>
+					#end 
+			     #end
+				 #if($kstd_linkcount%$kstd_col!=0)
+				  	#set( $kstd_other = $kstd_linkcount%$kstd_col)
+				  	#foreach($kstd_td in [$kstd_other..$kstd_col])
+				  	<td>&nbsp;</td>
+				  	#end
+				  	</tr>
+				 #end
+			  #end   
+	          <tr>
+	            <td height="14"></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+              </tr> 
+          </table></td>
+        </tr>
+		
+	    <tr>
+	      <td height="100%" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+	          <!--DWLayoutTable-->
+			  #set( $bmfw_cateunid = "8D55EC82C1120910279EF4F0297A63B9" )
+			  #set( $bmfw_catelist=$list.getCategoryList(${bmfw_cateunid}))
+			  #set( $bmfw_col = 2)
+			  #set( $bmfw_linkcount = 0 ) ##计算总数
+			  #set( $bmfw_flag = 1 ) ##每一列的标记
+	          <tr>
+	            <td width="250" height="29" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/other_top.jpg">
+		            <!--DWLayoutTable-->
+		            <tr>
+		              <td width="34" height="29" align="center"><img src="../images/46.gif" width="10" height="12" /></td>
+	                  <td width="94" class="online_left_title">便民服务</td>
+		              <td width="122" align="right"><a href="${tomcatroot}/cmsWebapp/fj/fjfa/jsp/bmfw/view.jsp?cateunid=${bmfw_cateunid}">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+		            </tr>
+                </table></td>
+              </tr>
+	          <tr>
+	            <td width="250" height="135" valign="top"><table  width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="bm_border" >
+		            <!--DWLayoutTable-->
+		            <tr>  
+		              <td width="9" ></td>
+                      <td width="121" ></td>
+                      <td width="121"></td>
+                      <td ></td>
+		            </tr>  
+		              
+					  #if( $bmfw_catelist )
+						 #foreach($bmfw_child in $bmfw_catelist)
+							#set( $bmfw_linkcount = $bmfw_linkcount + 1 )  
+							#if($bmfw_flag==1)
+							  <tr> 
+							  <td width="9" ></td>
+							#end 
+							#set( $bmfw_flag= $bmfw_flag +1 )
+							<td width="121" height="31" align="center" valign="bottom"><a href="${tomcatroot}/cmsWebapp/fj/fjfa/jsp/bmfw/viewMore.jsp?cateunid=${bmfw_child.unid}" target="_blank" ><img src="${bmfw_child.image}" width="111" height="26"  border="0" /></a>
+							</td> 
+							#if($bmfw_linkcount % $bmfw_col==0)
+							#set( $bmfw_flag = 1 )
+								<td >&nbsp;</td>
+								</tr>
+							#end 
+						 #end
+						 #if($bmfw_linkcount%$bmfw_col!=0)
+							#set( $bmfw_other = $bmfw_linkcount%$bmfw_col)
+							#foreach($bmfw_td in [$bmfw_other..$bmfw_col])
+							<td>&nbsp;</td>
+							#end
+							<td >&nbsp;</td>
+							</tr>
+						 #end
+					  #end   
+					  
+		            <tr>  
+		              <td></td>
+		              <td></td>
+		              <td></td>
+		              <td></td>
+	                </tr> 
+	              </table></td>
+              </tr> 
+          </table></td>
+        </tr>
+	    <tr>
+	      <td height="8"></td>
+        </tr>
+	    <tr>
+	      <td height="210" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+	          <!--DWLayoutTable-->
+	          <tr>
+	            <td width="250" height="29" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/other_top.jpg">
+		            <!--DWLayoutTable-->
+		            <tr>
+		              <td width="34" height="29" align="center"><img src="../images/46.gif" width="10" height="12" /></td>
+	                  <td width="94" class="online_left_title">场景式服务</td>
+		              <td width="122" align="right"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		            </tr>
+                </table></td>
+              </tr>
+	          <tr>
+	            <td height="180" valign="top"><table width="250" border="0" cellpadding="0" cellspacing="0" class="bm_border">
+	              <!--DWLayoutTable-->
+	              <tr>
+	                <td width="10" height="60" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td width="120" align="center"><img src="../images/index_75.jpg" width="94" height="40" /></td>
+	                  <td width="120" align="center"><img src="../images/index_77.jpg" width="95" height="40" /></td>
+	                </tr>
+	              <tr>
+	                <td height="60" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td align="center"><img src="../images/index_93.jpg" width="94" height="46" /></td>
+	                  <td align="center"><img src="../images/index_94.jpg" width="95" height="46" /></td>
+	                </tr>
+	              <tr>
+	                <td height="60" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td align="center"><img src="../images/index_106.jpg" width="94" height="45" /></td>
+	                  <td align="center"><img src="../images/index_107.jpg" width="95" height="45" /></td>
+                    </tr> 
+	                </table></td>
+	          </tr> 
+          </table></td>
+        </tr>
+		
+	    <tr>
+	      <td height="148" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+	          <!--DWLayoutTable-->
+	          <tr>
+	            <td height="29" colspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/other_top.jpg" style="background-repeat:no-repeat;">
+		            <!--DWLayoutTable-->
+		            <tr>
+		              <td width="34" height="29" align="center"><img src="../images/46.gif" width="10" height="12" /></td>
+	                  <td width="94" class="online_left_title">办件统计</td>
+		              <td width="122" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+		            </tr>
+                </table></td>
+              </tr>
+	          <tr>
+	            <td width="249" height="118" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0"  class="bm_border">
+	              <!--DWLayoutTable-->
+	              <tr>
+	                <td width="22" height="24" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                  <td width="228" class="red_bstj">截止2010年10月10日 </td>
+	              </tr>
+	              <tr>
+	                <td height="22" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                <td><img src="../images/redPoin.jpg"/> 累计收件:69623件</td>
+                  </tr>
+	              <tr>
+	                <td height="22" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                <td><img src="../images/redPoin.jpg"/> 累计办结:68098件</td>
+                  </tr>
+	              <tr>
+	                <td height="22" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                <td><img src="../images/redPoin.jpg"/> 昨日收件:4件</td>
+                  </tr>
+	              <tr>
+	                <td height="22" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                <td><img src="../images/redPoin.jpg"/> 昨日办结:0件</td>
+                  </tr>
+	              <tr>
+	                <td height="5"></td>
+	                  <td></td>
+                    </tr>
+                </table></td>
+              <td width="1"></td>
+	          </tr> 
+          </table></td>
+        </tr>
+	  
+    </table></td>
+   
+    <td rowspan="2" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td height="2"></td>
+    <td rowspan="2" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td rowspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="250" height="99" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff5e6">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="250" height="29" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/quick_top.jpg">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="28" height="29" align="center" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td width="100" class="bold font_14px" style="color:#333">快速查询</td>
+	                  <td width="122" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                </tr>
+              </table></td>
+              </tr>
+          <tr>
+            <td height="70" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="82" height="30">办事指南查询</td>
+	                  <td width="90"><input type="text" size="12" /></td>
+	                  <td width="47" align="center"><input value="&nbsp;" type="submit" valign="middle" class="serach_btn"/></td>
+	                </tr>
+              <tr>
+                <td height="30">表格下载查询</td>
+	                  <td><input type="text" size="12" /></td>
+	                  <td align="center"><input value="&nbsp;" type="submit" valign="middle" class="serach_btn"/></td>
+	                </tr>
+              <tr>
+                <td height="10"></td>
+	                  <td></td>
+	                  <td></td>
+	                </tr> 
+              </table> </td>
+              </tr> 
+          </table></td>
+        </tr>
+      <tr><td height="10"></td></tr>
+      <tr>
+        <td height="731" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="250" height="29" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/other_top.jpg">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="34" height="29" align="center"><img src="../images/46.gif" width="10" height="12" /></td>
+                      <td width="94" class="online_left_title">常用电话</td>
+	                  <td width="122" align="right"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                </tr>
+              </table></td>
+              </tr>
+          <tr>
+            <td height="701" valign="top"><table width="250" border="0" cellpadding="0" cellspacing="0" class="bm_border">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="20" height="8"></td>
+                      <td width="228"></td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                      <td><img src="../images/45.gif" width="7" height="7" /> 匪警 110</td>
+                    </tr>
+              
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 火警 119 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 急救中心 120 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 道路交通事故报警 122 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 水上求救专用电话 12395</td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 文化市场综合执法 12318 </td>
+	                </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 税务局通用电话 12366 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 环保局监督电话 12369 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 消费者申诉举报电话 12315 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 价格监督举报 12358 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 质量监督电话 12365 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 消费者申诉举报电话 12315 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 机构编制违规举报热线 12310</td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 供电局 95598</td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 天气预报 121 </td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 报时服务 117</td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 国际人工长途电话 103</td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 国际人工长途电话 103</td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 国际人工长途电话 103</td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 国际人工长途电话 103</td>
+                    </tr>
+              <tr>
+                <td height="33" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+	                  <td><img src="../images/45.gif" width="7" height="7" /> 国际人工长途电话 103</td>
+                    </tr> 
+              </table></td>
+              </tr> 
+          </table></td>
+        </tr> 
+    </table></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="3" valign="top" class="bm_rig_border">
+	
+	
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      
+      
+      #foreach($cate in $catelist) 
+      <tr>
+        <td></td>
+        <td height="93" valign="top" class="border_bot_2" >		  
+		  <table width="100%" border="0" cellpadding="0" cellspacing="0" > 
+            <tr> 
+              <td width="89" rowspan="2" align="center" valign="middle"  style="padding-top:7px;" >
+			  <a href="${tomcatroot}/cmsWebapp/fj/fjfa/jsp/ggfwpt/view.jsp?cateunid=${cate.unid}" target="_blank" >
+			  #if(! $null.isNull(${cate.image}) && ${cate.image}!="")
+			   <img src="${cate.image}" width="65" height="76" />
+			  #else
+			     请上传图标
+			  #end
+			  
+			  </a>
+			  </td>
+              <td width="371" height="3" valign="top">&nbsp;</td>
+              </tr>
+            <tr> 
+              <td height="72" valign="top">
+			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                 #set( $col = 3)
+			  	 #set( $linkcount = 0 ) ##计算总数
+                 #set( $flag = 0 ) ##每一列的标记
+			     #set( $catelistChild=$list.getCategoryList(${cate.unid}))
+				 #if( $catelistChild )
+					 #foreach($catechild in $catelistChild)
+						  #set ( $linkcount = $linkcount + 1 )
+						  #set( $flag= $flag +1 )
+						  #if($flag==1)
+						  <tr valign="top">
+						  #end
+						  <td align="left" width="33%" height="22"><img height="7" 
+							src="../images/ddd.jpg" width="7" 
+							align="absmiddle" /><a href="${tomcatroot}/cmsWebapp/fj/fjfa/jsp/ggfwpt/view.jsp?cateunid=${catechild.unid}" target="_blank">&nbsp;${catechild.name}</a></td>	  
+						  #if($linkcount % $col==0)
+						  #set( $flag = 1 )
+						  </tr>
+						  #end ##end if($linkcount % $col==0) 
+					 #end  ##end foreach($catelistChild...) 
+			     #end  ##end if( $catelistChild )	
+				 #if($linkcount%$col!=0)
+		      	   #set( $other = $linkcount%$col)
+			       #foreach($td in [$other..$col])
+			        <td>&nbsp;</td>
+			       #end
+		           </tr>
+                 #end	 
+                </table>
+				</td>
+              </tr>
+          </table>
+		  </td>
+          <td></td>
+        </tr>
+		#end 
+		
+		
+
+    </table>
+	
+	
+	
+	
+	</td>
+  
+  </tr>
+ 
+
+  </table>
+  </td>
+  </tr> 
+#parse("www.fjfa.gov.cn/topAndButton/buttom.html") 
+</table>
+</body>
+</html>
